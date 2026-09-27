@@ -614,6 +614,6 @@ export const trustedPartners = [
   {
     name: "Upwork",
     logo: "https://upload.wikimedia.org/wikipedia/commons/d/d2/Upwork-logo.svg",
-    url: "https://www.upwork.com/freelancers/~0170e20f8803389a86"
+    url: "https://www.upwork.com/freelancers/zainulabedinpk"
   }
 ];
