@@ -1129,7 +1129,7 @@ const WebsiteDevelopmentServices = () => {
                   Explore Freelancer Reviews
                 </a>
                 <a
-                  href="https://www.upwork.com/freelancers/~0170e20f8803389a86"
+                  href="https://www.upwork.com/freelancers/zainulabedinpk"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-outline-dark"

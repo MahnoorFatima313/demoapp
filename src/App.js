@@ -15,6 +15,7 @@ import MobileAppDevelopmentCost from "./pages/MobileAppDevelopmentCost";
 import WordPressDevelopmentServices from "./pages/WordPressDevelopmentServices";
 import CustomSchoolManagementSoftwareDevelopment from "./pages/CustomSchoolManagementSoftwareDevelopment";
 import CustomBusinessAutomationSolutions from "./pages/CustomBusinessAutomationSolutions";
+import DocumentControlSoftware from "./pages/DocumentControlSoftware";
 // Lazy loaded pages - each page loads only when visited
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -52,10 +53,8 @@ const OutsourceApiDevelopment = lazy(
 	() => import("./pages/OutsourceApiDevelopment"),
 );
 const WebAppDevelopment = lazy(() => import("./pages/WebAppDevelopment"));
-const WebsiteDevelopmentCost = lazy(
-	() => import("./pages/WebsiteDevelopmentCost"),
-);
-const BestSoftwareHouse = lazy(() => import("./pages/BestSoftwareHouse"));
+
+
 const RealEstateSoftware = lazy(() => import("./pages/RealEstateSoftware"));
 const FinanceManagementSystem = lazy(
 	() => import("./pages/FinanceManagementSystem"),
@@ -139,16 +138,8 @@ function App() {
 								element={<WebAppDevelopment />}
 							/>
 							<Route
-								path="/website-development-cost-in-pakistan"
-								element={<WebsiteDevelopmentCost />}
-							/>
-							<Route
 								path="/outsource-api-development-to-pakistan"
 								element={<OutsourceApiDevelopment />}
-							/>
-							<Route
-								path="/best-software-house-in-pakistan"
-								element={<BestSoftwareHouse />}
 							/>
 							<Route
 								path="/real-estate-software-development"
@@ -199,6 +190,13 @@ function App() {
 								path="/mobile-app-development-cost-in-pakistan"
 								element={<MobileAppDevelopmentCost />}
 							/>
+							
+
+<Route
+	path="/document-control-software"
+	element={<DocumentControlSoftware />}
+/>
+
 						</Routes>
 					</Suspense>
 					<Footer />

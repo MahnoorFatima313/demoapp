@@ -1,0 +1,292 @@
+/* Document Control Software page
+   Scoped with .dcs- prefix to reduce collisions with an existing React site. */
+
+.dcs-page {
+  --dcs-blue: #073e84;
+  --dcs-blue-dark: #042b5d;
+  --dcs-blue-soft: #eaf2ff;
+  --dcs-gold: #edb702;
+  --dcs-ink: #0b172a;
+  --dcs-muted: #617087;
+  --dcs-line: #dfe7f2;
+  --dcs-bg: #f7faff;
+  --dcs-white: #ffffff;
+  color: var(--dcs-ink);
+  background: #fff;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+.dcs-page * { box-sizing: border-box; }
+.dcs-page img { max-width: 100%; display: block; }
+.dcs-page a { color: inherit; }
+.dcs-container { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+.dcs-narrow { width: min(850px, calc(100% - 40px)); }
+.dcs-content-width { width: min(980px, calc(100% - 40px)); }
+
+.dcs-section { padding: 100px 0; }
+.dcs-kicker, .dcs-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .15em;
+  color: white;
+}
+.dcs-kicker::before, .dcs-eyebrow::before {
+  content: "";
+  width: 24px;
+  height: 2px;
+  background: var(--dcs-gold);
+}
+.dcs-kicker-light { color: #c9ddff; }
+.dcs-kicker-light::before { background: var(--dcs-gold); }
+
+.dcs-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 760px;
+  padding: 125px 0 90px;
+  background:
+    radial-gradient(circle at 75% 25%, rgba(237,183,2,.15), transparent 25%),
+    radial-gradient(circle at 15% 20%, rgba(51,133,255,.16), transparent 27%),
+    linear-gradient(135deg, #031f43 0%, #073e84 54%, #0a4f9e 100%);
+  color: white;
+}
+.dcs-hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: auto 0 0;
+  height: 130px;
+  background: linear-gradient(to top, rgba(247,250,255,1), rgba(247,250,255,0));
+}
+.dcs-orb { position: absolute; border-radius: 50%; filter: blur(1px); z-index: -1; }
+.dcs-orb-one { width: 240px; height: 240px; right: -80px; top: 110px; background: rgba(255,255,255,.05); }
+.dcs-orb-two { width: 120px; height: 120px; left: 44%; bottom: 100px; background: rgba(237,183,2,.09); }
+
+.dcs-hero-grid { display: grid; grid-template-columns: 1.02fr .98fr; gap: 75px; align-items: center; }
+.dcs-hero-copy h1 {
+  margin: 22px 0;
+  max-width: 730px;
+  font-size: clamp(42px, 5.2vw, 70px);
+  line-height: 1.02;
+  letter-spacing: -.045em;
+  color: white;
+}
+.dcs-lead {
+  max-width: 670px;
+  color: #d7e5f7;
+  font-size: 18px;
+  line-height: 1.8;
+}
+.dcs-actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 30px; }
+.dcs-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 22px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 800;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.dcs-btn:hover { transform: translateY(-2px); }
+.dcs-btn-primary { background: var(--dcs-gold); color: #162033; box-shadow: 0 14px 35px rgba(0,0,0,.18); }
+.dcs-btn-ghost { border: 1px solid rgba(255,255,255,.28); color: white; background: rgba(255,255,255,.05); }
+.dcs-btn-light { background: white; color: var(--dcs-blue-dark); color: white !important;}
+.dcs-btn-white { background: white; color: var(--dcs-blue); }
+.dcs-btn-outline-white { border: 1px solid rgba(255,255,255,.4); color: white; }
+
+.dcs-proof-row {
+  display: flex; flex-wrap: wrap; gap: 28px; margin-top: 55px; padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,.15);
+}
+.dcs-proof-row div { display: grid; gap: 4px; }
+.dcs-proof-row strong { font-size: 15px; }
+.dcs-proof-row span { color: #9eb6d6; font-size: 12px; }
+
+.dcs-hero-visual { position: relative; min-height: 520px; display: flex; align-items: center; }
+.dcs-glass-card {
+  width: 100%; border: 1px solid rgba(255,255,255,.2); border-radius: 22px;
+  background: rgba(255,255,255,.10); box-shadow: 0 35px 80px rgba(0,0,0,.27);
+  backdrop-filter: blur(20px); overflow: hidden;
+}
+.dcs-window-bar { height: 48px; display: flex; align-items: center; gap: 7px; padding: 0 16px; border-bottom: 1px solid rgba(255,255,255,.12); }
+.dcs-window-bar > span { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,.45); }
+.dcs-window-bar b { margin-left: 10px; color: #cfe0f4; font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.dcs-dashboard { display: grid; grid-template-columns: 54px 1fr; min-height: 430px; }
+.dcs-sidebar { padding: 16px 12px; display: flex; flex-direction: column; align-items: center; gap: 20px; border-right: 1px solid rgba(255,255,255,.1); }
+.dcs-mini-logo { display: grid; place-items: center; width: 29px; height: 29px; border-radius: 9px; background: var(--dcs-gold); color: #15325b; font-weight: 900; }
+.dcs-sidebar i { width: 20px; height: 20px; border-radius: 6px; background: rgba(255,255,255,.13); }
+.dcs-dash-main { padding: 25px; background: rgba(255,255,255,.97); color: var(--dcs-ink); }
+.dcs-dash-top { display: flex; justify-content: space-between; align-items: center; }
+.dcs-dash-top small { display: block; color: #8998aa; font-size: 8px; font-weight: 800; letter-spacing: .1em; }
+.dcs-dash-top strong { display: block; margin-top: 4px; font-size: 16px; }
+.dcs-live { color: #118451; font-size: 9px; font-weight: 800; }
+.dcs-stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; margin: 18px 0; }
+.dcs-stat-grid > div { padding: 12px; border: 1px solid #e8edf4; border-radius: 10px; }
+.dcs-stat-grid small, .dcs-stat-grid strong, .dcs-stat-grid span { display: block; }
+.dcs-stat-grid small { color: #7b8b9d; font-size: 8px; }
+.dcs-stat-grid strong { font-size: 20px; margin: 4px 0; }
+.dcs-stat-grid span { color: #18825b; font-size: 8px; font-weight: 700; }
+.dcs-search-demo { display: flex; align-items: center; gap: 9px; padding: 12px; border-radius: 10px; background: #f1f5fb; color: #6e7d91; font-size: 9px; }
+.dcs-search-demo b { margin-left: auto; color: var(--dcs-blue); font-size: 8px; }
+.dcs-file-list { margin-top: 12px; }
+.dcs-file-list > div { display: flex; align-items: center; gap: 10px; padding: 11px 0; border-bottom: 1px solid #edf1f6; }
+.dcs-file-list > div > div { flex: 1; }
+.dcs-file-list b, .dcs-file-list small { display: block; }
+.dcs-file-list b { font-size: 9px; }
+.dcs-file-list small { margin-top: 3px; color: #8491a2; font-size: 7px; }
+.dcs-file-icon { display: grid; place-items: center; width: 28px; height: 30px; border-radius: 7px; background: #eaf2ff; color: var(--dcs-blue); font-size: 6px; font-weight: 900; }
+.dcs-file-list em { padding: 4px 6px; border-radius: 5px; background: #eef8f3; color: #23815d; font-size: 6px; font-style: normal; font-weight: 800; }
+.dcs-float-card {
+  position: absolute; display: grid; grid-template-columns: auto 1fr; column-gap: 10px; padding: 13px 16px;
+  border: 1px solid #e1eaf5; border-radius: 14px; background: white; color: var(--dcs-ink);
+  box-shadow: 0 18px 45px rgba(0,0,0,.2);
+}
+.dcs-float-card b { font-size: 10px; }
+.dcs-float-card small { grid-column: 2; color: #7b899a; font-size: 8px; }
+.dcs-float-top { top: 28px; right: -25px; }
+.dcs-float-bottom { bottom: 35px; left: -25px; }
+
+.dcs-intro { background: var(--dcs-bg); }
+.dcs-narrow > h2, .dcs-content-width > h2, .dcs-section-heading h2 {
+  margin: 15px 0 20px; font-size: clamp(32px, 4vw, 49px); line-height: 1.1; letter-spacing: -.035em;
+}
+.dcs-narrow p, .dcs-content-width > p, .dcs-section-heading p {
+  color: var(--dcs-muted); font-size: 17px; line-height: 1.85;
+}
+.dcs-callout {
+  display: grid; gap: 8px; margin-top: 32px; padding: 23px 25px; border-left: 4px solid var(--dcs-gold);
+  border-radius: 0 14px 14px 0; background: white; box-shadow: 0 12px 30px rgba(15,48,88,.06);
+}
+.dcs-callout span { color: var(--dcs-muted); line-height: 1.65; }
+
+.dcs-image-section { background: white; }
+.dcs-image-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 75px; align-items: center; }
+.dcs-image-grid-reverse { grid-template-columns: 1.1fr .9fr; }
+.dcs-image-grid h2 { margin: 14px 0 20px; font-size: clamp(32px, 3.5vw, 48px); line-height: 1.1; letter-spacing: -.035em; }
+.dcs-image-grid p { color: var(--dcs-muted); font-size: 16px; line-height: 1.85; }
+.dcs-image-frame { margin: 0; border: 1px solid var(--dcs-line); border-radius: 20px; overflow: hidden; background: #eef4fc; box-shadow: 0 25px 60px rgba(12,48,90,.11); }
+.dcs-image-frame img { width: 100%; height: 390px; object-fit: cover; }
+.dcs-image-frame figcaption { padding: 12px 16px; color: #6d7c90; background: white; font-size: 11px; line-height: 1.5; }
+.dcs-inline-link { display: inline-flex; gap: 7px; margin-top: 16px; color: var(--dcs-blue); font-weight: 800; text-decoration: none; border-bottom: 1px solid #b9cbe3; padding-bottom: 3px; }
+
+.dcs-features-section { background: var(--dcs-bg); }
+.dcs-section-heading { max-width: 750px; margin-bottom: 45px; }
+.dcs-feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
+.dcs-feature-card {
+  position: relative; min-height: 245px; padding: 28px; border: 1px solid var(--dcs-line); border-radius: 18px;
+  background: white; transition: transform .2s ease, box-shadow .2s ease;
+}
+.dcs-feature-card:hover { transform: translateY(-5px); box-shadow: 0 18px 45px rgba(14,53,95,.09); }
+.dcs-feature-number { color: var(--dcs-blue); font-size: 12px; font-weight: 900; letter-spacing: .1em; }
+.dcs-feature-card h3 { margin: 32px 0 10px; font-size: 20px; }
+.dcs-feature-card p { margin: 0; color: var(--dcs-muted); font-size: 14px; line-height: 1.75; }
+
+.dcs-dark-section { background: #061f40; color: white; }
+.dcs-workflow-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 100px; }
+.dcs-sticky-copy { align-self: start; position: sticky; top: 90px; }
+.dcs-sticky-copy h2 { color: white; margin: 15px 0; font-size: clamp(32px, 4vw, 48px); line-height: 1.1; letter-spacing: -.035em; }
+.dcs-sticky-copy p { color: #a9bdd6; line-height: 1.8; font-size: 16px; }
+.dcs-workflow-list { border-top: 1px solid rgba(255,255,255,.14); }
+.dcs-workflow-item { display: grid; grid-template-columns: 70px 1fr; gap: 20px; padding: 30px 0; border-bottom: 1px solid rgba(255,255,255,.14); }
+.dcs-workflow-item > span { color: var(--dcs-gold); font-size: 13px; font-weight: 900; }
+.dcs-workflow-item h3 { margin: 0 0 7px; font-size: 22px; }
+.dcs-workflow-item p { margin: 0; color: #a9bdd6; line-height: 1.75; font-size: 15px; }
+
+.dcs-two-col { display: grid; grid-template-columns: 1.1fr .9fr; gap: 80px; align-items: start; }
+.dcs-two-col h2 { margin: 15px 0 20px; font-size: clamp(32px, 3.6vw, 47px); line-height: 1.1; letter-spacing: -.035em; }
+.dcs-two-col p { color: var(--dcs-muted); font-size: 16px; line-height: 1.85; }
+.dcs-checklist-card { padding: 32px; border: 1px solid var(--dcs-line); border-radius: 18px; background: var(--dcs-bg); }
+.dcs-checklist-card > span { color: var(--dcs-blue); font-size: 11px; font-weight: 900; letter-spacing: .13em; }
+.dcs-checklist-card h3 { margin: 12px 0 18px; font-size: 23px; }
+.dcs-checklist-card ul { padding: 0; margin: 0; list-style: none; }
+.dcs-checklist-card li { position: relative; padding: 11px 0 11px 28px; border-bottom: 1px solid #e3eaf3; color: #526278; font-size: 14px; line-height: 1.5; }
+.dcs-checklist-card li::before { content: "✓"; position: absolute; left: 0; color: #17815b; font-weight: 900; }
+
+.dcs-soft-bg { background: var(--dcs-bg); }
+.dcs-best-practices { display: grid; gap: 1px; margin-top: 45px; border: 1px solid var(--dcs-line); border-radius: 18px; overflow: hidden; }
+.dcs-best-practices article { display: grid; grid-template-columns: 45px 1fr; gap: 15px; padding: 23px 25px; background: white; border-bottom: 1px solid var(--dcs-line); }
+.dcs-best-practices article:last-child { border-bottom: 0; }
+.dcs-best-practices b { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 9px; background: var(--dcs-blue-soft); color: var(--dcs-blue); font-size: 12px; }
+.dcs-best-practices h3 { margin: 0 0 5px; font-size: 17px; }
+.dcs-best-practices p { margin: 0; color: var(--dcs-muted); font-size: 14px; line-height: 1.65; }
+.dcs-source-note { margin-top: 25px; padding: 20px; border-radius: 12px; background: #edf4fc; color: #52647b; font-size: 13px; line-height: 1.7; }
+.dcs-source-note strong { color: var(--dcs-ink); }
+.dcs-source-note a { color: var(--dcs-blue); font-weight: 800; margin-left: 4px; text-decoration: none; }
+
+.dcs-compare-section { background: white; }
+.dcs-table-wrap { overflow-x: auto; border: 1px solid var(--dcs-line); border-radius: 17px; box-shadow: 0 14px 35px rgba(14,53,95,.05); }
+.dcs-table-wrap table { width: 100%; border-collapse: collapse; min-width: 680px; }
+.dcs-table-wrap th, .dcs-table-wrap td { padding: 17px 19px; text-align: left; border-bottom: 1px solid var(--dcs-line); font-size: 14px; }
+.dcs-table-wrap th { background: #f0f5fb; color: var(--dcs-blue); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+.dcs-table-wrap tr:last-child td { border-bottom: 0; }
+.dcs-table-wrap td:first-child { color: var(--dcs-ink); font-weight: 800; }
+.dcs-table-wrap td { color: var(--dcs-muted); }
+
+.dcs-security { background: var(--dcs-bg); }
+.dcs-security-grid { display: grid; grid-template-columns: 1fr .8fr; gap: 90px; align-items: center; }
+.dcs-security h2 { margin: 15px 0 20px; font-size: clamp(32px, 3.7vw, 48px); line-height: 1.1; letter-spacing: -.035em; }
+.dcs-security p { color: var(--dcs-muted); font-size: 16px; line-height: 1.85; }
+.dcs-security-panel { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.dcs-security-panel div { min-height: 145px; display: grid; align-content: center; padding: 20px; border: 1px solid var(--dcs-line); border-radius: 16px; background: white; }
+.dcs-security-panel span { color: var(--dcs-blue); font-size: 22px; font-weight: 900; }
+.dcs-security-panel b { margin-top: 10px; font-size: 15px; }
+.dcs-security-panel small { color: #7c8b9e; margin-top: 4px; }
+
+.dcs-faq { background: white; }
+.dcs-faq-list { margin-top: 35px; border-top: 1px solid var(--dcs-line); }
+.dcs-faq details { border-bottom: 1px solid var(--dcs-line); }
+.dcs-faq summary { display: flex; justify-content: space-between; gap: 25px; cursor: pointer; padding: 22px 0; font-weight: 800; font-size: 16px; list-style: none; }
+.dcs-faq summary::-webkit-details-marker { display: none; }
+.dcs-faq summary span { color: var(--dcs-blue); font-size: 24px; line-height: 1; font-weight: 400; }
+.dcs-faq details[open] summary span { transform: rotate(45deg); }
+.dcs-faq details p { max-width: 850px; margin: -5px 0 25px; color: var(--dcs-muted); line-height: 1.8; font-size: 15px; }
+
+.dcs-cta { padding: 90px 0; background: linear-gradient(125deg, #052b59, #073e84); color: white; }
+.dcs-cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 50px; }
+.dcs-cta h2 { max-width: 700px; margin: 15px 0 12px; font-size: clamp(34px, 4vw, 54px); line-height: 1.08; letter-spacing: -.04em; }
+.dcs-cta p { max-width: 650px; color: #bed0e6; font-size: 16px; line-height: 1.75; }
+.dcs-cta .dcs-actions { margin-top: 0; flex-shrink: 0; }
+
+@media (max-width: 980px) {
+  .dcs-hero { padding-top: 90px; }
+  .dcs-hero-grid, .dcs-image-grid, .dcs-image-grid-reverse, .dcs-two-col, .dcs-security-grid { grid-template-columns: 1fr; }
+  .dcs-hero-grid { gap: 50px; }
+  .dcs-hero-visual { min-height: 480px; }
+  .dcs-feature-grid { grid-template-columns: repeat(2, 1fr); }
+  .dcs-workflow-grid { grid-template-columns: 1fr; gap: 45px; }
+  .dcs-sticky-copy { position: static; }
+  .dcs-cta-inner { align-items: flex-start; flex-direction: column; }
+  .dcs-cta .dcs-actions { margin-top: 5px; }
+}
+
+@media (max-width: 640px) {
+  .dcs-container, .dcs-narrow, .dcs-content-width { width: min(100% - 28px, 1160px); }
+  .dcs-section { padding: 70px 0; }
+  .dcs-hero { min-height: auto; padding: 75px 0 65px; }
+  .dcs-hero-copy h1 { font-size: 42px; }
+  .dcs-lead { font-size: 16px; }
+  .dcs-proof-row { gap: 17px; margin-top: 35px; }
+  .dcs-proof-row div { min-width: 105px; }
+  .dcs-hero-visual { min-height: 420px; }
+  .dcs-dashboard { min-height: 360px; }
+  .dcs-dash-main { padding: 17px; }
+  .dcs-stat-grid { grid-template-columns: 1fr; }
+  .dcs-stat-grid > div:nth-child(2), .dcs-stat-grid > div:nth-child(3) { display: none; }
+  .dcs-file-list > div:nth-child(3) { display: none; }
+  .dcs-float-top { top: 0; right: -5px; }
+  .dcs-float-bottom { bottom: 0; left: -5px; }
+  .dcs-feature-grid { grid-template-columns: 1fr; }
+  .dcs-image-frame img { height: 260px; }
+  .dcs-security-panel { grid-template-columns: 1fr; }
+  .dcs-workflow-item { grid-template-columns: 45px 1fr; }
+  .dcs-cta { padding: 70px 0; }
+  .dcs-cta .dcs-actions, .dcs-actions { width: 100%; }
+  .dcs-btn { width: 100%; }
+}
