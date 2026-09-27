@@ -69,7 +69,7 @@ export const schemaOrganization = {
   sameAs: [
     "https://www.linkedin.com/company/qllmsoft",
     "https://www.freelancer.com/u/mrprogrmmr",
-    "https://www.upwork.com/freelancers/~0170e20f8803389a86",
+    "https://www.upwork.com/freelancers/zainulabedinpk",
   ],
 };
 

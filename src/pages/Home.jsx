@@ -213,7 +213,7 @@ const Home = () => {
                 </p>
                 <p>
                   That track record is not something visitors have to take on faith. It is verifiable directly on{" "}
-                  <a href="https://www.upwork.com/freelancers/~0170e20f8803389a86" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.upwork.com/freelancers/zainulabedinpk" target="_blank" rel="noopener noreferrer">
                     Upwork, where QllmSoft holds a {FACTS.upworkScore} Job Success Score
                   </a>
                   , and on{" "}

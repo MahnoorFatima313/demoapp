@@ -480,7 +480,7 @@ const WebAppDevelopment = () => {
             </div>
             <div style={{textAlign:'center',marginTop:'24px',display:'flex',gap:'14px',justifyContent:'center',flexWrap:'wrap'}}>
               <a href="https://www.freelancer.com/u/mrprogrmmr" target="_blank" rel="noopener noreferrer" className="ip-btn-outline" aria-label="View QllmSoft web development reviews on Freelancer">View Freelancer Reviews</a>
-              <a href="https://www.upwork.com/freelancers/~0170e20f8803389a86" target="_blank" rel="noopener noreferrer" className="ip-btn-outline" aria-label="Verify QllmSoft on Upwork">Verify Upwork Status</a>
+              <a href="https://www.upwork.com/freelancers/zainulabedinpk" target="_blank" rel="noopener noreferrer" className="ip-btn-outline" aria-label="Verify QllmSoft on Upwork">Verify Upwork Status</a>
             </div>
           </div>
         </section>
