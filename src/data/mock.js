@@ -14,6 +14,10 @@ import stickerSmashApp from "../assets/sticker-mobile-app.webp";
 import webDesign from "../assets/web-design.webp";
 import qllmDocs from "../assets/QllmDocs.webp";
 import softwaredevelopmentimg from "../assets/Custom-Software.webp"
+import HRMS from "../assets/HUMANResources.jpg"
+import FinancialManagement from "../assets/FinancialManagement.jpg"
+import Fleetmanagement from "../assets/fleetManagement.jpg"
+import inventorymanagement from "../assets/inventorymanagement.jpg"
 export const companyInfo = {
   name: "QllmSoft",
   tagline: "Best for your business",
@@ -252,214 +256,130 @@ export const servicesData = [
   }
 ];
 
-export const projectsData = [
+const img = (id) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=1200&q=85`;
 
+export const projectsData = [
   {
     id: 1,
-    slug: "finance-management-system",
-    title: "Finance Management System",
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80",
-
-    shortDescription:
-      "Budgeting, analytics, expense tracking with accounting integrations.",
-
-    details: {
-      category: "Enterprise Finance | Real-Time Financial Control",
-
-      paragraphs: [
-        "The Finance Management System by QllmSoft helps businesses move away from fragmented spreadsheets and manual accounting. It centralizes budgeting and expense management, allowing teams to track spending, plan effectively, and maintain full visibility across departments. Automated financial categorization and reconciliation reduce errors, save time, and ensure accurate records without manual effort.",
-        "With real-time analytics, finance teams and decision-makers can access instant insights and make faster, data-driven decisions. Role-based access keeps sensitive information secure while enabling collaboration, and integration with QuickBooks and Xero ensures a seamless, unified financial workflow. Businesses using this system see reduced accounting overhead, faster month-end closing, and clear financial visibility, making it a strategic tool for growth and efficiency."
-      ],
-
-      listTitle: "What this system enables:",
-      list: [
-        "Centralized budgeting & expense tracking",
-        "Automated reconciliation workflows",
-        "Real-time analytics dashboards",
-        "Secure role-based access control"
-      ],
-
-      impact: [
-        "40% accounting efficiency gain",
-        "Faster financial closing",
-        "Live decision insights"
-      ]
-    }
+    slug: "ai-document-management-system",
+    image: qllmDocs,
+    title: "AI-powered Document Management System",
+    shape: "orb",
+    accent: "#edb702",
+    shortDescription: "Encrypted document storage with semantic search and an embedded RAG chatbot.",
+    stack: ["C#", "ASP.NET Core", ".NET 10", "MVC", "EF Core", "SQL Server", "Azure", "AI Chatbot", "RAG"],
+    category: "AI & Knowledge Management",
+    problem: "Organizations needed a centralized way to securely store, search, and retrieve large volumes of business documents. Traditional document search made it difficult to find relevant information across unstructured files.",
+    approach: "QllmSoft developed a cloud-based document management platform with encrypted document storage, role-based access control, semantic vector search, and an embedded RAG chatbot. Users could query their documents using natural language while access permissions remained enforced.",
+    result: "The platform combined secure document management with AI-powered information retrieval, allowing users to search and interact with organizational documents through a single application.",
+    listTitle: "Key capabilities:",
+    list: ["Encrypted document storage", "Role-based access control", "Semantic vector search", "Embedded RAG chatbot"],
+    impact: ["Natural-language document queries", "Permissions enforced on every answer", "Storage and retrieval in one application"],
   },
-
   {
     id: 2,
-    slug: "qllmdocs",
-    title: "QllmDocs",
-    image: qllmDocs,
-
-    shortDescription:
-      "Lifecycle document management with version control and approvals.",
-
-    details: {
-      category: "Data Governance | Compliance Ready",
-
-      paragraphs: [
-        "The Document Controller is a cloud-based Document Management System (DMS) designed for industries where compliance, security, and accuracy are critical — such as healthcare, finance, and legal services.",
-        "This solution manages the entire document lifecycle, from creation and review to approval, version control, and archival. With configurable access permissions and automated workflows, teams collaborate efficiently while maintaining full audit readiness."
-      ],
-
-      listTitle: "Key capabilities:",
-      list: [
-        "Version tracking & history logs",
-        "Approval workflows",
-        "Encrypted cloud storage",
-        "External API integrations"
-      ],
-
-      impact: [
-        "Audit ready compliance",
-        "70% faster approvals",
-        "Higher data security"
-      ]
-    }
+    slug: "biometric-attendance-management-system",
+    image: img("1563986768609-322da13575f3"),
+    title: "Biometric Attendance Management System",
+    shape: "gyro",
+    accent: "#4299e1",
+    shortDescription: "Real-time biometric log processing with configurable shift rules for 1,000+ active users.",
+    stack: ["C#", "ASP.NET Core/MVC", "SQL Server", "JavaScript", "Telerik Controls", "Workflow Engine", "GitHub"],
+    category: "Workforce Operations",
+    problem: "Managing biometric attendance data across a large workforce required continuous processing of attendance logs, complex shift rules, and consistent enforcement of organizational policies.",
+    approach: "QllmSoft developed a centralized attendance management platform capable of processing real-time biometric logs for 1,000+ active users. The system included configurable shift rules, automated workflows, attendance calculations, and business-rule enforcement.",
+    result: "The system provided a centralized platform for processing biometric attendance data and applying configurable workforce policies across the organization.",
+    listTitle: "Key capabilities:",
+    list: ["Real-time biometric log processing", "Configurable shift rules", "Automated workflows", "Business-rule enforcement"],
+    impact: ["1,000+ active users", "One platform for attendance data", "Configurable workforce policies"],
   },
-
   {
     id: 3,
-    slug: "hr-management-system",
-    title: "HR Management System",
-    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&q=80",
-
-    shortDescription:
-      "Employee lifecycle, payroll, and performance management platform.",
-
-    details: {
-      category: "People Operations | Workforce Automation",
-
-      paragraphs: [
-        "Our HR Management System automates core HR operations while keeping employee experience at the center. Built to replace manual HR processes, it centralizes employee data, attendance, leave management, payroll, and performance reviews.",
-        "Designed as a modular and scalable solution, this HRMS adapts to different organizational structures and compliance requirements, making it suitable for startups, SMEs, and enterprise teams."
-      ],
-
-      listTitle: "Core features:",
-      list: [
-        "Employee lifecycle tracking",
-        "Payroll automation",
-        "Leave & attendance management",
-        "Performance evaluation tools"
-      ],
-
-      impact: [
-        "Reduced admin workload",
-        "Improved employee visibility",
-        "Centralized HR records"
-      ]
-    }
+    slug: "human-resource-management-system",
+    image: HRMS,
+    title: "Human Resource Management System (HRMS)",
+    shape: "layers",
+    accent: "#63b3ed",
+    shortDescription: "Position-based employee management, career progression, and integrated HR reporting.",
+    stack: ["ASP.NET MVC", "C#", "jQuery", "Telerik Controls", "Entity Framework", "LINQ", "SQL Server", "Microsoft Reporting", "IIS"],
+    category: "People Operations",
+    problem: "HR teams needed to manage employee information, organizational structures, career progression, and reporting through a unified system instead of maintaining disconnected records.",
+    approach: "QllmSoft developed an enterprise HR platform supporting position-based employee management, job progression tracking, organizational hierarchy mapping, and integrated reporting. Entity Framework and LINQ were used for data access and business operations.",
+    result: "The platform centralized employee and organizational data while providing structured workflows and reporting capabilities for HR operations.",
+    listTitle: "Key capabilities:",
+    list: ["Position-based employee management", "Job progression tracking", "Organizational hierarchy mapping", "Integrated reporting"],
+    impact: ["Centralized employee data", "Structured HR workflows", "Built-in reporting"],
   },
-
   {
     id: 4,
-    slug: "warehouse-management",
-    title: "Warehouse Management Platform",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80",
-
-    shortDescription:
-      "Inventory automation, tracking, and logistics coordination.",
-
-    details: {
-      category: "Logistics Intelligence | Inventory Optimization",
-
-      paragraphs: [
-        "This Warehouse & Inventory Automation System was built specifically for factories and manufacturing environments where manual stock tracking leads to losses and inefficiencies.",
-        "Instead of generic software, we designed this system around the client’s existing SOPs, approval rules, and operational workflows. Every stock movement is tracked, approved, and recorded with full accountability."
-      ],
-
-      listTitle: "Capabilities include:",
-      list: [
-        "Inventory tracking dashboards",
-        "Barcode scanning support",
-        "Stock alerts & forecasting",
-        "Logistics coordination tools"
-      ],
-
-      impact: [
-        "Reduced stock errors",
-        "Faster dispatch",
-        "Improved inventory accuracy"
-      ]
-    }
+    slug: "payroll-management-system",
+    image: img("1554224154-26032ffc0d07"),
+    title: "Payroll Management System",
+    shape: "cube",
+    accent: "#edb702",
+    shortDescription: "Class and grade-based deductions, branch categorization, and an API layer for integrations.",
+    stack: ["ASP.NET MVC/Web API", "C#", "jQuery", "Entity Framework", "LINQ", "SQL Server", "IIS", "Telerik Controls"],
+    category: "Payroll & Compliance",
+    problem: "Payroll processing involved complex tax deductions, employee classifications, branch-level categorization, and supporting document management.",
+    approach: "QllmSoft developed a payroll management platform with a web application and API layer supporting class and grade-based deductions, branch categorization, payroll processing, and file integration with cloud storage services.",
+    result: "The platform centralized payroll operations and exposed supporting functionality through APIs for integration with other applications and mobile clients.",
+    listTitle: "Key capabilities:",
+    list: ["Class and grade-based deductions", "Branch categorization", "Payroll processing", "Cloud storage file integration", "API layer for apps and mobile clients"],
+    impact: ["Centralized payroll operations", "API-ready for other applications", "Mobile client support"],
   },
-
   {
     id: 5,
-    slug: "portfolio-management-platform",
-    title: "Portfolio Management Platform",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80",
-
-    shortDescription:
-      "Centralized investment tracking and performance analytics.",
-
-    details: {
-      category: "Investment Intelligence | Data Visualization",
-
-      paragraphs: [
-        "Our Portfolio Website projects focus on helping professionals, agencies, and businesses present their work through visually compelling and high-performing websites.",
-        "Each website is custom-designed with responsive layouts, optimized image galleries, and SEO-ready structure to ensure both aesthetics and discoverability."
-      ],
-
-      listTitle: "Platform highlights:",
-      list: [
-        "Multi-portfolio tracking",
-        "Interactive analytics dashboards",
-        "Risk evaluation tools",
-        "Performance forecasting"
-      ],
-
-      impact: [
-        "Better investment insight",
-        "Centralized portfolio view",
-        "Data-driven decisions"
-      ]
-    }
+    slug: "financial-management-system",
+    image: FinancialManagement,
+    title: "Financial Management System",
+    shape: "pyramid",
+    accent: "#4299e1",
+    shortDescription: "Applicant scoring, automated credit evaluation, dashboards, and audit trails.",
+    stack: ["C#", "ASP.NET MVC", "JavaScript", "SQL Server", "Telerik Controls", "Azure"],
+    category: "Finance & Audit",
+    problem: "Financial organizations needed a structured way to evaluate applicants, manage financial information, and maintain consistent decision-making and audit records.",
+    approach: "QllmSoft developed a financial management platform with applicant scoring workflows, automated credit evaluation, financial dashboards, custom reporting, and audit trails.",
+    result: "The system provided a centralized workflow for financial evaluation, reporting, and audit tracking.",
+    listTitle: "Key capabilities:",
+    list: ["Applicant scoring workflows", "Automated credit evaluation", "Financial dashboards", "Custom reporting", "Audit trails"],
+    impact: ["Consistent decision-making", "Audit-ready records", "Centralized evaluation workflow"],
   },
   {
     id: 6,
-    slug: "sticker-smash-photo-editor-app",
-    title: "Sticker Smash Photo Editor App",
-    image: stickerSmashApp,
-  
-    shortDescription:
-      "Interactive mobile app for editing pictures with fun stickers, emojis, and creative customization tools.",
-  
-    details: {
-      category: "Mobile Application | Photo Editing & Entertainment",
-  
-      paragraphs: [
-        "Sticker Smash is a modern mobile photo editing application that allows users to customize their pictures using interactive stickers, emojis, overlays, and creative editing tools through a simple and engaging interface.",
-  
-        "The application is designed with a smooth user experience, responsive mobile layout, and lightweight performance to provide fast image editing, sticker placement, and easy sharing functionality for Android and iOS users."
-      ],
-  
-      listTitle: "Application features:",
-  
-      list: [
-        "Photo upload & editing",
-        "Interactive sticker placement",
-        "Emoji & overlay customization",
-        "Drag & resize functionality",
-        "Image reset & preview options",
-        "Mobile-friendly responsive UI",
-        "Save & export edited images",
-        "Smooth Android & iOS experience"
-      ],
-  
-      impact: [
-        "Enhanced user engagement",
-        "Creative image customization",
-        "Simple and interactive experience",
-        "Fast mobile image editing",
-        "Improved social sharing appeal"
-      ]
-    }
-  }
-
+    slug: "logistics-fleet-management-system",
+    image: Fleetmanagement,
+    title: "Logistics & Fleet Management System",
+    shape: "helix",
+    accent: "#63b3ed",
+    shortDescription: "Shipment tracking, multi-warehouse stock movement, and carrier manifests in one interface.",
+    stack: ["C#", "ASP.NET MVC", "Angular", "JavaScript", "SQL Server", "Telerik Controls", "GitHub"],
+    category: "Logistics Intelligence",
+    problem: "Logistics operations required visibility across shipments, warehouses, inventory movements, and carrier documentation.",
+    approach: "QllmSoft developed a logistics management platform supporting shipment tracking, multi-warehouse stock movement, carrier manifests, and inventory monitoring through a centralized web interface.",
+    result: "The platform brought shipment and warehouse operations together, providing centralized visibility into logistics activities and inventory movement.",
+    listTitle: "Key capabilities:",
+    list: ["Shipment tracking", "Multi-warehouse stock movement", "Carrier manifests", "Inventory monitoring"],
+    impact: ["Centralized logistics visibility", "Shipments and warehouses together", "Tracked inventory movement"],
+  },
+  {
+    id: 7,
+    slug: "inventory-management-system",
+    image: inventorymanagement,
+    title: "Inventory Management System",
+    shape: "cube",
+    accent: "#63b3ed",
+    shortDescription: "1,000+ SKUs with automated stock records, monitoring, and low-stock alerts.",
+    stack: ["C#", "ASP.NET Core", "JavaScript", "SQL Server", "Telerik Controls", "GitHub"],
+    category: "Inventory Control",
+    problem: "Managing a large product catalog required accurate stock movement tracking and timely identification of inventory shortages.",
+    approach: "QllmSoft developed a web-based inventory management system supporting 1,000+ SKUs, automated stock movement records, inventory monitoring, and low-stock alerting.",
+    result: "The system provided centralized inventory visibility and automated monitoring of stock levels and movements.",
+    listTitle: "Key capabilities:",
+    list: ["1,000+ SKU catalog", "Automated stock movement records", "Inventory monitoring", "Low-stock alerting"],
+    impact: ["Centralized inventory visibility", "Automated stock monitoring", "Timely shortage alerts"],
+  },
 ];
+
 
 
 export const blogPosts = [
@@ -533,7 +453,7 @@ By leveraging powerful development frameworks like ASP.NET and the latest in web
   services: [
     {
       title: "Tailored Web & App Development Solutions",
-      description: "Every business is unique. We offer custom web, mobile, and software solutions designed to align with your goals, from dynamic websites to robust desktop applications — ensuring measurable growth."
+      description: "Every business is unique. We offer custom web, mobile, and software solutions designed to align with your goals, from dynamic websites to robust desktop applications ensuring measurable growth."
     },
     {
       title: "Global Experience with Local Expertise",
