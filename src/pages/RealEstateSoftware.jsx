@@ -491,7 +491,7 @@ const RealEstateSoftware = () => {
                 </div>
               ))}
               <a
-                href="https://www.upwork.com/freelancers/~0170e20f8803389a86"
+                href="https://www.upwork.com/freelancers/zainulabedinpk"
                 target="_blank" rel="noopener noreferrer"
                 className="res-hero__panel-verify"
                 aria-label="Verify QllmSoft ratings on Upwork"
@@ -821,7 +821,7 @@ const RealEstateSoftware = () => {
               ))}
             </div>
             <div className="res-reviews__actions">
-              <a href="https://www.upwork.com/freelancers/~0170e20f8803389a86"
+              <a href="https://www.upwork.com/freelancers/zainulabedinpk"
                 target="_blank" rel="noopener noreferrer"
                 className="res-btn res-btn--outline"
                 aria-label="Verify QllmSoft real estate software reviews on Upwork">
