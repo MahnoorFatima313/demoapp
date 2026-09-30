@@ -757,9 +757,9 @@
 /* ============================================================
    CASE STUDIES 
    ============================================================ */
-.case-grid {
+.home-page .case-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 34px;
   margin-top: 46px;
 }
@@ -816,8 +816,9 @@
 .case-card .case-solution { border-left-color: var(--qs-navy); }
 .case-card .case-result { border-left-color: var(--qs-mustard-dim); }
 
+
 @media (max-width: 1024px) {
-  .case-grid { grid-template-columns: 1fr; }
+  .home-page .case-grid { grid-template-columns: minmax(0, 1fr); }
 }
 
 /* ============================================================
