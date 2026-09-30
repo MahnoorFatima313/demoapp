@@ -5,47 +5,20 @@ import khalidImg from "../assets/khalid A.webp";
 import muhammadImg from "../assets/Muhammad I.webp";
 import fernandoImg from "../assets/fernandoM.webp";
 import neil from "../assets/NeilP.webp";
-/* =======================
-   Marquee Component
-======================= */
-const Marquee = ({
-  children,
-  direction = "left",
-  speed = 40,
-  pauseOnHover = true,
-}) => {
-  const [width, setWidth] = useState(0);
-  const contentRef = useRef(null);
-  const [paused, setPaused] = useState(false);
+import useAutoScroll from "../hooks/useAutoScroll";
 
-  useEffect(() => {
-    if (contentRef.current) {
-      setWidth(contentRef.current.scrollWidth);
-    }
-  }, [children]);
+const Marquee = ({ children, speed = 60 }) => {
+  const trackRef = useAutoScroll(speed); // px per second
 
   return (
-    <div
-      className="marquee-wrapper"
-      onMouseEnter={() => pauseOnHover && setPaused(true)}
-      onMouseLeave={() => pauseOnHover && setPaused(false)}
-    >
-      <div
-        className={`marquee-track ${direction}`}
-        style={{
-          animationDuration: `${width / speed}s`,
-          animationPlayState: paused ? "paused" : "running",
-        }}
-      >
-        <div ref={contentRef} className="marquee-content">
-          {children}
-        </div>
+    <div className="marquee-wrapper">
+      <div className="marquee-track" ref={trackRef}>
         <div className="marquee-content">{children}</div>
+        <div className="marquee-content" aria-hidden="true">{children}</div>
       </div>
     </div>
   );
 };
-
 /* =======================
    Review Card
 ======================= */

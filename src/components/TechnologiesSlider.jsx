@@ -1,5 +1,6 @@
 import React from "react";
 import "./TechnologiesSlider.css";
+import useAutoScroll from "../hooks/useAutoScroll";
 
 const techList = [
   { name: "C#", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" },
@@ -21,29 +22,28 @@ const techList = [
 ];
 
 const TechnologiesSlider = () => {
+  const trackRef = useAutoScroll(50);
+
   return (
     <section className="section tech-section bg-light">
       <div className="container">
-
         <div className="section-title">
           <h2>Technologies We Use</h2>
           <p>Modern tools & platforms powering our solutions</p>
         </div>
 
         <div className="slider">
-          <div className="slide-track">
+          <div className="slide-track" ref={trackRef}>
             {[...techList, ...techList].map((tech, index) => (
               <div className="slide" key={index}>
-                <img src={tech.icon} alt={tech.name} />
+                <img src={tech.icon} alt={tech.name} loading="lazy" />
                 <span>{tech.name}</span>
               </div>
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );
 };
-
 export default TechnologiesSlider;

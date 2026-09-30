@@ -422,7 +422,7 @@ path {
     pointer-events: auto !important;
   }
   
-  *:not(.mobile-drawer):not(.mobile-overlay):not(.s-icon):not(.cta-btn):not(.nav-link) {
+  *:not(.mobile-drawer):not(.mobile-overlay):not(.s-icon):not(.cta-btn):not(.nav-link):not(.slide-track):not(.marquee-track):not(.about-stat) {
     perspective: none !important;
     transform: none !important;
     transform-style: flat !important;

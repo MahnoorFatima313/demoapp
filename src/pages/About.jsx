@@ -350,109 +350,30 @@ const About = () => {
 
         {/* ── STATS BAND ── */}
         <section
-          className="section"
-          style={{ background: "#1A202C", padding: "48px 0", marginTop: "28px" }}
+          className="section about-stats"
           aria-label="QllmSoft company statistics"
         >
           <div className="container">
-          <div
-              className="why-grid"
-              style={{
-                textAlign: "center",
-                display: "grid",
-                gridTemplateColumns: "repeat(4, 1fr)",
-              }} >
-              <div>
-                <div
-                  style={{
-                    fontSize: "2.5rem",
-                    fontWeight: "800",
-                    color: "#63B3ED",
-                  }}
-                >
-                  10+
-                </div>
-                <div
-                  style={{
-                    color: "#CBD5E0",
-                    marginTop: "8px",
-                    fontWeight: "600",
-                  }}
-                >
-                  Years in Operation
-                </div>
-                <div style={{ color: "#718096", fontSize: "0.85rem" }}>
-                  Founded 2015
-                </div>
+            <div className="about-stats-grid">
+              <div className="about-stat reveal delay-1">
+                <span className="about-stat-value">10+</span>
+                <span className="about-stat-label">Years in Operation</span>
+                <span className="about-stat-note">Founded 2015</span>
               </div>
-              <div>
-                <div
-                  style={{
-                    fontSize: "2.5rem",
-                    fontWeight: "800",
-                    color: "#63B3ED",
-                  }}
-                >
-                  50+
-                </div>
-                <div
-                  style={{
-                    color: "#CBD5E0",
-                    marginTop: "8px",
-                    fontWeight: "600",
-                  }}
-                >
-                  Projects Delivered
-                </div>
-                <div style={{ color: "#718096", fontSize: "0.85rem" }}>
-                  Across 6 Industries
-                </div>
+              <div className="about-stat reveal delay-2">
+                <span className="about-stat-value">50+</span>
+                <span className="about-stat-label">Projects Delivered</span>
+                <span className="about-stat-note">Across 6 Industries</span>
               </div>
-              <div>
-                <div
-                  style={{
-                    fontSize: "2.5rem",
-                    fontWeight: "800",
-                    color: "#63B3ED",
-                  }}
-                >
-                  4
-                </div>
-                <div
-                  style={{
-                    color: "#CBD5E0",
-                    marginTop: "8px",
-                    fontWeight: "600",
-                  }}
-                >
-                  Continents Served
-                </div>
-                <div style={{ color: "#718096", fontSize: "0.85rem" }}>
-                  Clients Worldwide
-                </div>
+              <div className="about-stat reveal delay-3">
+                <span className="about-stat-value">4</span>
+                <span className="about-stat-label">Continents Served</span>
+                <span className="about-stat-note">Clients Worldwide</span>
               </div>
-              <div>
-                <div
-                  style={{
-                    fontSize: "2.5rem",
-                    fontWeight: "800",
-                    color: "#63B3ED",
-                  }}
-                >
-                  100%
-                </div>
-                <div
-                  style={{
-                    color: "#CBD5E0",
-                    marginTop: "8px",
-                    fontWeight: "600",
-                  }}
-                >
-                  On-Time Delivery
-                </div>
-                <div style={{ color: "#718096", fontSize: "0.85rem" }}>
-                  Every Project, Every Time
-                </div>
+              <div className="about-stat reveal delay-4">
+                <span className="about-stat-value">100%</span>
+                <span className="about-stat-label">On-Time Delivery</span>
+                <span className="about-stat-note">Every Project, Every Time</span>
               </div>
             </div>
           </div>
