@@ -58,6 +58,8 @@ const schemaItemList = {
 // The three lead projects .
 const caseStudies = projectsData.slice(0, 3);
 
+const PortfolioPdf = "/pdfs/QllmSoft - Website Development Portfolio.pdf";
+
 const faqItems = [
   {
     q: "How is each project on this page verified as real work QllmSoft actually completed?",
@@ -172,6 +174,31 @@ const Projects = () => {
                   </Link>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Portfolio Download */}
+        <section className="section portfolio-download-section" aria-labelledby="portfolio-download-heading">
+          <div className="container">
+            <div className="portfolio-download-card reveal">
+              <div className="portfolio-download-copy">
+                <span className="portfolio-download-kicker">Download portfolio</span>
+                <h2 id="portfolio-download-heading">Download the full QllmSoft portfolio</h2>
+                <p>
+                  10+ technical capabilities, delivery methodologies, and measurable client outcomes across six industries,
+                  including architecture approach, technology stack, and engagement models used for each engagement listed above.
+                </p>
+              </div>
+              <a
+                className="portfolio-download-btn"
+                href={PortfolioPdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+              >
+                Download full portfolio
+              </a>
             </div>
           </div>
         </section>
