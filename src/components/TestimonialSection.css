@@ -1,32 +1,49 @@
 .marquee-wrapper {
   overflow: hidden;
-  position: relative;
   width: 100%;
+  padding: 8px 0 18px;
 }
 
 .marquee-track {
   display: flex;
-  gap: 20px;
-  animation: scroll-left linear infinite;
+  width: max-content;
+ 
 }
+
+
 
 .marquee-content {
   display: flex;
+  flex-shrink: 0;
   gap: 20px;
+  padding-right: 20px;
 }
 
-/* 🔥 CARD FIX */
 .review-card {
-  min-width: 300px;
-  max-width: 320px;
-  background: #fff;
-  border-radius: 12px;
-  padding: 18px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  flex: 0 0 auto;
+  width: 300px;
+  min-width: 0;
+  max-width: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+@media (hover: hover) {
+  .review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.14);
+  }
+}
+
+
 
 /* Header */
 .review-header {
@@ -84,19 +101,13 @@
   to { transform: translateX(-50%); }
 }
 
-/* 🔥 TABLET */
 @media (max-width: 768px) {
-  .review-card {
-    min-width: 260px;
-    max-width: 260px;
-  }
+  .review-card { width: 270px; }
 }
 
-/* 🔥 MOBILE */
 @media (max-width: 480px) {
   .review-card {
-    min-width: 85%;
-    max-width: 85%;
+    width: min(260px, calc(100vw - 40px));
   }
 
   .review-card p {

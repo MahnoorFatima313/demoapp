@@ -53,16 +53,6 @@
   border-radius: 4px;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .home-page * {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-
 .qs-shape {
   position: absolute;
   border-radius: 42% 58% 65% 35% / 45% 40% 60% 55%;
@@ -698,6 +688,16 @@
 }
 .outsourcing-text strong { color: var(--qs-mustard-light); }
 
+.outsourcing-text .story-link {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid var(--qs-mustard);
+}
+.outsourcing-text .story-link:hover {
+  color: var(--qs-mustard-light);
+}
+
 .outsourcing-image img {
   width: 100%;
   max-width: 260px;
@@ -723,6 +723,32 @@
    ============================================================ */
 .projects-section { background: var(--qs-white); padding: 96px 0; }
 
+
+.projects-section,
+.testimonial-section,
+.tech-section {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.projects-section > *,
+.testimonial-section > *,
+.tech-section > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Touch devices: no sticky hover tilt */
+@media (hover: none) {
+  .service-card:hover,
+  .why-card:hover,
+  .case-card:hover,
+  .blog-preview-card:hover,
+  .process-card-lite:hover {
+    transform: none;
+  }
+}
+
 .tech-section {
   background: linear-gradient(180deg, var(--qs-white) 0%, var(--qs-gray-50) 100%);
   padding: 80px 0;
@@ -731,9 +757,9 @@
 /* ============================================================
    CASE STUDIES 
    ============================================================ */
-.case-grid {
+.home-page .case-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 34px;
   margin-top: 46px;
 }
@@ -790,8 +816,9 @@
 .case-card .case-solution { border-left-color: var(--qs-navy); }
 .case-card .case-result { border-left-color: var(--qs-mustard-dim); }
 
+
 @media (max-width: 1024px) {
-  .case-grid { grid-template-columns: 1fr; }
+  .home-page .case-grid { grid-template-columns: minmax(0, 1fr); }
 }
 
 /* ============================================================
@@ -1027,4 +1054,54 @@
 @media (max-width: 768px) {
   .cta-content h2 { font-size: 1.75rem; }
   .cta-content p { font-size: 1rem; }
+}
+
+/*removedspace between sections*/
+
+@media (max-width: 768px) {
+  .home-page .section,
+  .services-section,
+  .about-section,
+  .why-section,
+  .outsourcing-section,
+  .projects-section,
+  .blog-preview,
+  .faq-section,
+  .cta-section {
+    padding: 48px 0;
+  }
+
+  .tech-section,
+  .partners-section {
+    padding: 40px 0;
+  }
+
+  .home-page .section-title {
+    margin-bottom: 28px;
+  }
+
+  .case-grid,
+  .blog-preview-grid {
+    margin-top: 24px;
+    gap: 20px;
+  }
+}
+
+.about-text a.btn {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .about-text a.btn,
+  .cta-buttons .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+.home-page .marquee-track,
+.home-page .slide-track {
+  animation: none !important;
 }

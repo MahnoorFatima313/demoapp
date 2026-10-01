@@ -302,6 +302,12 @@
     text-align: center;
 }
 
+.project-sidebar-card .cta-btn,
+.project-sidebar-card .cta-btn:hover,
+.project-sidebar-card .cta-btn:focus-visible {
+    color: #fff;
+}
+
 @media (max-width: 992px) {
     .content-grid {
         grid-template-columns: 1fr;

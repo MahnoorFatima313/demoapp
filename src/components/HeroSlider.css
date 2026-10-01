@@ -3,8 +3,8 @@
 ═══════════════════════════════════════════════════════════ */
 .hero-video-wrapper {
   position: relative;
-  height: 90vh;
-  min-height: 520px;
+ 
+ min-height: 90vh;  
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -62,7 +62,7 @@
 }
 
 .hero-title {
-  font-size: 42px !important;
+  font-size: 42px ;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 18px;
@@ -123,35 +123,16 @@
    RESPONSIVE DESIGN
 ═══════════════════════════════════════════════════════════ */
 @media (max-width: 992px) {
-  .hero-video-wrapper {
-    height: 80vh;
-  }
-
-  .hero-title {
-    font-size: 2.25rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
-  }
+  .hero-video-wrapper { min-height: 80vh; height: auto; }
+  .hero-title { font-size: 2.25rem; }
 }
 
 @media (max-width: 768px) {
   .hero-video-wrapper {
-    height: 75vh;
+    min-height: 75vh;
+    height: auto;
+    padding: 40px 0 56px;
   }
-
-  .hero-title {
-    font-size: 1.85rem;
-  }
-
-  .hero-subtitle {
-    font-size: 0.95rem;
-    margin-bottom: 24px;
-  }
-
-  .hero-btn {
-    padding: 12px 28px;
-    font-size: 14px;
-  }
+  .hero-title { font-size: 1.85rem; }
+  .hero-btn { padding: 12px 28px; font-size: 14px; }
 }

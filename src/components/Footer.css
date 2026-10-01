@@ -275,3 +275,12 @@
     text-align: center;
   }
 }
+@media (max-width: 768px) {
+  .footer-social {
+    justify-content: center;
+  }
+}
+.footer-section:first-child {
+  align-items: center;
+  text-align: center;
+}

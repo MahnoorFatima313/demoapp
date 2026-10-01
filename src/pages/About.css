@@ -13,6 +13,79 @@
 .delay-1 { transition-delay: .1s; }
 .delay-2 { transition-delay: .2s; }
 .delay-3 { transition-delay: .3s; }
+.delay-4 { transition-delay: .4s; }
+
+.about-stats {
+  margin-top: 28px;
+  padding: 40px 0;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(34, 82, 132, 0.45), transparent 68%),
+    linear-gradient(135deg, #061426 0%, #0a1e36 52%, #07172a 100%);
+}
+
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  text-align: center;
+}
+
+.about-stat {
+  min-width: 0;
+  padding: 20px 12px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.about-stat-value {
+  display: block;
+  color: #f7c94b;
+  background: linear-gradient(180deg, #fff4c2 0%, #ffdc69 38%, #e5a91e 76%, #fff0a5 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.35px rgba(255, 239, 174, 0.55);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  text-shadow:
+    0 1px 0 #d69a19,
+    0 2px 0 #b77b10,
+    0 3px 0 #8f5c0b,
+    0 5px 9px rgba(0, 0, 0, 0.55);
+}
+
+.about-stat-label {
+  display: block;
+  margin-top: 8px;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.about-stat-note {
+  display: block;
+  margin-top: 5px;
+  color: #d0dbea;
+  font-size: 0.8rem;
+}
+
+.about-stat.reveal {
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+@media (max-width: 768px) {
+  .about-stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .about-stat-value { font-size: 1.8rem; }
+}
+
+@media (max-width: 360px) {
+  .about-stats { padding: 32px 0; }
+  .about-stats-grid { gap: 12px; }
+  .about-stat { padding: 18px 8px; }
+  .about-stat-value { font-size: 1.6rem; }
+  .about-stat-label { font-size: 0.85rem; }
+}
 
 /* Hero */
 .about-hero {
@@ -75,9 +148,12 @@
 
 /* CTA */
 .cta-section {
-  background: linear-gradient(135deg,#1e5aa8,#0d3a6e);
+  background: linear-gradient(135deg,#031937,#0d3a6e,#031937);
   position: relative;
   overflow: hidden;
+}
+.cta-section #cta-heading {
+  color: #fff;
 }
 .cta-section::after {
   content:'';
