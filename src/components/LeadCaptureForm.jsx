@@ -50,9 +50,7 @@ const LeadCaptureForm = ({
         from_name: name.trim(),
         user_email: email.trim(),
         subject: `🔥 New Lead Magnet Download: ${leadMagnet || "Inbound Query"}`,
-        message: customMessage,
-        user_phone_no: "Not Provided via Lead Magnet", 
-        user_company: "Not Provided via Lead Magnet"
+        message: customMessage
       };
 
       const result = await emailjs.send(
