@@ -1,35 +1,23 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import SEO from "../components/SEO";
 import { Link } from 'react-router-dom';
 import { Calendar, ArrowRight } from 'lucide-react';
-import { useInView } from 'react-intersection-observer';
 import blogPostsData from '../data/blogPostsData';
 import './Blog.css';
-import 'animate.css';
 import { schemaOrganization } from "../data/schema";
 
 /* Blog Card */
-const BlogCardItem = ({ slug, post, index }) => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-  });
-
+const BlogCardItem = ({ slug, post, priority }) => {
   return (
-    <article
-      ref={ref}
-      className={`blog-card animate__animated ${
-        inView ? 'animate__fadeInRight' : ''
-      }`}
-      style={{
-        opacity: inView ? 1 : 0,
-        animationDuration: '0.6s',
-        animationDelay: `${index * 0.12}s`,
-        animationFillMode: 'both',
-      }}
-    >
+    <article className="blog-card">
       <div className="blog-card-image">
-        <img src={post.image} alt={post.title} loading="lazy" />
+        <img
+          src={post.image}
+          alt={post.title}
+          loading={priority ? 'eager' : 'lazy'}
+          fetchPriority={priority ? 'high' : 'auto'}
+          decoding="async"
+        />
         <span className="blog-card-category">{post.category}</span>
       </div>
 
@@ -56,31 +44,9 @@ const BlogCardItem = ({ slug, post, index }) => {
 };
 const orgSchema = schemaOrganization;
 const Blog = () => {
-//  const blogPosts = Object.entries(blogPostsData);
-const blogPosts = Object.entries(blogPostsData).sort(
-  ([, a], [, b]) => new Date(b.date) - new Date(a.date)
-);
-  /* Hero reveal animation */
-  useEffect(() => {
-    const reveals = document.querySelectorAll('.reveal');
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-
-    reveals.forEach((el) => observer.observe(el));
-
-    return () => {
-      reveals.forEach((el) => observer.unobserve(el));
-    };
-  }, []);
+  const blogPosts = Object.entries(blogPostsData).sort(
+    ([, a], [, b]) => new Date(b.date) - new Date(a.date)
+  );
 
   return (
     <>
@@ -105,7 +71,7 @@ const blogPosts = Object.entries(blogPostsData).sort(
 
     <main className="blog-page">
       {/* Hero Section */}
-      <section className="blog-hero reveal">
+      <section className="blog-hero">
         <div className="container">
           <h1>Our Blogs</h1>
           <p>
@@ -129,7 +95,7 @@ const blogPosts = Object.entries(blogPostsData).sort(
                 key={slug}
                 slug={slug}
                 post={post}
-                index={index}
+                priority={index === 0}
               />
             ))}
           </div>
