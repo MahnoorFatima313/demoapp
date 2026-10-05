@@ -59,13 +59,6 @@ export const schemaOrganization = {
     "Cloud Solutions",
     "Software Outsourcing",
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: FACTS.freelancerRating,
-    reviewCount: FACTS.reviewCount.replace("+", ""),
-    bestRating: "5",
-    worstRating: "1",
-  },
   sameAs: [
     "https://www.linkedin.com/company/qllmsoft",
     "https://www.freelancer.com/u/mrprogrmmr",
