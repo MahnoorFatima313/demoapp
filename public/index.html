@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
 
+  <!-- Fallback title only. Each page's Helmet title replaces this. -->
+  <title>QllmSoft | Custom Software Development</title>
+
   <!-- Preconnect: only top 3 -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,14 +21,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet" />
   </noscript>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-
-
-
-
-  <!-- Font Awesome: NON-BLOCKING (already correct) -->
+  <!-- Font Awesome: NON-BLOCKING -->
   <link rel="stylesheet" 
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         media="print" onload="this.media='all'" />
@@ -34,12 +32,12 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   </noscript>
 
-
   <link rel="icon" href="%PUBLIC_URL%/qllm-soft-favicon.png" type="image/png" />
 
-  <!-- GA4: DELAYED 3s after load -->
+  <!-- GA4: DELAYED 3s after load. Skipped during react-snap prerendering. -->
   <script>
     window.addEventListener('load', function() {
+      if (/ReactSnap/.test(navigator.userAgent)) return;
       setTimeout(function() {
         var s = document.createElement('script');
         s.async = true;
@@ -53,23 +51,6 @@
       }, 3000);
     });
   </script>
-
-  <!-- Emergent: DEFERRED (was blocking) -->
-  <script defer src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
-
-  <!-- Visual edit iframes only -->
-  <script>
-    if (window.self !== window.top) {
-      var debugMonitorScript = document.createElement('script');
-      debugMonitorScript.src = 'https://assets.emergent.sh/scripts/debug-monitor.js';
-      document.head.appendChild(debugMonitorScript);
-      window.tailwind = window.tailwind || {};
-      tailwind.config = { corePlugins: { preflight: false } };
-      var tailwindScript = document.createElement('script');
-      tailwindScript.src = 'https://cdn.tailwindcss.com';
-      document.head.appendChild(tailwindScript);
-    }
-  </script>
 </head>
 
 <body>
@@ -79,9 +60,10 @@
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
 
-  <!-- PostHog: DELAYED 4s after load -->
+  <!-- PostHog: DELAYED 4s after load. Skipped during react-snap prerendering. -->
   <script>
     window.addEventListener('load', function() {
+      if (/ReactSnap/.test(navigator.userAgent)) return;
       setTimeout(function() {
         !(function (t, e) {
           var o, n, p, r;

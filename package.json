@@ -64,7 +64,8 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test": "craco test"
+    "test": "craco test",
+    "postbuild": "react-snap"
   },
   "browserslist": {
     "production": [
@@ -92,7 +93,62 @@
     "eslint-plugin-react-hooks": "5.2.0",
     "globals": "15.15.0",
     "postcss": "^8.4.49",
+    "react-snap": "^1.23.0",
     "tailwindcss": "^3.4.17"
+  },
+  "reactSnap": {
+  "puppeteerExecutablePath": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+  "concurrency": 1,
+  "include": [
+      "/",
+      "/services",
+      "/about",
+      "/contact",
+      "/blog",
+      "/projects",
+      "/write-for-us",
+      "/privacy-policy",
+      "/terms-of-services",
+      "/asp-net-core-development-services",
+      "/ecommerce-development-services",
+      "/custom-software-development-services",
+      "/website-development-services",
+      "/web-application-development-services",
+      "/api-development-services",
+      "/outsource-api-development-to-pakistan",
+      "/legacy-system-modernization-services",
+      "/mobile-app-development",
+      "/ai-powered-software-solutions",
+      "/wordpress-development-services",
+      "/custom-school-management-software-development",
+      "/custom-business-automation-solutions",
+      "/healthcare-software-development-pakistan",
+      "/education-software-development-pakistan",
+      "/real-estate-software-development",
+      "/finance-management-system",
+      "/hire-dotnet-developers-pakistan",
+      "/hire-react-developers-pakistan",
+      "/hire-angular-developers-pakistan",
+      "/outsource-web-development-to-pakistan",
+      "/outsource-software-development-to-pakistan",
+      "/software-development-cost-calculator",
+      "/software-project-requirements-checklist",
+      "/blog/csharp-desktop-application-development",
+      "/blog/scalable-ecommerce-development-for-smbs",
+      "/blog/mobile-app-devsecops-in-2026",
+      "/blog/shopify-isnt-scaling-what-companies-do-next",
+      "/blog/custom-vs-saas-ecommerce-for-growing-smbs",
+      "/blog/when-internal-software-slows-teams-instead-of-helping",
+      "/blog/role-based-access-problems-why-teams-break-systems",
+      "/blog/custom-software-for-financial-services-compliance-and-growth",
+      "/blog/legacy-system-modernization-without-downtime-or-data-loss",
+      "/blog/hiring-dotnet-developers-guide",
+      "/blog/best-software-house-in-pakistan",
+      "/blog/website-development-cost-in-pakistan",
+      "/blog/mobile-app-development-cost-in-pakistan",
+      "/blog/outsource-mobile-app-development-to-pakistan"
+    ],
+    "skipThirdPartyRequests": true
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
