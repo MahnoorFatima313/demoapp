@@ -377,7 +377,7 @@ button:focus-visible {
 /*global issue*/
 html, body, #root, .App, main {
   pointer-events: auto !important;
-  overflow-x: hidden !important;
+  overflow-x: clip !important;
 }
 
 @media (max-width: 480px) {

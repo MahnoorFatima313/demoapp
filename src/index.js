@@ -1,15 +1,24 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import { createRoot, hydrateRoot } from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import "@/index.css";
-import 'animate.css';
+import "animate.css";
 import App from "@/App";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
+const container = document.getElementById("root");
+
+const app = (
   <React.StrictMode>
     <HelmetProvider>
-    <App />
+      <App />
     </HelmetProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
+
+// If react-snap already put real HTML inside #root, attach to it (hydrate).
+// Otherwise (normal dev mode) render from scratch.
+if (container.hasChildNodes()) {
+  hydrateRoot(container, app);
+} else {
+  createRoot(container).render(app);
+}

@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 110px;
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -135,4 +135,8 @@
   }
   .hero-title { font-size: 1.85rem; }
   .hero-btn { padding: 12px 28px; font-size: 14px; }
+}
+
+@media (max-width: 640px) {
+  .hero-video-wrapper { margin-top: 102px; }
 }

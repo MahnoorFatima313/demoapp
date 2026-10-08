@@ -1,4 +1,4 @@
-.about-page { margin-top: 130px; }
+.about-page { margin-top: 110px; }
 
 /* Scroll Reveal */
 .reveal {
@@ -97,7 +97,7 @@
   padding: 90px 0;
   text-align: center;
   color: #fff;
-  margin-top: -50px;
+  margin-top: 0;
 }
 
 /* What Sets Apart */
@@ -202,7 +202,7 @@
 .vm-image img {
   width: 100%;
   height: 100%;       /* 🔥 THIS FIXES IT */
-  object-fit: cover; /* keeps image attractive */
+  object-fit: cover;
   transition: transform 0.6s ease;
 }
 
