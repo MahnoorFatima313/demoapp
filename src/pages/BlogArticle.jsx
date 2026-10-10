@@ -135,7 +135,7 @@ const BlogArticle = () => {
   const sections = post.sections || [];
 
   return (
-    <main className="blog-article-page">
+    <main className={`blog-article-page${slug === "role-based-vs-policy-based-authorization-asp-net-core" ? " blog-article-page--role-policy" : ""}`}>
 
      
      <SEO 
@@ -174,7 +174,7 @@ const BlogArticle = () => {
             </span>
             <span className="blog-article-author">
               <User size={14} />
-              QllmSoft Team
+              Zain ul Abideen
             </span>
           </div>
           <h1>{post.title}</h1>
