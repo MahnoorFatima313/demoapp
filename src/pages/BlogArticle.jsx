@@ -4,7 +4,7 @@ import { Calendar, ArrowLeft, User, Tag } from "lucide-react";
 import blogPostsData from "../data/blogPostsData";
 import "./BlogArticle.css";
 import SEO from '../components/SEO';
-import { schemaOrganization } from "../data/schema";
+
 
 // const BlogSection = ({ heading, paragraphs, list }) => (
 //   <div className="blog-article-section">
@@ -30,7 +30,7 @@ import { schemaOrganization } from "../data/schema";
 //   </div>
 // );
 
-const orgSchema = schemaOrganization;
+
 const SectionListItem = ({ text }) => <li>{text}</li>;
 
 const SectionParagraph = ({ text }) => {
@@ -55,25 +55,18 @@ const SectionParagraph = ({ text }) => {
   );
 };
 
-const BlogSection = ({ heading, paragraphs, list, html, table ,detailedList }) => (
+const BlogSection = ({ heading, paragraphs, list, html, table, detailedList }) => (
   <div className="blog-article-section">
-    {/* Render RAW HTML if provided */}
+    {heading && <h2>{heading}</h2>}
+
     {html && <div dangerouslySetInnerHTML={{ __html: html }} />}
 
-    {/* Normal structured rendering */}
     {!html && (
       <>
-        {heading && <h2>{heading}</h2>}
+        {paragraphs && paragraphs.map((p, i) => <SectionParagraph key={i} text={p} />)}
 
-        {paragraphs &&
-          paragraphs.map((p, i) => <SectionParagraph key={i} text={p} />)}
-
-
-       
-
-        
         {detailedList && (
-          <div className="detailed-blog-list" style={{ marginTop: '1.5rem', marginBottom: '1.5rem' }}>
+          <div className="detailed-blog-list" style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}>
             {detailedList.map((item, itemIdx) => (
               <div key={itemIdx} className="detailed-blog-card" style={{ padding: '15px', background: '#f9f9f9', borderRadius: '8px', marginBottom: '15px', borderLeft: '4px solid #0066cc' }}>
                 <h3 style={{ margin: '0 0 5px 0', color: '#111' }}>{item.name}</h3>
@@ -91,15 +84,14 @@ const BlogSection = ({ heading, paragraphs, list, html, table ,detailedList }) =
 
 
 
-        {list && (
+       {list && (
           <ul className="blog-article-list">
-            {list.map((item, i) => (
-              <SectionListItem key={i} text={item} />
-            ))}
+            {list.map((item, i) => <SectionListItem key={i} text={item} />)}
           </ul>
         )}
       </>
     )}
+ 
     {table && (
       <div className="blog-table-wrapper">
         <table className="blog-table">
@@ -132,28 +124,35 @@ const BlogArticle = () => {
     return <Navigate to="/blog" replace />;
   }
 
+  const SITE = "https://qllmsoft.com";
+  const abs = (src) =>
+    !src ? undefined : /^https?:/.test(src) ? src : `${SITE}${src}`;
+
+  const schemas = (post.schemas || []).map((s) =>
+    ["Article", "TechArticle"].includes(s["@type"])
+      ? { ...s, image: [abs(post.image), abs(post.secondaryImage)].filter(Boolean) }
+      : s
+  );
+
   const sections = post.sections || [];
 
   return (
     <main className={`blog-article-page${slug === "role-based-vs-policy-based-authorization-asp-net-core" ? " blog-article-page--role-policy" : ""}`}>
 
      
-     <SEO 
-        title={post.seoTitle || post.title} 
-        description={post.description}
-        url={post.canonicalUrl}
-        image={post.image}
-        schema={post.schemas && post.schemas[0]} 
-      />
+   <SEO
+  title={post.seoTitle || post.title}
+  description={post.description}
+  url={post.canonicalUrl}
+  image={abs(post.image)}
+  schema={schemas[0]}
+/>
 
-
-      {post.schemas && post.schemas.slice(1).map((additionalSchema, index) => (
-        <script key={index} type="application/ld+json">
-          {JSON.stringify(additionalSchema)}
-        </script>
-      ))}
-
-
+{schemas.slice(1).map((additionalSchema, index) => (
+  <script key={index} type="application/ld+json">
+    {JSON.stringify(additionalSchema)}
+  </script>
+))}
 
 
       {/* Hero Section */}
@@ -174,7 +173,7 @@ const BlogArticle = () => {
             </span>
             <span className="blog-article-author">
               <User size={14} />
-              Zain ul Abideen
+              {post.schemas?.[0]?.author?.name || "Zain ul Abedin"}
             </span>
           </div>
           <h1>{post.title}</h1>

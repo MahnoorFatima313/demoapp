@@ -40,7 +40,7 @@ import customvssaas2 from '../assets/Blog_Imgs/customvssaas.webp';
 import guide2 from '../assets/Blog_Imgs/operationalefficiencyguide.webp';
 import legacymodernization from '../assets/Blog_Imgs/legacymodernization2.webp';
 import softwareforfinancial from '../assets/Blog_Imgs/softwareforfinancial.webp';
-import { schemaOrganization } from "../data/schema";
+
 
 // ─── Shared Site Constants ───────────────────────────────────
 const SITE_URL   = "https://qllmsoft.com";
@@ -48,8 +48,28 @@ const SITE_NAME  = "QllmSoft";
 const BLOG_BASE  = `${SITE_URL}/blog`;
 
 // ─── Shared Organization Schema ──────────────────────────────
-const orgSchema = schemaOrganization;
 
+const publisherSchema = {
+  "@type": "Organization",
+  "name": SITE_NAME,
+  "url": SITE_URL,
+  "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` }
+};
+
+const AUTHORS = {
+  zain: {
+    name: "Zain Ul Abedin",
+    title: "Founder & CEO",
+    sameAs: ["https://www.linkedin.com/in/zain-ul-abedin-b09a613b/"],
+  },
+};
+
+const authorSchema = (a) => ({
+  "@type": "Person",
+  name: a.name,
+  url: a.url,
+  sameAs: a.sameAs,
+});
 // ─── Helper: build BreadcrumbList schema ─────────────────────
 const breadcrumb = (slug, label) => ({
   "@context": "https://schema.org",
@@ -113,8 +133,8 @@ export const blogPostsData = {
         "image": ["https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&q=80"],
         "datePublished": "2026-01-17T08:00:00+05:00",
         "dateModified": "2026-05-18T14:10:00+05:00",
-        "author": orgSchema,
-        "publisher": orgSchema,
+        "author": authorSchema(AUTHORS.zain),
+        "publisher": publisherSchema,
         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/best-software-house-in-pakistan` },
         "about": [
           { "@type": "Thing", "name": "Software Development Companies Pakistan" },
@@ -352,8 +372,8 @@ export const blogPostsData = {
         "image": [CsharpImg, csharpsecondaryimg],
         "datePublished": "2026-01-20T09:00:00+05:00",
         "dateModified": "2026-05-18T15:00:00+05:00",
-        "author": orgSchema,
-        "publisher": orgSchema,
+        "author": authorSchema(AUTHORS.zain),
+        "publisher": publisherSchema,
         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/csharp-desktop-application-development` },
         "about": [
           { "@type": "Thing", "name": "C# Desktop Development" },
@@ -520,8 +540,8 @@ export const blogPostsData = {
         "image": [websiteCostImg],
         "datePublished": "2026-01-13T10:00:00+05:00",
         "dateModified": "2026-05-18T16:20:00+05:00",
-        "author": orgSchema,
-        "publisher": orgSchema,
+        "author": authorSchema(AUTHORS.zain),
+        "publisher": publisherSchema,
         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/website-development-cost-in-pakistan` }
       },
       {
@@ -679,8 +699,8 @@ export const blogPostsData = {
         "image": [outsourceimg, outsourcesecondary],
         "datePublished": "2026-01-31T11:00:00+05:00",
         "dateModified": "2026-05-18T17:00:00+05:00",
-        "author": orgSchema,
-        "publisher": orgSchema,
+        "author": authorSchema(AUTHORS.zain),
+        "publisher": publisherSchema,
         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/outsource-software-development-to-pakistan` }
       },
       {
@@ -830,8 +850,8 @@ export const blogPostsData = {
         "image": [aipowered, aipoweredsecondary],
         "datePublished": "2026-01-25T10:30:00+05:00",
         "dateModified": "2026-05-18T18:15:00+05:00",
-        "author": orgSchema,
-        "publisher": orgSchema,
+        "author": authorSchema(AUTHORS.zain),
+        "publisher": publisherSchema,
         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/ai-powered-software-solutions` }
       },
       {
@@ -981,8 +1001,8 @@ export const blogPostsData = {
         "image": [educationsoftware, educationsecondary],
         "datePublished": "2026-01-31T11:15:00+05:00",
         "dateModified": "2026-05-18T19:00:00+05:00",
-        "author": orgSchema,
-        "publisher": orgSchema,
+        "author": authorSchema(AUTHORS.zain),
+        "publisher": publisherSchema,
         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/education-software-development-pakistan` }
       },
       {
@@ -1124,8 +1144,8 @@ export const blogPostsData = {
         "image": [mobileappimg, mobileappsecondryimg],
         "datePublished": "2026-01-08T09:00:00+05:00",
         "dateModified": "2026-05-18T20:00:00+05:00",
-        "author": orgSchema,
-        "publisher": orgSchema,
+        "author": authorSchema(AUTHORS.zain),
+        "publisher": publisherSchema,
         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/mobile-app-development-cost-in-pakistan` }
       },
       {
@@ -1283,8 +1303,8 @@ export const blogPostsData = {
         "image": [outsourcemobileappimg, outsourcemobileapp2],
         "datePublished": "2026-01-08T09:00:00+05:00",
         "dateModified": "2026-05-18T20:30:00+05:00",
-        "author": orgSchema,
-        "publisher": orgSchema,
+        "author": authorSchema(AUTHORS.zain),
+        "publisher": publisherSchema,
         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/outsource-mobile-app-development-to-pakistan` }
       },
       {
@@ -1426,8 +1446,8 @@ export const blogPostsData = {
         "description": "Custom scalable eCommerce platforms for small and mid sized businesses  secure, performant, and built to grow with your operations.",
         "datePublished": "2026-01-28",
         "dateModified": "2026-05-19",
-        "author": orgSchema,
-        "publisher": orgSchema,
+        "author": authorSchema(AUTHORS.zain),
+        "publisher": publisherSchema,
         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/scalable-ecommerce-development-for-smbs` }
       }
     ],
@@ -1532,8 +1552,8 @@ export const blogPostsData = {
         "description": "Expert ASP.NET Core development , scalable web applications, REST APIs, cloud native solutions, and legacy modernization using .NET 8/9.",
         "datePublished": "2026-01-22",
         "dateModified": "2026-05-19", 
-        "author": orgSchema,
-        "publisher": orgSchema,
+        "author": authorSchema(AUTHORS.zain),
+        "publisher": publisherSchema,
         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/asp-net-core-development` }
       },
       {
@@ -1650,8 +1670,8 @@ export const blogPostsData = {
         "description": "Hire skilled Angular developers in Pakistan for SPAs and enterprise web applications. Flexible models, competitive rates, deep TypeScript and Angular expertise.",
         "datePublished": "2026-01-31T09:00:00+05:00",
         "dateModified": "2026-05-19T16:00:00+05:00", 
-        "author": orgSchema,
-        "publisher": orgSchema,
+        "author": authorSchema(AUTHORS.zain),
+        "publisher": publisherSchema,
         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/hire-angular-developers-pakistan` }
       }
     ],
@@ -1758,8 +1778,8 @@ export const blogPostsData = {
         "description": "A complete guide to integrating DevSecOps practices into mobile app development for iOS and Android in 2026.",
         "datePublished": "2026-04-06T09:00:00+05:00",
         "dateModified": "2026-05-19T17:00:00+05:00", 
-        "author": orgSchema,
-        "publisher": orgSchema,
+        "author": authorSchema(AUTHORS.zain),
+        "publisher": publisherSchema,
         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/mobile-app-devsecops-in-2026` }
       },
       {
@@ -1922,8 +1942,8 @@ export const blogPostsData = {
         "description": "Practical decision guide for eCommerce businesses hitting Shopify's scaling limits  with three proven paths for regaining operational control.",
         "datePublished": "2026-04-22T09:00:00+05:00",
         "dateModified": "2026-05-19T17:30:00+05:00", 
-        "author": orgSchema,
-        "publisher": orgSchema,
+        "author": authorSchema(AUTHORS.zain),
+        "publisher": publisherSchema,
         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/shopify-isnt-scaling-what-companies-do-next` }
       },
       {
@@ -2089,8 +2109,8 @@ export const blogPostsData = {
         "description": "When SaaS eCommerce platforms start limiting growth — how SMBs evaluate the decision between staying on SaaS, adding a custom layer, or migrating to custom systems.",
         "datePublished": "2026-04-23T09:00:00+05:00",
         "dateModified": "2026-05-18T23:30:00+05:00",
-        "author": orgSchema,
-        "publisher": orgSchema,
+        "author": authorSchema(AUTHORS.zain),
+        "publisher": publisherSchema,
         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/custom-vs-saas-ecommerce-for-growing-smbs` }
       },
       {
@@ -2258,8 +2278,8 @@ export const blogPostsData = {
         "description": "Complete 2026 guide to hiring dedicated .NET developers in Pakistan real market rates, skill requirements, engagement models, and QllmSoft's transparent pricing packages.",
         "datePublished": "2026-04-23T09:00:00+05:00",
         "dateModified": "2026-05-18T23:45:00+05:00",
-        "author": orgSchema,
-        "publisher": orgSchema,
+        "author": authorSchema(AUTHORS.zain),
+        "publisher": publisherSchema,
         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/hiring-dotnet-developers-guide` }
       },
       {
@@ -2409,8 +2429,8 @@ export const blogPostsData = {
         "description": "A practical guide to safely modernizing legacy software systems using phased migration — avoiding the big-bang replacement failures that cause downtime and data loss.",
         "datePublished": "2026-04-24T09:00:00+05:00",
         "dateModified": "2026-05-18T23:50:00+05:00",
-        "author": orgSchema,
-        "publisher": orgSchema,
+        "author": authorSchema(AUTHORS.zain),
+        "publisher": publisherSchema,
         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/legacy-system-modernization-without-downtime-or-data-loss` }
       },
       {
@@ -2557,8 +2577,8 @@ export const blogPostsData = {
         "description": "How to identify when internal tools are hurting team execution rather than supporting it and a practical guide to fixing operational software systems.",
         "datePublished": "2026-04-24T09:00:00+05:00",
         "dateModified": "2026-05-18T23:55:00+05:00",
-        "author": orgSchema,
-        "publisher": orgSchema,
+        "author": authorSchema(AUTHORS.zain),
+        "publisher": publisherSchema,
         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/when-internal-software-slows-teams-instead-of-helping` }
       }
     ],
@@ -2684,8 +2704,8 @@ export const blogPostsData = {
         "description": "How rigid or misaligned access controls create dangerous workarounds and how organizations design adaptive RBAC systems that protect security without blocking productivity.",
         "datePublished": "2026-04-25T09:00:00+05:00",
         "dateModified": "2026-05-18T23:58:00+05:00",
-        "author": orgSchema,
-        "publisher": orgSchema,
+        "author": authorSchema(AUTHORS.zain),
+        "publisher": publisherSchema,
         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/role-based-access-problems-why-teams-break-systems` }
       }
     ],
@@ -2771,6 +2791,12 @@ export const blogPostsData = {
           "Comprehensive audit visibility showing who performed which actions and why.",
           "Access rules designed to evolve with organizational growth without requiring architectural rebuilds."
         ]
+      },
+      {
+        heading: "Choosing Roles and Policies in ASP.NET Core",
+        html: `
+          <p>For teams implementing these controls in ASP.NET Core, our guide to <a href="https://qllmsoft.com/blog/role-based-vs-policy-based-authorization-asp-net-core">role-based vs policy-based authorization</a> explains when broad roles are enough and when fine-grained policies are a better fit.</p>
+        `
       }
     ]
   },
@@ -2817,8 +2843,8 @@ export const blogPostsData = {
         "description": "Why off-the-shelf platforms fall short in regulated financial environments  and how custom-built systems deliver the compliance architecture, audit trails, and role-based controls financial services firms need.",
         "datePublished": "2026-04-26T09:00:00+05:00",
         "dateModified": "2026-05-18T23:59:00+05:00",
-        "author": orgSchema,
-        "publisher": orgSchema,
+        "author": authorSchema(AUTHORS.zain),
+        "publisher": publisherSchema,
         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/custom-software-for-financial-services-compliance-and-growth` }
       },
       {
@@ -2928,6 +2954,12 @@ export const blogPostsData = {
           "Secure API integrations connecting to external banking systems, payment processors, and regulatory reporting platforms.",
           "Enforced separation of duties preventing single points of control over sensitive financial processes."
         ]
+      },
+      {
+        heading: "Implementing Fine-Grained Authorization in ASP.NET Core",
+        html: `
+          <p>When building these controls on ASP.NET Core, choosing the right authorization model matters. See our practical guide to <a href="https://qllmsoft.com/blog/role-based-vs-policy-based-authorization-asp-net-core">role-based vs policy-based authorization in ASP.NET Core</a> for examples of roles, policies, and resource-based rules.</p>
+        `
       }
     ]
   },
@@ -2976,8 +3008,8 @@ export const blogPostsData = {
         "image": [rolePolicyHeroImage, rolePolicyFlowImage],
         "datePublished": "2026-10-10T09:00:00+05:00",
         "dateModified": "2026-10-10T09:00:00+05:00",
-        "author": orgSchema,
-        "publisher": orgSchema,
+        "author": authorSchema(AUTHORS.zain),
+        "publisher": publisherSchema,
         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/role-based-vs-policy-based-authorization-asp-net-core` }
       }
     ],

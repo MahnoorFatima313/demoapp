@@ -192,7 +192,7 @@ export default function AspnetCoreDevelopmentServices() {
                 <span className="step-num">01</span>
                 <div>
                   <h4>Architecture & Security Scoping</h4>
-                  <p>We map the data flow and decide on the identity approach — OAuth2, OpenID Connect, or JWT — before a controller is written, so security isn't retrofitted later.</p>
+                  <p>We map the data flow and decide on the identity approach — OAuth2, OpenID Connect, or JWT — before a controller is written, so security isn't retrofitted later. For authorization design, read our guide to <Link to="/blog/role-based-vs-policy-based-authorization-asp-net-core">role-based vs policy-based authorization in ASP.NET Core</Link>.</p>
                 </div>
               </li>
               <li className="aspnet-process__item">
