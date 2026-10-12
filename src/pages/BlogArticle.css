@@ -234,6 +234,38 @@
   box-shadow: 0 10px 20px rgba(237, 183, 2, 0.25);
 }
 
+.blog-article-page--role-policy .blog-article-section h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0f2a4a;
+  margin: 1.5rem 0 1rem;
+  padding-bottom: 12px;
+  position: relative;
+  letter-spacing: 0.2px;
+}
+
+.blog-article-page--role-policy .blog-article-section h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(226,232,240,1), rgba(226,232,240,0));
+}
+
+.blog-article-page--role-policy .blog-article-section h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  width: 64px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #edb702 0%, #facc15 55%, #ffe58a 100%);
+  box-shadow: 0 10px 20px rgba(237, 183, 2, 0.25);
+}
+
 
 .blog-article-list {
   list-style: none;

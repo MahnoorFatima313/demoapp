@@ -29,6 +29,11 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+Before each production build, `prebuild` regenerates `public/sitemap.xml` from
+the static routes in `src/App.js` and the article slugs in
+`src/data/blogPostsData.js`. Add new pages to the app routes and new articles to
+the blog data; the sitemap will include them automatically on the next build.
+
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**

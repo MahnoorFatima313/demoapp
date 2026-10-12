@@ -1,319 +1,332 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Core Homepage -->
-  <url>
+<url>
     <loc>https://qllmsoft.com/</loc>
     <lastmod>2026-08-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- Primary Commercial Pillar: Services Index -->
-  <url>
-    <loc>https://qllmsoft.com/services</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Core Commercial & Technical Service Pages -->
-  <url>
-    <loc>https://qllmsoft.com/asp-net-core-development-services</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://qllmsoft.com/ecommerce-development-services</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://qllmsoft.com/custom-software-development-services</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://qllmsoft.com/website-development-services</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://qllmsoft.com/web-application-development-services</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://qllmsoft.com/api-development-services</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://qllmsoft.com/outsource-api-development-to-pakistan</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://qllmsoft.com/legacy-system-modernization-services</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://qllmsoft.com/mobile-app-development</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://qllmsoft.com/ai-powered-software-solutions</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://qllmsoft.com/document-control-software</loc>
-    <lastmod>2026-09-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- ADDED 2026-09-21: recreated service pages, newly live in App.js -->
-  <url>
-    <loc>https://qllmsoft.com/wordpress-development-services</loc>
-    <lastmod>2026-09-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://qllmsoft.com/custom-school-management-software-development</loc>
-    <lastmod>2026-09-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://qllmsoft.com/custom-business-automation-solutions</loc>
-    <lastmod>2026-09-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Industry-Specific Software Solutions -->
-  <url>
-    <loc>https://qllmsoft.com/healthcare-software-development-pakistan</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://qllmsoft.com/education-software-development-pakistan</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://qllmsoft.com/real-estate-software-development</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://qllmsoft.com/finance-management-system</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Hiring & Outsourcing Intent Clusters -->
-  <url>
-    <loc>https://qllmsoft.com/hire-dotnet-developers-pakistan</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://qllmsoft.com/hire-react-developers-pakistan</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://qllmsoft.com/hire-angular-developers-pakistan</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://qllmsoft.com/outsource-web-development-to-pakistan</loc>
-    <lastmod>2026-09-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://qllmsoft.com/software-development-cost-calculator</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://qllmsoft.com/software-project-requirements-checklist</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Trust, Community & Informational Pages -->
-  <url>
-    <loc>https://qllmsoft.com/contact</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://qllmsoft.com/blog</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://qllmsoft.com/write-for-us</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://qllmsoft.com/projects</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
+<url>
     <loc>https://qllmsoft.com/about</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
-  <url>
+<url>
+    <loc>https://qllmsoft.com/services</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/projects</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+<url>
     <loc>https://qllmsoft.com/privacy-policy</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-  <url>
+<url>
     <loc>https://qllmsoft.com/terms-of-services</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-
-  <!-- Blog Articles -->
-  <url>
-    <loc>https://qllmsoft.com/blog/csharp-desktop-application-development</loc>
+<url>
+    <loc>https://qllmsoft.com/blog</loc>
     <lastmod>2026-08-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/contact</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/custom-software-development-services</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/website-development-services</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/api-development-services</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/hire-dotnet-developers-pakistan</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/mobile-app-development</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/outsource-software-development-to-pakistan</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/ai-powered-software-solutions</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/hire-react-developers-pakistan</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/hire-angular-developers-pakistan</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/healthcare-software-development-pakistan</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/education-software-development-pakistan</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/legacy-system-modernization-services</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/web-application-development-services</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/outsource-api-development-to-pakistan</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/real-estate-software-development</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/finance-management-system</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/write-for-us</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://qllmsoft.com/blog/scalable-ecommerce-development-for-smbs</loc>
-    <lastmod>2026-08-05</lastmod>
+<url>
+    <loc>https://qllmsoft.com/outsource-web-development-to-pakistan</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://qllmsoft.com/blog/mobile-app-devsecops-in-2026</loc>
-    <lastmod>2026-08-05</lastmod>
+<url>
+    <loc>https://qllmsoft.com/software-development-cost-calculator</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://qllmsoft.com/blog/shopify-isnt-scaling-what-companies-do-next</loc>
-    <lastmod>2026-08-05</lastmod>
+<url>
+    <loc>https://qllmsoft.com/software-project-requirements-checklist</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://qllmsoft.com/blog/custom-vs-saas-ecommerce-for-growing-smbs</loc>
-    <lastmod>2026-08-05</lastmod>
+<url>
+    <loc>https://qllmsoft.com/ecommerce-development-services</loc>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://qllmsoft.com/blog/when-internal-software-slows-teams-instead-of-helping</loc>
-    <lastmod>2026-08-05</lastmod>
+<url>
+    <loc>https://qllmsoft.com/asp-net-core-development-services</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/wordpress-development-services</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://qllmsoft.com/blog/role-based-access-problems-why-teams-break-systems</loc>
-    <lastmod>2026-08-05</lastmod>
+<url>
+    <loc>https://qllmsoft.com/custom-school-management-software-development</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://qllmsoft.com/blog/custom-software-for-financial-services-compliance-and-growth</loc>
-    <lastmod>2026-08-05</lastmod>
+<url>
+    <loc>https://qllmsoft.com/custom-business-automation-solutions</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://qllmsoft.com/blog/legacy-system-modernization-without-downtime-or-data-loss</loc>
-    <lastmod>2026-08-05</lastmod>
+<url>
+    <loc>https://qllmsoft.com/outsource-mobile-app-development-to-pakistan</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://qllmsoft.com/blog/hiring-dotnet-developers-guide</loc>
-    <lastmod>2026-08-20</lastmod>
+<url>
+    <loc>https://qllmsoft.com/mobile-app-development-cost-in-pakistan</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
-
-  <!-- Cannibalization fix: canonical winners added 2026-09-13 -->
-  <url>
+<url>
+    <loc>https://qllmsoft.com/document-control-software</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
     <loc>https://qllmsoft.com/blog/best-software-house-in-pakistan</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
+<url>
+    <loc>https://qllmsoft.com/blog/csharp-desktop-application-development</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
     <loc>https://qllmsoft.com/blog/website-development-cost-in-pakistan</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
+<url>
     <loc>https://qllmsoft.com/blog/outsource-software-development-to-pakistan</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <url>
+<url>
+    <loc>https://qllmsoft.com/blog/ai-powered-software-solutions</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/blog/education-software-development-pakistan</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+<url>
     <loc>https://qllmsoft.com/blog/mobile-app-development-cost-in-pakistan</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
+<url>
     <loc>https://qllmsoft.com/blog/outsource-mobile-app-development-to-pakistan</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-<!-- Individual /blog/* posts beyond those listed above should only be
-       added once real content is confirmed in view-source for each
-       (i.e. after the CSR/prerendering fix is live). Submitting a blank
-       JS shell just feeds Google more of the exact problem being fixed. -->
-
+<url>
+    <loc>https://qllmsoft.com/blog/scalable-ecommerce-development-for-smbs</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/blog/asp-net-core-development</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/blog/hire-angular-developers-pakistan</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/blog/mobile-app-devsecops-in-2026</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/blog/shopify-isnt-scaling-what-companies-do-next</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/blog/custom-vs-saas-ecommerce-for-growing-smbs</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/blog/hiring-dotnet-developers-guide</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/blog/legacy-system-modernization-without-downtime-or-data-loss</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/blog/when-internal-software-slows-teams-instead-of-helping</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/blog/role-based-access-problems-why-teams-break-systems</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/blog/custom-software-for-financial-services-compliance-and-growth</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/blog/role-based-vs-policy-based-authorization-asp-net-core</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
