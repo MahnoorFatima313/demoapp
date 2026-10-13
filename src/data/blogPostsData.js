@@ -5,6 +5,7 @@
 // Last Updated: May 2026
 // ============================================================
 
+import { articleAuthorSchema } from "./authorsData";
 import shopifyImg from "../assets/shopify.webp";
 import LegacyModernization from "../assets/Legacy-system-risk.webp";
 import CustomvsEcommerceImg from "../assets/SaaS-Ecommerce.webp";
@@ -42,6 +43,7 @@ import legacymodernization from '../assets/Blog_Imgs/legacymodernization2.webp';
 import softwareforfinancial from '../assets/Blog_Imgs/softwareforfinancial.webp';
 
 
+
 // ─── Shared Site Constants ───────────────────────────────────
 const SITE_URL   = "https://qllmsoft.com";
 const SITE_NAME  = "QllmSoft";
@@ -64,12 +66,8 @@ const AUTHORS = {
   },
 };
 
-const authorSchema = (a) => ({
-  "@type": "Person",
-  name: a.name,
-  url: a.url,
-  sameAs: a.sameAs,
-});
+const authorSchema = (a) => ({ "@type": "Person", name: a.name, sameAs: a.sameAs });
+
 // ─── Helper: build BreadcrumbList schema ─────────────────────
 const breadcrumb = (slug, label) => ({
   "@context": "https://schema.org",
@@ -2805,6 +2803,7 @@ export const blogPostsData = {
   // 19. CUSTOM SOFTWARE FOR FINANCIAL SERVICES
   // ══════════════════════════════════════════════════════════
   "custom-software-for-financial-services-compliance-and-growth": {
+    author: "ali-ilyas",
     title: "Custom Software for Financial Services | Compliance & Scalable Growth",
     seoTitle: "Custom Financial Services Software | Compliance, Security & Scalable Growth",
     description: "Financial services firms operate under strict regulatory pressure that off the shelf software cannot fully accommodate. This guide explains why custom systems enable both regulatory compliance and scalable, secure business growth.",
@@ -2843,7 +2842,7 @@ export const blogPostsData = {
         "description": "Why off-the-shelf platforms fall short in regulated financial environments  and how custom-built systems deliver the compliance architecture, audit trails, and role-based controls financial services firms need.",
         "datePublished": "2026-04-26T09:00:00+05:00",
         "dateModified": "2026-05-18T23:59:00+05:00",
-        "author": authorSchema(AUTHORS.zain),
+        "author": articleAuthorSchema("ali-ilyas"),
         "publisher": publisherSchema,
         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/custom-software-for-financial-services-compliance-and-growth` }
       },
@@ -2969,6 +2968,7 @@ export const blogPostsData = {
   // 20. ROLE-BASED VS POLICY-BASED AUTHORIZATION IN ASP.NET CORE
   // ══════════════════════════════════════════════════════════
   "role-based-vs-policy-based-authorization-asp-net-core": {
+    author: "mahnoor-fatima",
     title: "Role-Based vs Policy-Based Authorization in ASP.NET Core: Which One Should You Use?",
     seoTitle: "Role-Based vs Policy-Based Authorization in ASP.NET Core (With Code Examples)",
     description: "Not sure whether to use roles or policies in ASP.NET Core? Learn how each approach works, where roles fall short, and how to combine both safely, with clear C# examples.",
@@ -3008,7 +3008,7 @@ export const blogPostsData = {
         "image": [rolePolicyHeroImage, rolePolicyFlowImage],
         "datePublished": "2026-10-10T09:00:00+05:00",
         "dateModified": "2026-10-10T09:00:00+05:00",
-        "author": authorSchema(AUTHORS.zain),
+        "author": articleAuthorSchema("mahnoor-fatima"),
         "publisher": publisherSchema,
         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/role-based-vs-policy-based-authorization-asp-net-core` }
       }

@@ -16,6 +16,7 @@ import WordPressDevelopmentServices from "./pages/WordPressDevelopmentServices";
 import CustomSchoolManagementSoftwareDevelopment from "./pages/CustomSchoolManagementSoftwareDevelopment";
 import CustomBusinessAutomationSolutions from "./pages/CustomBusinessAutomationSolutions";
 import DocumentControlSoftware from "./pages/DocumentControlSoftware";
+import AuthorPage from "./pages/AuthorPage";
 // Lazy loaded pages - each page loads only when visited
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -190,6 +191,7 @@ function App() {
 								path="/mobile-app-development-cost-in-pakistan"
 								element={<MobileAppDevelopmentCost />}
 							/>
+							<Route path="/author/:authorSlug" element={<AuthorPage />} />
 							
 
 <Route

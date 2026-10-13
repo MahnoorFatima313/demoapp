@@ -48,9 +48,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-/*services pages*/
-
 <url>
     <loc>https://qllmsoft.com/custom-software-development-services</loc>
     <lastmod>2026-06-01</lastmod>
@@ -216,12 +213,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-
-
-/*blog posts*/
-
-
 <url>
     <loc>https://qllmsoft.com/blog/best-software-house-in-pakistan</loc>
     <lastmod>2026-09-13</lastmod>
