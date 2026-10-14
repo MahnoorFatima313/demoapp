@@ -1003,12 +1003,7 @@ const EducationSoftware = () => {
         </section>
 
         {/* ── TESTIMONIALS ── */}
-        <section
-          className="section testimonial-section"
-          aria-labelledby="testimonials-heading"
-          itemScope
-          itemType="https://schema.org/Review"
-        >
+       <section className="section testimonial-section" aria-labelledby="testimonials-heading">
           <h2 id="testimonials-heading" className="sr-only">
             Client Reviews, QllmSoft Software Development agency
           </h2>

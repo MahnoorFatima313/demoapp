@@ -3,34 +3,13 @@ import { useParams, Navigate, Link } from "react-router-dom";
 import { Calendar, ArrowLeft, User, Tag } from "lucide-react";
 import blogPostsData from "../data/blogPostsData";
 import "./BlogArticle.css";
-import SEO from '../components/SEO';
-import { schemaOrganization } from "../data/schema";
+import SEO from "../components/SEO";
+import {
+  authorsData,
+  DEFAULT_AUTHOR,
+  articleAuthorSchema,
+} from "../data/authorsData";
 
-// const BlogSection = ({ heading, paragraphs, list }) => (
-//   <div className="blog-article-section">
-//     {heading && <h2>{heading}</h2>}
-//     {paragraphs && paragraphs.length > 0 && <SectionParagraph text={paragraphs[0]} />}
-//     {paragraphs && paragraphs.length > 1 && <SectionParagraph text={paragraphs[1]} />}
-//     {paragraphs && paragraphs.length > 2 && <SectionParagraph text={paragraphs[2]} />}
-//     {paragraphs && paragraphs.length > 3 && <SectionParagraph text={paragraphs[3]} />}
-//     {list && (
-//       <ul className="blog-article-list">
-//         {list.length > 0 && <SectionListItem text={list[0]} />}
-//         {list.length > 1 && <SectionListItem text={list[1]} />}
-//         {list.length > 2 && <SectionListItem text={list[2]} />}
-//         {list.length > 3 && <SectionListItem text={list[3]} />}
-//         {list.length > 4 && <SectionListItem text={list[4]} />}
-//         {list.length > 5 && <SectionListItem text={list[5]} />}
-//         {list.length > 6 && <SectionListItem text={list[6]} />}
-//         {list.length > 7 && <SectionListItem text={list[7]} />}
-//         {list.length > 8 && <SectionListItem text={list[8]} />}
-//         {list.length > 9 && <SectionListItem text={list[9]} />}
-//       </ul>
-//     )}
-//   </div>
-// );
-
-const orgSchema = schemaOrganization;
 const SectionListItem = ({ text }) => <li>{text}</li>;
 
 const SectionParagraph = ({ text }) => {
@@ -55,41 +34,64 @@ const SectionParagraph = ({ text }) => {
   );
 };
 
-const BlogSection = ({ heading, paragraphs, list, html, table ,detailedList }) => (
+const BlogSection = ({ heading, paragraphs, list, html, table, detailedList }) => (
   <div className="blog-article-section">
-    {/* Render RAW HTML if provided */}
+    {heading && <h2>{heading}</h2>}
+
     {html && <div dangerouslySetInnerHTML={{ __html: html }} />}
 
-    {/* Normal structured rendering */}
     {!html && (
       <>
-        {heading && <h2>{heading}</h2>}
-
         {paragraphs &&
           paragraphs.map((p, i) => <SectionParagraph key={i} text={p} />)}
 
-
-       
-
-        
         {detailedList && (
-          <div className="detailed-blog-list" style={{ marginTop: '1.5rem', marginBottom: '1.5rem' }}>
+          <div
+            className="detailed-blog-list"
+            style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}
+          >
             {detailedList.map((item, itemIdx) => (
-              <div key={itemIdx} className="detailed-blog-card" style={{ padding: '15px', background: '#f9f9f9', borderRadius: '8px', marginBottom: '15px', borderLeft: '4px solid #0066cc' }}>
-                <h3 style={{ margin: '0 0 5px 0', color: '#111' }}>{item.name}</h3>
-                <p style={{ fontSize: '12px', color: '#666', fontWeight: 'bold', margin: '0 0 8px 0' }}>HUB: {item.hub}</p>
-                <p style={{ margin: '0 0 8px 0', fontSize: '14px' }}><strong>Specialties:</strong> {item.specialties}</p>
-                <p style={{ fontStyle: 'italic', color: '#444', margin: '0', background: '#fff', padding: '10px', borderRadius: '4px' }}>"{item.insight}"</p>
+              <div
+                key={itemIdx}
+                className="detailed-blog-card"
+                style={{
+                  padding: "15px",
+                  background: "#f9f9f9",
+                  borderRadius: "8px",
+                  marginBottom: "15px",
+                  borderLeft: "4px solid #0066cc",
+                }}
+              >
+                <h3 style={{ margin: "0 0 5px 0", color: "#111" }}>{item.name}</h3>
+                <p
+                  style={{
+                    fontSize: "12px",
+                    color: "#666",
+                    fontWeight: "bold",
+                    margin: "0 0 8px 0",
+                  }}
+                >
+                  HUB: {item.hub}
+                </p>
+                <p style={{ margin: "0 0 8px 0", fontSize: "14px" }}>
+                  <strong>Specialties:</strong> {item.specialties}
+                </p>
+                <p
+                  style={{
+                    fontStyle: "italic",
+                    color: "#444",
+                    margin: "0",
+                    background: "#fff",
+                    padding: "10px",
+                    borderRadius: "4px",
+                  }}
+                >
+                  "{item.insight}"
+                </p>
               </div>
             ))}
           </div>
         )}
-      
-        
-
-
-
-
 
         {list && (
           <ul className="blog-article-list">
@@ -100,6 +102,7 @@ const BlogSection = ({ heading, paragraphs, list, html, table ,detailedList }) =
         )}
       </>
     )}
+
     {table && (
       <div className="blog-table-wrapper">
         <table className="blog-table">
@@ -124,6 +127,7 @@ const BlogSection = ({ heading, paragraphs, list, html, table ,detailedList }) =
     )}
   </div>
 );
+
 const BlogArticle = () => {
   const { slug } = useParams();
   const post = blogPostsData[slug];
@@ -132,29 +136,46 @@ const BlogArticle = () => {
     return <Navigate to="/blog" replace />;
   }
 
+  const SITE = "https://qllmsoft.com";
+  const abs = (src) =>
+    !src ? undefined : /^(https?:|data:)/.test(src) ? src : `${SITE}${src}`;
+
+  const authorSlug = post.author || DEFAULT_AUTHOR;
+  const author = authorsData[authorSlug] || authorsData[DEFAULT_AUTHOR];
+
+  const schemas = (post.schemas || []).map((s) =>
+    ["Article", "TechArticle"].includes(s["@type"])
+      ? {
+          ...s,
+          author: articleAuthorSchema(authorSlug),
+          image: [abs(post.image), abs(post.secondaryImage)].filter(Boolean),
+        }
+      : s
+  );
+
   const sections = post.sections || [];
 
   return (
-    <main className={`blog-article-page${slug === "role-based-vs-policy-based-authorization-asp-net-core" ? " blog-article-page--role-policy" : ""}`}>
-
-     
-     <SEO 
-        title={post.seoTitle || post.title} 
+    <main
+      className={`blog-article-page${
+        slug === "role-based-vs-policy-based-authorization-asp-net-core"
+          ? " blog-article-page--role-policy"
+          : ""
+      }`}
+    >
+      <SEO
+        title={post.seoTitle || post.title}
         description={post.description}
         url={post.canonicalUrl}
-        image={post.image}
-        schema={post.schemas && post.schemas[0]} 
+        image={abs(post.image)}
+        schema={schemas[0]}
       />
 
-
-      {post.schemas && post.schemas.slice(1).map((additionalSchema, index) => (
+      {schemas.slice(1).map((additionalSchema, index) => (
         <script key={index} type="application/ld+json">
           {JSON.stringify(additionalSchema)}
         </script>
       ))}
-
-
-
 
       {/* Hero Section */}
       <section className="blog-article-hero">
@@ -174,7 +195,9 @@ const BlogArticle = () => {
             </span>
             <span className="blog-article-author">
               <User size={14} />
-              Zain ul Abideen
+              <Link to={`/author/${author.slug}`} rel="author">
+                {author.name}
+              </Link>
             </span>
           </div>
           <h1>{post.title}</h1>
@@ -189,6 +212,7 @@ const BlogArticle = () => {
             {/* Main Content */}
             <article className="blog-article-main">
               {sections[0] && <BlogSection {...sections[0]} />}
+
               {/* SECOND IMAGE */}
               {post.secondaryImage && (
                 <figure className="blog-inline-editorial-image">
@@ -207,13 +231,30 @@ const BlogArticle = () => {
                 </figure>
               )}
 
-
               {sections.slice(1).map((section, index) => (
                 <BlogSection key={index} {...section} />
               ))}
 
-
-
+              {/* Author box */}
+              <aside className="author-box">
+                <img
+                  src={author.image}
+                  alt={author.name}
+                  width="72"
+                  height="72"
+                  loading="lazy"
+                />
+                <div>
+                  <p className="author-box__label">Written by</p>
+                  <h3>
+                    <Link to={`/author/${author.slug}`} rel="author">
+                      {author.name}
+                    </Link>
+                  </h3>
+                  <p className="author-box__title">{author.jobTitle}, QllmSoft</p>
+                  <p>{author.bio}</p>
+                </div>
+              </aside>
             </article>
 
             {/* Sidebar */}

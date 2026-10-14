@@ -1041,76 +1041,24 @@ const OutsourceSoftwareDevelopment = () => {
                   text: '"Very pleasant team to work with remotely. QllmSoft consistently delivers a high standard of code, clean architecture, and professional results on every outsourced engagement. Highly recommended."',
                 },
               ].map((r, i) => (
-                <article
-                  key={i}
-                  className={`osd-review-card animate__animated ${
-                    reviewInView ? 'animate__fadeInUp' : ''
-                  }`}
-                  style={{ animationDelay: `${i * 0.1}s` }}
-                  itemScope
-                  itemType="https://schema.org/Review"
-                >
-                  {/* What is being reviewed */}
-                  <div
-                    itemProp="itemReviewed"
-                    itemScope
-                    itemType="https://schema.org/Organization"
-                  >
-                    <meta itemProp="name" content="QllmSoft" />
-                    <meta itemProp="url" content="https://qllmsoft.com/" />
-                    <meta
-                      itemProp="logo"
-                      content="https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo.webp"
-                    />
-                  </div>
-                
-                  {/* Review information */}
-                  <meta itemProp="name" content={`Review by ${r.name}`} />
-                  <meta itemProp="datePublished" content={r.date || "2025-01-01"} />
-                
-                  <div
-                    className="osd-review-card__stars"
-                    aria-label="5 out of 5 stars"
-                    itemProp="reviewRating"
-                    itemScope
-                    itemType="https://schema.org/Rating"
-                  >
-                    <meta itemProp="ratingValue" content="5" />
-                    <meta itemProp="bestRating" content="5" />
-                    <meta itemProp="worstRating" content="1" />
-                    ★★★★★
-                  </div>
-                
-                  <p className="osd-review-card__text" itemProp="reviewBody">
-                    {r.text}
-                  </p>
-                
-                  <div className="osd-review-card__footer">
-                    <div
-                      className="osd-review-card__author"
-                      itemProp="author"
-                      itemScope
-                      itemType="https://schema.org/Person"
-                    >
-                      <img
-                        src={r.img}
-                        alt={`${r.name} — verified QllmSoft client from ${r.loc}`}
-                        loading="lazy"
-                        width="48"
-                        height="48"
-                      />
-                
-                      <div>
-                        <strong itemProp="name">{r.name}</strong>
-                        <span>{r.loc}</span>
-                      </div>
-                    </div>
-                
-                    <span className="osd-review-card__platform">
-                      {r.platform}
-                    </span>
-                  </div>
-                </article>
+        <article
+  key={i}
+  className={`osd-review-card animate__animated ${reviewInView ? 'animate__fadeInUp' : ''}`}
+  style={{ animationDelay: `${i * 0.1}s` }}
+>
+  <div className="osd-review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+  <p className="osd-review-card__text">{r.text}</p>
+  <div className="osd-review-card__footer">
+    <div className="osd-review-card__author">
+      <img src={r.img} alt={`${r.name}, QllmSoft client from ${r.loc}`} loading="lazy" width="48" height="48" />
+      <div>
+        <strong>{r.name}</strong>
+        <span>{r.loc}</span>
+      </div>
+    </div>
+    <span className="osd-review-card__platform">{r.platform}</span>
+  </div>
+</article>
               ))}~
             </div>
             <div style={{ textAlign: 'center', marginTop: '32px' }}>
