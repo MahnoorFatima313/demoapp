@@ -385,7 +385,7 @@
   margin-top: clamp(32px, 5vw, 44px);
   padding: clamp(18px, 3vw, 24px);
   border: 1px solid #e7ebf2;
-  border-left: 4px solid #f4c20d;
+  border: 2px dashed #f4c20d;
   border-radius: 18px;
   background: #fff;
   box-shadow: 0 10px 24px rgba(9, 20, 36, 0.03);
