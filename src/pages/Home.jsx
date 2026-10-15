@@ -130,8 +130,9 @@ const Home = () => {
   const { ref: aboutRef, inView: aboutInView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   const blogPreviewSlugs = [
+    "marketing-tech-stack-for-enterprises",
     "custom-vs-saas-ecommerce-for-growing-smbs",
-    "role-based-access-problems-why-teams-break-systems",
+    "role-based-vs-policy-based-authorization-asp-net-core",
     "when-internal-software-slows-teams-instead-of-helping",
   ];
 
