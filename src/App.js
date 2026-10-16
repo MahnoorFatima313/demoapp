@@ -17,6 +17,7 @@ import CustomSchoolManagementSoftwareDevelopment from "./pages/CustomSchoolManag
 import CustomBusinessAutomationSolutions from "./pages/CustomBusinessAutomationSolutions";
 import DocumentControlSoftware from "./pages/DocumentControlSoftware";
 import AuthorPage from "./pages/AuthorPage";
+
 // Lazy loaded pages - each page loads only when visited
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
