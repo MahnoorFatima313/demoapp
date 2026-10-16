@@ -34,6 +34,9 @@ const CustomSoftwareDevelopment = lazy(
 const WebsiteDevelopmentServices = lazy(
 	() => import("./pages/WebsiteDevelopmentServices"),
 );
+const DigitalMarketingServices = lazy(
+	() => import("./pages/Digitalmarketingservices"),
+);
 const ApiDevelopmentServices = lazy(
 	() => import("./pages/ApiDevelopmentServices"),
 );
@@ -93,6 +96,10 @@ function App() {
 							<Route
 								path="/website-development-services"
 								element={<WebsiteDevelopmentServices />}
+							/>
+							<Route
+								path="/digital-marketing-services"
+								element={<DigitalMarketingServices />}
 							/>
 							<Route
 								path="/api-development-services"
