@@ -61,6 +61,11 @@
     <priority>0.8</priority>
   </url>
 <url>
+    <loc>https://qllmsoft.com/digital-marketing-services</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+<url>
     <loc>https://qllmsoft.com/api-development-services</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -326,6 +331,11 @@
 <url>
     <loc>https://qllmsoft.com/blog/role-based-vs-policy-based-authorization-asp-net-core</loc>
     <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/blog/marketing-tech-stack-for-enterprises</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
