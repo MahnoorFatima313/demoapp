@@ -7,6 +7,8 @@ import TestimonialSection from "../components/TestimonialSection";
 import FounderNote from "../components/FounderNote";
 import { schemaOrganization } from "../data/schema";
 import digitalMarketingInfo from "../assets/qllmsoft_digital_marketing_info.png";
+import digitalMarketingHero from "../assets/digitalmarketinghero.webp";
+import digitalMarketingTypes from "../assets/DigitalM.types.webp";
 
 const PAGE_URL = "https://qllmsoft.com/digital-marketing-services";
 const LOGO = "https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg";
@@ -176,7 +178,7 @@ const DigitalMarketingServices = () => {
 
       <main id="main-content" className="dm-page">
         {/* HERO */}
-        <header className="dm-hero">
+        <header className="dm-hero" style={{ "--dm-hero-image": `url(${digitalMarketingHero})` }}>
           <div className="dm-container dm-hero__inner">
             <div className="dm-hero__content">
              
@@ -289,9 +291,22 @@ const DigitalMarketingServices = () => {
         {/* OUTCOMES */}
         <section className="dm-section" ref={gRef} aria-labelledby="dm-outcomes">
           <div className="dm-container">
-            <div className="dm-title">
-              <h2 id="dm-outcomes">What Good Digital Marketing Delivers</h2>
-              <p>The outcomes we plan each programme around.</p>
+            <div className="dm-outcomes__intro">
+              <div className="dm-title dm-outcomes__title">
+                <h2 id="dm-outcomes">What Good Digital Marketing Delivers</h2>
+                <p>The outcomes we plan each programme around.</p>
+              </div>
+              <figure className="dm-outcomes__visual">
+                <img
+                  src={digitalMarketingTypes}
+                  alt="Digital marketing channels including search, social media, paid advertising, content, email, and analytics"
+                  width="720"
+                  height="655"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>Connected channels, measured against real business goals.</figcaption>
+              </figure>
             </div>
             <div className="dm-grid dm-grid--3">
               {GRID.map((g, i) => (
