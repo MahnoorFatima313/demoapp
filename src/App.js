@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -103,7 +103,8 @@ function App() {
 								path="/digital-marketing-services"
 								element={<DigitalMarketingServices />}
 							/>
-							<Route path="/qllmdocs" element={<QllmDocsPage />} />
+							<Route path="/document-controller-software" element={<QllmDocsPage />} />
+							<Route path="/qllmdocs" element={<Navigate to="/document-controller-software" replace />} />
 							<Route
 								path="/api-development-services"
 								element={<ApiDevelopmentServices />}
