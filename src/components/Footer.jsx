@@ -101,7 +101,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/qllmdocs">
+                  <Link to="/document-controller-software">
                     <ArrowRight size={14} />
                     QllmDocs Product
                   </Link>
