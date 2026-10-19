@@ -3720,9 +3720,9 @@ public async Task&lt;IActionResult&gt; Approve(int id)
       },
       {
         heading: "What Is BanoQabil?",
-        paragraphs: [
-          "BanoQabil is a program that provides free IT education to young people in Pakistan. It started in Karachi in 2022 and has since grown to 65 cities nationwide. The courses cover some of the most in-demand skills in the job market today."
-        ],
+        html: `
+          <p>BanoQabil is a program launched by <a href="https://alkhidmat.org/donations/area-of-work/banoqabil" target="_blank" rel="noopener noreferrer">Alkhidmat Foundation</a> that provides free IT education to young people in Pakistan. It started in Karachi in 2022 and has since grown to 65 cities nationwide. The courses cover some of the most in-demand skills in the job market today.</p>
+        `,
         table: {
           headers: ["Detail", "BanoQabil"],
           rows: [

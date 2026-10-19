@@ -1,4 +1,5 @@
 import React, { useCallback, useMemo } from "react";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import {
   ArrowDown,
@@ -21,10 +22,10 @@ import "./QllmDocsPage.css";
 
 const PRODUCT_URL = "https://qllmdocs.com";
 const COMPANY_URL = "https://qllmsoft.com";
-const PAGE_URL = `${COMPANY_URL}/document-controller-software`;
-const TITLE = "Document Controller Software & Document Management | QllmDocs";
+const PAGE_URL = `${COMPANY_URL}/ai-document-management-software`;
+const TITLE = "AI Document Management Software | QllmDocs by QllmSoft";
 const DESCRIPTION =
-  "Looking for document controller software? QllmDocs helps teams organize business documents with searchable metadata, access controls, AI-powered search, and export.";
+  "AI document management software for document controllers: searchable metadata, AskAI natural-language search, role-based access, encryption and Excel/CSV export.";
 
 const features = [
   { icon: FolderLock, title: "One secure document home", text: "Bring important business files into a centralized cloud repository instead of scattered drives, inboxes, and folders." },
@@ -44,17 +45,18 @@ const steps = [
 ];
 
 const faqs = [
-  { question: "What is document controller software?", answer: "Document controller software helps teams organize, identify, secure, and retrieve business documents. QllmDocs supports these everyday document-control workflows with centralized storage, searchable metadata, filters, role-based access, and AI-powered search." },
+  { question: "What is AI document management software?", answer: "AI document management software helps teams store, organize, secure, and retrieve business documents, with AI used to make finding information faster. In QllmDocs, AskAI lets users search in natural language or by voice, alongside metadata filters and role-based access." },
+  { question: "How does QllmDocs use AI to find documents?", answer: "AskAI lets users describe the information they need in natural language or by voice. Search can also use document attributes such as category, date, company, and amount, and results are subject to the user's access permissions." },
   { question: "Can QllmDocs be used as document controller software?", answer: "QllmDocs supports day-to-day document control by helping teams categorize, find, and manage access to shared documents. If your process requires formal revision numbering, approval chains, or specialized regulated-record controls, confirm those requirements before choosing a platform; QllmDocs is focused on document organization, retrieval, and access management." },
   { question: "What is QllmDocs?", answer: "QllmDocs is a cloud document management product developed and owned by QllmSoft. It helps teams organize, protect, search, and retrieve business documents from one workspace." },
   { question: "Who builds QllmDocs?", answer: "QllmSoft designs, develops, and maintains QllmDocs in-house. It is our own product, not a third-party tool we resell." },
-  { question: "How does AskAI help find documents?", answer: "AskAI lets users describe the information they need in natural language or by voice. Search can also use document attributes such as category, date, company, and amount, subject to the user's access permissions." },
+  { question: "Is my data secure in QllmDocs?", answer: "QllmDocs uses AES-256 encryption at rest, HTTPS/TLS in transit, two-factor authentication, and role-based access to shared documents." },
   { question: "Can I export document information?", answer: "QllmDocs supports exporting document metadata to Excel or CSV, including filtered datasets." },
 ];
 
 const proof = [
-  [ShieldCheck, "AES-256 encryption"],
   [BrainCircuit, "AI-powered search"],
+  [ShieldCheck, "AES-256 encryption"],
   [UsersRound, "Role-based access"],
 ];
 
@@ -84,12 +86,29 @@ function QllmDocsPage() {
           "@type": "SoftwareApplication",
           "@id": `${PAGE_URL}#product`,
           name: "QllmDocs",
+          alternateName: "QllmDocs AI Document Management Software",
           applicationCategory: "BusinessApplication",
           operatingSystem: "Web",
           description: DESCRIPTION,
           url: PRODUCT_URL,
           image: "https://qllmdocs.com/images/dashboard-qllmdocs-new.png",
+          featureList: [
+            "AI-powered document search (AskAI) with natural-language and voice queries",
+            "Metadata, categories and custom tags",
+            "Role-based access",
+            "AES-256 encryption at rest, HTTPS/TLS in transit, two-factor authentication",
+            "Export of document metadata to Excel or CSV",
+          ],
           publisher: { "@type": "Organization", name: "QllmSoft", url: COMPANY_URL },
+        },
+        {
+          "@type": "WebPage",
+          "@id": `${PAGE_URL}#webpage`,
+          url: PAGE_URL,
+          name: TITLE,
+          description: DESCRIPTION,
+          about: { "@id": `${PAGE_URL}#product` },
+          inLanguage: "en-US",
         },
         {
           "@type": "FAQPage",
@@ -103,7 +122,7 @@ function QllmDocsPage() {
           "@type": "BreadcrumbList",
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "QllmSoft", item: COMPANY_URL },
-            { "@type": "ListItem", position: 2, name: "QllmDocs", item: PAGE_URL },
+            { "@type": "ListItem", position: 2, name: "AI Document Management Software", item: PAGE_URL },
           ],
         },
       ],
@@ -111,7 +130,6 @@ function QllmDocsPage() {
     []
   );
 
- 
   const onMove = useCallback((e) => {
     if (e.pointerType === "touch") return;
     const el = e.currentTarget;
@@ -131,6 +149,7 @@ function QllmDocsPage() {
       <Helmet>
         <title>{TITLE}</title>
         <meta name="description" content={DESCRIPTION} />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
         <link rel="canonical" href={PAGE_URL} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="QllmSoft" />
@@ -150,7 +169,6 @@ function QllmDocsPage() {
         <div className="qdocs-orb qdocs-orb--two" aria-hidden="true" />
         <div className="qdocs-container">
           <a className="qdocs-brandbar" href={COMPANY_URL}>
-           
             <strong>QllmSoft</strong>
             <i aria-hidden="true" />
             <span>Product</span>
@@ -159,11 +177,11 @@ function QllmDocsPage() {
         </div>
         <div className="qdocs-container qdocs-hero__grid">
           <div className="qdocs-hero__copy">
-            <h1>Document Controller Software to Organize and Find Business Documents</h1>
+            <h1>AI Document Management Software to Organize, Search and Control Business Documents</h1>
             <p>
-              <strong>QllmDocs</strong> is cloud document controller software for teams that need
-              a clear way to organize, secure, and retrieve business documents. Add useful
-              metadata, control access, and find information with AskAI.
+              <strong>QllmDocs</strong> is AI document management software and a document controller
+              tool for teams that need a clear way to organize, secure, and retrieve business
+              documents. Add useful metadata, control access, and find information with AskAI.
             </p>
             <div className="qdocs-actions">
               <a className="qdocs-button qdocs-button--primary" href={PRODUCT_URL} {...external}>
@@ -190,7 +208,7 @@ function QllmDocsPage() {
                 <div className="qdocs-window"><i /><i /><i /><span>QllmDocs · Document workspace</span></div>
                 <img
                   src={dashboardImage}
-                  alt="QllmDocs document library with Ask AI, filters, and export controls"
+                  alt="QllmDocs AI document management dashboard with Ask AI, filters, and export controls"
                   width="1200"
                   height="760"
                   fetchPriority="high"
@@ -206,7 +224,6 @@ function QllmDocsPage() {
                 <div><strong>Access controlled</strong><small>For your team</small></div>
               </div>
               <div className="qdocs-float qdocs-float--brand">
-               
                 <div><strong>By QllmSoft</strong><small>Built in-house</small></div>
               </div>
             </div>
@@ -217,7 +234,6 @@ function QllmDocsPage() {
       <section className="qdocs-origin" aria-labelledby="qdocs-origin-title">
         <div className="qdocs-container qdocs-origin__inner">
           <div className="qdocs-origin__badge">
-           
             <div>
               <strong>QllmSoft</strong>
               <span>Software development company</span>
@@ -226,8 +242,8 @@ function QllmDocsPage() {
           <div className="qdocs-origin__copy">
             <h2 id="qdocs-origin-title">Created in-house. Ready for your document workflows.</h2>
             <p>
-              QllmDocs is QllmSoft’s own product not a third-party tool we resell. We built it
-              to bring document storage, useful context, access controls, and intelligent
+              QllmDocs is QllmSoft’s own product, not a third-party tool we resell. We built it
+              to bring document storage, useful context, access controls, and AI-assisted
               retrieval together in one focused workspace.
             </p>
           </div>
@@ -235,6 +251,9 @@ function QllmDocsPage() {
             <a className="qdocs-text-link" href={PRODUCT_URL} {...external}>
               Visit qllmdocs.com <ArrowUpRight size={16} />
             </a>
+            <Link className="qdocs-text-link" to="/document-control-software">
+              Document control software <ArrowUpRight size={16} />
+            </Link>
             <a className="qdocs-text-link" href={COMPANY_URL}>
               More from QllmSoft <ArrowUpRight size={16} />
             </a>
@@ -246,7 +265,7 @@ function QllmDocsPage() {
         <div className="qdocs-container">
           <div className="qdocs-heading">
             <span className="qdocs-section-label">One workspace, useful capabilities</span>
-            <h2>Document control features for everyday team workflows</h2>
+            <h2>AI document management features for everyday team workflows</h2>
             <p>Organize documents, manage access, and retrieve the right information from one workspace.</p>
           </div>
           <div className="qdocs-feature-grid">
@@ -264,8 +283,8 @@ function QllmDocsPage() {
       <section className="qdocs-showcase">
         <div className="qdocs-container qdocs-showcase__grid">
           <div className="qdocs-showcase__copy">
-            <span className="qdocs-section-label">Document controller software</span>
-            <h2>Find documents by their details not only by folder or filename.</h2>
+            <span className="qdocs-section-label">AI document search for document controllers</span>
+            <h2>Find documents by their details, not only by folder or filename.</h2>
             <p>
               Document controllers can add details like category, company, date, amount, and custom tags.
               Then filter the library or use AskAI to retrieve relevant documents using
@@ -327,7 +346,7 @@ function QllmDocsPage() {
         <div className="qdocs-container qdocs-faq__inner">
           <div className="qdocs-heading">
             <span className="qdocs-section-label">Quick answers</span>
-            <h2>Document controller software questions</h2>
+            <h2>AI document management software questions</h2>
           </div>
           <div className="qdocs-faq__list">
             {faqs.map((faq) => (
@@ -344,8 +363,8 @@ function QllmDocsPage() {
         <div className="qdocs-container qdocs-cta__inner">
           <div>
             <span className="qdocs-cta__brand">A product from QllmSoft</span>
-            <h2>Explore document controller software built for easier organization and retrieval.</h2>
-            <p>See how QllmDocs helps teams organize business documents, manage access, and find important information.</p>
+            <h2>See AI document management software built for easier organization and retrieval.</h2>
+            <p>See how QllmDocs helps teams organize business documents, manage access, and find important information with AskAI.</p>
           </div>
           <a className="qdocs-button qdocs-button--primary" href={PRODUCT_URL} {...external}>
             Explore QllmDocs <ArrowUpRight size={18} />

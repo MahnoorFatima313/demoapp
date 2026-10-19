@@ -66,7 +66,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://qllmsoft.com/document-controller-software</loc>
+    <loc>https://qllmsoft.com/ai-document-management-software</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -340,6 +340,11 @@
   </url>
 <url>
     <loc>https://qllmsoft.com/blog/marketing-tech-stack-for-enterprises</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qllmsoft.com/blog/qllmsoft-at-banoqabil-graduation</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

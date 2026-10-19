@@ -25,12 +25,14 @@ import "./ApiDevelopmentServices.css";
 import "animate.css";
 import TestimonialSection from "../components/TestimonialSection";
 import RelatedSolutions from "../components/RelatedSolutions";
+import CoreServiceLinks from "../components/CoreServiceLinks";
 import FounderNote from "../components/FounderNote";
 import apiimg from "../assets/API-DEVELOPMENT-SERVICES.webp";
 import Documentation from "../assets/Documentaion.webp";
 import ApiArchitecture from "../assets/API-CASESTUDY.webp";
 import phase3 from '../assets/phase3.webp';
 import { schemaOrganization } from "../data/schema";
+
 
 /* ─── Constants ───────────────────────────────────────────── */
 const PAGE_URL = "https://qllmsoft.com/api-development-services";
@@ -1473,23 +1475,7 @@ const ApiDevelopmentServices = () => {
               <span>✓ Post-launch support included</span>
             </div>
 
-            {/* Related services internal links */}
-            <nav
-              className="api-cta__related"
-              aria-label="Related software development services"
-            >
-              <span>Related Services:</span>
-              <Link to="/custom-software-development-services">
-                Custom Software Development
-              </Link>
-              <Link to="/website-development-services">
-                Web Application Development
-              </Link>
-              <Link to="/mobile-app-development">Mobile App Development</Link>
-              <Link to="/ai-powered-software-solutions">
-                AI-Powered Software
-              </Link>
-            </nav>
+            <CoreServiceLinks currentPath="/api-development-services" />
           </div>
         </section>
       </main>

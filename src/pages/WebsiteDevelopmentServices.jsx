@@ -31,10 +31,12 @@ import "animate.css";
 import TestimonialSection from "../components/TestimonialSection";
 import FounderNote from "../components/FounderNote";
 import RelatedSolutions from "../components/RelatedSolutions";
+import CoreServiceLinks from "../components/CoreServiceLinks";
 import processsectionimg from "../assets/website-services.webp";
 import fintech from "../assets/qllm-soft-finance-management-system-11.webp";
 import qllmdocs from "../assets/QllmDocs.webp";
 import { schemaOrganization } from "../data/schema";
+
 
 
 const PortfolioPdf = "/pdfs/QllmSoft - Website Development Portfolio.pdf";
@@ -1331,12 +1333,12 @@ const WebsiteDevelopmentServices = () => {
                 style={{
                   color: "rgba(255,255,255,0.75)",
                   marginTop: "16px",
-                  fontSize: "0.9rem",
                 }}
               >
                 Questions? Visit our <Link to="/blog">Expert Blog</Link> — we
                 typically respond within a few hours on business days.
               </p>
+              <CoreServiceLinks currentPath="/website-development-services" />
             </div>
           </div>
         </section>
