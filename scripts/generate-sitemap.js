@@ -22,7 +22,10 @@ for (const entry of existingSitemap.matchAll(/<url\b[^>]*>[\s\S]*?<\/url>/g)) {
 }
 
 const routes = new Set();
-const redirectRoutes = new Set(["/qllmdocs"]);
+const redirectRoutes = new Set([
+  "/document-controller-software",
+  "/qllmdocs",
+]);
 for (const match of appSource.matchAll(/<Route\b[^>]*\bpath="([^"]+)"/gs)) {
   const route = match[1];
   if (!route.includes(":") && !redirectRoutes.has(route)) {

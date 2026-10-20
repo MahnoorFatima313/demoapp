@@ -84,7 +84,9 @@ const ProjectDetails = () => {
                     <h3>Our product: QllmDocs</h3>
                     <p className="paragraph">
                       QllmDocs is a product developed and owned by QllmSoft.{" "}
-                      <Link to="/document-controller-software">View the QllmDocs product overview</Link>
+                      <Link to="/ai-document-management-software">
+                        View the QllmDocs product overview
+                      </Link>
                       {" or "}
                       <a href={project.productUrl} target="_blank" rel="noopener noreferrer">
                         visit qllmdocs.com

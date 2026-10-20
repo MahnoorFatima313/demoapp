@@ -26,8 +26,10 @@ import "./CustomSoftwareDevelopment.css";
 import FounderNote from "../components/FounderNote";
 import TestimonialSection from "../components/TestimonialSection";
 import RelatedSolutions from "../components/RelatedSolutions";
+import CoreServiceLinks from "../components/CoreServiceLinks";
 import QllmDocs from "../assets/QllmDocs.webp";
 import { schemaOrganization } from "../data/schema";
+
 
 /* ─── Page constants ──────────────────────────────────────── */
 const PAGE_URL = "https://qllmsoft.com/custom-software-development-services";
@@ -556,13 +558,7 @@ const CustomSoftwareDevelopment = () => {
                 <span>✓ No commitment required</span>
                 <span>✓ Response within 24 hours</span>
               </div>
-              <nav className="csd-final-cta__related" aria-label="Related software development services">
-                <span>Also see:</span>
-                <Link to="/website-development-services">Web Development Services</Link>
-                <Link to="/web-application-development-services">Web Application Development</Link>
-                <Link to="/legacy-system-modernization-services">Legacy System Modernization</Link>
-                <Link to="/ai-powered-software-solutions">AI-Powered Software</Link>
-              </nav>
+              <CoreServiceLinks currentPath="/custom-software-development-services" />
             </div>
           </div>
         </section>

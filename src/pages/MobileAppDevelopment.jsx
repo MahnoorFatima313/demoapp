@@ -39,6 +39,7 @@ import stickersmasher2 from "../assets/image8.webp";
 import TestimonialSection from "../components/TestimonialSection";
 import FounderNote from "../components/FounderNote";
 import RelatedSolutions from "../components/RelatedSolutions";
+import CoreServiceLinks from "../components/CoreServiceLinks";
 import MOBILEappPdf from "../assets/QllmSoftMobileAppDevelopmentServices.pdf";
 import { schemaOrganization } from "../data/schema";
 
@@ -1703,7 +1704,7 @@ const MobileAppDevelopment = () => {
             </div>
             <div style={{ textAlign: "center", marginTop: "32px" }}>
               <Link
-                to="/mobile-app-development"
+                to="/mobile-app-development-cost-in-pakistan"
                 className="btn btn-outline-dark"
                 style={{ marginRight: "16px" }}
                 aria-label="See detailed mobile app development cost guide "
@@ -1765,22 +1766,7 @@ const MobileAppDevelopment = () => {
               Fast response · Transparent pricing · Secure delivery
             </p>
 
-            {/* Internal link cluster for SEO */}
-            <nav
-              className="mob-cta__related"
-              aria-label="Related mobile and software development services"
-            >
-              <span>Also see:</span>
-              <Link to="/custom-software-development-services">
-                Custom Software
-              </Link>
-              <Link to="/website-development-services">Web Development</Link>
-              <Link to="/api-development-services">API Development</Link>
-              <Link to="/hire-dotnet-developers-pakistan">
-                Hire .NET Developers
-              </Link>
-              <Link to="/ai-powered-software-solutions">AI Solutions</Link>
-            </nav>
+            <CoreServiceLinks currentPath="/mobile-app-development" />
           </div>
         </section>
       </main>

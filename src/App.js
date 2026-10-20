@@ -103,8 +103,18 @@ function App() {
 								path="/digital-marketing-services"
 								element={<DigitalMarketingServices />}
 							/>
-							<Route path="/document-controller-software" element={<QllmDocsPage />} />
-							<Route path="/qllmdocs" element={<Navigate to="/document-controller-software" replace />} />
+							<Route
+								path="/ai-document-management-software"
+								element={<QllmDocsPage />}
+							/>
+							<Route
+								path="/document-controller-software"
+								element={<Navigate to="/ai-document-management-software" replace />}
+							/>
+							<Route
+								path="/qllmdocs"
+								element={<Navigate to="/ai-document-management-software" replace />}
+							/>
 							<Route
 								path="/api-development-services"
 								element={<ApiDevelopmentServices />}

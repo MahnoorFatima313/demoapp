@@ -76,12 +76,7 @@ const Footer = () => {
                     Mobile App Development
                   </Link>
                 </li>
-                <li>
-                  <Link to="/custom-software-development-services">
-                    <ArrowRight size={14} />
-                    Desktop Applications
-                  </Link>
-                </li>
+                
                 <li>
                   <Link to="/api-development-services">
                     <ArrowRight size={14} />
@@ -101,7 +96,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/document-controller-software">
+                  <Link to="/ai-document-management-software">
                     <ArrowRight size={14} />
                     QllmDocs Product
                   </Link>

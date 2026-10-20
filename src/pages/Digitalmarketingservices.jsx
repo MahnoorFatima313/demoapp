@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import CoreServiceLinks from "../components/CoreServiceLinks";
 import { Helmet } from "react-helmet-async";
 import { useInView } from "react-intersection-observer";
 import "./DigitalMarketingServices.css";
@@ -9,6 +10,7 @@ import { schemaOrganization } from "../data/schema";
 import digitalMarketingInfo from "../assets/qllmsoft_digital_marketing_info.png";
 import digitalMarketingHero from "../assets/digitalmarketinghero.webp";
 import digitalMarketingTypes from "../assets/DigitalM.types.webp";
+
 
 const PAGE_URL = "https://qllmsoft.com/digital-marketing-services";
 const LOGO = "https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg";
@@ -410,14 +412,7 @@ const DigitalMarketingServices = () => {
                 <a href="https://wa.me/923348229288" target="_blank" rel="noopener noreferrer">💬 WhatsApp - quick reply</a>
                 <a href="tel:+923348229288">📞 +92 334 8229288</a>
               </div>
-              <nav className="dm-related" aria-label="Related services">
-                <p>Related Services</p>
-                <Link to="/custom-software-development-services">Custom Software</Link>
-                <Link to="/finance-management-system">Finance Management System</Link>
-                <Link to="/mobile-app-development">Mobile App Development</Link>
-                <Link to="/ai-powered-software-solutions">AI Solutions</Link>
-                <Link to="/services">All Services</Link>
-              </nav>
+              <CoreServiceLinks currentPath="/digital-marketing-services" />
             </aside>
           </div>
         </section>

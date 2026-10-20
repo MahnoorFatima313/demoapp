@@ -1,0 +1,488 @@
+/* ═══════════════════════════════════════════════════════════
+   ServiceTheme.css — QllmSoft unified "spatial UI" theme
+   Pages: ApiDevelopmentServices, CustomSoftwareDevelopment,
+          DigitalMarketingServices, MobileAppDevelopment,
+          WebsiteDevelopmentServices
+   Brand: QllmDocs logo — navy #0F2D5E, gold gradient, greys.
+   Usage: add className "service-theme" to each page's <main>
+          and import this file AFTER the page's own CSS.
+   Spatial idea: frosted glass panels floating on layered
+          depth fields (soft aurora light, stacked shadows,
+          1px light edges), lifted on hover.
+═══════════════════════════════════════════════════════════ */
+
+main.service-theme {
+  --c-navy: #0F2D5E;
+  --c-navy-deep: #081A3A;
+  --c-navy-mid: #16407F;
+  --c-gold-a: #f8d701;
+  --c-gold-b: #e9bf37;
+  --c-gold: #e9bf37;
+  --gold-grad: linear-gradient(135deg, #f8d701, #e9bf37);
+  --c-grey-900: #1E293B;
+  --c-grey-600: #475569;
+  --c-grey-400: #94A3B8;
+  --c-grey-200: #E2E8F0;
+  --c-grey-100: #F1F5F9;
+
+  --bg-light: linear-gradient(180deg, #F4F7FC 0%, #E8EEF8 100%);
+  --bg-dark: linear-gradient(145deg, #0F2D5E 0%, #0A2048 55%, #081A3A 100%);
+
+  --glass-light: rgba(255, 255, 255, 0.72);
+  --glass-light-edge: rgba(255, 255, 255, 0.9);
+  --glass-dark: rgba(255, 255, 255, 0.06);
+  --glass-dark-edge: rgba(255, 255, 255, 0.14);
+
+  --r-card: 24px;
+  --r-pill: 999px;
+
+  --depth-1: 0 1px 0 rgba(255,255,255,.9) inset, 0 2px 4px rgba(15,45,94,.05), 0 12px 28px rgba(15,45,94,.08);
+  --depth-2: 0 1px 0 rgba(255,255,255,.9) inset, 0 4px 8px rgba(15,45,94,.07), 0 24px 56px rgba(15,45,94,.16);
+  --depth-dark-1: 0 1px 0 rgba(255,255,255,.12) inset, 0 16px 40px rgba(2,10,30,.45);
+  --depth-dark-2: 0 1px 0 rgba(255,255,255,.18) inset, 0 28px 70px rgba(2,10,30,.65), 0 0 0 1px rgba(248,215,1,.28);
+
+  color: var(--c-grey-600);
+  overflow-x: hidden;
+}
+
+/* ───────────── 1. HEROES: dark spatial field ───────────── */
+main.service-theme :is(.api-hero, .csd-hero, .dm-hero, .mob-hero, .wds-hero) {
+  background:
+    radial-gradient(900px 480px at 12% -8%, rgba(22, 64, 127, .85), transparent 62%),
+    radial-gradient(700px 420px at 92% 85%, rgba(233, 191, 55, .16), transparent 65%),
+    var(--bg-dark);
+  color: #fff;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+main.service-theme :is(.api-hero, .csd-hero, .dm-hero, .mob-hero, .wds-hero)::before {
+  content: "";
+  position: absolute;
+  inset: auto;
+  top: -160px; left: -140px;
+  width: 520px; height: 520px;
+  border-radius: 50%;
+  background: var(--c-navy-mid);
+  background-image: none;
+  filter: blur(120px);
+  opacity: .5;
+  transform: none;
+  z-index: -2;
+  pointer-events: none;
+}
+main.service-theme :is(.api-hero, .csd-hero, .dm-hero, .mob-hero, .wds-hero)::after {
+  content: "";
+  position: absolute;
+  inset: auto;
+  bottom: -140px; right: -120px;
+  width: 440px; height: 440px;
+  border-radius: 50%;
+  background: var(--c-gold-b);
+  filter: blur(140px);
+  opacity: .16;
+  z-index: -2;
+  pointer-events: none;
+}
+/* fine spatial grid floor */
+main.service-theme .api-hero__bg-grid {
+  background-image: radial-gradient(circle, rgba(255,255,255,.12) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+main.service-theme :is(.api-hero__title, .csd-hero__title, .dm-hero__title, .mob-hero__title, .wds-hero__title) {
+  background: none;
+  -webkit-text-fill-color: #fff;
+  color: #fff;
+  filter: none;
+  text-shadow: 0 8px 30px rgba(2, 10, 30, .45);
+}
+main.service-theme :is(.api-hero__accent, .mob-hero__title-accent) {
+  background: var(--gold-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: none;
+}
+main.service-theme :is(.api-hero__sub, .csd-hero__sub, .dm-hero__sub, .mob-hero__sub, .wds-hero__sub) {
+  color: rgba(255, 255, 255, .8);
+}
+main.service-theme :is(.csd-hero__eyebrow, .section-eyebrow, .wds-hero__eyebrow) {
+  color: var(--c-gold-b);
+}
+main.service-theme .wds-hero__sub a { color: var(--c-gold-a); }
+/* floating decorative shapes in wds hero */
+main.service-theme :is(.services-hero-shape-1, .services-hero-shape-2) {
+  background: var(--glass-dark);
+  border: 1px solid var(--glass-dark-edge);
+  backdrop-filter: blur(10px);
+}
+
+/* ───────────── 2. SECTION BACKGROUNDS ───────────── */
+/* light depth fields */
+main.service-theme :is(
+  .api-about, .api-explainer, .api-best-practices, .api-choose, .api-edge, .api-services,
+  .api-case-study, .api-faq, .api-invest,
+  .csd-about, .csd-services, .csd-process, .csd-tech, .csd-timeline, .csd-faq,
+  .dm-section, .dm-section--alt,
+  .mob-intro, .mob-process, .mob-tech, .mob-pillars, .mob-industries, .mob-why, .mob-faq,
+  .wds-intro, .wds-legacy, .wds-services, .portfolio-showcase, .wds-tech, .wds-perf,
+  .wds-why, .wds-pricing, .testimonial-section
+) {
+  background:
+    radial-gradient(640px 320px at 8% 0%, rgba(15, 45, 94, .07), transparent 70%),
+    radial-gradient(560px 300px at 96% 100%, rgba(233, 191, 55, .12), transparent 70%),
+    var(--bg-light) !important;
+  position: relative;
+}
+/* alternate sections sit slightly "further back" */
+main.service-theme :is(.api-explainer, .api-choose, .api-services, .csd-services, .csd-tech, .dm-section--alt,
+  .mob-process, .mob-industries, .wds-legacy, .wds-tech, .wds-pricing) {
+  background:
+    radial-gradient(640px 320px at 92% 0%, rgba(15, 45, 94, .08), transparent 70%),
+    linear-gradient(180deg, #EAF0FA 0%, #DFE8F6 100%) !important;
+}
+/* dark depth fields */
+main.service-theme :is(
+  .api-why-invest, .api-tech, .api-cta,
+  .csd-featured-projects, .csd-final-cta,
+  .dm-dark, .dm-cta,
+  .mob-services, .project-highlight, .mob-roadmap, .mob-outsource, .mob-cta,
+  .comparison-section
+) {
+  background:
+    radial-gradient(760px 380px at 10% 0%, rgba(22, 64, 127, .8), transparent 65%),
+    radial-gradient(620px 340px at 95% 100%, rgba(233, 191, 55, .14), transparent 70%),
+    var(--bg-dark) !important;
+  color: rgba(255, 255, 255, .82);
+  position: relative;
+  overflow: hidden;
+}
+/* kill old blurred orbs on dark/light sections */
+main.service-theme :is(.csd-featured-projects, .csd-final-cta, .csd-faq, .mob-faq, .wds-faq, .wds-tech, .wds-why, .wds-perf, .portfolio-showcase)::before,
+main.service-theme :is(.csd-featured-projects, .csd-final-cta, .csd-faq, .mob-faq, .wds-tech, .wds-why)::after {
+  background: none;
+  box-shadow: none;
+  border: 0;
+}
+main.service-theme .abstract-circle { display: none; }
+
+/* ───────────── 3. TYPOGRAPHY ───────────── */
+main.service-theme :is(h2, h3, h4, h5) { color: var(--c-navy); letter-spacing: -.01em; }
+main.service-theme :is(
+  .api-why-invest, .api-tech, .api-cta, .csd-featured-projects, .csd-final-cta,
+  .dm-dark, .dm-cta, .mob-services, .project-highlight, .mob-roadmap, .mob-outsource, .mob-cta
+) :is(h2, h3, h4, h5, .section-main-title, .project-title) { color: #fff !important; }
+main.service-theme :is(.section-title p, .dm-title p, .wds-services__main-sub, .wds-tech__main-sub, .wds-legacy__subtitle) {
+  color: var(--c-grey-600);
+}
+main.service-theme :is(.api-why-invest, .api-tech, .mob-services, .mob-roadmap, .dm-dark, .csd-featured-projects) :is(.section-title p, .dm-title p) {
+  color: rgba(255, 255, 255, .74);
+}
+main.service-theme #case-study-heading,
+main.service-theme .api-case-study #case-study-heading { color: var(--c-navy) !important; }
+main.service-theme .services-heading { color: #fff !important; }
+main.service-theme a:not(.btn):not(.dm-btn):not([class*="btn"]) { color: var(--c-navy-mid); font-weight: 600; }
+main.service-theme a:not(.btn):not(.dm-btn):not([class*="btn"]):hover { color: var(--c-gold-b); }
+main.service-theme :is(.api-cta, .mob-cta, .csd-final-cta, .dm-cta, .mob-outsource) a:not([class*="btn"]) { color: var(--c-gold-a); }
+
+/* ───────────── 4. BUTTONS ───────────── */
+main.service-theme :is(.btn-primary, .dm-btn--gold, .dm-btn--sm, .mob-btn-primary, .btn-warning,
+  .csd-final-cta__buttons .btn-primary) {
+  background: var(--gold-grad) !important;
+  color: var(--c-navy) !important;
+  border: 0 !important;
+  border-radius: 16px;
+  font-weight: 800;
+  letter-spacing: .02em;
+  box-shadow: 0 1px 0 rgba(255,255,255,.55) inset, 0 10px 26px rgba(233, 191, 55, .38), 0 2px 4px rgba(15,45,94,.2);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+main.service-theme :is(.btn-primary, .dm-btn--gold, .dm-btn--sm, .mob-btn-primary, .btn-warning):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1px 0 rgba(255,255,255,.6) inset, 0 18px 38px rgba(233, 191, 55, .5), 0 4px 8px rgba(15,45,94,.25);
+}
+/* glass secondary buttons on dark */
+main.service-theme :is(.btn-outline-light, .dm-btn--soft, .mob-btn-secondary, .mob-btn-whatsapp,
+  .csd-final-cta__buttons .btn-outline-light) {
+  background: var(--glass-dark) !important;
+  color: #fff !important;
+  border: 1px solid var(--glass-dark-edge) !important;
+  border-radius: 16px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: var(--depth-dark-1);
+  transition: transform .25s ease, border-color .25s ease;
+}
+main.service-theme :is(.btn-outline-light, .dm-btn--soft, .mob-btn-secondary, .mob-btn-whatsapp):hover {
+  transform: translateY(-3px);
+  border-color: var(--c-gold-b) !important;
+}
+/* glass secondary on light */
+main.service-theme .btn-outline-dark {
+  background: var(--glass-light);
+  color: var(--c-navy);
+  border: 1px solid rgba(15, 45, 94, .25);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: var(--depth-1);
+}
+main.service-theme .btn-outline-dark:hover { background: var(--c-navy); color: #fff; }
+main.service-theme .wds-why__platforms .btn-outline-dark { background: var(--c-navy); color: #fff; }
+
+/* ───────────── 5. GLASS CARDS (light) ───────────── */
+main.service-theme :is(
+  .api-practice-card, .api-invest-card, .api-edge-card, .api-service-card, .api-tech-col, .api-choose__item,
+  .cs-carousel-card, .case-study__results-strip,
+  .csd-service-card, .csd-about__stat-card, .csd-process__cta-box,
+  .dm-card, .dm-stat, .dm-panel, .dm-tab, .dm-faq__item, .dm-outcomes__visual, .dm-intro__visual,
+  .mob-process__step, .mob-process__sidebar-card, .mob-tech-col, .mob-pillar-card, .mob-industry-card,
+  .why-card, .wds-legacy__card, .wds-service-card, .wds-tech__col, .wds-perf__card, .wds-perf__comparison,
+  .wds-pricing-card, .wds-pricing__factors, .wds-why__verification, .project-item,
+  .faq-item, .api-hero__card
+) {
+  background: var(--glass-light) !important;
+  backdrop-filter: blur(18px) saturate(1.2);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  border: 1px solid var(--glass-light-edge) !important;
+  border-radius: var(--r-card);
+  box-shadow: var(--depth-1);
+  color: var(--c-grey-600);
+  transform: none;
+  transition: transform .35s cubic-bezier(.16,1,.3,1), box-shadow .35s cubic-bezier(.16,1,.3,1), border-color .3s ease;
+  overflow: hidden;
+}
+main.service-theme :is(
+  .api-practice-card, .api-invest-card, .api-edge-card, .api-service-card, .api-tech-col, .api-choose__item,
+  .csd-service-card, .csd-about__stat-card,
+  .dm-card, .dm-stat, .mob-process__step, .mob-tech-col, .mob-pillar-card, .mob-industry-card,
+  .why-card, .wds-legacy__card, .wds-service-card, .wds-tech__col, .wds-perf__card,
+  .wds-pricing-card, .project-item, .faq-item, .api-hero__card
+):hover {
+  transform: translateY(-8px);
+  box-shadow: var(--depth-2);
+  border-color: rgba(233, 191, 55, .7) !important;
+}
+/* remove legacy glows / corner shapes on cards */
+main.service-theme :is(
+  .api-practice-card, .api-invest-card, .api-edge-card, .api-service-card, .api-tech-col, .api-choose__item,
+  .csd-service-card, .csd-about__stat-card, .mob-process__step, .mob-tech-col, .mob-pillar-card,
+  .mob-industry-card, .why-card, .wds-legacy__card, .wds-service-card, .wds-tech__col, .wds-perf__card,
+  .wds-perf__comparison, .project-item, .faq-item, .dm-card
+)::before,
+main.service-theme :is(
+  .api-practice-card, .api-invest-card, .api-edge-card, .api-service-card, .api-tech-col, .api-choose__item,
+  .csd-service-card, .csd-about__stat-card, .mob-process__step, .mob-tech-col, .mob-pillar-card,
+  .mob-industry-card, .why-card, .wds-legacy__card, .wds-service-card, .wds-tech__col, .wds-perf__card,
+  .wds-perf__comparison, .project-item, .faq-item
+)::after {
+  content: none !important;
+}
+/* card typography (light) */
+main.service-theme :is(.api-practice-card, .api-invest-card, .api-edge-card, .api-service-card, .api-tech-col, .api-choose__item,
+  .csd-service-card, .dm-card, .mob-tech-col, .mob-pillar-card, .mob-industry-card, .why-card,
+  .wds-legacy__card, .wds-service-card, .wds-tech__col, .wds-perf__card, .wds-pricing-card, .project-item) :is(h3, h4, h5, strong) {
+  color: var(--c-navy) !important;
+}
+main.service-theme :is(.api-practice-card, .api-invest-card, .api-edge-card, .api-service-card, .api-choose__item,
+  .csd-service-card, .dm-card, .mob-tech-col, .mob-pillar-card, .mob-industry-card, .why-card,
+  .wds-legacy__card, .wds-service-card, .wds-tech__col, .wds-perf__card, .wds-pricing-card, .project-item) :is(p, li, span:not([class*="num"])) {
+  color: var(--c-grey-600);
+}
+/* numbers & icons = gold accent on navy chip */
+main.service-theme :is(.api-practice-card__num, .api-service-card__num, .api-edge-card__num, .csd-about__stat-num,
+  .wds-service-card__num, .wds-why__num, .mob-why-card__num, .wds-pricing-card__tier, .faq-icon) {
+  background: var(--gold-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+main.service-theme :is(.faq-icon) {
+  background: var(--c-navy);
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-text-fill-color: var(--c-gold-a);
+  color: var(--c-gold-a);
+}
+main.service-theme .faq-item--open .faq-icon { background: var(--gold-grad); -webkit-text-fill-color: var(--c-navy); }
+main.service-theme :is(.dm-icon-well, .dm-tick, .mob-why-card__icon, .mob-highlight-row__icon) {
+  background: var(--c-navy);
+  color: var(--c-gold-a);
+  box-shadow: 0 8px 20px rgba(15, 45, 94, .3), 0 1px 0 rgba(255,255,255,.2) inset;
+}
+main.service-theme .wds-pricing-card--popular {
+  border-color: var(--c-gold-b) !important;
+  box-shadow: var(--depth-2), 0 0 0 1px rgba(233, 191, 55, .5);
+}
+main.service-theme .wds-pricing-card__price { color: var(--c-navy); }
+
+/* ───────────── 6. GLASS CARDS (dark sections) ───────────── */
+main.service-theme :is(
+  .api-hero__card, .dm-hero__chip, .dm-hero__panel, .dm-step, .mob-platform-card, .mob-hero__stats,
+  .mob-outsource-card, .mob-service-card, .mob-intro__highlights, .mob-highlight-row,
+  .api-hero__stats, .wds-hero__pill, .project-card, .feature-item, .image-container-card
+) {
+  background: var(--glass-dark) !important;
+  backdrop-filter: blur(20px) saturate(1.3);
+  -webkit-backdrop-filter: blur(20px) saturate(1.3);
+  border: 1px solid var(--glass-dark-edge) !important;
+  border-radius: var(--r-card);
+  box-shadow: var(--depth-dark-1);
+  color: rgba(255, 255, 255, .82);
+}
+main.service-theme :is(.api-hero__card, .dm-hero__chip, .mob-platform-card, .mob-service-card, .mob-outsource-card,
+  .wds-hero__pill, .feature-item, .mob-highlight-row, .dm-step):hover {
+  transform: translateY(-8px);
+  box-shadow: var(--depth-dark-2);
+  border-color: rgba(233, 191, 55, .6) !important;
+}
+main.service-theme :is(.mob-service-card, .mob-platform-card, .mob-outsource-card, .mob-intro__highlights)::before,
+main.service-theme :is(.mob-service-card, .mob-platform-card, .mob-outsource-card, .mob-intro__highlights)::after { content: none !important; }
+main.service-theme .mob-service-card { background-image: none !important; }
+main.service-theme :is(.api-hero__card, .dm-hero__chip, .mob-platform-card, .mob-service-card, .mob-outsource-card,
+  .wds-hero__pill, .feature-item, .mob-highlight-row, .dm-step, .project-card) :is(h3, h4, h5, strong) { color: #fff !important; }
+main.service-theme :is(.api-hero__card, .mob-platform-card, .mob-service-card, .mob-outsource-card, .wds-hero__pill,
+  .feature-item, .mob-highlight-row, .dm-step, .project-card) :is(p, li, span) { color: rgba(255, 255, 255, .72); }
+main.service-theme :is(.mob-intro__highlights-title) { color: #fff; }
+main.service-theme :is(.mob-outsource-card__stat, .mob-hero__stat-num, .api-hero__stat-num, .dm-step__num, .mob-roadmap__stage-num) {
+  background: var(--gold-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+main.service-theme .dm-step__num { box-shadow: inset 0 0 0 1px rgba(248,215,1,.4); }
+main.service-theme .mob-roadmap__stage-icon {
+  background: var(--glass-dark);
+  border: 1px solid var(--glass-dark-edge);
+  backdrop-filter: blur(12px);
+}
+main.service-theme .mob-roadmap__stage-label { color: #fff; }
+
+/* api dark-themed cards that live on light sections: stay light glass.
+   api best-practices, services and tech columns were dark neon; now unified. */
+main.service-theme .api-tech-col { background: var(--glass-dark) !important; border: 1px solid var(--glass-dark-edge) !important; box-shadow: var(--depth-dark-1); }
+main.service-theme .api-tech-col :is(h3, li) { color: #fff !important; }
+main.service-theme .api-tech-col__item::before { color: var(--c-gold-a); text-shadow: none; }
+main.service-theme .api-why-invest .api-invest-card { background: var(--glass-dark) !important; border: 1px solid var(--glass-dark-edge) !important; box-shadow: var(--depth-dark-1); }
+main.service-theme .api-why-invest .api-invest-card :is(h3) { color: #fff !important; }
+main.service-theme .api-why-invest .api-invest-card :is(p) { color: rgba(255,255,255,.75) !important; }
+main.service-theme :is(.api-invest-card__stat) {
+  color: var(--c-navy); background: var(--gold-grad); border: 0; text-shadow: none;
+}
+main.service-theme :is(.api-invest-card__icon i, .api-practice-card__icon, .api-service-card__icon) { color: var(--c-navy) !important; text-shadow: none; }
+
+/* ───────────── 7. TAGS / PILLS ───────────── */
+main.service-theme :is(.api-tag, .mob-tag, .wds-tag, .csd-tag, .tech-pill, .csd-tech__pill, .mob-badge,
+  .wds-pricing__factor, .api-tech-pill, .tech-tag) {
+  background: var(--glass-light);
+  color: var(--c-navy);
+  border: 1px solid rgba(15, 45, 94, .18);
+  border-radius: var(--r-pill);
+  backdrop-filter: blur(8px);
+  font-weight: 600;
+}
+main.service-theme :is(.mob-service-card .mob-tag, .api-hero__tech-strip .api-tech-pill, .csd-hero .csd-tag,
+  .project-highlight .tech-pill, .api-service-card .api-tag) {
+  background: var(--glass-dark);
+  color: rgba(255, 255, 255, .9);
+  border: 1px solid var(--glass-dark-edge);
+}
+main.service-theme :is(.csd-tech__pill):hover,
+main.service-theme :is(.api-tech-pill):hover { background: var(--gold-grad); color: var(--c-navy); border-color: transparent; }
+
+/* ───────────── 8. PROCESS / STEPS ───────────── */
+main.service-theme :is(.csd-process__step-num, .api-choose__num, .mob-process__step-num, .wds-process__step-num) {
+  background: var(--c-navy);
+  color: var(--c-gold-a);
+  box-shadow: 0 10px 24px rgba(15, 45, 94, .35), 0 1px 0 rgba(255,255,255,.2) inset;
+}
+main.service-theme .api-choose__item { border-left: 4px solid var(--c-gold-b) !important; }
+main.service-theme :is(.api-choose__body h3, .api-choose__body p) { color: inherit; }
+main.service-theme .csd-process__step-body h4 { color: var(--c-navy); }
+main.service-theme .csd-process__step-body p { color: var(--c-grey-600); }
+main.service-theme .csd-process__cta-box,
+main.service-theme .mob-process__sidebar-card { background: var(--bg-dark) !important; border: 1px solid var(--glass-dark-edge) !important; }
+main.service-theme :is(.csd-process__cta-box, .mob-process__sidebar-card) :is(h3, h4, strong) { color: #fff !important; }
+main.service-theme :is(.csd-process__cta-box, .mob-process__sidebar-card) :is(p, span) { color: rgba(255,255,255,.8); }
+main.service-theme .mob-process__tip { background: rgba(233, 191, 55, .14); border: 1px solid rgba(233, 191, 55, .45); border-radius: 16px; }
+main.service-theme .mob-process__tip :is(strong, p) { color: #fff; }
+
+/* ───────────── 9. FAQ ───────────── */
+main.service-theme .faq-question,
+main.service-theme .dm-faq__q { color: var(--c-navy) !important; font-weight: 700; }
+main.service-theme .faq-answer p,
+main.service-theme .dm-faq__a p { color: var(--c-grey-600) !important; }
+main.service-theme .faq-item--open { border-color: var(--c-gold-b) !important; }
+
+/* ───────────── 10. DARK CASE-STUDY / PROJECT BLOCKS ───────────── */
+main.service-theme .csd-featured-projects :is(.project-narrative, .feature-item p) { color: rgba(255,255,255,.74); }
+main.service-theme .case-study-tag { color: var(--c-gold-a); }
+main.service-theme .project-card { background: var(--glass-dark); }
+main.service-theme .project-desc { color: rgba(255,255,255,.75); }
+main.service-theme .wds-portfolio__pdf-banner.card {
+  background: var(--bg-dark) !important;
+  border: 1px solid var(--glass-dark-edge) !important;
+  border-radius: var(--r-card);
+  box-shadow: var(--depth-dark-1);
+}
+main.service-theme .wds-portfolio__pdf-banner :is(.text-muted) { color: rgba(255,255,255,.72) !important; }
+/* case study carousel (api) */
+main.service-theme .cs-tab-btn { background: var(--glass-light); border: 1px solid rgba(15,45,94,.2); color: var(--c-navy); border-radius: var(--r-pill); }
+main.service-theme .cs-tab-btn.active { background: var(--c-navy); color: var(--c-gold-a); border-color: var(--c-navy); box-shadow: 0 8px 20px rgba(15,45,94,.3); }
+main.service-theme .case-study__features li::before { background: var(--gold-grad); }
+main.service-theme .case-study__image-wrapper { background: var(--glass-light); border: 1px solid var(--glass-light-edge); border-radius: 18px; box-shadow: var(--depth-1); }
+main.service-theme .results-badge { background: var(--gold-grad); color: var(--c-navy); }
+main.service-theme .results-metrics strong { color: var(--c-navy); }
+/* perf bars (wds) */
+main.service-theme .wds-perf__bar--fast { background: linear-gradient(90deg, var(--c-navy), var(--c-navy-mid)); }
+main.service-theme .wds-perf__bar--slow { background: linear-gradient(90deg, var(--c-grey-400), #64748B); }
+main.service-theme .wds-perf__card::before { content: none; }
+main.service-theme .wds-perf__stat-num { color: var(--c-navy); }
+
+/* ───────────── 11. API EXPLAINER COMPARE ───────────── */
+main.service-theme .api-explainer__compare {
+  background: var(--glass-light);
+  border: 1px solid var(--glass-light-edge);
+  box-shadow: var(--depth-1);
+  border-radius: var(--r-card);
+}
+main.service-theme .api-explainer__compare-sep { background: var(--c-navy); color: var(--c-gold-a); box-shadow: none; }
+main.service-theme .api-explainer__compare-col li::before { color: var(--c-gold-b); text-shadow: none; }
+main.service-theme .api-explainer__compare-col h3 { border-bottom-color: var(--c-gold-b); text-shadow: none; }
+main.service-theme :is(.api-about__image, .api-explainer__image) {
+  border-radius: var(--r-card);
+  box-shadow: var(--depth-2);
+  border: 1px solid var(--glass-light-edge);
+}
+
+/* ───────────── 12. CTA BLOCKS ───────────── */
+main.service-theme :is(.api-cta h2, .mob-cta h2, .csd-final-cta h2, .dm-cta h2) { color: #fff; }
+main.service-theme :is(.api-cta p, .mob-cta p, .csd-final-cta p, .dm-cta p) { color: rgba(255,255,255,.8); }
+main.service-theme .mob-cta__badge { background: var(--glass-dark); border: 1px solid rgba(233,191,55,.5); color: var(--c-gold-a); backdrop-filter: blur(10px); }
+main.service-theme .dm-contact { background: var(--glass-dark); border: 1px solid var(--glass-dark-edge); border-radius: var(--r-card); backdrop-filter: blur(16px); }
+main.service-theme .csd-final-cta__content .section-eyebrow { background: var(--gold-grad); color: var(--c-navy); }
+
+/* ───────────── 13. HERO STAT STRIPS ───────────── */
+main.service-theme :is(.api-hero__stats) { border-radius: var(--r-card); }
+main.service-theme :is(.api-hero__stat-label, .mob-hero__stat-label, .csd-hero__stat-label) { color: rgba(255,255,255,.7); }
+main.service-theme .api-hero__tech-strip { background: transparent; }
+main.service-theme .mob-hero__live-dot { background: var(--c-gold-a); }
+
+/* ───────────── 14. QUALITY FLOOR ───────────── */
+main.service-theme :focus-visible { outline: 3px solid var(--c-gold-a); outline-offset: 3px; border-radius: 8px; }
+@media (max-width: 768px) {
+  main.service-theme { --r-card: 20px; }
+  main.service-theme :is(.api-practice-card, .api-invest-card, .api-edge-card, .api-service-card, .wds-service-card,
+    .mob-tech-col, .why-card):hover { transform: translateY(-4px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  main.service-theme *, main.service-theme *::before, main.service-theme *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  main.service-theme :is(.api-tech-col) { animation: none !important; }
+}
+@supports not (backdrop-filter: blur(1px)) {
+  main.service-theme { --glass-light: rgba(255,255,255,.92); --glass-dark: rgba(15,45,94,.85); }
+}
