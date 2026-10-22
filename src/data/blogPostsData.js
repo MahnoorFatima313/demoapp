@@ -5057,7 +5057,7 @@ pd.DataFrame(rows).to_excel("pdf_metadata.xlsx", index=False)</code></pre>
   // ══════════════════════════════════════════════════════════
   "how-to-avoid-technical-debt-in-custom-web-software": {
     author: "mahnoor-fatima",
-    title: "How to Avoid Technical Debt in Custom Web Software: A Guide for Founders & CTOs",
+    title: "How to Avoid Technical Debt in Custom Web Software",
     seoTitle: "How to Avoid Technical Debt in Custom Web Software",
     description: "Template or custom build? Learn how to avoid technical debt in custom web software with a clear decision table, 8 practices and a ready-to-use CI example.",
     canonicalUrl: `${BLOG_BASE}/how-to-avoid-technical-debt-in-custom-web-software`,
@@ -5091,7 +5091,7 @@ pd.DataFrame(rows).to_excel("pdf_metadata.xlsx", index=False)</code></pre>
       {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "How to Avoid Technical Debt in Custom Web Software: A Guide for Founders & CTOs",
+        "headline": "How to Avoid Technical Debt in Custom Web Software",
         "description": "How founders and CTOs can choose between a template and a custom build, and prevent technical debt with sound architecture, testing, reviews and a debt budget.",
         "image": [technicalDebtHero, technicalDebtCompare],
         "datePublished": "2026-10-22T09:00:00+05:00",

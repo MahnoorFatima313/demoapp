@@ -466,6 +466,13 @@ const CustomSoftwareDevelopment = () => {
                 every new framework, it's what makes long-term maintenance predictable instead
                 of a guessing game for whoever inherits the code next.
               </p>
+              <p>
+                Planning a custom build? Read our guide on{" "}
+                <Link to="/blog/how-to-avoid-technical-debt-in-custom-web-software">
+                  how to avoid technical debt in custom web software
+                </Link>{" "}
+                for practical ways to keep future changes manageable.
+              </p>
             </div>
             <ul className="csd-tech__grid" aria-label="Programming languages and frameworks used by QllmSoft">
               {["ASP.NET Core", "React.js", "Angular", "SQL Server", "Microsoft Azure", "Entity Framework", "Docker", "Git & DevOps"].map((t) => (
