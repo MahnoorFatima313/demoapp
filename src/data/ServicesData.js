@@ -119,14 +119,6 @@ export const SERVICES = [
     categories: ["website","servicePage"]
   },
   {
-    id: "website-cost",
-    title: "Website Dev Cost",
-    desc: "Transparent pricing models for high converting business websites.",
-    link: "/website-development-cost-in-pakistan",
-    image: cost,
-    categories: ["website"]
-  },
-  {
     id: "hire-dotnet",
     title: "Hire .NET Developers",
     desc: "Access senior ASP.NET Core experts for enterprise level security.",
