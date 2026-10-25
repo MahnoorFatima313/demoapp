@@ -204,21 +204,15 @@ function App() {
 								path="/custom-business-automation-solutions"
 								element={<CustomBusinessAutomationSolutions />}
 							/>
+							<Route path="/outsource-mobile-app-development-to-pakistan"
+  element={<Navigate to="/blog/outsource-mobile-app-development-to-pakistan" replace />} />
 							<Route
-								path="/outsource-mobile-app-development-to-pakistan"
-								element={<OutsourceMobileAppDevelopment />}
-							/>
-							<Route
-								path="/mobile-app-development-cost-in-pakistan"
-								element={<MobileAppDevelopmentCost />}
-							/>
+	path="/mobile-app-development-cost-in-pakistan"
+	element={<Navigate to="/blog/mobile-app-development-cost-in-pakistan" replace />}
+/>
 							<Route path="/author/:authorSlug" element={<AuthorPage />} />
 							
 
-<Route
-	path="/document-control-software"
-	element={<DocumentControlSoftware />}
-/>
 
 						</Routes>
 					</Suspense>

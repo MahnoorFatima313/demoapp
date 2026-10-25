@@ -216,7 +216,7 @@ export const blogPostsData = {
       int("/asp-net-core-development", "ASP.NET Core Development Services"),
       int("/web-application-development-services", "Web Application Development Services"),
       int("/api-development-services", "API Development Services"),
-      int("/blog/outsource-software-development-to-pakistan", "Outsource Software Development to Pakistan - Full Guide"),
+    
       int("/blog/hiring-dotnet-developers-guide", "Hire .NET Developers in Pakistan"),
       int("/blog/csharp-desktop-application-development", "C# Desktop Application Development Services")
     ],
@@ -441,7 +441,7 @@ export const blogPostsData = {
     internalLinks: [
       int("/asp-net-core-development", "ASP.NET Core Web Development Services"),
       int("/blog/hiring-dotnet-developers-guide", "Hire .NET Developers in Pakistan"),
-      int("/blog/outsource-software-development-to-pakistan", "Outsource Software Development to Pakistan"),
+    
       int("/blog/legacy-system-modernization-without-downtime-or-data-loss", "Legacy System Modernization Without Downtime"),
       int("/services", "All QllmSoft Services")
     ],
@@ -599,7 +599,7 @@ export const blogPostsData = {
       int("/website-development-services", "Website Development Services"),
       int("/web-application-development-services", "Web Application Development"),
       int("/api-development-services", "API Development Services"),
-      int("/blog/outsource-software-development-to-pakistan", "Outsource Software Development to Pakistan"),
+    
       int("/blog/mobile-app-development-cost-in-pakistan", "Mobile App Development Cost in Pakistan"),
       int("/blog/best-software-house-in-pakistan", "Best Software Houses in Pakistan 2026")
     ],
@@ -900,7 +900,7 @@ export const blogPostsData = {
     internalLinks: [
       int("/api-development-services", "API Development Services"),
       int("/web-application-development-services", "Web Application Development"),
-      int("/blog/education-software-development-pakistan", "Education Software Development in Pakistan"),
+    
       int("/blog/custom-software-for-financial-services-compliance-and-growth", "Custom Software for Financial Services"),
       int("/services", "All QllmSoft Services")
     ],
@@ -1043,7 +1043,7 @@ export const blogPostsData = {
     internalLinks: [
       int("/web-application-development-services", "Web Application Development Services"),
       int("/api-development-services", "API Development Services"),
-      int("/blog/ai-powered-software-solutions", "AI-Powered Software Solutions"),
+    
       int("/blog/custom-software-for-financial-services-compliance-and-growth", "Custom Software for Financial Services"),
       int("/services", "All QllmSoft Services")
     ],
@@ -1344,7 +1344,7 @@ export const blogPostsData = {
     ],
     internalLinks: [
       int("/blog/mobile-app-development-cost-in-pakistan", "Mobile App Development Cost in Pakistan"),
-      int("/blog/outsource-software-development-to-pakistan", "Outsource Software Development to Pakistan"),
+    
       int("/blog/mobile-app-devsecops-in-2026", "Mobile App DevSecOps in 2026"),
       int("/blog/best-software-house-in-pakistan", "Best Software Houses in Pakistan"),
       int("/services", "All QllmSoft Services")
@@ -1689,7 +1689,7 @@ export const blogPostsData = {
     ],
     internalLinks: [
       int("/blog/hiring-dotnet-developers-guide", "Hire .NET Developers in Pakistan"),
-      int("/blog/outsource-software-development-to-pakistan", "Outsource Software Development to Pakistan"),
+    
       int("/asp-net-core-development", "ASP.NET Core Development Services"),
       int("/blog/best-software-house-in-pakistan", "Best Software Houses in Pakistan"),
       int("/services", "All QllmSoft Services")
@@ -2327,7 +2327,7 @@ export const blogPostsData = {
     ],
     internalLinks: [
       int("/blog/csharp-desktop-application-development", "C# Desktop Application Development Services"),
-      int("/blog/outsource-software-development-to-pakistan", "Outsource Software Development to Pakistan"),
+    
       int("/blog/best-software-house-in-pakistan", "Best Software Houses in Pakistan 2026"),
       int("/asp-net-core-development", "ASP.NET Core Development Services"),
       int("/services", "All QllmSoft Services")
@@ -2886,7 +2886,7 @@ export const blogPostsData = {
     internalLinks: [
       int("/blog/role-based-access-problems-why-teams-break-systems", "Role-Based Access Control Problems"),
       int("/blog/legacy-system-modernization-without-downtime-or-data-loss", "Legacy System Modernization"),
-      int("/blog/ai-powered-software-solutions", "AI-Powered Software Solutions"),
+     
       int("/api-development-services", "Secure API Development"),
       int("/services", "All QllmSoft Services")
     ],
@@ -3696,7 +3696,7 @@ public async Task&lt;IActionResult&gt; Approve(int id)
       int("/services", "All QllmSoft Services"),
       int("/web-application-development-services", "Web Application Development Services"),
       int("/blog/marketing-tech-stack-for-enterprises", "How to Choose the Right Marketing Tech Stack for Enterprises"),
-      int("/blog/outsource-software-development-to-pakistan", "Outsource Software Development to Pakistan"),
+     
       int("/blog/best-software-house-in-pakistan", "Best Software Houses in Pakistan 2026"),
       int("/blog/hiring-dotnet-developers-guide", "Hire .NET Developers in Pakistan")
     ],
@@ -3747,7 +3747,7 @@ public async Task&lt;IActionResult&gt; Approve(int id)
         heading: "Why 100,000+ Graduates Matter for Pakistan's Digital Future",
         html: `
           <p>A skill is only useful if people can get to it. By removing the cost barrier, a free program opens the door for students who might otherwise never get a chance to learn web development, design or digital marketing. Every graduate is a potential freelancer, employee or founder.</p>
-          <p>The range of courses matters too. Pakistan's technology sector needs developers, marketers, designers and security specialists working together. As our guide on <a href="https://qllmsoft.com/blog/outsource-software-development-to-pakistan">outsourcing software development to Pakistan</a> explains, a deep and varied talent pool is what makes the country attractive to global teams, and programs like this help build it.</p>
+          <p>The range of courses matters too. Pakistan's technology sector needs developers, marketers, designers and security specialists working together.</p>
         `
       },
       {
@@ -4217,7 +4217,7 @@ public async Task&lt;IActionResult&gt; Approve(int id)
       int("/blog/how-to-organize-unorganized-documents-in-cloud-storage", "How to Organize Unorganized Documents in Cloud Storage"),
       int("/blog/when-internal-software-slows-teams-instead-of-helping", "When Internal Software Slows Teams"),
       int("/blog/role-based-access-problems-why-teams-break-systems", "Role Based Access Problems"),
-      int("/blog/ai-powered-software-solutions", "AI-Powered Software Solutions"),
+     
       int("/services", "All QllmSoft Services")
     ],
     externalLinks: [
