@@ -10,12 +10,12 @@ import RequirementsChecklist from "./pages/RequirementsChecklist";
 import EcommerceDevelopmentServices from './pages/EcommerceDevelopmentServices';
 import AspnetCoreDevelopmentServices from './pages/asp-net-core-development-services';
 import OutsourceWebDevelopmentPakistan from "./pages/OutsourceWebDevelopmentPakistan";
-import OutsourceMobileAppDevelopment from "./pages/OutsourceMobileAppDevelopment";
-import MobileAppDevelopmentCost from "./pages/MobileAppDevelopmentCost";
+
+
 import WordPressDevelopmentServices from "./pages/WordPressDevelopmentServices";
 import CustomSchoolManagementSoftwareDevelopment from "./pages/CustomSchoolManagementSoftwareDevelopment";
 import CustomBusinessAutomationSolutions from "./pages/CustomBusinessAutomationSolutions";
-import DocumentControlSoftware from "./pages/DocumentControlSoftware";
+
 import AuthorPage from "./pages/AuthorPage";
 
 // Lazy loaded pages - each page loads only when visited
