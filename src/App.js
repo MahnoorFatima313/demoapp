@@ -17,6 +17,7 @@ import CustomSchoolManagementSoftwareDevelopment from "./pages/CustomSchoolManag
 import CustomBusinessAutomationSolutions from "./pages/CustomBusinessAutomationSolutions";
 
 import AuthorPage from "./pages/AuthorPage";
+import { RelatedReading } from "./components/RelatedReading";
 
 // Lazy loaded pages - each page loads only when visited
 const Home = lazy(() => import("./pages/Home"));
@@ -93,7 +94,12 @@ function App() {
 							<Route path="/blog/:slug" element={<BlogArticle />} />
 							<Route
 								path="/custom-software-development-services"
-								element={<CustomSoftwareDevelopment />}
+								element={
+									<>
+										<CustomSoftwareDevelopment />
+										<RelatedReading servicePath="/custom-software-development-services" />
+									</>
+								}
 							/>
 							<Route
 								path="/website-development-services"
@@ -117,15 +123,30 @@ function App() {
 							/>
 							<Route
 								path="/api-development-services"
-								element={<ApiDevelopmentServices />}
+								element={
+									<>
+										<ApiDevelopmentServices />
+										<RelatedReading servicePath="/api-development-services" />
+									</>
+								}
 							/>
 							<Route
 								path="/hire-dotnet-developers-pakistan"
-								element={<HireDotnetDevelopers />}
+								element={
+									<>
+										<HireDotnetDevelopers />
+										<RelatedReading servicePath="/hire-dotnet-developers-pakistan" />
+									</>
+								}
 							/>
 							<Route
 								path="/mobile-app-development"
-								element={<MobileAppDevelopment />}
+								element={
+									<>
+										<MobileAppDevelopment />
+										<RelatedReading servicePath="/mobile-app-development" />
+									</>
+								}
 							/>
 							<Route
 								path="/outsource-software-development-to-pakistan"
@@ -133,7 +154,12 @@ function App() {
 							/>
 							<Route
 								path="/ai-powered-software-solutions"
-								element={<AiPoweredSoftware />}
+								element={
+									<>
+										<AiPoweredSoftware />
+										<RelatedReading servicePath="/ai-powered-software-solutions" />
+									</>
+								}
 							/>
 							<Route
 								path="/hire-react-developers-pakistan"
@@ -149,7 +175,12 @@ function App() {
 							/>
 							<Route
 								path="/education-software-development-pakistan"
-								element={<EducationSoftware />}
+								element={
+									<>
+										<EducationSoftware />
+										<RelatedReading servicePath="/education-software-development-pakistan" />
+									</>
+								}
 							/>
 							<Route
 								path="/legacy-system-modernization-services"
@@ -157,7 +188,12 @@ function App() {
 							/>
 							<Route
 								path="/web-application-development-services"
-								element={<WebAppDevelopment />}
+								element={
+									<>
+										<WebAppDevelopment />
+										<RelatedReading servicePath="/web-application-development-services" />
+									</>
+								}
 							/>
 							<Route
 								path="/outsource-api-development-to-pakistan"

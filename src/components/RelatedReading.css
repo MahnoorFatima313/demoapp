@@ -1,0 +1,51 @@
+.related-reading {
+  padding: 2.5rem 0;
+  background: #f7fafc;
+}
+
+.related-reading h2 {
+  margin: 0 0 1.25rem;
+}
+
+.related-reading ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.related-reading li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1rem;
+  border: 1px solid #dbe4ee;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+.related-reading a,
+.article-service-link a {
+  color: #08397a;
+  font-weight: 600;
+}
+
+.related-reading li span {
+  color: #526174;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.article-service-link {
+  margin: 2rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid #edb702;
+  background: #f7fafc;
+}
+
+.article-service-link p {
+  margin: 0;
+  line-height: 1.6;
+}
