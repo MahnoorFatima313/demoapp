@@ -251,9 +251,7 @@ function QllmDocsPage() {
             <a className="qdocs-text-link" href={PRODUCT_URL} {...external}>
               Visit qllmdocs.com <ArrowUpRight size={16} />
             </a>
-            <Link className="qdocs-text-link" to="/document-control-software">
-              Document control software <ArrowUpRight size={16} />
-            </Link>
+           
             <a className="qdocs-text-link" href={COMPANY_URL}>
               More from QllmSoft <ArrowUpRight size={16} />
             </a>

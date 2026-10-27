@@ -467,11 +467,15 @@ const CustomSoftwareDevelopment = () => {
                 of a guessing game for whoever inherits the code next.
               </p>
               <p>
-                Planning a custom build? Read our guide on{" "}
+                Comparing options? Start with our{" "}
+                <Link to="/blog/custom-software-build-vs-buy-guide">
+                  practical build-vs-buy guide
+                </Link>
+                , then see{" "}
                 <Link to="/blog/how-to-avoid-technical-debt-in-custom-web-software">
                   how to avoid technical debt in custom web software
                 </Link>{" "}
-                for practical ways to keep future changes manageable.
+                for ways to keep future changes manageable.
               </p>
             </div>
             <ul className="csd-tech__grid" aria-label="Programming languages and frameworks used by QllmSoft">
@@ -496,8 +500,11 @@ const CustomSoftwareDevelopment = () => {
                 fully-featured one. A single internal tool can be a matter of weeks; a
                 multi-module operations platform is a matter of months. For a breakdown of how we
                 structure pricing and engagement models, see our{" "}
-                <Link to="/software-development-cost-calculator">pricing and engagement guide</Link>, or
-                just tell us your project and we'll give you a real number.
+                <Link to="/software-development-cost-calculator">pricing and engagement guide</Link>.
+                Before scoping, our{" "}
+                <Link to="/software-project-requirements-checklist">software project requirements checklist</Link>
+                can help organize the initial decisions. You can also tell us about your project
+                and we'll give you a real number.
               </p>
             </div>
           </div>

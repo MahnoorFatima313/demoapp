@@ -10,13 +10,14 @@ import RequirementsChecklist from "./pages/RequirementsChecklist";
 import EcommerceDevelopmentServices from './pages/EcommerceDevelopmentServices';
 import AspnetCoreDevelopmentServices from './pages/asp-net-core-development-services';
 import OutsourceWebDevelopmentPakistan from "./pages/OutsourceWebDevelopmentPakistan";
-import OutsourceMobileAppDevelopment from "./pages/OutsourceMobileAppDevelopment";
-import MobileAppDevelopmentCost from "./pages/MobileAppDevelopmentCost";
+
+
 import WordPressDevelopmentServices from "./pages/WordPressDevelopmentServices";
 import CustomSchoolManagementSoftwareDevelopment from "./pages/CustomSchoolManagementSoftwareDevelopment";
 import CustomBusinessAutomationSolutions from "./pages/CustomBusinessAutomationSolutions";
-import DocumentControlSoftware from "./pages/DocumentControlSoftware";
+
 import AuthorPage from "./pages/AuthorPage";
+import { RelatedReading } from "./components/RelatedReading";
 
 // Lazy loaded pages - each page loads only when visited
 const Home = lazy(() => import("./pages/Home"));
@@ -93,7 +94,12 @@ function App() {
 							<Route path="/blog/:slug" element={<BlogArticle />} />
 							<Route
 								path="/custom-software-development-services"
-								element={<CustomSoftwareDevelopment />}
+								element={
+									<>
+										<CustomSoftwareDevelopment />
+										<RelatedReading servicePath="/custom-software-development-services" />
+									</>
+								}
 							/>
 							<Route
 								path="/website-development-services"
@@ -117,15 +123,30 @@ function App() {
 							/>
 							<Route
 								path="/api-development-services"
-								element={<ApiDevelopmentServices />}
+								element={
+									<>
+										<ApiDevelopmentServices />
+										<RelatedReading servicePath="/api-development-services" />
+									</>
+								}
 							/>
 							<Route
 								path="/hire-dotnet-developers-pakistan"
-								element={<HireDotnetDevelopers />}
+								element={
+									<>
+										<HireDotnetDevelopers />
+										<RelatedReading servicePath="/hire-dotnet-developers-pakistan" />
+									</>
+								}
 							/>
 							<Route
 								path="/mobile-app-development"
-								element={<MobileAppDevelopment />}
+								element={
+									<>
+										<MobileAppDevelopment />
+										<RelatedReading servicePath="/mobile-app-development" />
+									</>
+								}
 							/>
 							<Route
 								path="/outsource-software-development-to-pakistan"
@@ -133,7 +154,12 @@ function App() {
 							/>
 							<Route
 								path="/ai-powered-software-solutions"
-								element={<AiPoweredSoftware />}
+								element={
+									<>
+										<AiPoweredSoftware />
+										<RelatedReading servicePath="/ai-powered-software-solutions" />
+									</>
+								}
 							/>
 							<Route
 								path="/hire-react-developers-pakistan"
@@ -149,7 +175,12 @@ function App() {
 							/>
 							<Route
 								path="/education-software-development-pakistan"
-								element={<EducationSoftware />}
+								element={
+									<>
+										<EducationSoftware />
+										<RelatedReading servicePath="/education-software-development-pakistan" />
+									</>
+								}
 							/>
 							<Route
 								path="/legacy-system-modernization-services"
@@ -157,7 +188,12 @@ function App() {
 							/>
 							<Route
 								path="/web-application-development-services"
-								element={<WebAppDevelopment />}
+								element={
+									<>
+										<WebAppDevelopment />
+										<RelatedReading servicePath="/web-application-development-services" />
+									</>
+								}
 							/>
 							<Route
 								path="/outsource-api-development-to-pakistan"
@@ -204,21 +240,15 @@ function App() {
 								path="/custom-business-automation-solutions"
 								element={<CustomBusinessAutomationSolutions />}
 							/>
+							<Route path="/outsource-mobile-app-development-to-pakistan"
+  element={<Navigate to="/blog/outsource-mobile-app-development-to-pakistan" replace />} />
 							<Route
-								path="/outsource-mobile-app-development-to-pakistan"
-								element={<OutsourceMobileAppDevelopment />}
-							/>
-							<Route
-								path="/mobile-app-development-cost-in-pakistan"
-								element={<MobileAppDevelopmentCost />}
-							/>
+	path="/mobile-app-development-cost-in-pakistan"
+	element={<Navigate to="/blog/mobile-app-development-cost-in-pakistan" replace />}
+/>
 							<Route path="/author/:authorSlug" element={<AuthorPage />} />
 							
 
-<Route
-	path="/document-control-software"
-	element={<DocumentControlSoftware />}
-/>
 
 						</Routes>
 					</Suspense>

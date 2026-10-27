@@ -9,6 +9,7 @@ import {
   DEFAULT_AUTHOR,
   articleAuthorSchema,
 } from "../data/authorsData";
+import { ArticleServiceLink } from "../components/RelatedReading";
 
 const SectionListItem = ({ text }) => <li>{text}</li>;
 
@@ -234,6 +235,8 @@ const BlogArticle = () => {
               {sections.slice(1).map((section, index) => (
                 <BlogSection key={index} {...section} />
               ))}
+
+              <ArticleServiceLink slug={slug} />
 
               {/* Author box */}
               <aside className="author-box">

@@ -34,7 +34,10 @@ for (const match of appSource.matchAll(/<Route\b[^>]*\bpath="([^"]+)"/gs)) {
 }
 
 for (const match of blogSource.matchAll(/^  "([^"]+)": \{$/gm)) {
-  routes.add(`/blog/${match[1]}`);
+  const route = `/blog/${match[1]}`;
+  if (!redirectRoutes.has(route)) {
+    routes.add(route);
+  }
 }
 
 const entries = [...routes].map((route) => {

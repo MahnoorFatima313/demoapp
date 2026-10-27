@@ -117,7 +117,7 @@ const sectors = [
   {
     title: "Education",
     text: "Admissions, fee follow-ups and attendance alerts handled without manual chasing.",
-    href: "/blog/education-software-development-pakistan",
+ 
     anchor: "education software development",
   },
   {
