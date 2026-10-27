@@ -207,6 +207,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+<url>
     <loc>https://qllmsoft.com/blog/best-software-house-in-pakistan</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -223,7 +224,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
 <url>
     <loc>https://qllmsoft.com/blog/mobile-app-development-cost-in-pakistan</loc>
     <lastmod>2026-09-13</lastmod>
@@ -244,11 +244,6 @@
   </url>
 <url>
     <loc>https://qllmsoft.com/blog/asp-net-core-development</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-<url>
-    <loc>https://qllmsoft.com/blog/hire-angular-developers-pakistan</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

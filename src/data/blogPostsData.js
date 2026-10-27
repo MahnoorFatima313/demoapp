@@ -213,7 +213,7 @@ export const blogPostsData = {
       }
     ],
     internalLinks: [
-      int("/asp-net-core-development", "ASP.NET Core Development Services"),
+      int("/asp-net-core-development-services", "ASP.NET Core Development Services"),
       int("/web-application-development-services", "Web Application Development Services"),
       int("/api-development-services", "API Development Services"),
     
@@ -439,7 +439,7 @@ export const blogPostsData = {
       }
     ],
     internalLinks: [
-      int("/asp-net-core-development", "ASP.NET Core Web Development Services"),
+      int("/asp-net-core-development-services", "ASP.NET Core Web Development Services"),
       int("/blog/hiring-dotnet-developers-guide", "Hire .NET Developers in Pakistan"),
     
       int("/blog/legacy-system-modernization-without-downtime-or-data-loss", "Legacy System Modernization Without Downtime"),
@@ -750,7 +750,7 @@ export const blogPostsData = {
       int("/blog/best-software-house-in-pakistan", "Best Software Houses in Pakistan 2026"),
       int("/blog/hiring-dotnet-developers-guide", "Hire .NET Developers in Pakistan"),
       int("/blog/outsource-mobile-app-development-to-pakistan", "Outsource Mobile App Development to Pakistan"),
-      int("/asp-net-core-development", "ASP.NET Core Development Services"),
+      int("/asp-net-core-development-services", "ASP.NET Core Development Services"),
       int("/services", "All QllmSoft Services")
     ],
     externalLinks: [
@@ -1690,7 +1690,7 @@ export const blogPostsData = {
     internalLinks: [
       int("/blog/hiring-dotnet-developers-guide", "Hire .NET Developers in Pakistan"),
     
-      int("/asp-net-core-development", "ASP.NET Core Development Services"),
+      int("/asp-net-core-development-services", "ASP.NET Core Development Services"),
       int("/blog/best-software-house-in-pakistan", "Best Software Houses in Pakistan"),
       int("/services", "All QllmSoft Services")
     ],
@@ -2329,7 +2329,7 @@ export const blogPostsData = {
       int("/blog/csharp-desktop-application-development", "C# Desktop Application Development Services"),
     
       int("/blog/best-software-house-in-pakistan", "Best Software Houses in Pakistan 2026"),
-      int("/asp-net-core-development", "ASP.NET Core Development Services"),
+      int("/asp-net-core-development-services", "ASP.NET Core Development Services"),
       int("/services", "All QllmSoft Services")
     ],
     externalLinks: [
@@ -2461,7 +2461,7 @@ export const blogPostsData = {
     ],
     internalLinks: [
       int("/blog/csharp-desktop-application-development", "C# Desktop Application Development"),
-      int("/blog/asp-net-core-development", "ASP.NET Core Development Services"),
+      int("/blog/asp-net-core-development-services", "ASP.NET Core Development Services"),
       int("/blog/when-internal-software-slows-teams-instead-of-helping", "When Internal Software Slows Teams"),
       int("/api-development-services", "API Development Services"),
       int("/services", "All QllmSoft Services")
@@ -3028,7 +3028,7 @@ export const blogPostsData = {
       }
     ],
     internalLinks: [
-      int("/asp-net-core-development", "ASP.NET Core Development Services"),
+      int("/asp-net-core-development-services", "ASP.NET Core Development Services"),
       int("/web-application-development-services", "Web Application Development Services"),
       int("/api-development-services", "API Development Services"),
       int("/blog/role-based-access-problems-why-teams-break-systems", "Role Based Access Problems"),
@@ -3320,7 +3320,7 @@ public async Task&lt;IActionResult&gt; Approve(int id)
         heading: "Conclusion: Start Simple, Plan for Policies",
         html: `
           <p>Role-based authorization is the fastest way to protect an ASP.NET Core app, and it is perfectly fine while your rules are broad and stable. Once access depends on claims, amounts, or individual records, policy-based authorization keeps your rules readable, testable and in one place. The strongest setups use both: roles for the front door, policies for the rules behind it.</p>
-          <p>If you are designing access control for a new system, or untangling one that has grown messy, our team can help you pick a clean approach from the start. Explore our <a href="https://qllmsoft.com/asp-net-core-development">ASP.NET Core development services</a>, or <a href="https://qllmsoft.com/contact">book a free consultation</a> to talk through your project. If you are building a team, our guide to <a href="https://qllmsoft.com/blog/hiring-dotnet-developers-guide">hiring .NET developers in Pakistan</a> is a good next read.</p>
+          <p>If you are designing access control for a new system, or untangling one that has grown messy, our team can help you pick a clean approach from the start. Explore our <a href="https://qllmsoft.com/asp-net-core-development-services">ASP.NET Core development services</a>, or <a href="https://qllmsoft.com/contact">book a free consultation</a> to talk through your project. If you are building a team, our guide to <a href="https://qllmsoft.com/blog/hiring-dotnet-developers-guide">hiring .NET developers in Pakistan</a> is a good next read.</p>
           <div class="contact-box">
             <p><strong>Need help with authorization in your ASP.NET Core project?</strong></p>
             <p><strong>Email:</strong> <a class="u-email" href="mailto:qllmsoft@gmail.com">qllmsoft@gmail.com</a></p>
@@ -3900,7 +3900,7 @@ public async Task&lt;IActionResult&gt; Approve(int id)
       }
     ],
     internalLinks: [
-      int("/document-controller-software", "Document Controller Software & Document Management | QllmDocs"),
+      int("/ai-document-management-software", "Document Controller Software & Document Management | QllmDocs"),
       int("/blog/role-based-access-problems-why-teams-break-systems", "Role Based Access Problems"),
       int("/blog/when-internal-software-slows-teams-instead-of-helping", "When Internal Software Slows Teams"),
       int("/blog/marketing-tech-stack-for-enterprises", "How to Choose the Right Marketing Tech Stack for Enterprises"),
@@ -4035,7 +4035,7 @@ public async Task&lt;IActionResult&gt; Approve(int id)
             <li>Audits or compliance reviews require days of manual gathering.</li>
             <li>The naming convention is ignored because following it takes too much effort.</li>
           </ul>
-          <p>That is the point where a document management system (DMS) earns its place. A <a href="https://en.wikipedia.org/wiki/Document_management_system" target="_blank" rel="noopener noreferrer">document management system</a> stores files in a structured, searchable repository with controlled access, instead of leaving organization to individual habits. Our overview of <a href="https://qllmsoft.com/document-controller-software">document controller software and document management</a> explains what to look for.</p>
+          <p>That is the point where a document management system (DMS) earns its place. A <a href="https://en.wikipedia.org/wiki/Document_management_system" target="_blank" rel="noopener noreferrer">document management system</a> stores files in a structured, searchable repository with controlled access, instead of leaving organization to individual habits. Our overview of <a href="https://qllmsoft.com/ai-document-management-software">document controller software and document management</a> explains what to look for.</p>
         `
       },
       {
@@ -4051,7 +4051,7 @@ public async Task&lt;IActionResult&gt; Approve(int id)
             <li><strong>Encryption:</strong> documents are protected with AES-256 encryption at rest and TLS in transit.</li>
             <li><strong>Excel export:</strong> export full or filtered document data to .xlsx with one click, which is useful for audits and reporting.</li>
           </ul>
-          <p>QllmDocs offers a 90-day free trial on its Basic plan with no credit card required, so a team can organize a real set of documents before deciding. See the full feature set on the <a href="https://qllmdocs.com" target="_blank" rel="noopener noreferrer">QllmDocs website</a>, or read about how document controller software supports governed document workflows on our <a href="https://qllmsoft.com/document-controller-software">Document Controller Software &amp; Document Management | QllmDocs</a> page.</p>
+          <p>QllmDocs offers a 90-day free trial on its Basic plan with no credit card required, so a team can organize a real set of documents before deciding. See the full feature set on the <a href="https://qllmdocs.com" target="_blank" rel="noopener noreferrer">QllmDocs website</a>, or read about how document controller software supports governed document workflows on our <a href="https://qllmsoft.com/ai-document-management-software">Document Controller Software &amp; Document Management | QllmDocs</a> page.</p>
         `
       },
       {
@@ -4105,7 +4105,7 @@ public async Task&lt;IActionResult&gt; Approve(int id)
         heading: "Conclusion: Organization Is a System, Not a One-Time Cleanup",
         html: `
           <p>To organize unorganized documents in cloud storage, clean first, keep the structure simple, name files consistently, record metadata, control access by role and assign someone to keep it healthy. For many teams that is enough. When searching, permissions and audits still cost too much time, a purpose-built document management platform removes the manual effort.</p>
-          <p>Explore <a href="https://qllmdocs.com" target="_blank" rel="noopener noreferrer">QllmDocs</a> and start the 90-day free trial, learn more about <a href="https://qllmsoft.com/document-controller-software">document controller software</a>, or <a href="https://qllmsoft.com/contact">book a free consultation</a> with our team.</p>
+          <p>Explore <a href="https://qllmdocs.com" target="_blank" rel="noopener noreferrer">QllmDocs</a> and start the 90-day free trial, learn more about <a href="https://qllmsoft.com/ai-document-management-software">AI document management software</a>, or <a href="https://qllmsoft.com/contact">book a free consultation</a> with our team.</p>
           <div class="contact-box">
             <p><strong>Need help organizing and securing your team's documents?</strong></p>
             <p><strong>Email:</strong> <a class="u-email" href="mailto:qllmsoft@gmail.com">qllmsoft@gmail.com</a></p>
@@ -4213,7 +4213,7 @@ public async Task&lt;IActionResult&gt; Approve(int id)
       }
     ],
     internalLinks: [
-      int("/document-controller-software", "Document Controller Software & Document Management | QllmDocs"),
+      int("/ai-document-management-software", "AI Document Management Software & Document Management | QllmDocs"),
       int("/blog/how-to-organize-unorganized-documents-in-cloud-storage", "How to Organize Unorganized Documents in Cloud Storage"),
       int("/blog/when-internal-software-slows-teams-instead-of-helping", "When Internal Software Slows Teams"),
       int("/blog/role-based-access-problems-why-teams-break-systems", "Role Based Access Problems"),
@@ -4397,7 +4397,7 @@ Result: only documents matching all three criteria</code></pre>
             <li><strong>Role-based access:</strong> admins control who can view, edit or share each document, with optional two-factor authentication.</li>
             <li><strong>Export for reporting:</strong> export full or filtered results to Excel (.xlsx) with one click.</li>
           </ul>
-          <p>QllmDocs offers a 90-day free trial on its Basic plan with no credit card required, and plans include a monthly allowance of AI queries, so you can test ASKAI on your own documents before deciding. To see how governed document workflows fit together, read about our <a href="https://qllmsoft.com/document-controller-software">Document Controller Software &amp; Document Management | QllmDocs</a> solution.</p>
+          <p>QllmDocs offers a 90-day free trial on its Basic plan with no credit card required, and plans include a monthly allowance of AI queries, so you can test ASKAI on your own documents before deciding. To see how governed document workflows fit together, read about our <a href="https://qllmsoft.com/ai-document-management-software">AI Document Management Software &amp; Document Management | QllmDocs</a> solution.</p>
         `
       },
       {
@@ -4427,7 +4427,7 @@ Result: only documents matching all three criteria</code></pre>
         heading: "Conclusion: Ask Naturally, Find Precisely",
         html: `
           <p>Natural language search in document management lets people find files by describing them in everyday words. Behind the scenes, the system turns the request into structured criteria and returns only what matches. It saves time, lowers the barrier to precise searching and helps every team member find what they need, provided your documents have consistent metadata and sensible permissions.</p>
-          <p>Try it on your own files with <a href="https://qllmdocs.com" target="_blank" rel="noopener noreferrer">QllmDocs</a> and its 90-day free trial, learn more about <a href="https://qllmsoft.com/document-controller-software">document controller software</a>, or <a href="https://qllmsoft.com/contact">book a free consultation</a> with our team.</p>
+          <p>Try it on your own files with <a href="https://qllmdocs.com" target="_blank" rel="noopener noreferrer">QllmDocs</a> and its 90-day free trial, learn more about <a href="https://qllmsoft.com/ai-document-management-software">AI document management software</a>, or <a href="https://qllmsoft.com/contact">book a free consultation</a> with our team.</p>
           <div class="contact-box">
             <p><strong>Want to make your team's documents searchable in seconds?</strong></p>
             <p><strong>Email:</strong> <a class="u-email" href="mailto:qllmsoft@gmail.com">qllmsoft@gmail.com</a></p>
@@ -4547,7 +4547,7 @@ Result: only documents matching all three criteria</code></pre>
       }
     ],
     internalLinks: [
-      int("/document-controller-software", "Document Controller Software & Document Management | QllmDocs"),
+      int("/ai-document-management-software", "AI Document Management Software & Document Management | QllmDocs"),
       int("/blog/how-to-organize-unorganized-documents-in-cloud-storage", "How to Organize Unorganized Documents in Cloud Storage"),
       int("/blog/what-is-natural-language-search-in-document-management", "What Is Natural Language Search in Document Management?"),
       int("/blog/when-internal-software-slows-teams-instead-of-helping", "When Internal Software Slows Teams"),
@@ -4682,7 +4682,7 @@ pd.DataFrame(rows).to_excel("pdf_metadata.xlsx", index=False)</code></pre>
         html: `
           <span id="platform"></span>
           <p>For teams that manage documents every day, a dedicated platform is the most practical option. Instead of writing scripts or running commands, you work from the system where your documents already live.</p>
-          <p><a href="https://qllmdocs.com" target="_blank" rel="noopener noreferrer">QllmDocs</a>, a product of QllmSoft, is built for this. It exports full or filtered document metadata to Excel in one click, so there is no code to write and no tool to maintain. It is part of QllmSoft's broader <a href="https://qllmsoft.com/document-controller-software">Document Controller Software &amp; Document Management | QllmDocs</a> offering, which helps organizations keep documents organized, searchable and under control.</p>
+          <p><a href="https://qllmdocs.com" target="_blank" rel="noopener noreferrer">QllmDocs</a>, a product of QllmSoft, is built for this. It exports full or filtered document metadata to Excel in one click, so there is no code to write and no tool to maintain. It is part of QllmSoft's broader <a href="https://qllmsoft.com/ai-document-management-software">AI Document Management Software &amp; Document Management | QllmDocs</a> offering, which helps organizations keep documents organized, searchable and under control.</p>
           <p><strong>Pros:</strong> no technical skills required, repeatable, and filtered exports let you pull only the documents you need.</p>
           <p><strong>Cons:</strong> it requires adopting a document management system rather than running a one-off script.</p>
         `
@@ -4771,7 +4771,7 @@ pd.DataFrame(rows).to_excel("pdf_metadata.xlsx", index=False)</code></pre>
         heading: "Conclusion: Stop Copying File Properties by Hand",
         html: `
           <p>Copying file properties by hand does not scale. Whether you use a Python script, ExifTool or a document management platform, the goal is the same: collect your PDFs, read the metadata, clean and validate it, and export it to a structured spreadsheet your whole team can use.</p>
-          <p>If your team handles documents every day, the simplest path is a tool built for the job. With <a href="https://qllmdocs.com" target="_blank" rel="noopener noreferrer">QllmDocs</a>, you can export full or filtered metadata to Excel in one click. To see how it fits into a complete document control setup, explore <a href="https://qllmsoft.com/document-controller-software">Document Controller Software &amp; Document Management | QllmDocs</a> from QllmSoft, or <a href="https://qllmsoft.com/contact">book a free consultation</a> with our team.</p>
+          <p>If your team handles documents every day, the simplest path is a tool built for the job. With <a href="https://qllmdocs.com" target="_blank" rel="noopener noreferrer">QllmDocs</a>, you can export full or filtered metadata to Excel in one click. To see how it fits into a complete document control setup, explore <a href="https://qllmsoft.com/ai-document-management-software">AI Document Management Software &amp; Document Management | QllmDocs</a> from QllmSoft, or <a href="https://qllmsoft.com/contact">book a free consultation</a> with our team.</p>
           <div class="contact-box">
             <p><strong>Want to export and manage your document metadata without scripts?</strong></p>
             <p><strong>Email:</strong> <a class="u-email" href="mailto:qllmsoft@gmail.com">qllmsoft@gmail.com</a></p>
@@ -4879,7 +4879,7 @@ pd.DataFrame(rows).to_excel("pdf_metadata.xlsx", index=False)</code></pre>
       }
     ],
     internalLinks: [
-      int("/document-controller-software", "Document Controller Software & Document Management | QllmDocs"),
+      int("/ai-document-management-software", "AI Document Management Software & Document Management | QllmDocs"),
       int("/blog/role-based-access-problems-why-teams-break-systems", "Role Based Access Problems"),
       int("/blog/how-to-organize-unorganized-documents-in-cloud-storage", "How to Organize Unorganized Documents in Cloud Storage"),
       int("/blog/what-is-natural-language-search-in-document-management", "What Is Natural Language Search in Document Management?"),
@@ -4985,7 +4985,7 @@ pd.DataFrame(rows).to_excel("pdf_metadata.xlsx", index=False)</code></pre>
         html: `
           <span id="qllmdocs-solution"></span>
           <p>To safely manage financial files, teams need an all-in-one system that pairs AES-256 encryption with proactive document control software.</p>
-          <p><a href="https://qllmdocs.com" target="_blank" rel="noopener noreferrer">QllmDocs</a>, developed by QllmSoft, automatically encrypts every stored document using AES-256 at rest while enforcing TLS 1.3 in transit. It forms a central component of QllmSoft’s flagship <a href="https://qllmsoft.com/document-controller-software">Document Controller Software &amp; Document Management | QllmDocs</a> platform, delivering enterprise-grade security without technical friction.</p>
+          <p><a href="https://qllmdocs.com" target="_blank" rel="noopener noreferrer">QllmDocs</a>, developed by QllmSoft, automatically encrypts every stored document using AES-256 at rest while enforcing TLS 1.3 in transit. It forms a central component of QllmSoft’s flagship <a href="https://qllmsoft.com/ai-document-management-software">AI Document Management Software &amp; Document Management | QllmDocs</a> platform, delivering enterprise-grade security without technical friction.</p>
           <p>With QllmDocs, team leaders benefit from built-in role-based access, automated audit logs, and AI-assisted file classification. Furthermore, features like <a href="https://qllmsoft.com/blog/what-is-natural-language-search-in-document-management">natural language search in document management</a> empower staff to instantly query financial archives without compromising strict security policies.</p>
         `
       },
@@ -5040,7 +5040,7 @@ pd.DataFrame(rows).to_excel("pdf_metadata.xlsx", index=False)</code></pre>
         html: `
           <p>So, is AES-256 encryption safe enough for storing sensitive financial documents? Unquestionably yes. Its mathematical resilience makes it the unquestioned benchmark for bank-grade data security. However, encryption must be supported by automated access controls, key management, and continuous audit trails to ensure complete compliance.</p>
           <p>If your organization manages sensitive contracts, balance sheets, or client financial records daily, upgrade to a platform built explicitly for the job. With <a href="https://qllmdocs.com" target="_blank" rel="noopener noreferrer">QllmDocs</a>, your financial documents are automatically protected by AES-256 encryption, intelligent access rules, and seamless document tracking.</p>
-          <p>Explore how QllmSoft can transform your organizational workflow with <a href="https://qllmsoft.com/document-controller-software">Document Controller Software &amp; Document Management | QllmDocs</a> or <a href="https://qllmsoft.com/contact">contact our document security experts today</a>.</p>
+          <p>Explore how QllmSoft can transform your organizational workflow with <a href="https://qllmsoft.com/ai-document-management-software">AI Document Management Software &amp; Document Management | QllmDocs</a> or <a href="https://qllmsoft.com/contact">contact our document security experts today</a>.</p>
           <div class="contact-box">
             <p><strong>Want to secure and manage your financial documents with bank-grade encryption?</strong></p>
             <p><strong>Email:</strong> <a class="u-email" href="mailto:qllmsoft@gmail.com">qllmsoft@gmail.com</a></p>
