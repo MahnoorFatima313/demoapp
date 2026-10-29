@@ -1,344 +1,619 @@
 /**
  * AspnetCoreDevelopmentServices.jsx
- * ─────────────────────────────────
- * OUTER SECTION — technology-specific page
- * Central Search Intent: "Hire a team that specializes in ASP.NET Core to build
- *                          or modernize a backend/web system."
- * URL:                   /asp-net-core-development-services
- * Links UP to:            /web-application-development-services (Core pillar)
- *
- * This is deliberately NOT a duplicate of the Web Application Development pillar.
- * That pillar answers "build me a web application" broadly, across frameworks.
- * This page answers a narrower, technology-qualified question — someone who has
- * already decided (or inherited) ASP.NET Core and wants a team that knows it deeply.
- * Keeping that distinction explicit is what keeps the two pages from cannibalizing
- * each other in search.
  */
 
 import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import "./asp-net-core-development-services.css";
-import { schemaOrganization } from "../data/schema";
+import HEROIMG from '../assets/asp-net-core-development-architecture.webp';
+import PROOFIMG from '../assets/QllmDocsMainPage.webp';
 
-const orgSchema = schemaOrganization;
+/* ───────────── Constants ───────────── */
+
+const SITE = "https://qllmsoft.com";
+const PAGE_PATH = "/asp-net-core-development-services";
+const PAGE_URL = `${SITE}${PAGE_PATH}`;
+const ORG_ID = `${SITE}/#organization`;
+const PAGE_ID = `${PAGE_URL}#webpage`;
+const SERVICE_ID = `${PAGE_URL}#service`;
+
+const TITLE = "ASP.NET Core Development Services & Migration | QllmSoft";
+const DESCRIPTION =
+  "Hire ASP.NET Core developers to build APIs and web applications or migrate from .NET Framework. C#, Azure, CI/CD and clear timelines. Talk to QllmSoft.";
+
+const HERO_IMG =
+  "https://qllmsoft.com/images/asp-net-core-development-architecture.webp";
+const PROOF_IMG =
+  "https://qllmsoft.com/images/qllmdocs-aspnet-core-dashboard.webp";
+
+/* ───────────── Content (single source of truth) ───────────── */
+
+const SERVICES = [
+  {
+    title: "ASP.NET Core API development",
+    text: "REST and gRPC APIs that connect your product to ERP, WMS and payment systems, with versioning and automated tests from the first sprint.",
+    to: "/api-development-services",
+    linkText: "API development and integration services",
+  },
+  {
+    title: ".NET Framework to ASP.NET Core migration",
+    text: "A staged move off classic ASP.NET that scopes the database and undocumented business logic first, so the timeline is based on facts.",
+    to: "/legacy-system-modernization-services",
+    linkText: "legacy system modernization services",
+  },
+  {
+    title: "Web application backends in C#",
+    text: "Domain-driven application backends with a clean separation between business logic and infrastructure, built to survive years of change.",
+    to: "/web-application-development-services",
+    linkText: "web application development services",
+  },
+  {
+    title: "Azure deployment and CI/CD",
+    text: "Azure App Service or Azure Kubernetes Service, with GitHub Actions or Azure DevOps pipelines and Key Vault secrets set up during the build.",
+  },
+  {
+    title: "Identity and authorization",
+    text: "OAuth2, OpenID Connect or JWT, with role-based or policy-based authorization chosen before the first controller exists.",
+    to: "/blog/role-based-vs-policy-based-authorization-asp-net-core",
+    linkText: "role-based vs policy-based authorization in ASP.NET Core",
+  },
+  {
+    title: "Distributed systems and messaging",
+    text: "gRPC between services, plus RabbitMQ or Azure Service Bus for work that has to survive a temporary outage.",
+  },
+];
+
+const FIT = [
+  {
+    title: "Your team already writes C#",
+    text: "Reusing existing skills beats retraining a team on a new language. If your developers know .NET, staying in that ecosystem removes months of ramp-up time.",
+  },
+  {
+    title: "You are migrating a legacy .NET Framework system",
+    text: "Moving from classic ASP.NET to Core is a smaller leap than jumping to a different stack. It also unlocks cross-platform hosting and years of performance improvements.",
+  },
+  {
+    title: "You are already invested in Azure",
+    text: "ASP.NET Core and Azure come from the same vendor and integrate with less friction than a mismatched stack: fewer workarounds, better tooling, faster deployments.",
+  },
+  {
+    title: "You need strong typing at scale",
+    text: "C#'s type system catches a category of bugs at compile time that dynamically typed stacks only catch in production. On large, long-lived codebases that adds up.",
+  },
+];
+
+const STACK = [
+  {
+    title: "C# and the .NET runtime",
+    text: "Modern C# features, async/await pipelines throughout, and attention to memory allocation on workloads where it matters.",
+  },
+  {
+    title: "Entity Framework Core and SQL Server",
+    text: "LINQ queries checked for the N+1 problem before they ship, a proper indexing strategy, and transactions that never leave data half-written.",
+  },
+  {
+    title: "Azure",
+    text: "App Service for most projects, Azure Kubernetes Service when the load pattern needs it, Redis for caching, and Key Vault for secrets instead of hardcoded config.",
+  },
+  {
+    title: "gRPC and messaging",
+    text: "gRPC for service-to-service speed, and RabbitMQ or Azure Service Bus for anything that must survive an outage.",
+  },
+];
+
+const COST_DRIVERS = [
+  "Data migration complexity",
+  "Third-party systems to integrate (ERP, WMS, payment processors)",
+  "Compliance frameworks that apply (HIPAA, SOC 2, GDPR)",
+  "Uptime requirements",
+];
+
+const FAQS = [
+  {
+    q: "Why would a team choose ASP.NET Core over Node.js or Django for a new backend?",
+    a: "It usually comes down to what's already in the building. If your team is already writing C#, or your infrastructure already runs on Windows Server or Azure, ASP.NET Core removes a lot of friction that a different stack would introduce. On raw performance it's genuinely competitive, since Kestrel handles concurrent load well, but the honest reason most of our clients pick it is organizational fit, not a benchmark chart.",
+  },
+  {
+    q: "We have an old ASP.NET (not Core) system. Is migrating actually worth it?",
+    a: "Usually yes, but not always urgently. Classic ASP.NET on .NET Framework still runs, but it's stuck on Windows-only hosting, it's missing a decade of performance work, and Microsoft's own long-term investment is clearly in Core. If you're actively adding features, migrating sooner saves you from building new work twice. If the system is stable and rarely touched, it can usually wait. We'll tell you which situation you're in rather than push a migration you don't need yet.",
+  },
+  {
+    q: "How long does an ASP.NET Core project typically take?",
+    a: "A focused API or a small internal system can land in 6-8 weeks. A full application with a proper domain model, integrations, and a real test suite is more commonly 12-20 weeks. Migration projects vary the most, since the biggest unknown is usually the state of the existing database and how much undocumented business logic is buried in it. We scope that explicitly before committing to a timeline.",
+  },
+  {
+    q: "Do you handle deployment and hosting, or just write the code?",
+    a: "Both, if you want it. Most of our ASP.NET Core work ends up on Azure: App Service for straightforward deployments, or Azure Kubernetes Service when the system needs to scale horizontally under load. We set up the CI/CD pipeline as part of the build, not as an afterthought, so deployments aren't a manual process someone has to remember to run correctly.",
+  },
+];
+
+const TOC = [
+  ["services", "Services"],
+  ["fit", "When it fits"],
+  ["process", "Process"],
+  ["stack", "Technology"],
+  ["timeline", "Timeline and cost"],
+  ["faq", "FAQ"],
+];
+
+/* ───────────── Structured data ───────────── */
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": ORG_ID,
+      name: "QllmSoft",
+      url: SITE,
+      sameAs: ["https://qllmdocs.com"],
+    },
+    {
+      "@type": "WebPage",
+      "@id": PAGE_ID,
+      url: PAGE_URL,
+      name: TITLE,
+      description: DESCRIPTION,
+      inLanguage: "en",
+      isPartOf: { "@type": "WebSite", name: "QllmSoft", url: SITE },
+      primaryImageOfPage: { "@type": "ImageObject", url: HERO_IMG },
+      breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
+      mainEntity: { "@id": SERVICE_ID },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${PAGE_URL}#breadcrumb`,
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Web Application Development",
+          item: `${SITE}/web-application-development-services`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "ASP.NET Core Development Services",
+          item: PAGE_URL,
+        },
+      ],
+    },
+    {
+      "@type": "Service",
+      "@id": SERVICE_ID,
+      name: "ASP.NET Core Development Services",
+      serviceType: "ASP.NET Core Development",
+      url: PAGE_URL,
+      description:
+        "QllmSoft builds and modernizes backend systems and web applications on ASP.NET Core and C#, for teams standardized on the Microsoft stack or migrating a legacy .NET Framework system.",
+      provider: { "@id": ORG_ID },
+      areaServed: [
+        { "@type": "Country", name: "United States" },
+        { "@type": "Country", name: "United Kingdom" },
+        { "@type": "Country", name: "United Arab Emirates" },
+        { "@type": "Place", name: "European Union" },
+      ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "ASP.NET Core development services",
+        itemListElement: SERVICES.map((s) => ({
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: s.title },
+        })),
+      },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: FAQS.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+  ],
+};
+
+/* ───────────── Component ───────────── */
 
 export default function AspnetCoreDevelopmentServices() {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Service",
-        name: "ASP.NET Core Development Services",
-        provider: {
-          "@type": "Organization",
-          name: "QllmSoft",
-          url: "https://qllmsoft.com",
-          sameAs: ["https://qllmdocs.com"],
-        },
-        description:
-          "QllmSoft builds and modernizes backend systems and web applications on ASP.NET Core — for teams that have already standardized on the Microsoft stack or are migrating a legacy .NET system.",
-        areaServed: ["US", "GB", "EU", "AE"],
-        serviceType: "ASP.NET Core Development",
-      },
-      {
-        "@type": "FAQPage",
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "Why would a team choose ASP.NET Core over Node.js or Django for a new backend?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "It usually comes down to what's already in the building. If your team is already writing C#, or your infrastructure already runs on Windows Server or Azure, ASP.NET Core removes a lot of friction that a different stack would introduce. On raw performance it's genuinely competitive — Kestrel handles concurrent load well — but the honest reason most of our clients pick it is organizational fit, not a benchmark chart.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "We have an old ASP.NET (not Core) system. Is migrating actually worth it?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Usually yes, but not always urgently. Classic ASP.NET on .NET Framework still runs, but it's stuck on Windows-only hosting, it's missing a decade of performance work, and Microsoft's own long-term investment is clearly in Core. If you're actively adding features, migrating sooner saves you from building new work twice. If the system is stable and rarely touched, it can usually wait — we'll tell you which situation you're in rather than push a migration you don't need yet.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "How long does an ASP.NET Core project typically take?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "A focused API or a small internal system can land in 6-8 weeks. A full application with a proper domain model, integrations, and a real test suite is more commonly 12-20 weeks. Migration projects vary the most, since the biggest unknown is usually the state of the existing database and how much undocumented business logic is buried in it — we scope that explicitly before committing to a timeline.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Do you handle deployment and hosting, or just write the code?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Both, if you want it. Most of our ASP.NET Core work ends up on Azure — App Service for straightforward deployments, or Azure Kubernetes Service when the system needs to scale horizontally under load. We set up the CI/CD pipeline as part of the build, not as an afterthought, so deployments aren't a manual process someone has to remember to run correctly.",
-            },
-          },
-        ],
-      },
-    ],
-  };
-
   return (
     <>
       <Helmet>
-        <title>ASP.NET Core Development Services | QllmSoft</title>
+        <title>{TITLE}</title>
+        <meta name="description" content={DESCRIPTION} />
         <meta
-          name="description"
-          content="QllmSoft builds and modernizes backend systems and web applications on ASP.NET Core and C#, for teams standardized on the Microsoft stack or migrating from legacy .NET."
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1"
         />
-        <link rel="canonical" href="https://qllmsoft.com/asp-net-core-development-services" />
-        <meta property="og:title" content="ASP.NET Core Development Services | QllmSoft" />
-        <meta property="og:description" content="Backend systems and web applications built on ASP.NET Core, by a team that works in it daily." />
-        <meta property="og:url" content="https://qllmsoft.com/asp-net-core-development-services" />
+        <link rel="canonical" href={PAGE_URL} />
+
+        <meta property="og:site_name" content="QllmSoft" />
+        <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
-        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+        <meta property="og:title" content={TITLE} />
+        <meta property="og:description" content={DESCRIPTION} />
+        <meta property="og:url" content={PAGE_URL} />
+        <meta property="og:image" content={HERO_IMG} />
+        <meta
+          property="og:image:alt"
+          content="ASP.NET Core backend architecture diagram used by QllmSoft"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={TITLE} />
+        <meta name="twitter:description" content={DESCRIPTION} />
+        <meta name="twitter:image" content={HERO_IMG} />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600&display=swap"
+        />
+        <link rel="preload" as="image" href={HERO_IMG} />
+
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
       </Helmet>
 
       <main className="aspnet-page">
-        {/* HERO — single H1 + direct answer */}
+        {/* ───────── HERO ───────── */}
         <header className="aspnet-hero">
-          <div className="container aspnet-hero__inner">
-            <div className="aspnet-hero__content">
-              <div className="aspnet-badge">
-                <span className="aspnet-badge-dot" aria-hidden="true" />
-                Microsoft Stack Specialists
+          <span className="aspnet-shape aspnet-shape--glow" aria-hidden="true" />
+          <span className="aspnet-shape aspnet-shape--sphere" aria-hidden="true" />
+          <span className="aspnet-shape aspnet-shape--ring" aria-hidden="true" />
+
+          <div className="aspnet-container">
+          
+
+            <div className="aspnet-hero__grid">
+              <div className="aspnet-hero__content">
+                <h1 className="aspnet-title">ASP.NET Core Development Services</h1>
+
+                <p className="aspnet-direct-answer">
+                  We build and modernize backend systems and web applications on ASP.NET
+                  Core and C#, for teams already on the Microsoft stack or migrating off an
+                  aging .NET Framework system.
+                </p>
+                <p className="aspnet-direct-answer aspnet-direct-answer--note">
+                  Haven't picked a framework yet? Start with our{" "}
+                  <Link to="/web-application-development-services">
+                    web application development services
+                  </Link>
+                  . This page is for teams who already know ASP.NET Core is the tool they
+                  want.
+                </p>
+
+                <div className="aspnet-hero__cta">
+                  <Link
+                    to="/contact"
+                    className="aspnet-btn aspnet-btn--primary"
+                    aria-label="Discuss your ASP.NET Core project with QllmSoft"
+                  >
+                    Discuss your project
+                  </Link>
+                  <Link
+                    to="/pricing-and-engagement-models"
+                    className="aspnet-btn aspnet-btn--secondary"
+                    aria-label="View QllmSoft pricing and engagement models"
+                  >
+                    View engagement models
+                  </Link>
+                </div>
+
+                <dl className="aspnet-facts">
+                  <div>
+                    <dt>Focused API</dt>
+                    <dd>6-8 weeks</dd>
+                  </div>
+                  <div>
+                    <dt>Full application</dt>
+                    <dd>12-20 weeks</dd>
+                  </div>
+                  <div>
+                    <dt>Hosting</dt>
+                    <dd>Azure App Service or AKS</dd>
+                  </div>
+                </dl>
               </div>
 
-              <h1 className="aspnet-title">ASP.NET Core Development Services</h1>
-
-              <p className="aspnet-direct-answer">
-                We build and modernize backend systems and web applications using ASP.NET Core
-                and C#, for teams that are already on the Microsoft stack or are migrating off
-                an aging .NET Framework system. If you need a broader web application built from
-                scratch and haven't committed to a framework yet, our{" "}
-                <Link to="/web-application-development-services">web application development page</Link>{" "}
-                is the better starting point — this one is for teams who already know ASP.NET
-                Core is the tool they want.
-              </p>
-
-              <div className="aspnet-hero__cta">
-                <Link to="/contact" className="btn btn-primary" aria-label="Discuss your ASP.NET Core project with QllmSoft">
-                  Discuss Your Project
-                </Link>
-                <Link to="/pricing-and-engagement-models" className="btn btn-secondary" aria-label="View pricing and engagement structures">
-                  View Engagement Models
-                </Link>
+              <div className="aspnet-hero__media">
+                <figure className="aspnet-hero__frame">
+                  <img
+                    src={HEROIMG}
+                    alt="ASP.NET Core backend architecture diagram used by QllmSoft on client projects"
+                    width="560"
+                    height="420"
+                    loading="eager"
+                    decoding="async"
+                    fetchPriority="high"
+                    className="aspnet-hero__image"
+                  />
+                </figure>
               </div>
-            </div>
-
-            <div className="aspnet-hero__image-wrap">
-              <img
-                src="https://qllmsoft.com/images/asp-net-core-development-architecture.webp"
-                alt="ASP.NET Core backend architecture diagram used by QllmSoft on client projects"
-                loading="lazy"
-                width="560"
-                height="420"
-                className="aspnet-hero__image"
-              />
             </div>
           </div>
         </header>
 
-        {/* WHY ASP.NET CORE — H2 */}
-        <section className="section aspnet-why" aria-labelledby="why-heading">
-          <div className="container">
-            <p className="section-eyebrow">Fit, Not Fashion</p>
-            <div className="section-title">
-              <h2 id="why-heading">When ASP.NET Core is actually the right choice</h2>
+        {/* ───────── ON-PAGE NAV ───────── */}
+        <nav className="aspnet-toc" aria-label="On this page">
+          <div className="aspnet-container">
+            <ul>
+              {TOC.map(([id, label]) => (
+                <li key={id}>
+                  <a href={`#${id}`}>{label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </nav>
+
+        {/* ───────── SERVICES ───────── */}
+        <section className="aspnet-section" id="services" aria-labelledby="services-heading">
+          <div className="aspnet-container">
+            <div className="aspnet-section__head">
+              <h2 id="services-heading">What our ASP.NET Core team delivers</h2>
               <p>
-                We'll say upfront: framework choice matters less than most agencies pretend it
-                does. ASP.NET Core is a strong pick in a few specific situations, and we'd
-                rather you know which one you're in before signing a contract.
+                Six kinds of work we do most often on the Microsoft stack. Each one is
+                scoped on its own, so you only pay for what your system needs.
               </p>
             </div>
-            <div className="aspnet-tech__grid">
-              <div className="aspnet-tech-card">
-                <h3>Your team is already writing C#</h3>
-                <p>Reusing existing skills beats retraining a team on a new language for the sake of it. If your developers know .NET, staying in that ecosystem removes months of ramp-up time.</p>
-              </div>
-              <div className="aspnet-tech-card">
-                <h3>You're migrating a legacy .NET Framework system</h3>
-                <p>Moving from classic ASP.NET to Core is a smaller leap than jumping to an entirely different stack, and it unlocks cross-platform hosting and years of performance improvements.</p>
-              </div>
-              <div className="aspnet-tech-card">
-                <h3>You're already invested in Azure</h3>
-                <p>ASP.NET Core and Azure are built by the same vendor and integrate with noticeably less friction than a mismatched stack — fewer workarounds, better tooling, faster deployments.</p>
-              </div>
-              <div className="aspnet-tech-card">
-                <h3>You need strong typing at scale</h3>
-                <p>C#'s type system catches a category of bugs at compile time that dynamically typed stacks only catch in production. On large, long-lived codebases, that adds up.</p>
-              </div>
-            </div>
+
+            <ul className="aspnet-services">
+              {SERVICES.map((s) => (
+                <li key={s.title} className="aspnet-service">
+                  <h3>{s.title}</h3>
+                  <p>{s.text}</p>
+                  {s.to && (
+                    <p className="aspnet-service__link">
+                      Related:{" "}
+                      <Link to={s.to}>{s.linkText}</Link>
+                    </p>
+                  )}
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
-        {/* METHODOLOGY — H2 */}
-        <section className="section aspnet-process" aria-labelledby="process-heading">
-          <div className="container">
-            <p className="section-eyebrow">How We Work</p>
-            <div className="section-title">
-              <h2 id="process-heading">Our approach to an ASP.NET Core build</h2>
+        {/* ───────── WHEN IT FITS ───────── */}
+        <section
+          className="aspnet-section aspnet-section--tint"
+          id="fit"
+          aria-labelledby="fit-heading"
+        >
+          <div className="aspnet-container aspnet-split">
+            <div className="aspnet-split__head">
+              <h2 id="fit-heading">When ASP.NET Core is the right choice</h2>
               <p>
-                Nothing exotic here — just a sequence we've found actually prevents the
-                expensive mistakes, in the order that catches them earliest.
+                Framework choice matters less than most agencies pretend. ASP.NET Core is
+                a strong pick in a few specific situations, and we'd rather you know which
+                one you're in before signing a contract.
+              </p>
+            </div>
+            <ul className="aspnet-fit">
+              {FIT.map((f) => (
+                <li key={f.title}>
+                  <h3>{f.title}</h3>
+                  <p>{f.text}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* ───────── PROCESS ───────── */}
+        <section className="aspnet-section" id="process" aria-labelledby="process-heading">
+          <div className="aspnet-container">
+            <div className="aspnet-section__head">
+              <h2 id="process-heading">How an ASP.NET Core build runs</h2>
+              <p>
+                Nothing exotic: a sequence that catches the expensive mistakes earliest.
               </p>
             </div>
 
-            <ol className="aspnet-process__list" aria-label="QllmSoft ASP.NET Core development approach">
-              <li className="aspnet-process__item">
-                <span className="step-num">01</span>
-                <div>
-                  <h4>Architecture & Security Scoping</h4>
-                  <p>We map the data flow and decide on the identity approach — OAuth2, OpenID Connect, or JWT — before a controller is written, so security isn't retrofitted later. For authorization design, read our guide to <Link to="/blog/role-based-vs-policy-based-authorization-asp-net-core">role-based vs policy-based authorization in ASP.NET Core</Link>.</p>
-                </div>
+            <ol
+              className="aspnet-steps"
+              aria-label="QllmSoft ASP.NET Core development process"
+            >
+              <li>
+                <h3>Architecture and security scoping</h3>
+                <p>
+                  We map the data flow and choose the identity approach (OAuth2, OpenID
+                  Connect or JWT) before a controller is written, so security isn't
+                  retrofitted. For authorization design, read our guide to{" "}
+                  <Link to="/blog/role-based-vs-policy-based-authorization-asp-net-core">
+                    role-based vs policy-based authorization in ASP.NET Core
+                  </Link>
+                  .
+                </p>
               </li>
-              <li className="aspnet-process__item">
-                <span className="step-num">02</span>
-                <div>
-                  <h4>Clean Architecture Setup</h4>
-                  <p>Business logic lives separately from infrastructure code from day one. It's more setup upfront and considerably less pain when something needs to change six months in.</p>
-                </div>
+              <li>
+                <h3>Clean architecture setup</h3>
+                <p>
+                  Business logic lives apart from infrastructure code from day one. It's
+                  more setup upfront and far less pain when something needs to change six
+                  months in.
+                </p>
               </li>
-              <li className="aspnet-process__item">
-                <span className="step-num">03</span>
-                <div>
-                  <h4>Sprint-Based Build</h4>
-                  <p>Two-week cycles, automated tests written alongside the code (not after), and deployment pipelines set up through GitHub Actions or Azure DevOps from the first sprint.</p>
-                </div>
+              <li>
+                <h3>Sprint-based build</h3>
+                <p>
+                  Two-week cycles, automated tests written alongside the code, and
+                  deployment pipelines on GitHub Actions or Azure DevOps from the first
+                  sprint.
+                </p>
               </li>
-              <li className="aspnet-process__item">
-                <span className="step-num">04</span>
-                <div>
-                  <h4>Staged Rollout & Monitoring</h4>
-                  <p>Production releases go out in stages, watched through structured logging and telemetry, with a defined maintenance window agreed before launch — not negotiated after something breaks.</p>
-                </div>
+              <li>
+                <h3>Staged rollout and monitoring</h3>
+                <p>
+                  Production releases go out in stages, watched through structured logging
+                  and telemetry, with a maintenance window agreed before launch rather than
+                  negotiated after something breaks.
+                </p>
               </li>
             </ol>
           </div>
         </section>
 
-        {/* TECH STACK — H2 */}
-        <section className="section aspnet-tech" aria-labelledby="tech-stack-heading">
-          <div className="container">
-            <p className="section-eyebrow">Under the Hood</p>
-            <div className="section-title">
-              <h2 id="tech-stack-heading">What we build with</h2>
-              <p>The specific tools, named directly, rather than vague "modern technologies" language.</p>
+        {/* ───────── TECH STACK ───────── */}
+        <section
+          className="aspnet-section aspnet-section--tint aspnet-section--stack"
+          id="stack"
+          aria-labelledby="stack-heading"
+        >
+          <span className="aspnet-shape aspnet-shape--ring-sm" aria-hidden="true" />
+          <div className="aspnet-container">
+            <div className="aspnet-section__head">
+              <h2 id="stack-heading">The technology we build with</h2>
+              <p>The specific tools, named directly.</p>
             </div>
+            <ul className="aspnet-stack">
+              {STACK.map((s) => (
+                <li key={s.title}>
+                  <h3>{s.title}</h3>
+                  <p>{s.text}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
 
-            <div className="aspnet-tech__grid">
-              <div className="aspnet-tech-card">
-                <h3>C# & the .NET Runtime</h3>
-                <p>Modern C# language features, async/await pipelines throughout, and attention to memory allocation on workloads where it actually matters.</p>
+        {/* ───────── TIMELINE & COST ───────── */}
+        <section className="aspnet-section" id="timeline" aria-labelledby="timeline-heading">
+          <div className="aspnet-container">
+            <div className="aspnet-panel">
+              <div className="aspnet-panel__intro">
+                <h2 id="timeline-heading">Timeline and what drives cost</h2>
+                <p>
+                  There's no flat rate for an ASP.NET Core project. These four things set
+                  the price:
+                </p>
+                <ul className="aspnet-drivers">
+                  {COST_DRIVERS.map((d) => (
+                    <li key={d}>{d}</li>
+                  ))}
+                </ul>
+                <p>
+                  For how we structure engagements, see our{" "}
+                  <Link to="/pricing-and-engagement-models">
+                    pricing and engagement guide
+                  </Link>
+                  .
+                </p>
               </div>
-              <div className="aspnet-tech-card">
-                <h3>Entity Framework Core & SQL Server</h3>
-                <p>LINQ queries checked for the N+1 problem before they ship, proper indexing strategy, and transaction handling that doesn't leave data in a half-written state.</p>
-              </div>
-              <div className="aspnet-tech-card">
-                <h3>Azure Deployment</h3>
-                <p>App Service for most projects, Azure Kubernetes Service when the load pattern genuinely needs it, Redis for caching, and Key Vault for secrets — not hardcoded config.</p>
-              </div>
-              <div className="aspnet-tech-card">
-                <h3>gRPC & Messaging</h3>
-                <p>For systems with multiple services talking to each other, we use gRPC for speed and RabbitMQ or Azure Service Bus for anything that needs to survive a temporary outage.</p>
+
+              <div className="aspnet-ranges">
+                <div className="aspnet-range">
+                  <p className="aspnet-range__value">6-8 weeks</p>
+                  <p className="aspnet-range__label">
+                    A focused API or internal tool
+                  </p>
+                </div>
+                <div className="aspnet-range">
+                  <p className="aspnet-range__value">12-20+ weeks</p>
+                  <p className="aspnet-range__label">
+                    A full application rebuild or migration
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* TIMELINE & COST */}
-        <section className="section aspnet-timeline" aria-labelledby="timeline-heading">
-          <div className="container">
-            <div className="aspnet-timeline-wrapper">
-              <p className="section-eyebrow">Investment & Scheduling</p>
-              <h2 id="timeline-heading">Timeline and what actually drives cost</h2>
-              <p className="timeline-intro">
-                We won't pretend there's a flat rate — an ASP.NET Core project's cost is set by
-                data migration complexity, how many third-party systems it needs to talk to
-                (ERP, WMS, payment processors), which compliance frameworks apply (HIPAA, SOC2,
-                GDPR), and how strict your uptime requirements are.
+        {/* ───────── PROOF ───────── */}
+        <section
+          className="aspnet-section aspnet-section--tint"
+          aria-labelledby="proof-heading"
+        >
+          <div className="aspnet-container aspnet-proof">
+            <div className="aspnet-proof__text">
+              <h2 id="proof-heading">Where our .NET work runs in production</h2>
+              <p>
+                <a
+                  href="https://qllmdocs.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  QllmDocs
+                </a>{" "}
+                is a document management platform we built end to end on ASP.NET Core and
+                Azure. It's a working reference for how we structure a real production
+                system, not just a portfolio piece.
               </p>
               <p>
-                A focused API or internal tool usually lands in the 6-8 week range. A full
-                application rebuild or migration is more commonly 12-20+ weeks. For how we
-                structure engagement types and pricing, see our{" "}
-                <Link to="/pricing-and-engagement-models">pricing and engagement guide</Link>.
+                Related work: our{" "}
+                <Link to="/web-application-development-services">
+                  web application development services
+                </Link>
+                ,{" "}
+                <Link to="/api-development-services">
+                  API development and integration services
+                </Link>
+                , and{" "}
+                <Link to="/legacy-system-modernization-services">
+                  legacy system modernization services
+                </Link>{" "}
+                for teams migrating off older .NET Framework systems.
               </p>
             </div>
-          </div>
-        </section>
-
-        {/* CROSS-LINKING */}
-        <section className="section aspnet-proof" aria-labelledby="proof-heading">
-          <div className="container aspnet-proof__layout">
-            <div className="aspnet-proof-box">
-              <h2 id="proof-heading">Where our .NET work shows up in production</h2>
-              <p>
-                A good example is <a href="https://qllmdocs.com" target="_blank" rel="noopener noreferrer">QllmDocs</a>,
-                a document management platform we built end-to-end on ASP.NET Core and Azure —
-                it's a working reference for how we structure a real production system, not just
-                a portfolio piece.
-              </p>
-              <p className="proof-links-row">
-                Related work: our broader <Link to="/web-application-development-services">web application development services</Link>,
-                {" "}<Link to="/api-development-services">API development and integration services</Link>, and{" "}
-                <Link to="/legacy-system-modernization-services">legacy system modernization services</Link> for
-                teams migrating off older .NET Framework systems.
-              </p>
-            </div>
-            <div className="aspnet-proof__image-wrap">
+            <figure className="aspnet-proof__figure">
               <img
-                src="https://qllmsoft.com/images/qllmdocs-aspnet-core-dashboard.webp"
+                src= {PROOFIMG}
                 alt="QllmDocs dashboard, a document management platform QllmSoft built on ASP.NET Core and Azure"
-                loading="lazy"
                 width="560"
                 height="380"
+                loading="lazy"
+                decoding="async"
                 className="aspnet-proof__image"
               />
+            </figure>
+          </div>
+        </section>
+
+        {/* ───────── FAQ ───────── */}
+        <section className="aspnet-section" id="faq" aria-labelledby="faq-heading">
+          <div className="aspnet-container aspnet-split">
+            <div className="aspnet-split__head">
+              <h2 id="faq-heading">ASP.NET Core questions, answered</h2>
+              <p>
+                What teams usually ask before starting an ASP.NET Core project with us.
+              </p>
+            </div>
+            <div className="aspnet-faq">
+              {FAQS.map((f, i) => (
+                <details key={f.q} className="aspnet-faq__item" open={i === 0}>
+                  <summary>
+                    <h3>{f.q}</h3>
+                  </summary>
+                  <p>{f.a}</p>
+                </details>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* FAQ */}
-        <section className="section aspnet-faq" aria-labelledby="faq-heading">
-          <div className="container">
-            <div className="section-title">
-              <h2 id="faq-heading">Frequently Asked Questions</h2>
-              <p>Straight answers to what teams usually ask before starting an ASP.NET Core project with us.</p>
-            </div>
-
-            <div className="aspnet-faq__grid">
-              <div className="faq-item">
-                <h3>Why would a team choose ASP.NET Core over Node.js or Django for a new backend?</h3>
-                <p>It usually comes down to what's already in the building. If your team is already writing C#, or your infrastructure already runs on Windows Server or Azure, ASP.NET Core removes friction a different stack would introduce. On performance it's genuinely competitive, but the honest reason most clients pick it is organizational fit.</p>
-              </div>
-              <div className="faq-item">
-                <h3>We have an old ASP.NET (not Core) system. Is migrating actually worth it?</h3>
-                <p>Usually yes, but not always urgently. Classic ASP.NET still runs, but it's stuck on Windows-only hosting and missing a decade of performance work. If you're actively adding features, migrating sooner saves rework. If the system is stable and rarely touched, it can wait.</p>
-              </div>
-              <div className="faq-item">
-                <h3>How long does an ASP.NET Core project typically take?</h3>
-                <p>A focused API or small internal system: 6-8 weeks. A full application with proper domain modeling and a real test suite: 12-20 weeks. Migrations vary most, depending on the state of the existing database.</p>
-              </div>
-              <div className="faq-item">
-                <h3>Do you handle deployment and hosting, or just write the code?</h3>
-                <p>Both, if you want it. Most of our work ends up on Azure App Service or AKS, with the CI/CD pipeline set up as part of the build — not as an afterthought.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="section aspnet-cta-banner" aria-labelledby="cta-heading">
-          <div className="container text-center">
+        {/* ───────── CTA ───────── */}
+        <section className="aspnet-cta" aria-labelledby="cta-heading">
+          <div className="aspnet-container">
             <h2 id="cta-heading">Have an ASP.NET Core project or migration in mind?</h2>
-            <p>Tell us where the system stands today and where it needs to go — we'll give you a real scope, not a sales pitch.</p>
-            <Link to="/contact" className="btn btn-primary btn-large" aria-label="Schedule an architecture consultation with QllmSoft">
-              Schedule Architecture Review
+            <p>
+              Tell us where the system stands today and where it needs to go. You'll get a
+              real scope, not a sales pitch.
+            </p>
+            <Link
+              to="/contact"
+              className="aspnet-btn aspnet-btn--primary aspnet-btn--large"
+              aria-label="Schedule an ASP.NET Core architecture review with QllmSoft"
+            >
+              Book an architecture review
             </Link>
           </div>
         </section>

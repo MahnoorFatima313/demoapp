@@ -336,4 +336,24 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+<url>
+    <loc>https://qllmsoft.com/blog/dotnet-10-aot-compilation-performance-benefits</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/blog/custom-saas-vs-website-template-roi</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/blog/offshore-software-development-fixed-price-model</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+<url>
+    <loc>https://qllmsoft.com/blog/buy-custom-software-development-services</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
