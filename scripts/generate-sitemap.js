@@ -25,6 +25,22 @@ const routes = new Set();
 const redirectRoutes = new Set([
   "/document-controller-software",
   "/qllmdocs",
+  // Redirected by web.config: never list these in the sitemap
+  "/document-control-software",
+  "/outsource-mobile-app-development-to-pakistan",
+  "/mobile-app-development-cost-in-pakistan",
+  "/blog/outsource-software-development-to-pakistan",
+  "/blog/ai-powered-software-solutions",
+  "/blog/education-software-development-pakistan",
+  "/blog/hire-angular-developers-pakistan",
+  "/best-software-house-in-pakistan",
+  "/website-development-cost-in-pakistan",
+  "/top-software-house-in-pakistan",
+  "/best-software-house-in-lalamusa",
+  "/asp-net-core-development",
+  "/csharp-desktop-application-development",
+  "/scalable-ecommerce-development-for-smbs",
+  "/resources",
 ]);
 for (const match of appSource.matchAll(/<Route\b[^>]*\bpath="([^"]+)"/gs)) {
   const route = match[1];

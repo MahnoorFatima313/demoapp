@@ -43,10 +43,17 @@ const BlogCardItem = ({ slug, post, priority }) => {
   );
 };
 const orgSchema = schemaOrganization;
+const REDIRECTED_POSTS = new Set([
+  "outsource-software-development-to-pakistan",
+  "ai-powered-software-solutions",
+  "education-software-development-pakistan",
+  "hire-angular-developers-pakistan",
+]);
+
 const Blog = () => {
-  const blogPosts = Object.entries(blogPostsData).sort(
-    ([, a], [, b]) => new Date(b.date) - new Date(a.date)
-  );
+  const blogPosts = Object.entries(blogPostsData)
+    .filter(([slug]) => !REDIRECTED_POSTS.has(slug))
+    .sort(([, a], [, b]) => new Date(b.date) - new Date(a.date));
 
   return (
     <>
