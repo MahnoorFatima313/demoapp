@@ -226,7 +226,7 @@ const OutsourceWebDevelopmentPakistan = () => {
         />
         <meta name="author" content="QllmSoft" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        <link rel="canonical" href={PAGE_URL} />
+        <link rel="canonical" href= 'https://qllmsoft.com/outsource-web-development-to-pakistan' />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content={PAGE_URL} />
