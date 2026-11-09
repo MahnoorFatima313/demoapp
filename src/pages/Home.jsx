@@ -21,21 +21,22 @@
  * overlap, so both can carry FAQPage schema without duplication.
  */
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useInView } from "react-intersection-observer";
+import { motion, useReducedMotion } from "framer-motion";
 
 import HeroSlider from "../components/HeroSlider";
-import ServiceCard from "../components/ServiceCard";
+import ServiceCoverflow from "../components/ServiceCoverflow";
 import { homeServices, trustedPartners } from "../data/mock";
 import ProjectSections from "../components/ProjectSections";
 import TechnologiesSlider from "../components/TechnologiesSlider";
 import TestimonialSection from "../components/TestimonialSection";
 import blogPostsData from "../data/blogPostsData";
 import financialsystemImg from "../assets/qllm-soft-finance-management-system-11.webp";
-import AboutImg from "../assets/HeroQllmsoftimg.webp";
 import GlobalTeamImg from "../assets/pakistanimg.webp";
+import qllmsoftLogo from "../assets/qllmsoft-web-desktop-mobile-app-logo.webp";
 import QLLMDOCSImg from "../assets/QllmDocs Smart Document Management.png";
 import {
   schemaOrganization,
@@ -125,9 +126,105 @@ const featuredCaseStudies = [
   },
 ];
 
+const stepIconProps = {
+  width: 24,
+  height: 24,
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: 1.8,
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  "aria-hidden": true,
+};
+
+const engagementSteps = [
+  {
+    n: "01",
+    title: "Scope is written before pricing is quoted",
+    icon: (
+      <svg {...stepIconProps}>
+        <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />
+        <path d="M14 3v5h5" />
+        <path d="M9 13h6M9 17h4" />
+      </svg>
+    ),
+    body: (
+      <>
+        A formal scope document exists before a price is proposed. If the scope does not change
+        during the build, the price does not change either.
+      </>
+    ),
+  },
+  {
+    n: "02",
+    title: "Source code and IP transfer on delivery",
+    icon: (
+      <svg {...stepIconProps}>
+        <circle cx="8" cy="15" r="4" />
+        <path d="M10.8 12.2 20 3" />
+        <path d="m16 7 3 3" />
+        <path d="m14 9 2 2" />
+      </svg>
+    ),
+    body: (
+      <>
+        Every project ends with full intellectual property transfer, a documented repository
+        handoff, and no ongoing licensing dependency on QllmSoft.
+      </>
+    ),
+  },
+  {
+    n: "03",
+    title: "Security follows a published standard",
+    icon: (
+      <svg {...stepIconProps}>
+        <path d="M12 3 5 6v5c0 4.5 3 8.2 7 10 4-1.8 7-5.5 7-10V6z" />
+        <path d="m9 12 2.2 2.2L15.5 10" />
+      </svg>
+    ),
+    body: (
+      <>
+        Builds follow the{" "}
+        <a
+          href="https://owasp.org/www-project-top-ten/"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          className="font-semibold text-slate-900 underline decoration-indigo-400 decoration-2 underline-offset-4 transition-colors hover:text-indigo-600"
+        >
+          OWASP Top 10
+        </a>{" "}
+        security framework, with functional, load, and penetration testing completed before
+        launch, not after a client reports a problem.
+      </>
+    ),
+  },
+  {
+    n: "04",
+    title: "Support does not end at launch",
+    icon: (
+      <svg {...stepIconProps}>
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 7v5l3 2" />
+      </svg>
+    ),
+    body: (
+      <>
+        A 30 day post launch window covering bug fixes and monitoring is included in every
+        project, with optional maintenance contracts for anything beyond that window.
+      </>
+    ),
+  },
+];
+
+/* Services shown in the "What we build" coverflow carousel */
+const coverflowServices = homeServices.filter(
+  (service) => service.id <= 4 || service.id === 8
+);
+
 const Home = () => {
-  const { ref: servicesRef, inView: servicesInView } = useInView({ triggerOnce: true, threshold: 0.2 });
   const { ref: aboutRef, inView: aboutInView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const prefersReducedMotion = useReducedMotion();
 
   const blogPreviewSlugs = [
     "marketing-tech-stack-for-enterprises",
@@ -135,6 +232,34 @@ const Home = () => {
     "role-based-vs-policy-based-authorization-asp-net-core",
     "when-internal-software-slows-teams-instead-of-helping",
   ];
+  const insightPosts = blogPreviewSlugs
+    .map((key) => ({ key, post: blogPostsData[key] }))
+    .filter(({ post }) => Boolean(post));
+  const [insightIndex, setInsightIndex] = useState(0);
+  const [isInsightsPaused, setIsInsightsPaused] = useState(false);
+  const [openFaq, setOpenFaq] = useState(0);
+
+  useEffect(() => {
+    if (
+      !insightPosts.length ||
+      isInsightsPaused ||
+      prefersReducedMotion
+    ) {
+      return undefined;
+    }
+
+    const interval = window.setInterval(() => {
+      setInsightIndex((current) => (current + 1) % insightPosts.length);
+    }, 5000);
+    return () => window.clearInterval(interval);
+  }, [insightPosts.length, isInsightsPaused, prefersReducedMotion]);
+
+  const showPreviousInsight = () => {
+    setInsightIndex((current) => (current - 1 + insightPosts.length) % insightPosts.length);
+  };
+  const showNextInsight = () => {
+    setInsightIndex((current) => (current + 1) % insightPosts.length);
+  };
 
   return (
     <>
@@ -185,15 +310,30 @@ const Home = () => {
         <section className="section about-section bg-light" ref={aboutRef} aria-labelledby="about-heading">
           <div className="container">
             <div className="about-content">
-              <div className={`about-image animate__animated ${aboutInView ? "animate__fadeInLeft" : ""}`}>
-                <img
-                  src={AboutImg}
-                  alt="QllmSoft engineering team building enterprise web and mobile applications"
-                  width="600"
-                  height="400"
-                  loading="lazy"
-                  decoding="async"
-                />
+              <div className={`about-diagram animate__animated ${aboutInView ? "animate__fadeInLeft" : ""}`}>
+                <div className="diagram-orbit diagram-orbit-outer" aria-hidden="true" />
+                <div className="diagram-orbit diagram-orbit-inner" aria-hidden="true" />
+                <div className="diagram-trace diagram-trace-one" aria-hidden="true" />
+                <div className="diagram-trace diagram-trace-two" aria-hidden="true" />
+                <div className="diagram-core">
+                  <img src={qllmsoftLogo} alt="QllmSoft" />
+                </div>
+                <div className="diagram-node diagram-node-ai">
+                  <span>01</span>
+                  <strong>AI Systems</strong>
+                </div>
+                <div className="diagram-node diagram-node-web">
+                  <span>02</span>
+                  <strong>Web Platforms</strong>
+                </div>
+                <div className="diagram-node diagram-node-mobile">
+                  <span>03</span>
+                  <strong>Mobile Apps</strong>
+                </div>
+                <div className="diagram-node diagram-node-cloud">
+                  <span>04</span>
+                  <strong>Cloud Scale</strong>
+                </div>
               </div>
               <div className={`about-text animate__animated ${aboutInView ? "animate__fadeInRight" : ""}`}>
                 <h2 id="about-heading" className="section-title">
@@ -232,8 +372,8 @@ const Home = () => {
           </div>
         </section>
 
-        {/* ── WHAT WE BUILD ── one paragraph per service line, each linking to its dedicated page */}
-        <section className="section services-section" ref={servicesRef} aria-labelledby="services-heading">
+        {/* WHAT WE BUILDce */}
+        <section className="section services-section" aria-labelledby="services-heading">
           <div className="container">
             <div className="section-title">
               <h2 id="services-heading">What we build</h2>
@@ -244,16 +384,7 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="services-grid">
-              {homeServices.filter((service) => service.id <= 4 || service.id === 8).map((service, index) => {
-                const animation = index < 2 ? "animate__fadeInLeft" : "animate__fadeInRight";
-                return (
-                  <div key={service.id} className={`animate__animated ${servicesInView ? animation : ""}`}>
-                    <ServiceCard service={service} />
-                  </div>
-                );
-              })}
-            </div>
+            <ServiceCoverflow services={coverflowServices} />
 
             <div className="csd-about" style={{ marginTop: "32px" }}>
               <p>
@@ -344,40 +475,57 @@ const Home = () => {
           </div>
         </section>
 
-        {/* ── WHY CHOOSE US ── unique attributes with specifics, not generic claims */}
-        <section className="section why-section" aria-labelledby="why-heading">
-          <div className="container">
-            <div className="section-title">
-              <h2 id="why-heading">What the engagement actually looks like</h2>
-              <p>
+        {/* 
+        +ENGAGEMENT STEPS  */}
+        <section className="relative py-16 sm:py-20 lg:py-24" aria-labelledby="why-heading">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto mb-12 max-w-2xl text-center lg:mb-14">
+              <h2
+                id="why-heading"
+                className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+              >
+                What the engagement actually looks like
+              </h2>
+              <p className="mt-4 text-base leading-7 text-slate-600 sm:text-lg">
                 These are structural facts about how QllmSoft works, not marketing adjectives.
               </p>
             </div>
-            <div className="why-grid">
-              <article className="why-card">
-                <h3>Scope is written before pricing is quoted</h3>
-                <p>A formal scope document exists before a price is proposed. If the scope does not change during the build, the price does not change either.</p>
-              </article>
-              <article className="why-card">
-                <h3>Source code and IP transfer on delivery</h3>
-                <p>Every project ends with full intellectual property transfer, a documented repository handoff, and no ongoing licensing dependency on QllmSoft.</p>
-              </article>
-              <article className="why-card">
-                <h3>Security follows a published standard</h3>
-                <p>
-                  Builds follow the{" "}
-                  <a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener noreferrer nofollow">
-                    OWASP Top 10
-                  </a>{" "}
-                  security framework, with functional, load, and penetration testing completed before launch, not
-                  after a client reports a problem.
-                </p>
-              </article>
-              <article className="why-card">
-                <h3>Support does not end at launch</h3>
-                <p>A 30 day post launch window covering bug fixes and monitoring is included in every project, with optional maintenance contracts for anything beyond that window.</p>
-              </article>
-            </div>
+
+            <ol className="grid list-none grid-cols-1 gap-5 p-0 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+              {engagementSteps.map((step, i) => (
+                <li key={step.n} className="relative">
+                  <article className="home-engagement-card group relative h-full overflow-hidden rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#022038]/50 hover:bg-white hover:shadow-xl hover:shadow-[#022038]/10 sm:p-7">
+                    <span
+                      aria-hidden="true"
+                      className="pointer-events-none absolute -right-1 -top-3 select-none text-7xl font-bold leading-none text-slate-900 opacity-[0.1] transition-all duration-300 group-hover:text-[#022038] group-hover:opacity-[0.16]"
+                    >
+                      {step.n}
+                    </span>
+
+                    <div className="home-engagement-icon relative mb-5 flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white text-[#022038] shadow-sm transition-colors duration-300 group-hover:border-[#022038]/40 group-hover:bg-[#022038] group-hover:text-white">
+                      {step.icon}
+                    </div>
+
+                    <h3 className="mb-3 text-lg font-semibold leading-snug text-slate-900">
+                      <span className="sr-only">Step {Number(step.n)}: </span>
+                      {step.title}
+                    </h3>
+                    <p className="text-[0.95rem] leading-7 text-slate-600">{step.body}</p>
+                  </article>
+
+                  {i < engagementSteps.length - 1 && (
+                    <span
+                      aria-hidden="true"
+                      className="absolute -right-5 top-1/2 z-10 hidden h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-400 shadow-sm lg:flex"
+                    >
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="m9 6 6 6-6 6" />
+                      </svg>
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ol>
           </div>
         </section>
 
@@ -466,23 +614,87 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="section blog-preview" aria-labelledby="blog-preview-heading">
+        <section
+          className="section blog-preview"
+          aria-labelledby="blog-preview-heading"
+          onMouseEnter={() => setIsInsightsPaused(true)}
+          onMouseLeave={() => setIsInsightsPaused(false)}
+          onFocusCapture={() => setIsInsightsPaused(true)}
+          onBlurCapture={(event) => {
+            if (!event.currentTarget.contains(event.relatedTarget)) {
+              setIsInsightsPaused(false);
+            }
+          }}
+        >
           <div className="container">
-            <div className="section-title">
+            <div className="section-title insights-heading">
               <h2 id="blog-preview-heading">Latest insights</h2>
+              <div className="insights-controls" aria-label="Latest insight carousel controls">
+                <button type="button" onClick={showPreviousInsight} aria-label="Previous insight">←</button>
+                <button type="button" onClick={showNextInsight} aria-label="Next insight">→</button>
+              </div>
             </div>
-            <div className="blog-preview-grid">
-              {blogPreviewSlugs
-                .map((key) => ({ key, post: blogPostsData[key] }))
-                .filter(({ post }) => Boolean(post))
-                .map(({ key, post }) => (
-                  <article key={key} className="blog-preview-card">
-                    <img src={post.image} alt={post.title} loading="lazy" />
-                    <h3>{post.title}</h3>
-                    <p>{post.description}</p>
-                    <Link to={`/blog/${key}`} className="blog-read-btn">Read article</Link>
-                  </article>
-                ))}
+            <div
+              className="insight-carousel-viewport"
+              role="region"
+              aria-label="Latest insight articles"
+              aria-roledescription="carousel"
+            >
+              <div className="insight-carousel">
+                {insightPosts.map(({ key, post }, index) => {
+                  const isActive = index === insightIndex;
+                  let offset = index - insightIndex;
+                  if (offset > insightPosts.length / 2) {
+                    offset -= insightPosts.length;
+                  } else if (offset < -insightPosts.length / 2) {
+                    offset += insightPosts.length;
+                  }
+                  const distance = Math.abs(offset);
+
+                  return (
+                    <motion.article
+                      key={key}
+                      className={`blog-preview-card insight-carousel-card ${isActive ? "active" : ""}`}
+                      aria-hidden={!isActive}
+                      inert={!isActive}
+                      initial={false}
+                      animate={{
+                        x: offset * 255,
+                        z: -distance * 90,
+                        rotateY: offset * -22,
+                        scale: distance === 0 ? 1 : distance === 1 ? 0.84 : 0.68,
+                        opacity: distance > 1 ? 0 : distance === 1 ? 0.82 : 1,
+                      }}
+                      transition={
+                        prefersReducedMotion
+                          ? { duration: 0 }
+                          : { type: "spring", stiffness: 150, damping: 22 }
+                      }
+                      style={{
+                        zIndex: insightPosts.length - distance,
+                        pointerEvents: isActive ? "auto" : "none",
+                      }}
+                    >
+                      <img src={post.image} alt="" loading="lazy" />
+                      <h3>{post.title}</h3>
+                      <p>{post.description}</p>
+                      <Link to={`/blog/${key}`} className="blog-read-btn">Read article</Link>
+                    </motion.article>
+                  );
+                })}
+              </div>
+            </div>
+            <div className="insights-progress" aria-label="Choose an insight">
+              {insightPosts.map((_, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  className={index === insightIndex ? "active" : ""}
+                  aria-label={`Show insight ${index + 1}`}
+                  aria-current={index === insightIndex ? "true" : undefined}
+                  onClick={() => setInsightIndex(index)}
+                />
+              ))}
             </div>
           </div>
         </section>
@@ -500,9 +712,14 @@ const Home = () => {
             </div>
             <div className="faq-accordion">
               {homeFaqItems.map((item, i) => (
-                <div key={i} className="faq-item" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
-                  <h3 itemProp="name" style={{ fontSize: "1.05rem", marginBottom: "6px" }}>{item.q}</h3>
-                  <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                <div key={item.q} className={`faq-item ${openFaq === i ? "faq-item-open" : ""}`} itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+                  <h3 itemProp="name">
+                    <button type="button" className="faq-question" onClick={() => setOpenFaq(openFaq === i ? -1 : i)} aria-expanded={openFaq === i}>
+                      <span>{item.q}</span>
+                      <span className="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                  </h3>
+                  <div className="faq-answer" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                     <p itemProp="text">{item.a}</p>
                   </div>
                 </div>

@@ -85,47 +85,101 @@
 // };
 
 // export default HeroSlider;
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import heroVideo from "../assets/corporate-office.mp4";
+import heroVideo from "../assets/herovdTrim .mp4";
 
 import "./HeroSlider.css";
 
+const heroHeadingFirstLine = "Custom Software & AI";
+const heroHeadingSecondLine = "Built for Worldwide Impact";
+const heroHeadingCharacterCount =
+  heroHeadingFirstLine.length + 1 + heroHeadingSecondLine.length;
+const heroHeadingAccentStart = "Custom Software ".length;
+
 const HeroSlider = () => {
+  const [visibleHeadingCharacters, setVisibleHeadingCharacters] = useState(0);
+
+  useEffect(() => {
+    let characterIndex = 0;
+    let interval;
+    const startDelay = window.setTimeout(() => {
+      interval = window.setInterval(() => {
+        characterIndex += 1;
+        setVisibleHeadingCharacters(characterIndex);
+
+        if (characterIndex >= heroHeadingCharacterCount) {
+          window.clearInterval(interval);
+        }
+      }, 100);
+    }, 250);
+
+    return () => {
+      window.clearTimeout(startDelay);
+      window.clearInterval(interval);
+    };
+  }, []);
+
+  const firstLineCharacterCount = Math.min(
+    visibleHeadingCharacters,
+    heroHeadingFirstLine.length
+  );
+  const secondLineCharacterCount = Math.max(
+    0,
+    visibleHeadingCharacters - heroHeadingFirstLine.length - 1
+  );
+
   return (
     <section className="hero-video-wrapper">
-      {/* Background Video with Poster Fallback */}
       <video
-        className="hero-video"
+        className="hero-background-video"
         autoPlay
         muted
         loop
         playsInline
         preload="auto"
-       
+        aria-hidden="true"
       >
         <source src={heroVideo} type="video/mp4" />
-        Your browser does not support the video tag.
       </video>
+      <div className="hero-spatial-grid" aria-hidden="true" />
+      <div className="hero-glow hero-glow-one" aria-hidden="true" />
+      <div className="hero-glow hero-glow-two" aria-hidden="true" />
 
-      {/* Dark Gradient Overlay */}
-      <div className="hero-overlay"></div>
+      <div className="hero-container">
+        <div className="hero-content">
+          <span className="hero-eyebrow">Software engineered for what comes next</span>
+          <h1
+            className="hero-title"
+            aria-label="Custom Software & AI Built for Worldwide Impact"
+          >
+            <span aria-hidden="true">
+              {heroHeadingFirstLine.slice(0, Math.min(firstLineCharacterCount, heroHeadingAccentStart))}
+              <span className="hero-title-accent">
+                {heroHeadingFirstLine.slice(
+                  heroHeadingAccentStart,
+                  firstLineCharacterCount
+                )}
+              </span>
+              {firstLineCharacterCount === heroHeadingFirstLine.length && (
+                <>
+                  <br />
+                  {heroHeadingSecondLine.slice(0, secondLineCharacterCount)}
+                </>
+              )}
+              <span className="hero-title-cursor" />
+            </span>
+          </h1>
 
-      {/* Hero Content */}
-      <div className="hero-content">
-        <h1 className="hero-title">
-          Custom Software Development and AI Integration for Businesses Worldwide
-        </h1>
+          <p className="hero-subtitle">
+            Secure, scalable enterprise systems and AI-powered digital products
+            for ambitious businesses across four continents.
+          </p>
 
-        <p className="hero-subtitle">
-          QllmSoft builds secure, scalable enterprise web applications, internal
-          business systems, mobile apps, and AI-powered digital solutions for
-          growing businesses across four continents.
-        </p>
-
-        <Link to="/services" className="hero-btn" aria-label="Explore QllmSoft services">
-          Explore Our Services
-        </Link>
+          <Link to="/services" className="hero-btn" aria-label="Explore QllmSoft services">
+            Explore Our Services
+          </Link>
+        </div>
       </div>
     </section>
   );

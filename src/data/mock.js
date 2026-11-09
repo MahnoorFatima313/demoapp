@@ -13,11 +13,16 @@ import systemModernization from "../assets/SystemModernization.webp";
 import stickerSmashApp from "../assets/sticker-mobile-app.webp";
 import webDesign from "../assets/web-design.webp";
 import qllmDocs from "../assets/QllmDocs.webp";
-import softwaredevelopmentimg from "../assets/Custom-Software.webp"
+import softwaredevelopmentimg from "../assets/01-custom-software-development.webp"
 import HRMS from "../assets/HUMANResources.jpg"
 import FinancialManagement from "../assets/FinancialManagement.jpg"
 import Fleetmanagement from "../assets/fleetManagement.jpg"
 import inventorymanagement from "../assets/inventorymanagement.jpg"
+import digitalmarketingimg from "../assets/02-digital-marketing.webp"
+import apiintegration from "../assets/03-api-enterprise-integration.webp"
+import mobileapp from "../assets/05-mobile-app-development.webp"
+import webdevelopmentimg from "../assets/04-custom-web-development.webp"
+
 export const companyInfo = {
   name: "QllmSoft",
   tagline: "Best for your business",
@@ -88,8 +93,7 @@ export const homeServices = [
     name: "Custom Web Development",
     description:
       "End-to-end modern web applications designed for performance, user experience, and long-term business growth.",
-    image:
-      "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: webdevelopmentimg,
     link: "/website-development-services"
   },
   
@@ -99,7 +103,7 @@ export const homeServices = [
     description:
       "High-performance iOS and Android applications crafted with seamless UX and robust functional architecture.",
     image:
-      "https://images.pexels.com/photos/1092671/pexels-photo-1092671.jpeg?auto=compress&cs=tinysrgb&w=800",
+      mobileapp,
     link: "/mobile-app-development"
   },
   {
@@ -108,7 +112,7 @@ export const homeServices = [
     description:
       "Robust RESTful API development and secure third-party integrations to connect your business ecosystem.",
     image:
-      "https://images.pexels.com/photos/614117/pexels-photo-614117.jpeg?auto=compress&cs=tinysrgb&w=800",
+      apiintegration,
     link: "/api-development-services"
   },
   {
@@ -144,7 +148,7 @@ export const homeServices = [
     description:
       "SEO, social media marketing, and performance-driven digital campaigns designed to increase visibility and generate leads.",
     image:
-      "https://images.pexels.com/photos/905163/pexels-photo-905163.jpeg?auto=compress&cs=tinysrgb&w=800",
+      digitalmarketingimg,
     link: "/digital-marketing-services"
   }
 ];
