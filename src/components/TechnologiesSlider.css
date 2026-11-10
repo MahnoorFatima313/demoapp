@@ -1,66 +1,129 @@
-.tech-section {
-  padding: 70px 0;
+/* ============================================================
+   TECHNOLOGIES — slow looping 3D ring (icons only, no backgrounds)
+   ============================================================ */
+
+.tr-section {
+  position: relative;
+  padding: 72px 0 56px;
   text-align: center;
+  overflow: hidden;
+  background: none;
 }
 
-.slider {
-  overflow: hidden;
+/* ---------- 3D scene ---------- */
+.tr-scene {
+  --tr-tile: 62px;
+
   position: relative;
   width: 100%;
+  perspective: 1300px;
+  perspective-origin: 50% 42%;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+  outline: none;
+}
+.tr-scene:active { cursor: grabbing; }
+.tr-scene:focus-visible {
+  outline: 2px solid var(--qs-mustard, #D6A125);
+  outline-offset: -6px;
+  border-radius: 24px;
 }
 
-.slide-track {
-  display: flex;
-  align-items: center;
-  width: max-content;
-  margin-top: 20px;
-  animation: qs-tech-scroll var(--tech-duration, 50s) linear infinite;
-  will-change: transform;
+.tr-ring {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transform-style: preserve-3d;
 }
 
-.slider:hover .slide-track,
-.slider:active .slide-track {
-  animation-play-state: paused;
+/* each icon sits at the centre; framer-motion moves it round the ring */
+.tr-item {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  width: var(--tr-tile);
+  margin-left: calc(var(--tr-tile) / -2);
+  margin-top: calc((var(--tr-tile) + 34px) / -2);
+  list-style: none;
+  will-change: transform, opacity, filter;
 }
 
-.slide {
-  flex: 0 0 auto;
-  min-width: 180px;
+/* slow idle float, staggered per item via animation-delay */
+.tr-float {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease;
+  gap: 10px;
+  animation: tr-bob 7s ease-in-out infinite;
+}
+@keyframes tr-bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
 }
 
-.slide img {
-  height: 50px;
-  width: auto;
-  margin-bottom: 8px;
+/* ---------- icon: no background, small shadow ---------- */
+.tr-tile {
+  display: block;
+  width: var(--tr-tile);
+  height: var(--tr-tile);
 }
 
-.slide span {
-  font-size: 14px;
-  font-weight: 500;
+.tr-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 5px rgba(2, 32, 56, 0.22));
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  pointer-events: none;
 }
 
 @media (hover: hover) {
-  .slide:hover { transform: scale(1.1); }
+  .tr-item:hover .tr-icon { transform: translateY(-4px) scale(1.12); }
 }
 
-@keyframes qs-tech-scroll {
-  from { transform: translate3d(0, 0, 0); }
-  to   { transform: translate3d(-50%, 0, 0); }
+.tr-label {
+  font-size: 0.74rem;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--qs-ink-soft, #5B6473);
 }
 
-@media (max-width: 768px) {
-  .slide { min-width: 140px; }
-  .slide-track { --tech-duration: 40s; }
+/* ---------- caption ---------- */
+.tr-caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin: 4px 0 0;
+}
+.tr-caption-name {
+  font-family: var(--qs-font-display, "Space Grotesk", sans-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--qs-navy, #022038);
+  letter-spacing: -0.01em;
+  min-height: 1.6em;
+}
+.tr-caption-hint {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--qs-ink-faint, #8A93A3);
 }
 
-@media (max-width: 480px) {
-  .slide { min-width: 120px; }
-  .slide img { height: 40px; }
-  .slide span { font-size: 12px; }
-  .slide-track { --tech-duration: 30s; }
+/* ---------- responsive ---------- */
+@media (max-width: 640px) {
+  .tr-section { padding: 48px 0 40px; }
+  .tr-label { font-size: 0.66rem; }
+  .tr-float { gap: 8px; }
+  .tr-caption-name { font-size: 1.1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tr-float { animation: none; }
+  .tr-icon { transition: none; }
 }

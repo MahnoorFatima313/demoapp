@@ -52,8 +52,7 @@ useEffect(() => {
                 <Link to={`/projects#${project.slug}`}>
                   <img src={project.image} alt={project.name} loading="lazy" />
                   <div className="carousel-info">
-                    <h3>{project.name}</h3>
-                    <p>{project.description}</p>
+                    <span className="carousel-project-button">{project.name}</span>
                   </div>
                 </Link>
               </div>
