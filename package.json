@@ -40,6 +40,7 @@
     "date-fns": "^4.1.0",
     "emailjs-com": "^3.2.0",
     "embla-carousel-react": "^8.6.0",
+    "framer-motion": "^14.10.1",
     "input-otp": "^1.4.2",
     "lucide-react": "^0.507.0",
     "next-themes": "^0.4.6",
@@ -151,15 +152,14 @@
       "/blog/mobile-app-development-cost-in-pakistan",
       "/blog/outsource-mobile-app-development-to-pakistan",
       "/blog/asp-net-core-development",
-"/blog/role-based-vs-policy-based-authorization-asp-net-core",
-"/blog/marketing-tech-stack-for-enterprises",
-"/blog/qllmsoft-at-banoqabil-graduation",
-"/blog/how-to-organize-unorganized-documents-in-cloud-storage",
-"/blog/what-is-natural-language-search-in-document-management",
-"/blog/how-to-export-metadata-from-pdf-to-excel-automatically",
-"/blog/is-aes-256-encryption-safe-enough-for-storing-sensitive-financial-documents",
-"/blog/how-to-avoid-technical-debt-in-custom-web-software"
-      
+      "/blog/role-based-vs-policy-based-authorization-asp-net-core",
+      "/blog/marketing-tech-stack-for-enterprises",
+      "/blog/qllmsoft-at-banoqabil-graduation",
+      "/blog/how-to-organize-unorganized-documents-in-cloud-storage",
+      "/blog/what-is-natural-language-search-in-document-management",
+      "/blog/how-to-export-metadata-from-pdf-to-excel-automatically",
+      "/blog/is-aes-256-encryption-safe-enough-for-storing-sensitive-financial-documents",
+      "/blog/how-to-avoid-technical-debt-in-custom-web-software"
     ],
     "skipThirdPartyRequests": true
   },

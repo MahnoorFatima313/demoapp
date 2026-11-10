@@ -3,46 +3,92 @@
 ═══════════════════════════════════════════════════════════ */
 .hero-video-wrapper {
   position: relative;
- 
- min-height: 90vh;  
+  min-height: 800px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 110px;
+  margin-top: 0;
+  padding-top: 120px;
+  box-sizing: border-box;
+  color: #ffffff;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 76% 48%, rgba(55, 119, 211, 0.22), transparent 30%),
+    radial-gradient(circle at 18% 82%, rgba(237, 183, 2, 0.12), transparent 32%),
+    linear-gradient(135deg, rgba(7, 17, 31, 0.72), rgba(9, 23, 42, 0.58)),
+    linear-gradient(315deg, #111d31 0%, #07111f 48%, #1b3157 100%);
 }
 
-/* ═══════════════════════════════════════════════════════════
-   BLURRED & HIGH QUALITY VIDEO BACKGROUND
-═══════════════════════════════════════════════════════════ */
-.hero-video {
+.hero-background-video {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  inset: -10px;
   z-index: 0;
-  /* Proper CSS blur on the video element */
-  filter: blur(5px) brightness(0.9);
-  -webkit-filter: blur(5px) brightness(0.9);
-  /* Slight scale prevents white/unfocused edges caused by blur */
-  transform: scale(1.05);
-  will-change: transform, filter;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  object-fit: cover;
+  opacity: 0.42;
+  filter: blur(2px) saturate(0.82) brightness(0.64);
+  transform: scale(1.03);
+  pointer-events: none;
 }
 
-/* ═══════════════════════════════════════════════════════════
-   DARK OVERLAY (ENHANCES TEXT CONTRAST)
-═══════════════════════════════════════════════════════════ */
-.hero-overlay {
+.hero-video-wrapper::before {
+  content: "";
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.55) 0%,
-    rgba(0, 0, 0, 0.7) 100%
-  );
+  background: linear-gradient(90deg, rgba(5, 13, 25, 0.58), rgba(5, 13, 25, 0.3));
+  pointer-events: none;
+}
+
+.hero-spatial-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.1;
+  background-image:
+    linear-gradient(rgba(255,255,255,.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.12) 1px, transparent 1px);
+  background-size: 58px 58px;
+  transform: perspective(700px) rotateX(62deg) scale(1.45) translateY(32%);
+  transform-origin: center bottom;
+  mask-image: linear-gradient(to bottom, transparent 15%, black 100%);
+}
+
+.hero-glow {
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  filter: blur(70px);
+  pointer-events: none;
+}
+
+.hero-glow-one {
+  width: 260px;
+  height: 260px;
+  right: 12%;
+  top: 10%;
+  background: rgba(37, 99, 235, 0.22);
+}
+
+.hero-glow-two {
+  width: 180px;
+  height: 180px;
+  left: 8%;
+  bottom: 0;
+  background: rgba(237, 183, 2, 0.1);
+}
+
+.hero-container {
+  width: min(1280px, calc(100% - 48px));
+  min-height: 700px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -54,29 +100,58 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  width: min(100%, 1080px);
   text-align: center;
-  padding: 0 24px;
-  max-width: 900px;
-  margin: 0 auto;
 }
 
-.hero-title {
-  font-size: 42px ;
-  font-weight: 700;
+.hero-eyebrow {
+  margin-bottom: 18px;
+  color: #c5c7cb;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.hero-video-wrapper .hero-title {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  font-size: clamp(2.4rem, 4.4vw, 4.25rem);
+  font-weight: 900;
   color: #ffffff;
   margin-bottom: 18px;
-  line-height: 1.25;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  text-shadow:
+    0 3px 0 rgba(4, 12, 24, 0.42),
+    0 12px 32px rgba(0, 0, 0, 0.55),
+    0 0 42px rgba(145, 185, 243, 0.18);
+}
+
+.hero-video-wrapper .hero-title-accent {
+  color: #edb702;
+}
+
+.hero-video-wrapper .hero-title-cursor {
+  display: inline-block;
+  width: 0.065em;
+  height: 0.8em;
+  margin-left: 0.12em;
+  vertical-align: -0.04em;
+  background: #ffdd57;
+  box-shadow: 0 0 18px rgba(255, 221, 87, 0.95);
+  animation: hero-cursor-blink 0.7s steps(2, start) infinite;
 }
 
 .hero-subtitle {
   font-size: 1.125rem;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.95);
+  color: rgba(220, 229, 241, 0.86);
   margin-bottom: 30px;
   line-height: 1.6;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  max-width: 560px;
   animation: fadeInUp 0.8s ease 0.2s forwards;
 }
 
@@ -84,25 +159,55 @@
    CALL TO ACTION BUTTON
 ═══════════════════════════════════════════════════════════ */
 .hero-btn {
-  background: linear-gradient(135deg, #2b6cb0, #1a365d);
-  color: #ffffff;
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(135deg, #ffdd57 0%, #edb702 48%, #c99400 100%);
+  color: #111827;
   padding: 15px 36px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 6px;
-  font-weight: 600;
+  border-radius: 999px;
+  font-weight: 800;
   text-decoration: none;
   letter-spacing: 0.5px;
   transition: all 0.35s ease;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 12px 30px rgba(237, 183, 2, 0.28),
+    0 0 26px rgba(255, 221, 87, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.58),
+    inset 0 -2px 0 rgba(126, 91, 0, 0.22);
+  overflow: hidden;
+  transform: translateZ(18px);
+}
+
+.hero-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(100deg, transparent 18%, rgba(255,255,255,.48) 48%, transparent 78%);
+  transform: translateX(-130%);
+  transition: transform 0.7s ease;
 }
 
 .hero-btn:hover {
-  background: linear-gradient(135deg, #3182ce, #2b6cb0);
-  transform: translateY(-2px);
-  color: #ffffff;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #ffe779 0%, #f2be12 48%, #dba600 100%);
+  transform: translateY(-3px) translateZ(18px);
+  color: #111827;
+  box-shadow:
+    0 18px 38px rgba(237, 183, 2, 0.38),
+    0 0 34px rgba(255, 221, 87, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.68);
+}
+
+.hero-btn:hover::before {
+  transform: translateX(130%);
+}
+
+.hero-btn:active {
+  transform: translateY(-1px);
+  color: #111827;
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -119,24 +224,47 @@
   }
 }
 
+@keyframes hero-cursor-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
 /* ═══════════════════════════════════════════════════════════
    RESPONSIVE DESIGN
 ═══════════════════════════════════════════════════════════ */
 @media (max-width: 992px) {
-  .hero-video-wrapper { min-height: 80vh; height: auto; }
-  .hero-title { font-size: 2.25rem; }
+  .hero-video-wrapper { min-height: 800px; }
+  .hero-video-wrapper .hero-title { font-size: clamp(2.6rem, 5.4vw, 3.8rem); }
 }
 
 @media (max-width: 768px) {
   .hero-video-wrapper {
-    min-height: 75vh;
+    min-height: 860px;
     height: auto;
     padding: 40px 0 56px;
   }
-  .hero-title { font-size: 1.85rem; }
+  .hero-container {
+    width: min(100% - 32px, 1280px);
+  }
+  .hero-content { max-width: 680px; margin: 0 auto; }
+  .hero-video-wrapper .hero-title { font-size: clamp(1.9rem, 8vw, 3rem); }
   .hero-btn { padding: 12px 28px; font-size: 14px; }
 }
 
 @media (max-width: 640px) {
-  .hero-video-wrapper { margin-top: 102px; }
+  .hero-video-wrapper { padding-top: 112px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video-wrapper .hero-title,
+  .hero-video-wrapper .hero-title-cursor {
+    animation: none;
+  }
 }

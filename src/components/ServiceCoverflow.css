@@ -1,0 +1,169 @@
+/* ============================================================
+   SERVICE COVERFLOW  (What we build)
+   ============================================================ */
+.cf {
+  --cf-card-w: 340px;
+  --cf-card-h: 400px;
+  position: relative;
+  outline: none;
+  padding: 8px 0 0;
+}
+
+.cf:focus-visible .cf-stage {
+  outline: 2px solid var(--qs-mustard, #D6A125);
+  outline-offset: 6px;
+  border-radius: 20px;
+}
+
+/* 3D stage */
+.cf-stage {
+  position: relative;
+  height: calc(var(--cf-card-h) + 70px);
+  perspective: 1500px;
+  perspective-origin: 50% 42%;
+  transform-style: preserve-3d;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.cf-stage:active { cursor: grabbing; }
+
+.cf-slide {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  width: var(--cf-card-w);
+  height: var(--cf-card-h);
+  margin-left: calc(var(--cf-card-w) / -2);
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+.cf-card {
+  height: 100%;
+  border-radius: var(--qs-radius-lg, 20px);
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(14, 30, 51, 0.1);
+  box-shadow: 0 18px 40px rgba(14, 30, 51, 0.16);
+  transition: box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.cf-slide.is-active .cf-card {
+  border-color: rgba(214, 161, 37, 0.65);
+  box-shadow:
+    0 30px 60px rgba(14, 30, 51, 0.22),
+    0 0 0 4px rgba(214, 161, 37, 0.12);
+}
+
+/* inactive cards act as one big "select me" target */
+.cf-slide:not(.is-active) { cursor: pointer; }
+.cf-slide:not(.is-active) .cf-card * { pointer-events: none; }
+
+/* neutralise ServiceCard's own hover tilt so it doesn't fight the 3D transforms */
+.cf .service-card,
+.cf .service-card:hover {
+  height: 100%;
+  transform: none !important;
+  perspective: none;
+  box-shadow: none;
+  border: 0;
+  border-radius: 0;
+}
+.cf .service-card-content { height: 100%; }
+
+/* mirror reflection under each card */
+.cf-reflection {
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  bottom: -26px;
+  height: 22px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(14, 30, 51, 0.28), transparent 70%);
+  filter: blur(7px);
+  pointer-events: none;
+}
+
+/* spotlight floor under the active card */
+.cf-floor {
+  position: absolute;
+  left: 50%;
+  bottom: 4px;
+  width: min(720px, 90%);
+  height: 60px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at center, rgba(214, 161, 37, 0.22), transparent 68%);
+  filter: blur(10px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* controls */
+.cf-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 10px;
+}
+
+.cf-arrow {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(214, 161, 37, 0.58);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--qs-navy, #022038);
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(14, 30, 51, 0.12);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+.cf-arrow:hover { transform: translateY(-3px); background: var(--qs-mustard-light, #F0C862); }
+.cf-arrow:active { transform: translateY(0); }
+.cf-arrow:focus-visible,
+.cf-dot:focus-visible {
+  outline: 2px solid var(--qs-mustard, #D6A125);
+  outline-offset: 3px;
+}
+
+.cf-dots { display: flex; align-items: center; gap: 8px; }
+.cf-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(14, 30, 51, 0.2);
+  cursor: pointer;
+  transition: width 0.35s ease, background 0.35s ease;
+}
+.cf-dot:hover { background: rgba(14, 30, 51, 0.4); }
+.cf-dot.is-active {
+  width: 30px;
+  background: var(--qs-mustard, #D6A125);
+  box-shadow: 0 0 12px rgba(214, 161, 37, 0.45);
+}
+
+/* screen-reader only live region */
+.cf-live {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .cf { --cf-card-h: 420px; }
+  .cf-controls { gap: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cf-card, .cf-arrow, .cf-dot { transition: none; }
+}
