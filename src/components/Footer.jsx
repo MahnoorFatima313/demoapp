@@ -102,7 +102,6 @@ const services = [
   ['/api-development-services', 'API Development'],
   ['/custom-software-development-services', 'Custom Software'],
   ['/digital-marketing-services', 'Digital Marketing'],
-  ['/ai-document-management-software', 'QllmDocs'],
 ];
 
 const Footer = () => {
@@ -153,6 +152,14 @@ const Footer = () => {
             <h4>Services</h4>
             <ul>
               {services.map(([p, n]) => <li key={p}><Link to={p}>{n}</Link></li>)}
+            </ul>
+          </nav>
+
+          <nav className="footer-col" aria-label="Products">
+            <h4>Products</h4>
+            <ul>
+              <li><a href="https://qllmdocs.com" target="_blank" rel="noopener noreferrer">QllmDocs</a></li>
+              <li><a href="https://zain33-001-site4.ktempurl.com/" target="_blank" rel="noopener noreferrer">QllmFO</a></li>
             </ul>
           </nav>
 

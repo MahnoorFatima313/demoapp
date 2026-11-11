@@ -135,6 +135,30 @@ const Header = () => {
                 </Link>
               </li>
             ))}
+            <li className="nav-item nav-products">
+              <details>
+                <summary className="nav-link">
+                  Our Products
+                  <ChevronDown size={15} className="products-chevron" />
+                </summary>
+                <ul className="products-dropdown">
+                  <li>
+                    <a href="https://qllmdocs.com" target="_blank" rel="noreferrer">
+                      QllmDocs
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://zain33-001-site4.ktempurl.com/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      QllmFO
+                    </a>
+                  </li>
+                </ul>
+              </details>
+            </li>
           </ul>
 
           {/* CTA + Hamburger */}
@@ -188,6 +212,30 @@ const Header = () => {
               </Link>
             </li>
           ))}
+          <li className="drawer-products">
+            <details>
+              <summary className="drawer-link">
+                Our Products
+                <ChevronDown size={16} className="products-chevron" />
+              </summary>
+              <ul className="drawer-products-submenu">
+                <li>
+                  <a href="https://qllmdocs.com" target="_blank" rel="noreferrer">
+                    QllmDocs
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://zain33-001-site4.ktempurl.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    QllmFO
+                  </a>
+                </li>
+              </ul>
+            </details>
+          </li>
         </ul>
 
         <div className="drawer-footer">

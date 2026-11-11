@@ -29,21 +29,11 @@
   --qs-shadow-lg: 0 14px 30px rgba(14,30,51,0.14), 0 36px 70px rgba(14,30,51,0.16);
   --qs-shadow-mustard: 0 10px 24px rgba(214,161,37,0.28);
 
- 
-  --qs-grid-size: 56px;
-  --qs-grid-line: rgba(2, 32, 56, 0.055);
-
   overflow-x: hidden;
   font-family: var(--qs-font-body);
   color: var(--qs-navy);
   position: relative;
   background-color: var(--qs-white);
-  background-image:
-    linear-gradient(to right, var(--qs-grid-line) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--qs-grid-line) 1px, transparent 1px);
-  background-size: var(--qs-grid-size) var(--qs-grid-size);
-  background-position: -1px -1px;
-  background-attachment: fixed;
 }
 
 
@@ -526,6 +516,73 @@
 
 @media (max-width: 992px) {
   .about-content { flex-direction: column; gap: 40px; }
+}
+
+@media (max-width: 640px) {
+  .about-section {
+    padding: 56px 0;
+  }
+
+  .about-content {
+    gap: 28px;
+  }
+
+  .about-diagram {
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    perspective: none;
+    transform: none;
+  }
+
+  .about-diagram:hover {
+    transform: none;
+  }
+
+  .diagram-orbit,
+  .diagram-trace {
+    display: none;
+  }
+
+  .diagram-core {
+    grid-column: 1 / -1;
+    width: 116px;
+    height: 116px;
+    margin-bottom: 4px;
+    transform: none;
+  }
+
+  .diagram-core img {
+    width: 92px;
+  }
+
+  .diagram-node,
+  .diagram-node-ai,
+  .diagram-node-web,
+  .diagram-node-mobile,
+  .diagram-node-cloud {
+    position: static;
+    width: auto;
+    min-height: 76px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: none;
+    animation: none;
+  }
+
+  .diagram-node strong {
+    font-size: 0.78rem;
+  }
+
+  .about-text #about-heading {
+    font-size: clamp(1.7rem, 7vw, 2rem);
+    line-height: 1.2;
+  }
 }
 
 /* ============================================================
@@ -1536,8 +1593,6 @@ section.testimonial-section {background: none !important; }
     gap: 20px;
   }
 
-  /* smaller grid cells on phones */
-  .home-page { --qs-grid-size: 40px; }
 }
 
 .about-text a.btn {

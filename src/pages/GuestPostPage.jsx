@@ -1,5 +1,7 @@
-import React, { useState } from "react";
-import { Helmet } from "react-helmet-async"; 
+import React, { useEffect, useRef, useState } from "react";
+import { motion, useReducedMotion } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import "./GuestPostPage.css";
 import { schemaOrganization } from "../data/schema";
 
@@ -180,6 +182,45 @@ const Icon = {
 
 export default function GuestPostPage() {
   const [openFaq, setOpenFaq] = useState(0);
+  const [blogIndex, setBlogIndex] = useState(0);
+  const [isCompactCarousel, setIsCompactCarousel] = useState(
+    () => typeof window !== "undefined" && window.innerWidth < 768
+  );
+  const prefersReducedMotion = useReducedMotion();
+
+  useEffect(() => {
+    const updateBreakpoint = () => setIsCompactCarousel(window.innerWidth < 768);
+    window.addEventListener("resize", updateBreakpoint);
+    return () => window.removeEventListener("resize", updateBreakpoint);
+  }, []);
+
+  const moveBlogs = (direction) => {
+    setBlogIndex((current) => (current + direction + QLLM_BLOGS.length) % QLLM_BLOGS.length);
+  };
+
+  const getBlogOffset = (index) => {
+    let offset = index - blogIndex;
+    if (offset > QLLM_BLOGS.length / 2) offset -= QLLM_BLOGS.length;
+    if (offset < -QLLM_BLOGS.length / 2) offset += QLLM_BLOGS.length;
+    return offset;
+  };
+
+  const handleBlogPanEnd = (_, info) => {
+    if (Math.abs(info.offset.x) < 45) return;
+    moveBlogs(info.offset.x < 0 ? 1 : -1);
+  };
+
+  const getBlogMotion = (offset) => {
+    const distance = Math.abs(offset);
+    return {
+      x: offset * (isCompactCarousel ? 126 : 248),
+      z: distance === 0 ? 48 : -distance * (isCompactCarousel ? 56 : 105),
+      rotateY: offset === 0 ? 0 : -Math.sign(offset) * (isCompactCarousel ? 24 : 38),
+      scale: distance === 0 ? 1 : Math.max(0.7, 1 - distance * 0.13),
+      opacity: distance === 0 ? 1 : Math.max(0.26, 0.78 - distance * 0.2),
+      filter: distance === 0 ? "brightness(1)" : `brightness(${Math.max(0.76, 1 - distance * 0.1)})`,
+    };
+  };
 
   return (
     <>
@@ -194,17 +235,21 @@ export default function GuestPostPage() {
       <div className="qllm-gp modern-media-layout extended-hub">
       
         <header className="gp-hero">
-            <div className="gp-hero-shapes">
-    <div className="hero-shape shape-cyber-mesh"></div>
-    <div className="hero-shape shape-blueprint-circle"></div>
-    <div className="hero-shape shape-constellation-left"></div>
-    <div className="shape-tech-dot-nodes node-1"></div>
-    <div className="shape-tech-dot-nodes node-2"></div>
-    <div className="shape-tech-dot-nodes node-3"></div>
-  </div>
+          <div className="gp-hero-shapes" aria-hidden="true">
+            <div className="hero-depth-grid" />
+            <div className="hero-orb hero-orb-one" />
+            <div className="hero-orb hero-orb-two" />
+            <div className="hero-orbit hero-orbit-one" />
+            <div className="hero-orbit hero-orbit-two" />
+            <div className="hero-glass-panel hero-panel-one" />
+            <div className="hero-glass-panel hero-panel-two" />
+            <div className="hero-particle hero-particle-one" />
+            <div className="hero-particle hero-particle-two" />
+            <div className="hero-particle hero-particle-three" />
+          </div>
           <div className="gp-container">
             <span className="gp-eyebrow"><span className="dot" /> QllmSoft Global Intelligence Network</span>
-            <h1>Where technology leaders share <span className="accent">proven blueprints.</span></h1>
+            <h1>Write what moves <span className="accent">technology forward.</span></h1>
             <p className="lede">
   Join a trusted platform for enterprise architects, software engineers, and technology leaders. 
   At QllmSoft, we publish high-quality blogs on software development, artificial intelligence, 
@@ -306,16 +351,55 @@ export default function GuestPostPage() {
             <div className="gp-container">
               <div className="gp-section-head">
               
-                <h2>Recently blogs</h2>
-                <p>Analyze how peer experts structure their data frameworks and architectural insights on our live platform.</p>
+                <h2>Recent insights</h2>
+                <p>Explore how technology teams approach architecture, security, and modernization.</p>
               </div>
               
-              <div className="gp-carousel-wrapper">
-                <div className="gp-carousel-track">
-                  {QLLM_BLOGS.map((blog, idx) => (
-                    <a href={blog.link} className="gp-carousel-card" key={idx} target="_blank" rel="noreferrer">
+              <div className="gp-carousel-shell">
+                <div
+                  className="gp-carousel-wrapper"
+                  role="region"
+                  aria-roledescription="carousel"
+                  aria-label="Recently published blogs"
+                >
+                  <motion.div
+                    className="gp-carousel-stage"
+                    onPanEnd={handleBlogPanEnd}
+                    style={{ touchAction: "pan-y" }}
+                  >
+                  {QLLM_BLOGS.map((blog, idx) => {
+                    const offset = getBlogOffset(idx);
+                    const isActive = offset === 0;
+                    return (
+                    <motion.a
+                      href={blog.link}
+                      className="gp-carousel-card"
+                      key={idx}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-hidden={!isActive}
+                      tabIndex={isActive ? 0 : -1}
+                      initial={false}
+                      animate={getBlogMotion(offset)}
+                      transition={
+                        prefersReducedMotion
+                          ? { duration: 0 }
+                          : { type: "spring", stiffness: 230, damping: 26, mass: 0.9 }
+                      }
+                      style={{
+                        zIndex: 10 - Math.abs(offset),
+                        pointerEvents: Math.abs(offset) <= 1 ? "auto" : "none",
+                      }}
+                      onClickCapture={(event) => {
+                        if (!isActive) {
+                          event.preventDefault();
+                          setBlogIndex(idx);
+                        }
+                      }}
+                      whileHover={isActive && !prefersReducedMotion ? { y: -5 } : undefined}
+                    >
                       <div className="gp-card-img-wrap">
-                        <img src={blog.image} alt={blog.title} onError={(e) => { e.target.src = ""; }} />
+                        <img src={blog.image} alt="" loading="lazy" />
                         <span className="blog-cat">{blog.category}</span>
                       </div>
                       <div className="gp-card-content">
@@ -323,8 +407,41 @@ export default function GuestPostPage() {
                         <h3>{blog.title}</h3>
                         <span className="read-link">Review Structure →</span>
                       </div>
-                    </a>
-                  ))}
+                    </motion.a>
+                    );
+                  })}
+                  </motion.div>
+                </div>
+                <div className="gp-carousel-controls">
+                  <button
+                    type="button"
+                    className="gp-carousel-control"
+                    aria-label="Previous blog"
+                    onClick={() => moveBlogs(-1)}
+                  >
+                    <ChevronLeft size={20} />
+                  </button>
+                  <div className="gp-carousel-dots" role="tablist" aria-label="Choose a blog">
+                    {QLLM_BLOGS.map((blog, index) => (
+                      <button
+                        key={blog.link}
+                        type="button"
+                        role="tab"
+                        aria-label={`Show blog ${index + 1}`}
+                        aria-selected={blogIndex === index}
+                        className={blogIndex === index ? "active" : ""}
+                        onClick={() => setBlogIndex(index)}
+                      />
+                    ))}
+                  </div>
+                  <button
+                    type="button"
+                    className="gp-carousel-control"
+                    aria-label="Next blog"
+                    onClick={() => moveBlogs(1)}
+                  >
+                    <ChevronRight size={20} />
+                  </button>
                 </div>
               </div>
             </div>
