@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Star } from "lucide-react";
+import React, { useId } from "react";
 import "./TestimonialSection.css";
 import khalidImg from "../assets/khalid A.webp";
 import muhammadImg from "../assets/Muhammad I.webp";
@@ -19,6 +18,31 @@ const Marquee = ({ children, speed = 60 }) => {
     </div>
   );
 };
+
+const GoldenStar = ({ filled = false }) => {
+  const gradientId = useId();
+
+  return (
+    <svg className={`star-svg ${filled ? "filled" : ""}`} viewBox="0 0 24 24" aria-hidden="true">
+      <defs>
+        <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#ffe9a3" />
+          <stop offset="32%" stopColor="#f9d15a" />
+          <stop offset="68%" stopColor="#f1b421" />
+          <stop offset="100%" stopColor="#b97800" />
+        </linearGradient>
+      </defs>
+      <path
+        d="M12 2.5l2.9 5.8 6.4.9-4.6 4.5 1.1 6.4-5.8-3-5.8 3 1.1-6.4-4.6-4.5 6.4-.9L12 2.5z"
+        fill={filled ? `url(#${gradientId})` : "#d8dde4"}
+        stroke={filled ? "#d49a17" : "#c9ced7"}
+        strokeWidth="0.8"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
 /* =======================
    Review Card
 ======================= */
@@ -38,11 +62,7 @@ const ReviewCard = ({ avatar, name, location, rating, review, link }) => (
 
         <div className="stars">
           {Array.from({ length: 5 }).map((_, i) => (
-            <Star
-              key={i}
-              size={16}
-              className={i < rating ? "star filled" : "star"}
-            />
+            <GoldenStar key={i} filled={i < rating} />
           ))}
         </div>
       </div>

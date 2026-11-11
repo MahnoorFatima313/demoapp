@@ -955,7 +955,7 @@
   overflow: hidden;
   max-width: 100%;
 }
-
+   
 .projects-section > *,
 .testimonial-section > *,
 .tech-section > * {
@@ -981,6 +981,11 @@
     }
   }
 }
+
+
+section.testimonial-section {background: none !important; } 
+
+
 
 .tech-section {
 

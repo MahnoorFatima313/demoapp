@@ -556,10 +556,9 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="section testimonial-section" aria-labelledby="testimonials-heading">
-          <h2 id="testimonials-heading" className="sr-only">Client reviews</h2>
+      
           <TestimonialSection />
-        </section>
+
 
         <section className="section tech-section" aria-label="Technologies used by QllmSoft">
           <TechnologiesSlider />
