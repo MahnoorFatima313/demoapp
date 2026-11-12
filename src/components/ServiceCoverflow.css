@@ -64,6 +64,8 @@
 /* neutralise ServiceCard's own hover tilt so it doesn't fight the 3D transforms */
 .cf .service-card,
 .cf .service-card:hover {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   transform: none !important;
   perspective: none;
@@ -71,7 +73,15 @@
   border: 0;
   border-radius: 0;
 }
-.cf .service-card-content { height: 100%; }
+.cf .service-card-image {
+  flex: 0 0 200px;
+}
+.cf .service-card-content {
+  box-sizing: border-box;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
 
 /* mirror reflection under each card */
 .cf-reflection {
@@ -162,6 +172,19 @@
 @media (max-width: 640px) {
   .cf { --cf-card-h: 420px; }
   .cf-controls { gap: 14px; }
+
+  .cf .service-card-image {
+    flex-basis: 185px;
+  }
+
+  .cf .service-card-image img {
+    object-fit: contain;
+    background: #07142f;
+  }
+
+  .cf .service-card-content {
+    padding: 20px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

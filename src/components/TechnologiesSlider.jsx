@@ -7,6 +7,7 @@ import {
   useTransform,
 } from "framer-motion";
 import "./TechnologiesSlider.css";
+import useAutoScroll from "../hooks/useAutoScroll";
 import awsLogo from "../assets/aws-logo.svg";
 
 const techList = [
@@ -84,6 +85,36 @@ const RingItem = ({ tech, index, rot, ringR }) => {
   );
 };
 
+const CompactTechMarquee = () => {
+  const trackRef = useAutoScroll(65);
+
+  return (
+    <div
+      className="tr-mobile-marquee"
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="Technologies we use"
+    >
+      <div className="tr-mobile-track" ref={trackRef}>
+        {[false, true].map((isDuplicate) => (
+          <div
+            className="tr-mobile-group"
+            key={isDuplicate ? "duplicate" : "original"}
+            aria-hidden={isDuplicate}
+          >
+            {techList.map((tech) => (
+              <div className="tr-mobile-card" key={tech.name}>
+                <img src={tech.icon} alt="" width="56" height="56" />
+                <span>{tech.name}</span>
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const TechnologiesSlider = () => {
   const reduceMotion = useReducedMotion();
   const [bp, setBp] = useState(getBreakpoint);
@@ -111,18 +142,19 @@ const TechnologiesSlider = () => {
   useEffect(
     () =>
       rot.on("change", (v) => {
+        if (bp !== "lg") return;
         const idx = ((Math.round(-v / STEP) % COUNT) + COUNT) % COUNT;
         if (idx !== frontRef.current) {
           frontRef.current = idx;
           setFront(idx);
         }
       }),
-    [rot]
+    [bp, rot]
   );
 
   /* auto-rotate with eased start / stop and drag inertia */
   useAnimationFrame((_, dt) => {
-    if (dragging.current) return;
+    if (bp !== "lg" || dragging.current) return;
     const target = reduceMotion || focused.current ? 0 : AUTO_SPEED;
     vel.current += (target - vel.current) * Math.min(1, dt / 700);
     if (Math.abs(vel.current) > 0.01) rot.set(rot.get() + (vel.current * dt) / 1000);
@@ -159,37 +191,49 @@ const TechnologiesSlider = () => {
         </div>
       </div>
 
-      <div
-        className="tr-scene"
-        role="region"
-        aria-roledescription="carousel"
-        aria-label="Technologies we use. Drag or use the arrow keys to rotate."
-        tabIndex={0}
-        onKeyDown={onKeyDown}
-        onPointerDown={onPointerDown}
-        onPointerMove={onPointerMove}
-        onPointerUp={endDrag}
-        onPointerCancel={endDrag}
-        onPointerLeave={endDrag}
-        onFocus={() => { focused.current = true; }}
-        onBlur={() => { focused.current = false; }}
-        style={{
-          "--tr-tile": `${m.tile}px`,
-          "--tr-r": `${m.radius}px`,
-          height: m.height,
-        }}
-      >
-        <ul className="tr-ring">
-          {techList.map((tech, i) => (
-            <RingItem key={tech.name + i} tech={tech} index={i} rot={rot} ringR={ringR} />
-          ))}
-        </ul>
-      </div>
+      {bp !== "lg" ? (
+        <CompactTechMarquee />
+      ) : (
+        <>
+          <div
+            className="tr-scene"
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Technologies we use. Drag or use the arrow keys to rotate."
+            tabIndex={0}
+            onKeyDown={onKeyDown}
+            onPointerDown={onPointerDown}
+            onPointerMove={onPointerMove}
+            onPointerUp={endDrag}
+            onPointerCancel={endDrag}
+            onPointerLeave={endDrag}
+            onFocus={() => { focused.current = true; }}
+            onBlur={() => { focused.current = false; }}
+            style={{
+              "--tr-tile": `${m.tile}px`,
+              "--tr-r": `${m.radius}px`,
+              height: m.height,
+            }}
+          >
+            <ul className="tr-ring">
+              {techList.map((tech, i) => (
+                <RingItem
+                  key={tech.name + i}
+                  tech={tech}
+                  index={i}
+                  rot={rot}
+                  ringR={ringR}
+                />
+              ))}
+            </ul>
+          </div>
 
-      <p className="tr-caption" aria-hidden="true">
-        <span className="tr-caption-name">{techList[front].name}</span>
-        <span className="tr-caption-hint">Drag to explore</span>
-      </p>
+          <p className="tr-caption" aria-hidden="true">
+            <span className="tr-caption-name">{techList[front].name}</span>
+            <span className="tr-caption-hint">Drag to explore</span>
+          </p>
+        </>
+      )}
     </section>
   );
 };
