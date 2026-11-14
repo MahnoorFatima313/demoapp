@@ -92,7 +92,7 @@ import heroVideo from "../assets/herovdTrim .mp4";
 import "./HeroSlider.css";
 
 const heroHeadingFirstLine = "Custom Software & AI";
-const heroHeadingSecondLine = "Built for Worldwide Impact";
+const heroHeadingSecondLine = "For Your Business Workflows";
 const heroHeadingCharacterCount =
   heroHeadingFirstLine.length + 1 + heroHeadingSecondLine.length;
 const heroHeadingAccentStart = "Custom Software ".length;
@@ -148,10 +148,11 @@ const HeroSlider = () => {
 
       <div className="hero-container">
         <div className="hero-content">
-          <span className="hero-eyebrow">Software engineered for what comes next</span>
+          <span className="hero-eyebrow">Software development for business teams</span>
           <h1
             className="hero-title"
-            aria-label="Custom Software & AI Built for Worldwide Impact"
+            aria-label={`${heroHeadingFirstLine} ${heroHeadingSecondLine}`}
+            data-prerender-ready={visibleHeadingCharacters >= heroHeadingCharacterCount ? "true" : "false"}
           >
             <span aria-hidden="true">
               {heroHeadingFirstLine.slice(0, Math.min(firstLineCharacterCount, heroHeadingAccentStart))}
@@ -172,8 +173,8 @@ const HeroSlider = () => {
           </h1>
 
           <p className="hero-subtitle">
-            Secure, scalable enterprise systems and AI-powered digital products
-            for ambitious businesses across four continents.
+            Business software, web applications and mobile apps planned around
+            your users, existing systems and day-to-day operations.
           </p>
 
           <Link to="/services" className="hero-btn" aria-label="Explore QllmSoft services">

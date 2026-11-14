@@ -1,0 +1,48 @@
+{
+  "scope": "Exact repeated paragraph check within the seven local source pages; not an external plagiarism scan.",
+  "reports": [
+    {
+      "file": "src/pages/Home.jsx",
+      "presentationAttributesUnchanged": true,
+      "titleDeclarations": 1,
+      "duplicateFaqMicrodata": 0
+    },
+    {
+      "file": "src/pages/CustomSoftwareDevelopment.jsx",
+      "presentationAttributesUnchanged": true,
+      "titleDeclarations": 1,
+      "duplicateFaqMicrodata": 0
+    },
+    {
+      "file": "src/pages/ApiDevelopmentServices.jsx",
+      "presentationAttributesUnchanged": true,
+      "titleDeclarations": 1,
+      "duplicateFaqMicrodata": 0
+    },
+    {
+      "file": "src/pages/WebAppDevelopment.jsx",
+      "presentationAttributesUnchanged": true,
+      "titleDeclarations": 1,
+      "duplicateFaqMicrodata": 0
+    },
+    {
+      "file": "src/pages/WebsiteDevelopmentServices.jsx",
+      "presentationAttributesUnchanged": true,
+      "titleDeclarations": 1,
+      "duplicateFaqMicrodata": 0
+    },
+    {
+      "file": "src/pages/MobileAppDevelopment.jsx",
+      "presentationAttributesUnchanged": true,
+      "titleDeclarations": 1,
+      "duplicateFaqMicrodata": 0
+    },
+    {
+      "file": "src/pages/EcommerceDevelopmentServices.jsx",
+      "presentationAttributesUnchanged": true,
+      "titleDeclarations": 1,
+      "duplicateFaqMicrodata": 0
+    }
+  ],
+  "duplicateParagraphs": []
+}

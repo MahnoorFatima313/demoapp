@@ -28,6 +28,7 @@ const TermsOfServices = () => {
 
   return (
     <main className="tos-page">
+      <title>Terms of Services | QllmSoft</title>
 
       {/* Hero Section */}
       <section

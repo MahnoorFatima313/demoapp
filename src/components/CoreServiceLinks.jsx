@@ -4,7 +4,9 @@ import "./CoreServiceLinks.css";
 import "../styles/service-page-polish.css";
 
 const services = [
-  { path: "/website-development-services", label: "Web Development" },
+  { path: "/website-development-services", label: "Website Development" },
+  { path: "/web-application-development-services", label: "Web Application Development" },
+  { path: "/ecommerce-development-services", label: "Ecommerce Development" },
   { path: "/mobile-app-development", label: "Mobile App Development" },
   {
     path: "/custom-software-development-services",

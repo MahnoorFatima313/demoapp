@@ -33,9 +33,11 @@ import { schemaOrganization } from "../data/schema";
 
 /* ─── Page constants ──────────────────────────────────────── */
 const PAGE_URL = "https://qllmsoft.com/custom-software-development-services";
+const PAGE_TITLE = "Custom Software Development Services | QllmSoft";
+const PAGE_DESCRIPTION = "Replace spreadsheet workarounds with custom business software, ERP modules and connected workflows. Discuss your requirements with QllmSoft.";
 const OG_IMAGE =
   "https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg";
-const DATE_MODIFIED = "2026-08-13";
+const DATE_MODIFIED = "2026-11-14";
 
 /* ─── JSON-LD: Organization ───────────────────────────────── */
 const orgSchema = schemaOrganization;
@@ -92,36 +94,36 @@ const schemaWebPage = {
 /* ─── FAQ data ─────────────────────────────────────────────── */
 const FAQ_DATA = [
   {
-    q: "What do 'software development services' actually include?",
-    a: "It covers the full lifecycle of building software that's built specifically for your business: requirements gathering, architecture and database design, the development itself, QA and testing, deployment, and post-launch support. We handle all of these stages in-house rather than subcontracting parts of the build out.",
+    q: "What does a custom software project include?",
+    a: "The scope can include discovery, workflow and data modeling, interface design, implementation, testing, deployment, and handover. Agree on which stages and deliverables are included, who provides access to existing systems, and who approves the finished work.",
   },
   {
     q: "What counts as 'custom software' versus buying something off the shelf?",
-    a: "If a product like Salesforce, an ERP suite, or a generic SaaS tool already does 80% of what you need without fighting its own workflow, custom software probably isn't the answer — buy the tool. Custom development earns its cost once you're bending an off-the-shelf product into shapes it wasn't designed for, paying for modules you don't use, or stuck waiting on a support ticket for a fix the vendor has no plan to ship. We say this directly on the first call, even when it means recommending against hiring us.",
+    a: "Compare an existing product, configuration changes, and integration work before commissioning a new system. Custom development is worth assessing when important rules or workflows cannot be supported reliably by those options. Include migration, training, and maintenance in the decision.",
   },
   {
     q: "Do you build software from scratch, or use existing frameworks and libraries?",
-    a: "Neither extreme. We don't hand-roll infrastructure that's already been solved — authentication, payments, file storage and similar plumbing come from proven libraries and services. What's custom is the business logic: the rules, workflows and data model specific to how your company actually operates. That split keeps the build faster and the long-term maintenance bill lower than a fully bespoke stack.",
+    a: "The business rules and workflows are developed for your requirements, while established frameworks and services can provide supporting functions. Evaluate dependencies for security, licensing, support, and suitability; using a library does not remove the need to test the finished system.",
   },
   {
     q: "How much do software development services cost?",
-    a: "It depends entirely on scope, which is why we don't quote a number on this page. A single internal tool replacing a spreadsheet workflow is a very different project from a multi-module ERP system. We walk through cost drivers and engagement models on our pricing and engagement guide, and give a real estimate after a scoping call — not before.",
+    a: "Cost depends on workflow complexity, user roles, integrations, data migration, security requirements, and testing. A single internal tool has a different scope from a multi-module ERP system. The cost calculator provides a planning estimate; a scoped proposal should confirm deliverables, exclusions, and acceptance criteria before you commit.",
   },
   {
-    q: "What happens after the software is delivered — do you just disappear?",
-    a: "No. Every build ships with a defined post-launch window covering bug fixes and monitoring at no extra cost, and most clients move into either a fixed-term support retainer or a pay-as-needed maintenance arrangement afterward. Software nobody touches for a year tends to break quietly; we'd rather catch that early.",
+    q: "How is existing business data moved into the new system?",
+    a: "Inventory the records and formats first, then agree on field mappings, data cleanup, access controls, and validation. Rehearse the transfer with representative data, reconcile totals and key records, and prepare backups and a recovery plan before cutover.",
   },
   {
     q: "Can you take over a system another developer or agency built?",
-    a: "Yes, and it's a fairly common starting point for us. We run a short code and architecture review first, partly to understand what we're inheriting, partly to be honest about whether it's worth extending or worth rebuilding a specific module. Sometimes the existing code just needs a team that answers emails; sometimes it doesn't, and we'll say so.",
+    a: "Yes. Begin with access to the code, deployment process, dependencies, and representative workflows. A review helps identify what can be retained, which changes are needed, and where uncertainty affects the estimate. Avoid committing to a rebuild before that assessment.",
   },
   {
-    q: "Do software development services include ongoing maintenance, or is that separate?",
-    a: "The initial post-launch support window is included in every project at no extra cost. Ongoing maintenance beyond that — new features, scaling changes, third-party API updates — is a separate, optional retainer, priced based on expected monthly hours rather than bundled into the build cost by default.",
+    q: "How is ongoing maintenance handled?",
+    a: "Assign responsibility for monitoring, backups, dependency updates, and changes to external services. The proposal should distinguish initial defect support from ongoing operations and new features, including response expectations and any recurring charges.",
   },
   {
     q: "Which industries do you build software for?",
-    a: "Most of our work has been for finance and fintech operations, logistics and supply chain teams, and internal operations tools for mid-sized businesses generally. We're comfortable with regulated data handling requirements where relevant, and we'll tell you upfront if a project falls outside what we're confident building well.",
+    a: "Business-specific software can support finance, logistics, inventory, document handling, and internal operations. These are application examples rather than claims that one system suits every industry. Discuss sector-specific requirements and any independent security or compliance review your project needs.",
   },
 ];
 
@@ -142,23 +144,23 @@ const FAQItem = ({ faq, index }) => {
   return (
     <div
       className={`faq-item ${open ? "faq-item--open" : ""}`}
-      itemScope
-      itemProp="mainEntity"
-      itemType="https://schema.org/Question"
+
+
+
     >
       <button
         className="faq-question"
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
         aria-controls={answerId}
-        itemProp="name"
+
       >
         <span>{faq.q}</span>
         <span className="faq-icon" aria-hidden="true">{open ? "−" : "+"}</span>
       </button>
       {open && (
-        <div id={answerId} className="faq-answer" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-          <p itemProp="text">{faq.a}</p>
+        <div id={answerId} className="faq-answer"   >
+          <p >{faq.a}</p>
         </div>
       )}
     </div>
@@ -177,10 +179,10 @@ const CustomSoftwareDevelopment = () => {
   return (
     <>
       <Helmet>
-        <title>Software Development Services | Custom Software — QllmSoft</title>
+        <title>{PAGE_TITLE}</title>
         <meta
           name="description"
-          content="QllmSoft's software development services cover custom internal tools, ERP systems, desktop applications and workflow platforms for businesses off-the-shelf products no longer fit."
+          content={PAGE_DESCRIPTION}
         />
         <meta
           name="keywords"
@@ -193,8 +195,8 @@ const CustomSoftwareDevelopment = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:site_name" content="QllmSoft" />
-        <meta property="og:title" content="Software Development Services | QllmSoft" />
-        <meta property="og:description" content="Bespoke software for the workflows off-the-shelf tools can't handle — built, deployed, and supported by QllmSoft." />
+        <meta property="og:title" content={PAGE_TITLE} />
+        <meta property="og:description" content={PAGE_DESCRIPTION} />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -202,8 +204,8 @@ const CustomSoftwareDevelopment = () => {
         <meta property="og:locale" content="en_US" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Software Development Services | QllmSoft" />
-        <meta name="twitter:description" content="Bespoke software for the workflows off-the-shelf tools can't handle." />
+        <meta name="twitter:title" content={PAGE_TITLE} />
+        <meta name="twitter:description" content={PAGE_DESCRIPTION} />
         <meta name="twitter:image" content={OG_IMAGE} />
 
         <script type="application/ld+json">{JSON.stringify(schemaOrganization)}</script>
@@ -220,7 +222,7 @@ const CustomSoftwareDevelopment = () => {
             <p className="csd-hero__eyebrow">Software Development Services</p>
 
             <h1 className="csd-hero__title">
-              Software Development Services for Custom Business Systems
+              Custom Software Development for Business Systems
             </h1>
 
             <p className="csd-hero__sub">
@@ -228,8 +230,7 @@ const CustomSoftwareDevelopment = () => {
               companies whose workflows have outgrown off-the-shelf tools: internal
               systems, desktop applications, ERP modules and business platforms built
               around how your team actually works, not how a generic product assumes
-              you work. Projects typically start around $1,000 and are scoped
-              individually.
+              you work. Each project is scoped against its workflows, integrations, and delivery requirements.
             </p>
 
             <div className="csd-hero__buttons">
@@ -266,13 +267,7 @@ const CustomSoftwareDevelopment = () => {
                   case isn't common enough to matter to them.
                 </p>
                 <p>
-                  We have built systems for finance teams tracking compliance data no
-                  generic tool handles correctly, for logistics operations
-                  coordinating dozens of moving parts across time zones, and for
-                  internal teams who were, quite literally, running their business
-                  out of a shared spreadsheet that had started crashing under its own
-                  weight. In each case the goal was not an impressive-looking product —
-                  it was removing a specific, ongoing cost.
+                  A useful brief describes the work that is difficult today: reconciling records across systems, routing approvals, or finding reliable operational information. These are example use cases. Identify the people, data, and decisions involved before choosing whether to configure, integrate, or build.
                 </p>
                 <p>
                   If your project is closer to a public-facing{" "}
@@ -280,15 +275,18 @@ const CustomSoftwareDevelopment = () => {
                   , that falls under our web development services instead, this page
                   is specifically about internal and business-specific software: the
                   tools that run your operations rather than face your customers.
+                  For software that needs to exchange records with an existing CRM or ERP,
+                  explore our{" "}
+                  <Link to="/api-development-services">API development and integration services</Link>.
                 </p>
               </article>
 
               <aside className={`csd-about__stats animate__animated ${aboutInView ? "animate__fadeInRight" : ""}`} aria-label="Company track record">
                 {[
-                  { num: "50+", label: "Software projects delivered" },
+                  { num: "Build", label: "Workflow-specific software" },
                   { num: "10+", label: "Years building for enterprise clients" },
                   { num: "5", label: "Countries with active clients" },
-                  { num: "100%", label: "Upwork Job Success Score" },
+                  { num: "Read", label: "Client feedback" },
                 ].map((s) => (
                   <div key={s.num} className="csd-about__stat-card">
                     <span className="csd-about__stat-num">{s.num}</span>
@@ -368,12 +366,7 @@ const CustomSoftwareDevelopment = () => {
                 <span className="case-study-tag">Case Study</span>
                 <h3 className="project-title">QllmDocs — Document Management for Compliance-Heavy Teams</h3>
                 <p className="project-narrative">
-                  A recurring problem we kept hearing from clients in finance and
-                  legal-adjacent work was version control chaos — multiple copies of
-                  the same file circulating by email, except with contracts and
-                  compliance filings where a mistake actually costs money. We built
-                  QllmDocs as an internal answer to that, then made it available as
-                  its own product once it proved out.
+                  QllmDocs brings document organization, permissions, audit history, and search into a separate product associated with QllmSoft. Review its documented capabilities against your workflow rather than assuming it is included in a custom software project.
                 </p>
                 <p className="project-narrative">
                   It handles role-based access so only the right people can see or
@@ -428,7 +421,7 @@ const CustomSoftwareDevelopment = () => {
                   { n: "4", title: "Design & Prototyping", desc: "Wireframes and, where it matters, a clickable prototype so you're reacting to something real instead of imagining the final product." },
                   { n: "5", title: "Development in Sprints", desc: "Two-week build cycles with something demoable at the end of each one — you're never waiting three months to see if it's on track." },
                   { n: "6", title: "Testing & QA", desc: "Manual and automated testing before anything reaches production, including the edge cases that only show up once real users touch it." },
-                  { n: "7", title: "Launch & Support Window", desc: "Deployment plus a defined period of monitoring and bug fixes included at no extra cost, before we discuss ongoing maintenance." },
+                  { n: "7", title: "Launch & Support Window", desc: "Plan deployment, monitoring, documentation, and defect reporting. Agree on the initial support window and ongoing maintenance responsibilities before launch." },
                 ].map((step, i) => (
                   <li key={i} className={`csd-process__step animate__animated ${processInView ? "animate__fadeInLeft" : ""}`} style={{ animationDelay: `${i * 0.08}s` }}>
                     <div className="csd-process__step-num" aria-label={`Step ${step.n}`}>{step.n}</div>
@@ -467,9 +460,9 @@ const CustomSoftwareDevelopment = () => {
                 of a guessing game for whoever inherits the code next.
               </p>
               <p>
-                Comparing options? Start with our{" "}
-                <Link to="/blog/custom-software-build-vs-buy-guide">
-                  practical build-vs-buy guide
+                Comparing ecommerce options? Start with our{" "}
+                <Link to="/blog/custom-vs-saas-ecommerce-for-growing-smbs">
+                  comparison of custom and SaaS ecommerce
                 </Link>
                 , then see{" "}
                 <Link to="/blog/how-to-avoid-technical-debt-in-custom-web-software">
@@ -492,19 +485,14 @@ const CustomSoftwareDevelopment = () => {
             <div className="section-title">
               <h2 id="timeline-heading">Timeline and Cost: What Actually Drives the Number</h2>
               <p>
-                We are not going to put a fake price calculator on this page, because the honest
-                answer is "it depends on scope," and pretending otherwise doesn't help you plan.
-                What we can tell you is what moves the number: how many user roles the system
-                needs, whether it integrates with software you already run, how strict your
-                compliance requirements are, and whether you need a working version fast or a
-                fully-featured one. A single internal tool can be a matter of weeks; a
-                multi-module operations platform is a matter of months. For a breakdown of how we
-                structure pricing and engagement models, see our{" "}
-                <Link to="/software-development-cost-calculator">pricing and engagement guide</Link>.
-                Before scoping, our{" "}
-                <Link to="/software-project-requirements-checklist">software project requirements checklist</Link>
-                can help organize the initial decisions. You can also tell us about your project
-                and we'll give you a real number.
+                Cost and delivery time depend on workflows, user roles, integrations,
+                data migration, and testing. Existing code quality, access to external
+                systems, and stakeholder review time also affect the plan. Use our{" "}
+                <Link to="/software-development-cost-calculator">software development cost calculator</Link>{" "}
+                for an initial planning estimate, then prepare your priorities with the{" "}
+                <Link to="/software-project-requirements-checklist">software project requirements checklist</Link>.
+                A proposal should define deliverables, assumptions, acceptance criteria,
+                and support arrangements before development begins.
               </p>
             </div>
           </div>
@@ -522,12 +510,12 @@ const CustomSoftwareDevelopment = () => {
         </section>
 
         <FounderNote
-          title="Why I Still Review Every Architecture Decision Myself"
-          message="Most of the damage in custom software happens quietly, in decisions nobody questions until the bill comes due — a data model that can't scale, a shortcut that becomes permanent, a dependency nobody planned to maintain. I review the architecture on every project we take on personally, not because our engineers need supervision, but because catching a bad decision in week two costs an afternoon, and catching it in month eight costs a rebuild. That review is the one step I haven't delegated, and I don't plan to."
+          title="Plan the business rules before the screens"
+          message="Map how records move between people, which decisions need approval, and which systems own the data. Those decisions shape the software more than a list of screens. Document them early so the team can review changes against an agreed workflow."
         />
 
         {/* ══════════════ FAQ — H2 + FAQPage itemScope ══════════════ */}
-        <section className="section csd-faq" aria-labelledby="faq-heading" itemScope itemType="https://schema.org/FAQPage">
+        <section className="section csd-faq" aria-labelledby="faq-heading"  >
           <div className="container">
             <p className="section-eyebrow">Common Questions</p>
             <div className="section-title">
@@ -570,7 +558,7 @@ const CustomSoftwareDevelopment = () => {
               <div className="csd-final-cta__perks">
                 <span>✓ Free project estimate</span>
                 <span>✓ No commitment required</span>
-                <span>✓ Response within 24 hours</span>
+                <span>✓ Discuss your requirements</span>
               </div>
               <CoreServiceLinks currentPath="/custom-software-development-services" />
             </div>

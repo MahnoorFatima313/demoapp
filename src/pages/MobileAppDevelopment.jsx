@@ -8,7 +8,7 @@
  *  ✓ react-helmet-async   → title, description, keywords, canonical, robots
  *  ✓ Open Graph + Twitter Card
  *  ✓ JSON-LD × 5          → Organization, Service, BreadcrumbList, FAQPage,
- *                            SoftwareApplication (mobile app schema)
+ *                            WebPage (commercial service page)
  *  ✓ Single H1 only       → strict H1→H2→H3→H4 hierarchy
  *  ✓ Semantic HTML5       → main, header, nav, section, article, aside, ol
  *  ✓ aria-label on every section / image / button / table
@@ -45,6 +45,8 @@ import { schemaOrganization } from "../data/schema";
 
 /* ─── Constants ───────────────────────────────────────────── */
 const PAGE_URL = "https://qllmsoft.com/mobile-app-development";
+const PAGE_TITLE = "Mobile App Development for Android & iOS | QllmSoft";
+const PAGE_DESCRIPTION = "Build an Android, iOS or cross-platform app around your users. Discuss device features, backend integrations, testing and release planning with QllmSoft.";
 const OG_IMAGE =
   "https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg";
 
@@ -55,15 +57,12 @@ const orgSchema = schemaOrganization;
 const schemaService = {
   "@context": "https://schema.org",
   "@type": "Service",
+  "@id": PAGE_URL + "#service",
   serviceType: "Mobile App Development",
   name: "Mobile App Development Services ",
   description:
     "QllmSoft provides custom mobile app development services, for Android, iOS, and cross platform using Flutter and React Native. We build secure, scalable, high-performance mobile applications for startups, SMBs, and enterprises worldwide.",
-  provider: {
-    "@type": "Organization",
-    name: "QllmSoft",
-    url: "https://qllmsoft.com",
-  },
+  provider: { "@id": "https://qllmsoft.com/#organization" },
   areaServed: [
     "Pakistan",
     "United States",
@@ -87,7 +86,7 @@ const schemaService = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "iOS App Developm",
+          name: "iOS App Development",
         },
       },
       {
@@ -119,19 +118,11 @@ const schemaService = {
   },
 };
 
-/* ─── JSON-LD: SoftwareApplication ───────────────────────── */
-const schemaSoftwareApp = {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  name: "Custom Mobile Application",
-  applicationCategory: "BusinessApplication",
-  operatingSystem: "Android, iOS",
-  offers: {
-    "@type": "Offer",
-    priceCurrency: "USD",
-    price: "1200",
-    description: "Custom mobile app development starting from $1,200",
-  },
+/* ─── JSON-LD: WebPage ───────────────────────────────────── */
+const schemaWebPage = {
+  "@context": "https://schema.org", "@type": "WebPage",
+  "@id": PAGE_URL + "#webpage", url: PAGE_URL, name: PAGE_TITLE,
+  description: PAGE_DESCRIPTION, about: { "@id": PAGE_URL + "#service" }
 };
 
 /* ─── JSON-LD: BreadcrumbList ─────────────────────────────── */
@@ -163,12 +154,12 @@ const schemaBreadcrumb = {
 /* ─── FAQ data ────────────────────────────────────────────── */
 const FAQ_DATA = [
   {
-    q: "How long does mobile app development take?",
-    a: "Development timelines depend on complexity and features. A simple Android or iOS app typically takes 1–2 months. More complex custom mobile applications with integrations, dashboards, and multi-role user systems take 3–6 months. QllmSoft follows an agile sprint process that keeps delivery fast, quality high, and scope under control at every stage.",
+    q: "What determines the mobile app development timeline?",
+    a: "User journeys, supported devices, integrations, and offline requirements shape the schedule. Existing backend quality, access to test accounts, stakeholder reviews, and store review can also affect release dates. Define a usable first release and agree on milestones after discovery.",
   },
   {
-    q: "What is the difference between Native and Hybrid App Development?",
-    a: "Native apps are built specifically for one platform (Kotlin for Android, Swift for iOS) for maximum performance. Hybrid App Development uses frameworks like Flutter or React Native to create one codebase that runs on both platforms. QllmSoft specializes in both, helping you save up to 40% in costs via Hybrid solutions without compromising on fluid performance.",
+    q: "Should we choose native or cross-platform development?",
+    a: "Native development uses platform-specific tools such as Swift for iOS and Kotlin for Android. Flutter and React Native can share parts of an app across platforms, but device features and platform-specific behavior still need individual implementation and testing. Choose based on required capabilities, existing skills, and long-term maintenance rather than an assumed saving.",
   },
   {
     q: "Can QllmSoft develop apps for both Android and iOS?",
@@ -176,20 +167,20 @@ const FAQ_DATA = [
   },
   {
     q: "Do you handle app store submission for Google Play and Apple App Store?",
-    a: "Absolutely. We manage the complete submission process for both Google Play Store and Apple App Store — including store listing optimization, screenshot preparation, compliance checks, and release management. We follow platform-specific guidelines to ensure smooth, first-attempt approvals.",
+    a: "We can prepare builds, screenshots, listing information, and submission materials for the stores included in your scope. Your organization should control its developer accounts and supply required business and privacy information. Review decisions belong to Apple and Google; approval or review timing cannot be guaranteed.",
   },
   {
     q: "Can you upgrade or modernize my existing mobile application?",
-    a: "Yes. We provide comprehensive mobile app modernization services including UI/UX redesign, performance optimization, bug resolution, security hardening, and feature expansion. Whether your app is Android, iOS, or cross-platform, we bring it up to current standards without disrupting your existing users.",
+    a: "Yes. Start with a review of the source code, dependencies, crash reports, and backend compatibility. That review helps decide whether to improve the existing app or replace selected components. Plan staged releases, data compatibility, and a recovery approach for users on older versions.",
   },
 
   {
     q: "How much does mobile app development cost?",
-    a: "Mobile app development cost depends on platform (Android, iOS, or both), feature complexity, UI/UX requirements, backend integrations, and testing scope. QllmSoft provides transparent, milestone-based estimates with no hidden charges. Contact us for a detailed quote tailored to your specific project.",
+    a: "Cost depends on user journeys, platforms, device features, design, backend work, and testing. Offline sync, payments, notifications, and changes to an existing API can add scope. Bring a prioritized feature list and sample workflows; agree on exclusions, third-party fees, and maintenance responsibilities in the proposal.",
   },
   {
-    q: "What is the best framework for cross-platform mobile app development?",
-    a: "Flutter (by Google) and React Native (by Meta) are the two leading cross-platform frameworks. Flutter delivers pixel-perfect native UIs with a single codebase and exceptional performance. React Native leverages the JavaScript ecosystem and is ideal for teams with existing web development experience. QllmSoft helps you choose the right framework based on your product goals, timeline, and technical requirements.",
+    q: "How do you choose between Flutter and React Native?",
+    a: "Review the required screens, device integrations, accessibility needs, supported OS versions, and available libraries. React Native may fit a team already working with React; Flutter offers its own UI toolkit. Both need platform-specific testing and ongoing dependency updates. Prototype the highest-risk device feature before committing.",
   },
 ];
 
@@ -211,16 +202,16 @@ const FAQItem = ({ faq, index }) => {
   return (
     <div
       className={`faq-item ${open ? "faq-item--open" : ""}`}
-      itemScope
-      itemProp="mainEntity"
-      itemType="https://schema.org/Question"
+
+
+
     >
       <button
         className="faq-question"
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
         aria-controls={id}
-        itemProp="name"
+
       >
         <span>{faq.q}</span>
         <span className="faq-icon" aria-hidden="true">
@@ -231,11 +222,11 @@ const FAQItem = ({ faq, index }) => {
         <div
           id={id}
           className="faq-answer"
-          itemScope
-          itemProp="acceptedAnswer"
-          itemType="https://schema.org/Answer"
+
+
+
         >
-          <p itemProp="text">{faq.a}</p>
+          <p >{faq.a}</p>
         </div>
       )}
     </div>
@@ -294,12 +285,10 @@ const MobileAppDevelopment = () => {
       ════════════════════════════════════════════════ */}
       <Helmet>
         {/* Primary — commercial + service intent keywords */}
-        <title>
-          Cross Platform Mobile App Engineering & Native Systems | QllmSoft
-        </title>
+        <title>{PAGE_TITLE}</title>
         <meta
           name="description"
-          content="QllmSoft engineers high performance, secure cross platform mobile apps for iOS and Android using Flutter and React Native. Deployed natively for global startups and enterprises across the Globe."
+          content={PAGE_DESCRIPTION}
         />
         <meta
           name="keywords"
@@ -318,11 +307,11 @@ const MobileAppDevelopment = () => {
         <meta property="og:site_name" content="QllmSoft" />
         <meta
           property="og:title"
-          content="Cross Platform Mobile App Engineering & Native Systems | QllmSoft"
+          content={PAGE_TITLE}
         />
         <meta
           property="og:description"
-          content="Elite software delivery center designing secure, high availability mobile ecosystems for international enterprise workloads."
+          content={PAGE_DESCRIPTION}
         />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:width" content="1200" />
@@ -337,11 +326,11 @@ const MobileAppDevelopment = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Cross Platform Mobile App Engineering & Native Systems | QllmSoft"
+          content={PAGE_TITLE}
         />
         <meta
           name="twitter:description"
-          content="Elite software delivery center designing secure, high availability mobile ecosystems for international enterprise workloads."
+          content={PAGE_DESCRIPTION}
         />
         <meta name="twitter:image" content={OG_IMAGE} />
         <meta
@@ -355,7 +344,7 @@ const MobileAppDevelopment = () => {
           {JSON.stringify(schemaService)}
         </script>
         <script type="application/ld+json">
-          {JSON.stringify(schemaSoftwareApp)}
+          {JSON.stringify(schemaWebPage)}
         </script>
         <script type="application/ld+json">
           {JSON.stringify(schemaBreadcrumb)}
@@ -376,23 +365,21 @@ const MobileAppDevelopment = () => {
               <div className="mob-hero__eyebrow-wrap">
                 <span className="mob-hero__live-dot" aria-hidden="true" />
                 <span className="section-eyebrow" style={{ textAlign: "left" }}>
-                  Cross Platform Engineering Hub
+                  Android, iOS & Cross-Platform Development
                 </span>
               </div>
 
               {/* ✅ ONE H1 */}
               <h1 className="mob-hero__title">
-                Next - Gen
+                Mobile App
                 <br />
-                Mobile Application
+                Development
                 <br />
-                <span className="mob-hero__title-accent">Engineering</span>
+                <span className="mob-hero__title-accent">Services</span>
               </h1>
 
               <p className="mob-hero__sub">
-                We architect resilient iOS, Android, and native performance
-                hybrid ecosystems for modern startups and scaling global
-                enterprises.
+                Build an app for customers, field teams, or staff who need to work on the move. We develop Android, iOS, and cross-platform applications, including the backend connections and release preparation your product needs.
               </p>
               <div className="mob-hero__buttons">
                 <Link
@@ -413,13 +400,13 @@ const MobileAppDevelopment = () => {
 
               {/* Trust row */}
               <div className="mob-hero__trust" aria-label="Trust signals">
-                <span>⭐ 5-Star Rated</span>
+                <span>⭐ Device testing</span>
                 <span className="mob-hero__trust-dot" aria-hidden="true" />
-                <span>100% Upwork Success</span>
+                <span>Defined scope</span>
                 <span className="mob-hero__trust-dot" aria-hidden="true" />
-                <span>50+ Apps Delivered</span>
+                <span>Backend integration</span>
                 <span className="mob-hero__trust-dot" aria-hidden="true" />
-                <span>10+ Years Experience</span>
+                <span>Release planning</span>
               </div>
             </div>
 
@@ -503,10 +490,10 @@ const MobileAppDevelopment = () => {
               {/* Stats strip */}
               <div className="mob-hero__stats" aria-label="Key figures">
                 {[
-                  { num: "50+", label: "Apps Delivered" },
+                  { num: "Build", label: "Workflow-specific software" },
                   { num: "10+", label: "Years Experience" },
-                  { num: "98%", label: "Client Satisfaction" },
-                  { num: "30d", label: "Post-Launch Support" },
+                  { num: "QA", label: "Device and workflow testing" },
+                  { num: "Plan", label: "Support scope agreed" },
                 ].map((s) => (
                   <div key={s.label} className="mob-hero__stat">
                     <span className="mob-hero__stat-num">{s.num}</span>
@@ -533,43 +520,23 @@ const MobileAppDevelopment = () => {
                 className={`mob-intro__text animate__animated ${introInView ? "animate__fadeInLeft" : ""}`}
               >
                 <h2 id="intro-heading">
-                  Custom Mobile App Development Services That Power Business
-                  Growth
+                  Mobile Apps Built Around Real User Tasks
                 </h2>
                 <p>
-                  A high performance mobile application is more than just an
-                  asset , it’s a strategic investment. At QllmSoft, we deliver{" "}
-                  <strong>bespoke mobile development services</strong>
-                  engineered to help startups and enterprises build scalable,
-                  secure, and user centric mobile solutions that drive long term
-                  engagement.
+                  Start with what people need to do on a phone: complete a booking, record a visit, track an order, or access business information. Our <strong>mobile app development services</strong> cover the interface, device features, backend integration, testing, and release scope required for those tasks.
                 </p>
                 <p>
-                  Our engineering team specializes in native iOS, Android, and
-                  high performance <strong>hybrid architectures</strong>. By
-                  leveraging industry leading frameworks like Flutter and React
-                  Native, we deliver cross platform applications that provide
-                  native quality experiences from a single, maintainable
-                  codebase.
+                  We work with native Android and iOS tools as well as Flutter and React Native. A shared codebase can be useful, but camera access, notifications, background work, accessibility, and offline data still need careful platform-specific planning.
                 </p>
                 <p>
-                  We bridge the gap between technical precision and intuitive
-                  UI/UX design. With our{" "}
-                  <Link to="/api-development-services">
-                    secure API integration capabilities
-                  </Link>
-                  , we ensure seamless data synchronization and fluid
-                  performance across the entire mobile ecosystem. Leading
-                  businesses across the
-                  <strong> the world</strong> trust QllmSoft to build digital
-                  products that scale with their vision.
+                  A mobile app also needs reliable access to business data. Our <Link to="/api-development-services">API development and integration services</Link> cover the backend connections. Agree on permissions, session handling, retry behavior, and how edits synchronize after a lost connection. For help preparing a brief, see our <Link to="/blog/mobile-app-development-cost-in-pakistan">guide to mobile app development cost factors</Link>.
                 </p>
                 <div
                   className="mob-intro__badges"
                   aria-label="Compliance and delivery standards"
                 >
                   {[
-                    "GDPR-Aware Development",
+                    "Data Handling Review",
                     "Agile Delivery",
                     "Store-Ready Builds",
                     "Secure by Default",
@@ -655,16 +622,13 @@ const MobileAppDevelopment = () => {
             <div className="project-card">
               <div className="project-card__content">
                 <span className="section-eyebrow" style={{ color: "#edb702" }}>
-                  Recent Launch
+                  Interface Example
                 </span>
                 <h2 className="project-title text-white">
                   Sticker Smash — Interactive Photo Editor
                 </h2>
                 <p className="project-desc">
-                  We developed a vibrant, user centric photo editing application
-                  that allows users to express creativity through custom
-                  stickers. Built with high performance rendering, it features a
-                  seamless gallery integration and real time image manipulation.
+                  This photo-editor interface illustrates an image-selection and editing workflow. Use it as a starting point for discussing interaction requirements, then validate the behavior needed for your own app. It is an interface example, not a documented client outcome.
                 </p>
 
                 <div className="project-features">
@@ -702,26 +666,21 @@ const MobileAppDevelopment = () => {
           </div>
           <div
             className="wds-portfolio__pdf-banner card  text-white p-5 text-center border-0 shadow mx-auto"
-        
+
           >
             <div
               className="card-body mx-auto mob-dossier-body"
-             
+
             >
             <div className="mob-dossier-icon text-warning" aria-hidden="true">
       <i className="bi bi-file-earmark-pdf-fill"></i>
     </div>
 
               <h3 className="h3 text-white mb-3 fw-bold">
-                Download Our Enterprise Mobile Engineering Capability Dossier
+                Download the Mobile Development Overview
               </h3>
               <p className="text-muted small mb-4">
-                Seeking a precise technical audit of our runtimes? Download our
-                comprehensive mobile systems blueprint portfolio. This master
-                architectural brief dissects our live iOS & Android native
-                deployments, memory profile optimization patterns, secure
-                offline first sync engines, and strict App Store & Play Store
-                compliance compliance pipelines.
+                Review the mobile development overview, then discuss your intended users, platform requirements, backend connections, and release responsibilities with our team.
               </p>
 
               <a
@@ -796,7 +755,7 @@ const MobileAppDevelopment = () => {
                   icon: "bi-lightning-charge",
                   platform: "Flutter",
                   title: "Flutter Cross-Platform App Development",
-                  desc: "Flutter by Google lets us build one codebase that delivers native-quality apps on both Android and iOS — cutting development time by up to 40% without sacrificing UI fidelity or performance. Ideal for startups and businesses that need both platforms simultaneously.",
+                  desc: "Flutter can share application code across Android and iOS. Assess device integrations, available packages, accessibility, and platform-specific UI requirements before choosing it for a project.",
                   tags: [
                     "Flutter",
                     "Dart",
@@ -840,7 +799,7 @@ const MobileAppDevelopment = () => {
                   icon: "bi-arrow-repeat",
                   platform: "Modernization",
                   title: "App Modernization &amp; Maintenance",
-                  desc: "Outdated mobile apps leak users and revenue. We modernize legacy Android and iOS applications through UI/UX redesign, performance auditing, security hardening, framework migration, and feature expansion — without disrupting your existing user base.",
+                  desc: "Review crash reports, slow workflows, dependency support, and backend compatibility. Prioritize fixes and plan releases for users who may update at different times.",
                   tags: [
                     "UI Redesign",
                     "Performance Audit",
@@ -954,13 +913,13 @@ const MobileAppDevelopment = () => {
                     n: "05",
                     icon: "bi-cloud-arrow-up",
                     title: "Store Deployment",
-                    desc: "We prepare store optimized builds, handle Google Play and App Store submission, and manage the review process , ensuring firstattempt approvals and a smooth public launch.",
+                    desc: "Prepare release builds, store listings, review access, and privacy information for the agreed distribution channels. Allow time for platform review and requested changes; approval remains the store operator's decision.",
                   },
                   {
                     n: "06",
                     icon: "bi-wrench",
                     title: "Post Launch Support",
-                    desc: "Every project includes 30 days of post launch monitoring, bug resolution, and performance tuning at no additional cost. Long term maintenance contracts are available for ongoing feature development.",
+                    desc: "Plan crash monitoring, compatibility updates, dependency maintenance, and future store submissions before launch. Confirm support scope, response expectations, and ongoing costs in your project agreement.",
                   },
                 ].map((step, i) => (
                   <li
@@ -1326,19 +1285,19 @@ const MobileAppDevelopment = () => {
                 {
                   icon: "bi-speedometer2",
                   title: "High Performance & Speed",
-                  desc: "Speed directly impacts retention. Apps that take more than 3 seconds to load lose over 50% of users on first open. We build mobile applications with optimized rendering, efficient data fetching, and sub-second response times.",
+                  desc: "Test startup, screen transitions, and data loading on representative devices and network conditions. Rendering, API response times, image sizes, and offline behavior all affect the experience. Set measurable targets for frequent user tasks.",
                   highlight: false,
                 },
                 {
                   icon: "bi-layers-half",
                   title: "Scalable Mobile Architecture",
-                  desc: "Your app should grow with your business — not become a bottleneck. We use proven architectural patterns (MVVM, Clean Architecture) so your product can handle 10x user growth without a costly rebuild.",
+                  desc: "Plan how the app and backend handle more users, larger datasets, and new features. Separate responsibilities, monitor slow requests, and test realistic workloads before deciding whether infrastructure or architecture needs to change.",
                   highlight: false,
                 },
                 {
                   icon: "bi-shield-lock",
                   title: "Security & Data Compliance",
-                  desc: "We apply OWASP Mobile Top 10 practices, encrypted local storage, secure API communication, and privacy-aware data handling. Where required, we support GDPR-aligned data flows to protect your users and reduce regulatory risk.",
+                  desc: "Plan secure transport, storage, authentication, and permissions around the data the app handles. Identify privacy requirements and any independent review needed for the intended markets.",
                   highlight: false,
                 },
                 {
@@ -1350,7 +1309,7 @@ const MobileAppDevelopment = () => {
                 {
                   icon: "bi-device-ssd",
                   title: "Cross-Platform Consistency",
-                  desc: "With Flutter and React Native, we ensure your app looks, feels, and performs consistently on both Android and iOS — reaching the widest possible audience without doubling your development budget.",
+                  desc: "Shared code can reduce duplicated implementation, while navigation, permissions, notifications, and device integrations may need platform-specific work. Test complete user journeys on both Android and iOS.",
                   highlight: false,
                 },
               ].map((p, i) => (
@@ -1387,7 +1346,7 @@ const MobileAppDevelopment = () => {
           <div className="container">
             <div className="section-title">
               <h2 id="industries-heading">
-                Mobile Applications Across Every Industry
+                Examples of Mobile Application Workflows
               </h2>
               <p>
                 We build mobile solutions tailored to the compliance
@@ -1400,7 +1359,7 @@ const MobileAppDevelopment = () => {
                 {
                   icon: "bi-heart-pulse",
                   title: "Healthcare",
-                  desc: "HIPAA-aware patient portals, telemedicine apps, appointment booking systems, EHR integrations, and wearable device connectivity for healthcare providers and patients.",
+                  desc: "Potential healthcare workflows include appointments, patient access to records, and staff communication. Assess sensitive-data handling, clinical-system access, and sector-specific requirements before defining the scope.",
                 },
                 {
                   icon: "bi-mortarboard",
@@ -1420,7 +1379,7 @@ const MobileAppDevelopment = () => {
                 {
                   icon: "bi-credit-card",
                   title: "FinTech",
-                  desc: "Mobile banking apps, digital wallets, investment platforms, payment gateway integration, and regulatory-compliant financial tools built with security at the core.",
+                  desc: "Financial workflow applications can include account information, payment-provider integrations, and reporting. Assess identity, access, data handling, and sector-specific requirements before defining the scope.",
                 },
                 {
                   icon: "bi-bag-shopping",
@@ -1483,13 +1442,7 @@ const MobileAppDevelopment = () => {
                   <span>Global Resource Scaling</span>
                 </h2>
                 <p>
-                  Partnering with QllmSoft's global delivery center enables
-                  organizations to bypass regional talent shortages and secure
-                  senior systems engineering expertise. We deliver institutional
-                  grade code architecture, strict compliance mapping, and high
-                  velocity product rollouts while maintaining exceptional
-                  capital efficiency relative to domestic Western consulting
-                  firms.
+                  An external mobile team needs clear product ownership, access to test systems, and regular feedback from the people using the app. Agree on those responsibilities, communication times, and handover requirements before development begins.
                 </p>
                 <p>
                   Our core development hub operates with a deep bench of mobile
@@ -1523,15 +1476,15 @@ const MobileAppDevelopment = () => {
                 {[
                   {
                     icon: "bi-currency-dollar",
-                    stat: "50–60%",
-                    label: "Cost Savings",
-                    desc: "vs US, UK, or Australian development teams",
+                    stat: "Scope",
+                    label: "Budget Planning",
+                    desc: "Compare scope, testing, integrations, hosting, and ongoing maintenance.",
                   },
                   {
                     icon: "bi-clock",
-                    stat: "Days",
-                    label: "Time to Onboard",
-                    desc: "Not weeks — start building immediately",
+                    stat: "Plan",
+                    label: "Onboarding Plan",
+                    desc: "Agree on access, discovery inputs, and team availability before scheduling work.",
                   },
                   {
                     icon: "bi-people",
@@ -1553,9 +1506,9 @@ const MobileAppDevelopment = () => {
                   },
                   {
                     icon: "bi-handshake",
-                    stat: "100%",
-                    label: "IP Ownership",
-                    desc: "All code and assets belong to you",
+                    stat: "Code",
+                    label: "Ownership terms",
+                    desc: "Confirm custom-code rights, account ownership, and third-party licensing in the agreement.",
                   },
                 ].map((b, i) => (
                   <div key={i} className="mob-outsource-card">
@@ -1623,7 +1576,7 @@ const MobileAppDevelopment = () => {
                   num: "04",
                   icon: "bi-shield-lock",
                   title: "Verified Global Track Record",
-                  desc: "Top-Rated Plus on Upwork. 5-star reviews on Freelancer. Clients across the UK, USA, UAE, Saudi Arabia, and Jordan. Our reputation is backed by independent third-party verification — not just our own claims.",
+                  desc: "Review marketplace feedback alongside relevant app examples, device-testing plans, and the responsibilities for future releases.",
                 },
               ].map((w, i) => (
                 <article
@@ -1674,8 +1627,8 @@ const MobileAppDevelopment = () => {
         </section>
 
         <FounderNote
-          title="Engineering Mobility, Scaling Vision"
-          message="At QllmSoft, we don't just build apps; we engineer global products. Our focus is exclusively on the International Market, ensuring that every project adheres to ISO standards, GDPR privacy laws, and Tier 1 security protocols. We bridge the gap between complex business logic and world class user experiences, serving as your dedicated offshore innovation hub."
+          title="Start with a complete user journey"
+          message="Plan what happens from sign-in to task completion, including interrupted connections, denied permissions, and users returning after an update. Test that journey on the devices your audience actually uses before expanding the feature list."
         />
 
         {/* ════════════════════════════════════════════════
@@ -1684,8 +1637,8 @@ const MobileAppDevelopment = () => {
         <section
           className="section csd-faq mob-faq"
           aria-labelledby="faq-heading"
-          itemScope
-          itemType="https://schema.org/FAQPage"
+
+
         >
           <div className="container">
             <p className="section-eyebrow">Common Questions</p>

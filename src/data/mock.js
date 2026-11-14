@@ -84,15 +84,15 @@ export const homeServices = [
     id: 1,
     name: "Custom Software Development",
     description:
-      "Tailored enterprise solutions and scalable core software engineered to automate complex workflows and accelerate organizational growth.",
+      "Internal tools and business systems for workflows that need more than a standard product configuration.",
     image: softwaredevelopmentimg,
     link: "/custom-software-development-services"
   },
   {
     id: 2,
-    name: "Custom Web Development",
+    name: "Website Development",
     description:
-      "End-to-end modern web applications designed for performance, user experience, and long-term business growth.",
+      "Business websites and content-led pages with clear editing, contact, and integration requirements.",
     image: webdevelopmentimg,
     link: "/website-development-services"
   },
@@ -101,16 +101,16 @@ export const homeServices = [
     id: 3,
     name: "Mobile App Development",
     description:
-      "High-performance iOS and Android applications crafted with seamless UX and robust functional architecture.",
+      "Android and iOS apps planned around user tasks, device features, backend connections, and release requirements.",
     image:
       mobileapp,
     link: "/mobile-app-development"
   },
   {
     id: 4,
-    name: "API & Enterprise Integration",
+    name: "API Development & Integration",
     description:
-      "Robust RESTful API development and secure third-party integrations to connect your business ecosystem.",
+      "Interfaces that connect applications and business systems with defined permissions, data contracts, and failure handling.",
     image:
       apiintegration,
     link: "/api-development-services"

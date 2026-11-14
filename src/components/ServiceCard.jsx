@@ -19,7 +19,7 @@ const ServiceCardDetailed = ({ service }) => {
       <div className="service-image-box">
         <img 
           src={service.image} 
-          alt={`${service.name} Engineering - Global Tech Solutions QllmSoft`} 
+          alt={`${service.name} service illustration`}
           loading="lazy" 
         />
         <div className="service-card-overlay">

@@ -161,7 +161,8 @@
       "/blog/is-aes-256-encryption-safe-enough-for-storing-sensitive-financial-documents",
       "/blog/how-to-avoid-technical-debt-in-custom-web-software"
     ],
-    "skipThirdPartyRequests": true
+    "skipThirdPartyRequests": true,
+    "waitFor": "h1:not([data-prerender-ready=\"false\"])"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

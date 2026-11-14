@@ -49,15 +49,17 @@ import {
 import "./Home.css";
 import "animate.css";
 
+const PAGE_TITLE = "QllmSoft | Business Software, Web & Mobile Development";
+const PAGE_DESCRIPTION = "Build software around your business workflows. Explore QllmSoft's custom systems, web applications, mobile apps and API integrations. Discuss your project.";
+
 /* ─── JSON-LD unique to Home ────────────────────────────────── */
 const schemaHomePage = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "@id": "https://qllmsoft.com/#webpage",
   url: "https://qllmsoft.com",
-  name: "Custom Software Development Company | QllmSoft",
-  description:
-    "QllmSoft builds enterprise software, web applications, mobile apps, and AI powered solutions for businesses worldwide.",
+  name: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   isPartOf: { "@id": "https://qllmsoft.com/#website" },
   about: { "@id": "https://qllmsoft.com/#organization" },
   primaryImageOfPage: {
@@ -86,11 +88,11 @@ const homeFaqItems = [
   },
   {
     q: "Where is the QllmSoft team based and who do they serve?",
-    a: "The core engineering team operates out of Punjab, Pakistan, and works with clients across North America, the United Kingdom, Europe, and the Gulf region, in addition to businesses within Pakistan. Communication runs in English with working hours overlapping US, UK, and Gulf business days.",
+    a: "QllmSoft is based in Punjab, Pakistan and works with local and international clients. Agree on meeting times, communication channels, review responsibilities, and time-zone overlap when planning the engagement.",
   },
   {
-    q: "How is QllmSoft different from a typical outsourcing agency?",
-    a: "Most outsourcing arrangements bill hourly with an open ended scope. QllmSoft scopes every project in writing before development starts, quotes a fixed price against that scope, and keeps the same engineers on a project from discovery through post launch support rather than rotating staff between clients.",
+    q: "What should we prepare before discussing a project?",
+    a: "Describe the task you want to improve, who uses the system, and what is difficult today. Bring sample workflows, existing system details, and a prioritized list of requirements. We can then discuss scope, dependencies, delivery options, and the information needed for an estimate.",
   },
 ];
 
@@ -102,27 +104,27 @@ const featuredCaseStudies = [
     title: "Enterprise financial management platform",
     industry: "Finance",
     problem:
-      "A mid sized finance team was closing the books using disconnected spreadsheets shared by email. Reconciliation errors were common, and senior leadership had no real time view of departmental spending until the following month.",
+      "Financial evaluation needs consistent applicant records, decision workflows, reporting, and a record of changes.",
     approach:
-      "QllmSoft built a role based platform on ASP.NET Core with a React front end, replacing manual entry with automated data capture from existing accounting sources and a live approval workflow for department heads.",
+      "The financial management project in our portfolio brings applicant scoring, credit evaluation, dashboards, custom reporting, and audit trails into one system.",
     result:
-      "Month end close time dropped by 60 percent and leadership gained same day visibility into spending across every department, replacing the prior month long reporting lag.",
+      "A centralized workflow for evaluating financial information and reviewing the records behind decisions. See the project details for the documented feature set.",
     image: financialsystemImg,
     alt: "Enterprise financial management platform dashboard built by QllmSoft",
     link: "/finance-management-system",
   },
   {
-    title: "QllmDocs, a document management system for compliance heavy teams",
-    industry: "Legal and compliance",
+    title: "QllmDocs document management",
+    industry: "Document workflows",
     problem:
-      "Contract and compliance documents were circulating by email with no version control, which created real exposure for a client handling regulated filings where the wrong version reaching the wrong person carries financial risk.",
+      "Teams need to find the right document, control access, and keep track of changes without relying on scattered email attachments.",
     approach:
-      "The team built a document management platform with granular role based permissions, a complete audit trail on every file action, and AI assisted search that locates documents by content instead of filename, deployed on Azure with encrypted storage.",
+      "QllmDocs is a separate document-management product associated with QllmSoft. It combines document organization, access permissions, audit history, and AI-assisted search.",
     result:
-      "Manual document handling overhead dropped by more than 70 percent, and the client passed its next compliance review without a single flagged document access issue.",
+      "Explore the product's document workflows and available capabilities, then assess whether it fits your storage, access, and integration requirements.",
     image: QLLMDOCSImg,
     alt: "QllmDocs secure document management dashboard built by QllmSoft",
-    link: "/projects/qllmdocs-document-management-system",
+    link: "/ai-document-management-software",
   },
 ];
 
@@ -141,7 +143,7 @@ const stepIconProps = {
 const engagementSteps = [
   {
     n: "01",
-    title: "Scope is written before pricing is quoted",
+    title: "Define the work before estimating it",
     icon: (
       <svg {...stepIconProps}>
         <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />
@@ -151,14 +153,14 @@ const engagementSteps = [
     ),
     body: (
       <>
-        A formal scope document exists before a price is proposed. If the scope does not change
-        during the build, the price does not change either.
+        Identify the users, workflows, integrations and constraints. Agree on deliverables,
+        assumptions and acceptance criteria so proposals can be compared on the same basis.
       </>
     ),
   },
   {
     n: "02",
-    title: "Source code and IP transfer on delivery",
+    title: "Agree on ownership and handover",
     icon: (
       <svg {...stepIconProps}>
         <circle cx="8" cy="15" r="4" />
@@ -169,14 +171,14 @@ const engagementSteps = [
     ),
     body: (
       <>
-        Every project ends with full intellectual property transfer, a documented repository
-        handoff, and no ongoing licensing dependency on QllmSoft.
+        Confirm source-code rights, repository access, documentation and hosting ownership.
+        Identify third-party subscriptions and licenses that will remain part of the system.
       </>
     ),
   },
   {
     n: "03",
-    title: "Security follows a published standard",
+    title: "Plan security around the data",
     icon: (
       <svg {...stepIconProps}>
         <path d="M12 3 5 6v5c0 4.5 3 8.2 7 10 4-1.8 7-5.5 7-10V6z" />
@@ -185,7 +187,7 @@ const engagementSteps = [
     ),
     body: (
       <>
-        Builds follow the{" "}
+        Use guidance such as the{" "}
         <a
           href="https://owasp.org/www-project-top-ten/"
           target="_blank"
@@ -194,14 +196,14 @@ const engagementSteps = [
         >
           OWASP Top 10
         </a>{" "}
-        security framework, with functional, load, and penetration testing completed before
-        launch, not after a client reports a problem.
+        to inform risk assessment. Define access controls, validation and testing around the
+        data involved; a checklist alone does not establish that an application is secure.
       </>
     ),
   },
   {
     n: "04",
-    title: "Support does not end at launch",
+    title: "Decide how the system will be maintained",
     icon: (
       <svg {...stepIconProps}>
         <circle cx="12" cy="12" r="9" />
@@ -210,8 +212,8 @@ const engagementSteps = [
     ),
     body: (
       <>
-        A 30 day post launch window covering bug fixes and monitoring is included in every
-        project, with optional maintenance contracts for anything beyond that window.
+        Assign responsibility for monitoring, backups, updates and incident response.
+        Confirm the initial support period and ongoing maintenance scope in the agreement.
       </>
     ),
   },
@@ -264,10 +266,10 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Custom Software Development Company | QllmSoft</title>
+        <title>{PAGE_TITLE}</title>
         <meta
           name="description"
-          content="QllmSoft builds enterprise web applications, mobile apps and AI solutions for global clients. Fixed price delivery, 100% IP ownership. Free quote in 24 hours."
+          content={PAGE_DESCRIPTION}
         />
         <meta
           name="keywords"
@@ -280,10 +282,10 @@ const Home = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://qllmsoft.com/" />
         <meta property="og:site_name" content="QllmSoft" />
-        <meta property="og:title" content="Custom Software Development Company | QllmSoft" />
+        <meta property="og:title" content={PAGE_TITLE} />
         <meta
           property="og:description"
-          content="Enterprise software, mobile apps, and AI powered solutions for global businesses. Fixed price delivery, verified track record."
+          content={PAGE_DESCRIPTION}
         />
         <meta property="og:image" content="https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg" />
         <meta property="og:image:width" content="1200" />
@@ -291,8 +293,8 @@ const Home = () => {
         <meta property="og:locale" content="en_US" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Custom Software Development Company | QllmSoft" />
-        <meta name="twitter:description" content="Custom web apps, mobile apps, and AI powered solutions built for businesses worldwide." />
+        <meta name="twitter:title" content={PAGE_TITLE} />
+        <meta name="twitter:description" content={PAGE_DESCRIPTION} />
         <meta name="twitter:image" content="https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg" />
 
         <script type="application/ld+json">{JSON.stringify(schemaOrganization)}</script>
@@ -337,32 +339,31 @@ const Home = () => {
               </div>
               <div className={`about-text animate__animated ${aboutInView ? "animate__fadeInRight" : ""}`}>
                 <h2 id="about-heading" className="section-title">
-                  A custom software development company built for real operations, not templates
+                  Software that connects the work across your business
                 </h2>
                 <p className="direct-answer">
                   QllmSoft is a <strong>custom software development company</strong> founded in{" "}
-                  {FACTS.foundingYear}. The team designs, builds, and maintains enterprise web applications,
-                  mobile apps, and AI powered automation tools under fixed price, fixed scope contracts, so
-                  clients know the total cost before development begins rather than discovering it through an
-                  hourly invoice.
+                  {FACTS.foundingYear}. We build business systems, web applications, mobile apps and
+                  integrations for teams whose requirements need more than a standard product configuration.
+                  The starting point is the work people need to complete and the systems they already use.
                 </p>
                 <p>
-                  Founder and CEO Zain Ul Abedin leads a team that has shipped {FACTS.projectsDelivered} production
-                  systems for {FACTS.globalClients} clients spanning finance, healthcare, logistics, and eCommerce.
-                  Every engagement runs on the same technology stack the team uses internally: ASP.NET Core and
-                  C# on the backend, React on the frontend, SQL Server for relational data, and Flutter when a
-                  project needs a single mobile codebase for both Android and iOS.
+                  Founder Zain Ul Abedin leads the team. Our development work includes ASP.NET Core and C#,
+                  React, Angular, SQL Server, and mobile frameworks such as Flutter and React Native.
+                  Technology choices depend on the existing environment, required device capabilities,
+                  integrations, and the people who will maintain the software.
                 </p>
                 <p>
-                  That track record is not something visitors have to take on faith. It is verifiable directly on{" "}
+                  To assess previous client feedback, review our profiles on{" "}
                   <a href="https://www.upwork.com/freelancers/zainulabedinpk" target="_blank" rel="noopener noreferrer">
-                    Upwork, where QllmSoft holds a {FACTS.upworkScore} Job Success Score
+                    Upwork
                   </a>
                   , and on{" "}
                   <a href="https://www.freelancer.com/u/mrprogrmmr" target="_blank" rel="noopener noreferrer">
-                    Freelancer, with a {FACTS.freelancerRating} star rating across {FACTS.reviewCount} reviews
+                    Freelancer
                   </a>
-                  . Both platforms are independent of QllmSoft and cannot be edited by the company itself.
+                  . Ask for examples relevant to your workflow and discuss the delivery responsibilities
+                  before selecting a development partner.
                 </p>
                 <Link to="/about" className="btn btn-primary" aria-label="Learn more about QllmSoft">
                   Read the full company story
@@ -378,9 +379,8 @@ const Home = () => {
             <div className="section-title">
               <h2 id="services-heading">What we build</h2>
               <p>
-                Five categories of work make up most of what QllmSoft delivers. Each one has its own dedicated
-                page with full technical detail, pricing factors, and a service specific FAQ. What follows is the
-                short version of each.
+                Choose a starting point based on what you need to deliver. The service pages explain the
+                scope, implementation decisions and information needed for a project discussion.
               </p>
             </div>
 
@@ -391,24 +391,23 @@ const Home = () => {
                 <strong>
                   <Link to="/custom-software-development-services">Custom software development</Link>
                 </strong>{" "}
-                covers internal tools and business specific systems built when an off the shelf product like a
-                generic CRM or ERP module no longer fits how a company actually operates. This is the right
-                starting point when a business is bending a SaaS tool into shapes it was never designed for.
+                helps teams replace spreadsheet handoffs, approval bottlenecks or disconnected records.
+                First assess whether configuring an existing product or adding an integration would meet
+                the need before committing to a custom system.
               </p>
               <p>
                 <strong>
                   <Link to="/website-development-services">Website development</Link>
                 </strong>{" "}
-                covers public facing marketing sites and eCommerce storefronts, built custom coded rather than on
-                a page builder, so page speed and technical SEO are part of the build rather than something
-                patched in afterward.
+                focuses on public-facing business sites and content that help prospective customers
+                understand your offer. Plan content editing, forms, analytics and technical SEO together.
               </p>
               <p>
                 <strong>
                   <Link to="/web-application-development-services">Web application development</Link>
                 </strong>{" "}
-                covers enterprise portals and SaaS platforms built specifically on ASP.NET Core, for projects
-                where the deliverable is a login protected application rather than a public marketing page.
+                covers customer portals, staff applications and SaaS platforms. Define who can access
+                each record, how tasks move between users, and which systems the application connects to.
               </p>
               <p>
                 <strong>
@@ -422,14 +421,19 @@ const Home = () => {
                 <strong>
                   <Link to="/mobile-app-development">Mobile app development</Link>
                 </strong>{" "}
-                covers Android and iOS apps, typically built in Flutter for a shared codebase, or natively when a
-                project needs direct hardware access that a cross platform framework cannot provide cleanly.
+                covers Android and iOS products for customers or staff working on the move. Native and
+                cross-platform approaches both need device testing, backend planning and release support.
+              </p>
+              <p>
+                <strong><Link to="/ecommerce-development-services">Custom ecommerce development</Link></strong>{" "}
+                addresses checkout rules, catalog operations and connections to inventory or order systems.
+                Consider a focused integration before replacing a platform that otherwise serves the business.
               </p>
             </div>
 
             <div style={{ textAlign: "center", marginTop: "32px" }}>
               <Link to="/services" className="btn btn-primary" aria-label="See the full QllmSoft service catalog">
-                See the full service catalog and pricing model
+                Explore all services
               </Link>
             </div>
           </div>
@@ -439,11 +443,10 @@ const Home = () => {
         <section className="section" aria-labelledby="industries-heading">
           <div className="container">
             <div className="section-title">
-              <h2 id="industries-heading">Industries with the deepest project history</h2>
+              <h2 id="industries-heading">Industry workflows and requirements</h2>
               <p>
-                Software requirements differ meaningfully by sector. A hospital booking system has compliance
-                requirements a retail storefront never encounters, and a lending platform has audit requirements
-                a school portal never encounters. These are the sectors QllmSoft has built repeatedly.
+                Each sector has different users, records, integrations and risk considerations. These pages
+                describe industry-specific applications and the requirements to assess before a project begins.
               </p>
             </div>
             <div className="why-grid">
@@ -452,7 +455,7 @@ const Home = () => {
                 <p>Clinic booking systems, patient portals, and hospital management platforms built with role based access controls around sensitive patient data.</p>
               </article>
               <article className="why-card">
-                <h3>Finance and fintech</h3>
+                <h3><Link to="/finance-management-system">Finance and fintech</Link></h3>
                 <p>Financial reporting dashboards, budgeting and approval systems, and payment integrations, including the platform detailed in the case study below.</p>
               </article>
               <article className="why-card">
@@ -460,7 +463,7 @@ const Home = () => {
                 <p>School management systems, learning management platforms, and online examination tools for institutions managing multiple campuses.</p>
               </article>
               <article className="why-card">
-                <h3>Logistics and eCommerce</h3>
+                <h3><Link to="/ecommerce-development-services">Logistics and eCommerce</Link></h3>
                 <p>Inventory tracking, delivery routing tools, and custom storefronts for retailers who have outgrown what a template store platform can support.</p>
               </article>
               <article className="why-card">
@@ -475,7 +478,7 @@ const Home = () => {
           </div>
         </section>
 
-        {/* 
+        {/*
         +ENGAGEMENT STEPS  */}
         <section className="relative py-16 sm:py-20 lg:py-24" aria-labelledby="why-heading">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -487,7 +490,7 @@ const Home = () => {
                 What the engagement actually looks like
               </h2>
               <p className="mt-4 text-base leading-7 text-slate-600 sm:text-lg">
-                These are structural facts about how QllmSoft works, not marketing adjectives.
+                Make the delivery responsibilities clear before development starts.
               </p>
             </div>
 
@@ -543,20 +546,20 @@ const Home = () => {
                   <h3>{c.title}</h3>
                   <p><strong>Problem.</strong> {c.problem}</p>
                   <p><strong>Approach.</strong> {c.approach}</p>
-                  <p><strong>Result.</strong> {c.result}</p>
-                  <Link to={c.link} className="story-link">Read the full case study</Link>
+                  <p><strong>Capabilities.</strong> {c.result}</p>
+                  <Link to={c.link} className="story-link">Explore this solution</Link>
                 </article>
               ))}
             </div>
             <div style={{ textAlign: "center", marginTop: "24px" }}>
               <Link to="/projects" className="btn btn-primary">
-                View the full portfolio, {FACTS.projectsDelivered} projects
+                Explore the project portfolio
               </Link>
             </div>
           </div>
         </section>
 
-      
+
           <TestimonialSection />
 
 
@@ -571,11 +574,9 @@ const Home = () => {
               <div className="outsourcing-text">
                 <h2>Outsourcing software development, briefly</h2>
                 <p>
-                  Businesses outsource development for three reasons: access to senior engineering talent that
-                  would take months to hire directly, lower management overhead than running an internal team,
-                  and faster delivery without a drop in build quality. QllmSoft has run {FACTS.projectsDelivered}{" "}
-                  engagements on this model since {FACTS.foundingYear}, working across time zones with clients in
-                  North America, the United Kingdom, and the Gulf region.
+                  An external development partner can provide delivery capacity or technical skills your
+                  internal team needs. It also requires clear ownership of scope, access, review and release.
+                  Agree on communication, decision-making and handover before work begins.
                 </p>
                 <Link to="/outsource-software-development-to-pakistan" className="story-link">
                   Read the full outsourcing model
@@ -702,8 +703,8 @@ const Home = () => {
         <section
           className="section faq-section"
           aria-labelledby="home-faq-heading"
-          itemScope
-          itemType="https://schema.org/FAQPage"
+
+
         >
           <div className="container">
             <div className="section-title">
@@ -711,15 +712,15 @@ const Home = () => {
             </div>
             <div className="faq-accordion">
               {homeFaqItems.map((item, i) => (
-                <div key={item.q} className={`faq-item ${openFaq === i ? "faq-item-open" : ""}`} itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
-                  <h3 itemProp="name">
+                <div key={item.q} className={`faq-item ${openFaq === i ? "faq-item-open" : ""}`}   >
+                  <h3 >
                     <button type="button" className="faq-question" onClick={() => setOpenFaq(openFaq === i ? -1 : i)} aria-expanded={openFaq === i}>
                       <span>{item.q}</span>
                       <span className="faq-icon" aria-hidden="true">+</span>
                     </button>
                   </h3>
-                  <div className="faq-answer" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                    <p itemProp="text">{item.a}</p>
+                  <div className="faq-answer"   >
+                    <p >{item.a}</p>
                   </div>
                 </div>
               ))}
@@ -730,10 +731,10 @@ const Home = () => {
         <section className="section cta-section" aria-labelledby="cta-heading">
           <div className="container">
             <div className="cta-content">
-              <h2 id="cta-heading">Ready to build software that drives real business growth?</h2>
+              <h2 id="cta-heading">What would you like your software to do better?</h2>
               <p>
-                Tell us your challenge. QllmSoft reviews requirements, sends a fixed price proposal within 24
-                hours, and schedules a free discovery call with no commitment required.
+                Share your current process, the people involved and the systems you need to connect.
+                We can discuss the requirements, delivery options and next steps for an estimate.
               </p>
               <div className="cta-buttons">
                 <Link to="/contact" className="btn btn-primary" aria-label="Get a free software development consultation">

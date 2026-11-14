@@ -84,11 +84,6 @@ export const schemaWebsite = {
   url: "https://qllmsoft.com",
   name: "QllmSoft",
   publisher: { "@id": "https://qllmsoft.com/#organization" },
-  potentialAction: {
-    "@type": "SearchAction",
-    target: "https://qllmsoft.com/blog?q={search_term_string}",
-    "query-input": "required name=search_term_string",
-  },
 };
 
 /** Helper: consistent BreadcrumbList so every page doesn't hand-roll its own */
