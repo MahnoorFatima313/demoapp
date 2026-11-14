@@ -29,7 +29,7 @@ import CoreServiceLinks from "../components/CoreServiceLinks";
 import FounderNote from "../components/FounderNote";
 import apiimg from "../assets/API-DEVELOPMENT-SERVICES.webp";
 import Documentation from "../assets/Documentaion.webp";
-import ApiArchitecture from "../assets/API-CASESTUDY.webp";
+import ApiArchitecture from "../assets/api-request-flow.svg";
 import phase3 from '../assets/phase3.webp';
 import { schemaOrganization } from "../data/schema";
 
@@ -633,8 +633,8 @@ const ApiDevelopmentServices = () => {
             <div className="api-explainer__layout">
               <figure className="api-explainer__image">
                 <img
-                  src="https://qllmsoft.com/images/api-services.webp"
-                  alt="API development services overview  how APIs connect web, mobile and cloud systems"
+                  src={apiimg}
+                  alt="Illustration of connected components representing application integration"
                   loading="lazy"
                   width="500"
                   height="360"

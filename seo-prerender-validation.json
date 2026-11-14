@@ -1,0 +1,174 @@
+{
+  "javascriptExecuted": false,
+  "results": [
+    {
+      "route": "/",
+      "titles": [
+        "QllmSoft | Business Software, Web & Mobile Development"
+      ],
+      "descriptions": [
+        "Build software around your business workflows. Explore QllmSoft's custom systems, web applications, mobile apps and API integrations. Discuss your project."
+      ],
+      "canonicals": [
+        "https://qllmsoft.com/"
+      ],
+      "h1": [
+        "Custom Software & AIFor Your Business Workflows"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "Service",
+        "FAQPage"
+      ],
+      "faqMicrodata": 0,
+      "textLength": 11129
+    },
+    {
+      "route": "/custom-software-development-services",
+      "titles": [
+        "Custom Software Development Services | QllmSoft"
+      ],
+      "descriptions": [
+        "Replace spreadsheet workarounds with custom business software, ERP modules and connected workflows. Discuss your requirements with QllmSoft."
+      ],
+      "canonicals": [
+        "https://qllmsoft.com/custom-software-development-services"
+      ],
+      "h1": [
+        "Custom Software Development for Business Systems"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "Service",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "faqMicrodata": 0,
+      "textLength": 10431
+    },
+    {
+      "route": "/api-development-services",
+      "titles": [
+        "API Development & Integration Services | QllmSoft"
+      ],
+      "descriptions": [
+        "Connect your apps, CRM and ERP with custom REST, GraphQL or SOAP APIs. Plan integrations, backend upgrades and project scope with QllmSoft."
+      ],
+      "canonicals": [
+        "https://qllmsoft.com/api-development-services"
+      ],
+      "h1": [
+        "API Development &Integration Services"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "faqMicrodata": 0,
+      "textLength": 14855
+    },
+    {
+      "route": "/web-application-development-services",
+      "titles": [
+        "Web Application Development: Portals & SaaS | QllmSoft"
+      ],
+      "descriptions": [
+        "Build a customer portal, internal web app or SaaS platform around your workflows. Discuss roles, integrations and a scoped project estimate."
+      ],
+      "canonicals": [
+        "https://qllmsoft.com/web-application-development-services"
+      ],
+      "h1": [
+        "Web ApplicationDevelopment Services"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "faqMicrodata": 0,
+      "textLength": 12467
+    },
+    {
+      "route": "/website-development-services",
+      "titles": [
+        "Website Development for Business & eCommerce | QllmSoft"
+      ],
+      "descriptions": [
+        "Get a business website, ecommerce storefront or content-led site built around your goals. Discuss design, integrations and your project estimate."
+      ],
+      "canonicals": [
+        "https://qllmsoft.com/website-development-services"
+      ],
+      "h1": [
+        "Website Development for Business & eCommerce"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "Service",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "faqMicrodata": 0,
+      "textLength": 14393
+    },
+    {
+      "route": "/mobile-app-development",
+      "titles": [
+        "Mobile App Development for Android & iOS | QllmSoft"
+      ],
+      "descriptions": [
+        "Build an Android, iOS or cross-platform app around your users. Discuss device features, backend integrations, testing and release planning with QllmSoft."
+      ],
+      "canonicals": [
+        "https://qllmsoft.com/mobile-app-development"
+      ],
+      "h1": [
+        "Mobile AppDevelopmentServices"
+      ],
+      "schemaTypes": [
+        "Organization",
+        "Service",
+        "WebPage",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "faqMicrodata": 0,
+      "textLength": 18062
+    },
+    {
+      "route": "/ecommerce-development-services",
+      "titles": [
+        "Custom Ecommerce Development & Integrations | QllmSoft"
+      ],
+      "descriptions": [
+        "Build a custom storefront around your checkout, pricing and inventory workflows. Discuss ecommerce integrations, migration and ongoing costs with QllmSoft."
+      ],
+      "canonicals": [
+        "https://qllmsoft.com/ecommerce-development-services"
+      ],
+      "h1": [
+        "E-Commerce Development Services"
+      ],
+      "schemaTypes": [
+        "WebPage",
+        "Organization",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "faqMicrodata": 0,
+      "textLength": 6902
+    }
+  ]
+}

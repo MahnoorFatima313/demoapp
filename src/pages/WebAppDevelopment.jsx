@@ -274,7 +274,7 @@ const WebAppDevelopment = () => {
             <div className={`wapp-advantage__grid animate__animated ${advInView?'animate__fadeInUp':''}`}>
               {[
                 {Icon:IconZap,    title:"Performance Around Your Workload",        badge:"Tests", desc:"Measure response times and capacity using realistic workflows and data. Database queries, caching, integrations, and hosting all affect application performance."},
-                {Icon:IconShield, title:'Enterprise Security Built In',           badge:"Security Review", desc:'Ships with data protection APIs, CSRF prevention, XSS filters, HTTPS enforcement, and deep Azure AD and OAuth 2.0 integration. Security is architectural, not a plugin you install and forget.'},
+                {Icon:IconShield, title:'Enterprise Security Built In',           badge:"Security Review", desc:'ASP.NET Core provides authentication, authorization, data protection, and controls for common web risks. Configure those features for the application and test access decisions; the framework alone does not establish security.'},
                 {Icon:IconCloud,  title:'Native Azure & Cloud Integration',       badge:'Azure-Native', desc:'As a Microsoft framework, ASP.NET Core integrates natively with Azure App Service, AKS, Azure Functions, and Azure DevOps CI/CD pipelines, reducing cloud deployment complexity and operational cost.'},
                 {Icon:IconGlobe,  title:'Cross-Platform & Open Source',           badge:'Windows · Linux · macOS', desc:'Deploy on Windows Server, Linux, or macOS. Fully open source with active Microsoft development, ensuring long-term support, regular security patches, and a stable technology bet for your business.'},
                 {Icon:IconDatabase,title:"Data Access with EF Core",          badge:'Code-First Migrations', desc:"Entity Framework Core supports data modeling, queries, and migrations. Provider compatibility, indexes, and query behavior should be evaluated against the application workload."},
@@ -306,7 +306,7 @@ const WebAppDevelopment = () => {
                   tags:['MVC Pattern','Razor Views','Clean Architecture','SOLID Principles','Business Portals']},
                 {Icon:IconCode,     title:'REST API & GraphQL Web API Development',
                   desc:'Secure, well-documented RESTful APIs and GraphQL endpoints built with ASP.NET Core Web API, authenticated via JWT and OAuth 2.0, documented with Swagger/OpenAPI 3.0, and tested with comprehensive unit and integration test suites built for mobile apps and third-party connectivity.',
-                  tags:['REST / GraphQL','JWT Auth','Swagger / OpenAPI','OAuth 2.0','Integration Tests']},
+                  tags:['REST / GraphQL','JWT Validation','Swagger / OpenAPI','OAuth 2.0','Integration Tests']},
                 {Icon:IconSettings, title:'SaaS Platform Development',
                   desc:'Multi-tenant SaaS applications with per-tenant data isolation, subscription billing integration, role-based access control, and real-time dashboards, deployed to Azure App Service with auto-scaling and custom domain management. Engineered for rapid customer onboarding.',
                   tags:['Multi-Tenant','RBAC','Subscription Billing','Azure Deployment','Real-Time Dashboards']},

@@ -12,9 +12,10 @@ const batch2 = process.argv.includes('--batch-2');
 const batch3 = process.argv.includes('--batch-3');
 const review = process.argv.includes('--review');
 const navigationOnly = process.argv.includes('--navigation-only');
-const pages = review ? ['Home', 'CustomSoftwareDevelopment', 'ApiDevelopmentServices', 'WebAppDevelopment', 'WebsiteDevelopmentServices', 'MobileAppDevelopment', 'EcommerceDevelopmentServices'] : batch3 ? ['MobileAppDevelopment', 'EcommerceDevelopmentServices'] : batch2 ? ['WebAppDevelopment', 'WebsiteDevelopmentServices'] : ['CustomSoftwareDevelopment', 'ApiDevelopmentServices'];
-const routes = review ? ['/', '/custom-software-development-services', '/api-development-services', '/web-application-development-services', '/website-development-services', '/mobile-app-development', '/ecommerce-development-services'] : batch3 ? ['/mobile-app-development', '/ecommerce-development-services'] : batch2 ? ['/web-application-development-services', '/website-development-services'] : ['/custom-software-development-services', '/api-development-services'];
-const output = path.join(root, 'build', review ? 'seo-final-review' : batch3 ? 'seo-validation-batch3' : batch2 ? 'seo-validation-batch2' : 'seo-validation');
+const apiOnly = process.argv.includes('--api-only');
+const pages = apiOnly ? ['ApiDevelopmentServices'] : review ? ['Home', 'CustomSoftwareDevelopment', 'ApiDevelopmentServices', 'WebAppDevelopment', 'WebsiteDevelopmentServices', 'MobileAppDevelopment', 'EcommerceDevelopmentServices'] : batch3 ? ['MobileAppDevelopment', 'EcommerceDevelopmentServices'] : batch2 ? ['WebAppDevelopment', 'WebsiteDevelopmentServices'] : ['CustomSoftwareDevelopment', 'ApiDevelopmentServices'];
+const routes = apiOnly ? ['/api-development-services'] : review ? ['/', '/custom-software-development-services', '/api-development-services', '/web-application-development-services', '/website-development-services', '/mobile-app-development', '/ecommerce-development-services'] : batch3 ? ['/mobile-app-development', '/ecommerce-development-services'] : batch2 ? ['/web-application-development-services', '/website-development-services'] : ['/custom-software-development-services', '/api-development-services'];
+const output = path.join(root, 'build', apiOnly ? 'seo-api-image-check' : review ? 'seo-final-review' : batch3 ? 'seo-validation-batch3' : batch2 ? 'seo-validation-batch2' : 'seo-validation');
 fs.mkdirSync(output, { recursive: true });
 function presentation(source) {
   const values = [];
@@ -63,7 +64,7 @@ const server = http.createServer((req, res) => {
     for (const route of (navigationOnly ? [] : routes)) {
       for (const width of [1440, 768, 390]) {
         await page.setViewport({ width, height: 900 });
-        await page.goto(`http://127.0.0.1:${server.address().port}${route}`, { waitUntil: 'networkidle0' });
+        await page.goto(`http://127.0.0.1:${server.address().port}${route}`, { waitUntil: 'domcontentloaded' });
         await page.waitForSelector('main h1');
         await page.waitForFunction(() => document.querySelector('main h1')?.dataset.prerenderReady !== 'false');
         // Exercise intersection-triggered content without altering animation styles.
@@ -99,9 +100,9 @@ const server = http.createServer((req, res) => {
       }
     }
     const linkTargets = [];
-    for (const route of (navigationOnly ? [] : review ? ['/about', '/contact', '/blog', '/asp-net-core-development-services', '/blog/mobile-app-development-cost-in-pakistan', '/software-project-requirements-checklist', '/ai-document-management-software', '/blog/web-application-planning-and-architecture-guide'] : batch3 ? ['/blog/mobile-app-development-cost-in-pakistan', '/software-project-requirements-checklist', '/blog/custom-vs-saas-ecommerce-for-growing-smbs', '/api-development-services'] : batch2 ? ['/asp-net-core-development-services', '/blog/web-application-planning-and-architecture-guide'] : ['/web-application-development-services', '/api-development-services', '/blog/custom-vs-saas-ecommerce-for-growing-smbs', '/blog/asp-net-core-development'])) {
+    for (const route of (navigationOnly || apiOnly ? [] : review ? ['/about', '/contact', '/blog', '/asp-net-core-development-services', '/blog/mobile-app-development-cost-in-pakistan', '/software-project-requirements-checklist', '/ai-document-management-software', '/blog/web-application-planning-and-architecture-guide'] : batch3 ? ['/blog/mobile-app-development-cost-in-pakistan', '/software-project-requirements-checklist', '/blog/custom-vs-saas-ecommerce-for-growing-smbs', '/api-development-services'] : batch2 ? ['/asp-net-core-development-services', '/blog/web-application-planning-and-architecture-guide'] : ['/web-application-development-services', '/api-development-services', '/blog/custom-vs-saas-ecommerce-for-growing-smbs', '/blog/asp-net-core-development'])) {
       try {
-      await page.goto(`http://127.0.0.1:${server.address().port}${route}`, { waitUntil: 'networkidle0' });
+      await page.goto(`http://127.0.0.1:${server.address().port}${route}`, { waitUntil: 'domcontentloaded' });
       await page.waitForSelector('h1', { timeout: 10000 });
       const actual = await page.evaluate(() => ({ path: location.pathname, h1: document.querySelector('h1')?.textContent.trim(), canonical: document.querySelector('link[rel="canonical"]')?.href }));
       assert.equal(actual.path, route, 'Link destination redirected');
@@ -112,9 +113,20 @@ const server = http.createServer((req, res) => {
       }
     }
     const navigation = [];
-    fs.writeFileSync(path.join(output, 'results.json'), JSON.stringify({ presentationAttributesUnchanged: true, pageErrors: errors, linkTargets, navigation, results }, null, 2));
+    const legalTitles = [];
+    if (apiOnly) {
+      for (const [route, title] of [['/privacy-policy', 'Privacy Policy | QllmSoft'], ['/terms-of-services', 'Terms of Services | QllmSoft']]) {
+        await page.goto(`http://127.0.0.1:${server.address().port}${route}`, { waitUntil: 'domcontentloaded' });
+        await page.waitForFunction(title => document.title === title, {}, title);
+        const count = await page.evaluate(() => document.querySelectorAll('title').length);
+        assert.equal(count, 1, `${route}: title count`);
+        legalTitles.push({ route, title, count });
+      }
+      assert.ok(results.every(r => r.brokenImages.length === 0), 'API local images must load');
+    }
+    fs.writeFileSync(path.join(output, 'results.json'), JSON.stringify({ presentationAttributesUnchanged: true, pageErrors: errors, linkTargets, navigation, legalTitles, results }, null, 2));
     if (review) {
-      await page.goto(`http://127.0.0.1:${server.address().port}/`, { waitUntil: 'networkidle0' });
+      await page.goto(`http://127.0.0.1:${server.address().port}/`, { waitUntil: 'domcontentloaded' });
       await page.waitForFunction(() => document.querySelector('main h1')?.dataset.prerenderReady === 'true');
       for (const route of routes.slice(1)) {
         // Click the actual rendered link, preserving client-side routing.
@@ -133,8 +145,8 @@ const server = http.createServer((req, res) => {
         await page.waitForFunction(() => location.pathname === '/' && document.querySelector('link[rel="canonical"]')?.href === 'https://qllmsoft.com/');
       }
     }
-    fs.writeFileSync(path.join(output, 'results.json'), JSON.stringify({ presentationAttributesUnchanged: true, pageErrors: errors, linkTargets, navigation, results }, null, 2));
-    console.log(JSON.stringify({ presentationAttributesUnchanged: true, pageErrors: errors, linkTargets, checks: results.map(r => ({ route: r.route, width: r.width, metadataValid: r.metadataValid, descriptionCount: r.description.length, titleCount: r.titles.length, overflow: r.overflow, brokenImages: r.brokenImages, title: r.title })) }, null, 2));
+    fs.writeFileSync(path.join(output, 'results.json'), JSON.stringify({ presentationAttributesUnchanged: true, pageErrors: errors, linkTargets, navigation, legalTitles, results }, null, 2));
+    console.log(JSON.stringify({ presentationAttributesUnchanged: true, pageErrors: errors, linkTargets, legalTitles, checks: results.map(r => ({ route: r.route, width: r.width, metadataValid: r.metadataValid, descriptionCount: r.description.length, titleCount: r.titles.length, overflow: r.overflow, brokenImages: r.brokenImages, title: r.title })) }, null, 2));
     assert.equal(errors.length, 0, 'Browser JavaScript errors');
     assert.ok(linkTargets.every(r => !r.error), 'A link target did not render; see results.json');
     assert.ok(results.every(r => r.metadataValid), `Rendered metadata has duplicates; see ${path.relative(root, output)}/results.json`);
