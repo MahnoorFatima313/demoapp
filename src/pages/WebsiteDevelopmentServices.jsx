@@ -42,9 +42,11 @@ import { schemaOrganization } from "../data/schema";
 const PortfolioPdf = "/pdfs/QllmSoft - Website Development Portfolio.pdf";
 /* ─── Page constants ──────────────────────────────────────── */
 const PAGE_URL = "https://qllmsoft.com/website-development-services";
+const PAGE_TITLE = "Website Development for Business & eCommerce | QllmSoft";
+const PAGE_DESCRIPTION = "Get a business website, ecommerce storefront or content-led site built around your goals. Discuss design, integrations and your project estimate.";
 const OG_IMAGE =
   "https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg";
-const DATE_MODIFIED = "2026-08-13";
+const DATE_MODIFIED = "2026-11-14";
 
 /* ─── JSON-LD: Organization ───────────────────────────────── */
 
@@ -117,12 +119,12 @@ const FAQ_DATA = [
   {
     id: "faq-what-is-included",
     q: "What's actually included in a web development services engagement?",
-    a: "A full engagement covers discovery and information architecture, custom UI design, front-end and back-end build, content migration, on-page SEO setup (schema, meta data, sitemap), cross-browser and cross-device QA, deployment, and a post-launch support window. You get source code ownership, not a locked-down page builder account.",
+    a: "Agree on the page inventory, content responsibilities, design, implementation, integrations, testing, deployment, and handover. The proposal should say whether content migration, analytics setup, technical SEO validation, hosting configuration, and maintenance are included.",
   },
   {
     id: "faq-timeline",
     q: "How long does a business or e-commerce website take to build?",
-    a: "A standard business website typically takes 3 to 6 weeks from signed scope to launch. An e-commerce storefront with payment gateway integration and inventory sync usually runs 6 to 10 weeks. Larger content-driven sites on a headless CMS, or projects needing custom integrations, can run 10 to 16 weeks depending on scope.",
+    a: "Page types, content readiness, design approvals, CMS configuration, and integrations determine the schedule. Migrating a large existing site takes additional planning and validation. Agree on milestones after reviewing the page inventory and required functionality.",
   },
   {
     id: "faq-tech-stack",
@@ -137,7 +139,7 @@ const FAQ_DATA = [
   {
     id: "faq-vs-wordpress",
     q: "Should I get a custom-coded site or a WordPress/template build?",
-    a: "It depends on your goals. WordPress and page builders are a reasonable, lower-cost option for a simple brochure site with no unusual requirements. We build custom-coded sites when page speed, security, or a specific workflow (custom quoting tools, gated content, non-standard integrations) matters more than the lower up-front cost of a template. We'll tell you honestly which one fits your case.",
+    a: "Compare how editors will update content, required integrations, accessibility, hosting, and ongoing maintenance. WordPress can suit a content-led business site. Custom development can suit unusual functionality or integration requirements. Neither approach automatically guarantees better speed, security, or search performance.",
   },
   {
     id: "faq-ecommerce",
@@ -147,27 +149,27 @@ const FAQ_DATA = [
   {
     id: "faq-seo-ready",
     q: "Will the website be SEO-ready when it launches?",
-    a: "Every site we ship includes clean semantic HTML5, correct heading hierarchy, JSON-LD schema markup for the relevant entities, optimized Core Web Vitals, an XML sitemap, and proper canonical/meta tag setup. That covers the technical foundation; ongoing keyword targeting and content strategy is a separate, optional service we also offer.",
+    a: "Technical SEO work should cover crawlable content, descriptive metadata, canonical URLs, appropriate structured data, mobile usability, and a reviewed sitemap. Validate these in the deployed site as well as the source code. Indexing and rankings depend on more than implementation and cannot be guaranteed.",
   },
   {
     id: "faq-responsive",
     q: "Is the site fully responsive on mobile and tablet?",
-    a: "Yes, every site is built mobile-first and tested across common breakpoints, not just resized down from a desktop layout. Since the majority of organic traffic for most businesses now arrives on mobile, we treat the mobile layout as the primary design, not an afterthought.",
+    a: "Responsive delivery should be tested on representative phones, tablets, and desktop sizes. Check navigation, form completion, readable content, and image behavior rather than judging the layout only by its appearance at one screen width.",
   },
   {
     id: "faq-source-code",
     q: "Do we own the source code once the site is delivered?",
-    a: "Yes, fully. Once the project is delivered and paid for, all intellectual property and source code rights transfer to you. You get a clean, documented repository on GitHub or GitLab, no proprietary lock-in and no recurring licensing fee tied to us.",
+    a: "Confirm ownership of the custom code, design assets, repository, hosting accounts, and data in your agreement. Third-party software, fonts, images, plugins, and services may have separate licenses or ongoing charges. Request documentation for those dependencies as part of handover.",
   },
   {
     id: "faq-maintenance",
     q: "What happens after the site goes live?",
-    a: "Every project includes a 30-day post-launch support window covering bug fixes and monitoring at no extra cost. After that, most clients move onto an ongoing maintenance retainer for updates, security patches and small content changes, though it isn't required.",
+    a: "Confirm the initial support period and what it covers before launch. Ongoing care can include security patches, dependency updates, monitoring, backups, content changes, and repairs to external integrations. Assign responsibilities and response expectations rather than assuming these are included indefinitely.",
   },
   {
     id: "faq-redesign",
-    q: "Can you redesign an existing site without losing our search rankings?",
-    a: "Yes — this is one of the more common projects we take on. We audit the existing site's URL structure and ranking pages first, then map old URLs to new ones with server-side 301 redirects so link equity and rankings carry over instead of resetting to zero.",
+    q: "How do you manage SEO risks during a website redesign?",
+    a: "Inventory existing URLs, important content, internal links, and search performance before changing the site. Preserve useful URLs where possible and review any necessary redirect mapping. Test the launch and monitor Search Console afterward. Rankings can fluctuate, so a redesign cannot guarantee unchanged traffic or positions.",
   },
   {
     id: "faq-remote-collaboration",
@@ -194,16 +196,16 @@ const FAQItem = ({ faq, index }) => {
   return (
     <div
       className={`faq-item ${open ? "faq-item--open" : ""}`}
-      itemScope
-      itemProp="mainEntity"
-      itemType="https://schema.org/Question"
+
+
+
     >
       <button
         className="faq-question"
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
         aria-controls={answerId}
-        itemProp="name"
+
       >
         <span>{faq.q}</span>
         <span className="faq-icon" aria-hidden="true">
@@ -214,11 +216,11 @@ const FAQItem = ({ faq, index }) => {
         <div
           id={answerId}
           className="faq-answer"
-          itemScope
-          itemProp="acceptedAnswer"
-          itemType="https://schema.org/Answer"
+
+
+
         >
-          <p itemProp="text">{faq.a}</p>
+          <p >{faq.a}</p>
         </div>
       )}
     </div>
@@ -289,7 +291,7 @@ const WebsiteDevelopmentServices = () => {
     {
       icon: "bi bi-shield-lock-fill",
       title: "Security by Default",
-      desc: "OWASP Top 10 mitigations, HTTPS everywhere, and hardened forms and API endpoints on every project.",
+      desc: "Define the relevant access controls, form validation, secure connections, and dependency checks for the website scope.",
     },
   ];
 
@@ -310,9 +312,9 @@ const WebsiteDevelopmentServices = () => {
       >
         {[
           { num: "10+", lbl: "Years Building Websites" },
-          { num: "50+", lbl: "Sites & Storefronts Shipped" },
+          { num: "Build", lbl: "Workflow-specific delivery" },
           { num: "5", lbl: "Countries Served" },
-          { num: "100%", lbl: "Upwork Job Success" },
+          { num: "Read", lbl: "Client feedback" },
         ].map((s, i) => (
           <div
             key={i}
@@ -383,15 +385,15 @@ const WebsiteDevelopmentServices = () => {
     },
     {
       icon: "bi-patch-check-fill",
-      title: "Verified Marketplace History",
-      label: "Top Rated Plus",
-      desc: "Top Rated Plus status and a 100% Job Success Score on Upwork, independently verifiable, not a claim we make about ourselves.",
+      title: "Marketplace Client Feedback",
+      label: "Review Profiles",
+      desc: "Review the linked marketplace profiles for project context and current client feedback.",
     },
     {
       icon: "bi-shield-lock-fill",
-      title: "30-Day Launch Support",
-      label: "Included, Not Upsold",
-      desc: "Every website ships with a 30-day post-launch window for bug fixes and monitoring before any maintenance retainer conversation happens.",
+      title: "Launch Support Planning",
+      label: "Agreed Support Scope",
+      desc: "Agree on the post-launch support window, monitoring responsibilities, and the distinction between defect fixes and new work before release.",
     },
   ];
 
@@ -405,7 +407,7 @@ const WebsiteDevelopmentServices = () => {
     {
       num: "02",
       title: "eCommerce Website Development",
-      desc: "A storefront you fully control, with Stripe, PayPal or regional payment gateways wired in, inventory that updates in real time, and a checkout flow built to reduce cart abandonment rather than a default theme checkout.",
+      desc: "A storefront planned around product information, checkout, payments, and order management. Define inventory synchronization, provider limits, and exception handling with your existing systems before implementation.",
       tags: ["Payment Gateways", "Real-Time Inventory", "Secure Checkout"],
     },
     {
@@ -423,7 +425,7 @@ const WebsiteDevelopmentServices = () => {
     {
       num: "05",
       title: "Website Redesign & Performance Optimization",
-      desc: "We audit the existing site for what's slowing it down or costing it rankings, then rebuild it without losing organic traffic, using proper 301 redirects and a like-for-like content migration.",
+      desc: "Review the existing page inventory, content, performance, and conversion paths before rebuilding. Preserve useful URLs and content, plan any necessary redirects, and validate the launch. Search visibility can fluctuate during a redesign.",
       tags: ["Core Web Vitals", "UX Modernization", "Security Hardening"],
     },
     {
@@ -489,10 +491,10 @@ const WebsiteDevelopmentServices = () => {
       ══════════════════════════════════════════════════ */}
       <Helmet>
         {/* Primary */}
-        <title>Web Development Services | Business & eCommerce Websites — QllmSoft</title>
+        <title>{PAGE_TITLE}</title>
         <meta
           name="description"
-          content="QllmSoft's web development services cover custom business websites, eCommerce storefronts and headless CMS builds — engineered for Core Web Vitals and built to convert."
+          content={PAGE_DESCRIPTION}
         />
 
         <meta
@@ -512,11 +514,11 @@ const WebsiteDevelopmentServices = () => {
         <meta property="og:site_name" content="QllmSoft" />
         <meta
           property="og:title"
-          content="Web Development Services | QllmSoft"
+          content={PAGE_TITLE}
         />
         <meta
           property="og:description"
-          content="Custom business websites, eCommerce storefronts and content-driven builds, engineered for speed, security and search visibility."
+          content={PAGE_DESCRIPTION}
         />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:width" content="1200" />
@@ -531,11 +533,11 @@ const WebsiteDevelopmentServices = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Web Development Services | QllmSoft"
+          content={PAGE_TITLE}
         />
         <meta
           name="twitter:description"
-          content="Custom-coded business websites and eCommerce storefronts, built for Core Web Vitals and long-term search visibility."
+          content={PAGE_DESCRIPTION}
         />
         <meta name="twitter:image" content={OG_IMAGE} />
         <meta
@@ -566,7 +568,7 @@ const WebsiteDevelopmentServices = () => {
             </p>
 
             <h1 className="wds-hero__title" id="svc-hero-h1">
-              Web Development Services for Business & eCommerce
+              Website Development for Business & eCommerce
             </h1>
 
             <p className="wds-hero__sub">
@@ -575,8 +577,8 @@ const WebsiteDevelopmentServices = () => {
               content-driven builds engineered for Core Web Vitals and built to
               convert visitors into leads or customers. Looking for a custom internal
               tool or SaaS platform instead of a public-facing website? See{" "}
-              <Link to="/custom-software-development-services">
-                Software Development Services
+              <Link to="/web-application-development-services">
+                Web Application Development Services
               </Link>
               .
             </p>
@@ -650,11 +652,7 @@ const WebsiteDevelopmentServices = () => {
                 </p>
 
                 <p>
-                  Most template and page-builder sites carry hidden{" "}
-                  <strong>technical debt</strong>, unused CSS, unnecessary plugins,
-                  and script bloat that slows load times and holds back search
-                  visibility. We build with a smaller, cleaner codebase so the site
-                  stays fast and easy to maintain as content and traffic grow.
+                  Website maintainability depends on the implementation, the editing workflow, and the dependencies it relies on. Review those choices alongside performance and accessibility; a custom codebase is not automatically better than a well-managed CMS.
                 </p>
 
                 <p>
@@ -1074,7 +1072,7 @@ const WebsiteDevelopmentServices = () => {
                 {
                   num: "02",
                   title: "Verifiable Track Record",
-                  desc: "Top Rated Plus on Upwork and a verified history on Freelancer.com — reviews you can check independently, not testimonials we wrote ourselves.",
+                  desc: "Review published feedback and ask how content editing, launch checks, and ongoing website maintenance will be handled.",
                 },
                 {
                   num: "03",
@@ -1089,7 +1087,7 @@ const WebsiteDevelopmentServices = () => {
                 {
                   num: "05",
                   title: "We Don't Disappear After Launch",
-                  desc: "A 30-day support window is included with every project, and we manage the full lifecycle from first call to post-launch fixes.",
+                  desc: "Plan handover, monitoring, backups, and future updates alongside the build. Confirm the support period and ongoing responsibilities in the proposal.",
                 },
               ].map((w, i) => (
                 <article
@@ -1133,7 +1131,7 @@ const WebsiteDevelopmentServices = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-outline-dark"
-                  aria-label="Verify QllmSoft Top-Rated Plus status on Upwork"
+                  aria-label="Review QllmSoft client feedback on Upwork"
                 >
                   Verify Upwork Status
                 </a>
@@ -1150,7 +1148,7 @@ const WebsiteDevelopmentServices = () => {
            <h2 id="testimonials-heading" className="sr-only">
     Client Reviews for QllmSoft Web Development Services
            </h2>
-         
+
            <TestimonialSection />
          </section>
 
@@ -1245,8 +1243,7 @@ const WebsiteDevelopmentServices = () => {
                 ))}
               </ul>
               <p className="wds-pricing__cta-text">
-                Want a precise number? We provide custom quotes within 24 hours based
-                on your actual scope.
+                Share your page inventory, content requirements, and integrations so we can discuss the information needed for a scoped estimate.
               </p>
               <Link
                 to="/contact"
@@ -1260,8 +1257,8 @@ const WebsiteDevelopmentServices = () => {
         </section>
 
         <FounderNote
-          title="A Website Is an Asset, Not Just an Address"
-          message="I review the architecture on every website project we take on, not because our engineers need supervision, but because the decisions that hurt a site most — bloated dependencies, a URL structure that breaks on redesign, security shortcuts — are cheap to catch early and expensive to fix later. Our job is to hand you something that still performs well a few years from now, not just something that looks right on launch day."
+          title="Keep content ownership clear"
+          message="A business website needs accurate service information, a manageable publishing workflow, and working contact paths. Decide who supplies the content, who can edit it, and how changes will be reviewed after launch."
         />
 
         {/* ══════════════════════════════════════════════════
@@ -1270,8 +1267,8 @@ const WebsiteDevelopmentServices = () => {
         <section
           className="section csd-faq"
           aria-labelledby="faq-heading"
-          itemScope
-          itemType="https://schema.org/FAQPage"
+
+
         >
           <div className="container">
             <div className="section-title">

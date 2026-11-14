@@ -36,6 +36,13 @@ import { schemaOrganization } from "../data/schema";
 
 /* ─── Constants ───────────────────────────────────────────── */
 const PAGE_URL = "https://qllmsoft.com/api-development-services";
+const PAGE_TITLE = "API Development & Integration Services | QllmSoft";
+const PAGE_DESCRIPTION = "Connect your apps, CRM and ERP with custom REST, GraphQL or SOAP APIs. Plan integrations, backend upgrades and project scope with QllmSoft.";
+const schemaWebPage = {
+  "@context": "https://schema.org", "@type": "WebPage",
+  "@id": PAGE_URL + "#webpage", url: PAGE_URL, name: PAGE_TITLE,
+  description: PAGE_DESCRIPTION, about: { "@id": PAGE_URL + "#service" }
+};
 const OG_IMAGE =
   "https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg";
 
@@ -43,17 +50,14 @@ const OG_IMAGE =
 const orgSchema = schemaOrganization;
 /* ─── JSON-LD: Service ────────────────────────────────────── */
 const schemaService = {
+  "@id": PAGE_URL + "#service",
   "@context": "https://schema.org",
   "@type": "Service",
   serviceType: "API Development",
-  name: "Web Development Services — API & Backend Engineering | QllmSoft",
+  name: "API Development & Integration Services | QllmSoft",
   description:
-    "QllmSoft's web development services include REST, GraphQL and SOAP API engineering, third-party integrations, payment gateway APIs, and legacy modernization for startups, SMBs, SaaS, and enterprises.",
-  provider: {
-    "@type": "Organization",
-    name: "QllmSoft",
-    url: "https://qllmsoft.com",
-  },
+    "QllmSoft builds REST, GraphQL and SOAP APIs, connects third-party systems, and modernizes backend integrations for business applications.",
+  provider: { "@id": "https://qllmsoft.com/#organization" },
   areaServed: [
     "Worldwide"
   ],
@@ -128,12 +132,12 @@ const schemaBreadcrumb = {
 /* ─── FAQ data ────────────────────────────────────────────── */
 const FAQ_DATA = [
   {
-    q: "Are APIs part of your web development services, or a separate offering?",
-    a: "APIs are the backend layer of our web development services. When we build a web platform we design the API architecture alongside it; we also take stand-alone API projects for teams with an existing frontend that needs a new or modernized backend.",
+    q: "Can you build an API for an application we already have?",
+    a: "Yes. An API project can support an existing frontend, connect business systems, or replace part of a backend. Share the current API contracts, authentication approach, sample data with sensitive information removed, and the workflows that depend on the integration.",
   },
   {
     q: "How does QllmSoft determine API project pricing?",
-    a: "Project cost is determined by structural scope: the total number of endpoints, architectural complexity (monolith vs microservices), security requirements (such as PCI DSS or HIPAA), and third party sync protocols. We provide fully detailed, fixed scope proposals post consultation to ensure zero pricing surprises.",
+    a: "Cost depends on endpoint behavior, data mapping, authentication, external provider limitations, migration, and testing. Share API documentation, sample payloads with sensitive data removed, expected traffic, and required workflows. These details help define scope, dependencies, and acceptance criteria for a proposal.",
   },
   {
     q: "Which API standards does QllmSoft support?",
@@ -141,11 +145,11 @@ const FAQ_DATA = [
   },
   {
     q: "Do you provide post launch API support and maintenance?",
-    a: "Yes. We provide ongoing monitoring, security updates, and performance optimization after delivery. Every project includes a dedicated support period  ensuring your APIs remain reliable, secure, and scalable as your business grows.",
+    a: "Post-launch planning should cover monitoring, error alerts, credential rotation, dependency updates, and changes to third-party APIs. Confirm the initial support period, response expectations, hosting responsibilities, and ongoing maintenance scope in your project agreement.",
   },
   {
-    q: "What architectural parameters dictate choosing a RESTful API over a GraphQL fabric?",
-    a: "RESTful architectures rely on structured, stateless resources with fixed schema endpoints making them exceptionally resilient for traditional CRUD workflows, microservices communication, and highly cacheable public interfaces. Conversely, GraphQL implements a unified data graph allowing runtime clients to request precise payloads via single queries, completely mitigating data over fetching and under fetching inside complex modern SaaS portals and resource constrained mobile apps.",
+    q: "Should my application use REST or GraphQL?",
+    a: "REST often suits resource-based operations and integrations with established HTTP endpoints. GraphQL lets clients request selected fields when different screens need different data shapes. Both require authorization, validation, and performance controls. Choose based on client needs, caching, query complexity, and maintenance; GraphQL does not automatically make an API faster.",
   },
 ];
 
@@ -167,16 +171,16 @@ const FAQItem = ({ faq, index }) => {
   return (
     <div
       className={`faq-item ${open ? "faq-item--open" : ""}`}
-      itemScope
-      itemProp="mainEntity"
-      itemType="https://schema.org/Question"
+
+
+
     >
       <button
         className="faq-question"
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
         aria-controls={answerId}
-        itemProp="name"
+
       >
         <span>{faq.q}</span>
         <span className="faq-icon" aria-hidden="true">
@@ -187,11 +191,11 @@ const FAQItem = ({ faq, index }) => {
         <div
           id={answerId}
           className="faq-answer"
-          itemScope
-          itemProp="acceptedAnswer"
-          itemType="https://schema.org/Answer"
+
+
+
         >
-          <p itemProp="text">{faq.a}</p>
+          <p >{faq.a}</p>
         </div>
       )}
     </div>
@@ -248,14 +252,14 @@ const ApiDevelopmentServices = () => {
       title: "Phase 1: Secure & Fast Architecture",
       subtitle:
         "Designing a high performance verification & optimization pipeline.",
-      desc: "We built a multi-layered REST API architecture. Instead of letting requests hit the database directly, every incoming call goes through a strict verification and optimization pipeline.",
+      desc: "In this example, requests pass through authentication, validation, and routing before reaching application logic and data access. Choose the layers required by the system rather than adding infrastructure by default.",
       imgSrc: ApiArchitecture,
       imgAlt: "api architecture",
       featuresTitle: "Key Features of This Architecture:",
       features: [
         {
           bold: "API Gateway & Security First:",
-          text: "An Nginx API gateway routes traffic safely, validating JWT Auth and rate limits instantly.",
+          text: "A gateway can route requests and enforce configured limits. Authentication and authorization also need to be checked at the appropriate application boundary.",
         },
         {
           bold: "Smart Middleware Pipeline:",
@@ -263,7 +267,7 @@ const ApiDevelopmentServices = () => {
         },
         {
           bold: "High Speed Caching Layer:",
-          text: "Redis Cache layer saves common data in memory, reducing database load by 80%.",
+          text: "Redis can cache frequently requested data to reduce repeated database reads. Cache expiry and invalidation must match the workflow.",
         },
       ],
     },
@@ -271,7 +275,7 @@ const ApiDevelopmentServices = () => {
       title: "Phase 2: Automated Testing & Docs",
       subtitle:
         "Streamlining development with clean, live-updating API documentation.",
-      desc: "An optimized API is only useful if frontend developers and external partners know how to use it. We built automated specifications to keep workflows completely frictionless.",
+      desc: "Document the endpoints, authentication, payloads, error responses, and versioning rules. Keep examples and automated checks aligned with the implementation so consumers can test their integrations.",
       imgSrc: Documentation,
       imgAlt: "api documentation",
       featuresTitle: "How This Simplifies Development:",
@@ -282,25 +286,25 @@ const ApiDevelopmentServices = () => {
         },
         {
           bold: "Multi Language Support:",
-          text: "Generates code snippets for JavaScript, jQuery, Ruby, Node, PHP, and Go within minutes.",
+          text: "Documentation tools can provide request examples and client snippets. Validate examples against the API contract and chosen SDK version.",
         },
         {
           bold: "Instant Response Previews:",
-          text: "Clear previews of HTTP 200 OK or 201 Created JSON payloads eliminate backend guesswork.",
+          text: "Examples should show successful responses, validation errors, authentication failures, and fields required by consumers.",
         },
       ],
     },
     {
   title: "Phase 3: Real Time Business Dashboard",
   subtitle: "Integrating scalable REST APIs with dynamic data visualization.",
-  desc: "We connected our high performance Express.js backend with an intuitive frontend CRM dashboard. By executing optimized SQL queries, the system securely processes leads, tracking contact distribution metrics in real time.",
-  imgSrc: phase3, 
+  desc: "A CRM dashboard can use an API to retrieve authorized records and submit updates. Review query behavior, pagination, and error handling against the actual tasks users need to perform.",
+  imgSrc: phase3,
   imgAlt: "CRM Dashboard and API Code",
   featuresTitle: "Core Full-Stack Capabilities:",
   features: [
     {
       bold: "Asynchronous Route Handlers:",
-      text: "The Express.js backend utilizes async/await pipelines to handle database operations smoothly without blocking the event loop."
+      text: "Asynchronous I/O lets the server wait for database responses without blocking unrelated I/O work. CPU-heavy tasks and inefficient queries still need separate attention."
     },
     {
       bold: "Robust Error Handling:",
@@ -320,16 +324,14 @@ const ApiDevelopmentServices = () => {
           SEO HEAD
       ══════════════════════════════════════════════ */}
       <Helmet>
-        <title>
-          Web Development Services: API & Backend Engineering | QllmSoft
-        </title>
+        <title>{PAGE_TITLE}</title>
         <meta
           name="description"
-          content="QllmSoft's web development services include REST, GraphQL and SOAP API engineering, third-party integrations, and legacy modernization — the backend layer behind fast, secure web and mobile platforms."
+          content={PAGE_DESCRIPTION}
         />
         <meta
           name="keywords"
-          content="web development services, API development services, REST API development, GraphQL development, backend web development, custom API integration"
+          content="API development services, REST API development, GraphQL development, backend development, custom API integration"
         />
         <meta name="author" content="QllmSoft" />
         <meta
@@ -344,18 +346,18 @@ const ApiDevelopmentServices = () => {
         <meta property="og:site_name" content="QllmSoft" />
         <meta
           property="og:title"
-          content="Web Development Services: API & Backend Engineering | QllmSoft"
+          content={PAGE_TITLE}
         />
         <meta
           property="og:description"
-          content="QllmSoft's web development services include REST, GraphQL and SOAP API engineering, third-party integrations, and legacy modernization for fast, secure platforms."
+          content={PAGE_DESCRIPTION}
         />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta
           property="og:image:alt"
-          content="QllmSoft - Web Development Services: API & Backend Engineering"
+          content="QllmSoft API Development and Integration Services"
         />
         <meta property="og:locale" content="en_US" />
 
@@ -363,20 +365,21 @@ const ApiDevelopmentServices = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Web Development Services: API & Backend Engineering | QllmSoft"
+          content={PAGE_TITLE}
         />
         <meta
           name="twitter:description"
-          content="REST, GraphQL and SOAP API engineering, integrations, and legacy modernization — the backend layer of QllmSoft's web development services."
+          content={PAGE_DESCRIPTION}
         />
         <meta name="twitter:image" content={OG_IMAGE} />
         <meta
           name="twitter:image:alt"
-          content="QllmSoft - Web Development Services: API & Backend Engineering"
+          content="QllmSoft API Development and Integration Services"
         />
 
         {/* JSON-LD */}
         <script type="application/ld+json">{JSON.stringify(schemaOrganization)}</script>
+        <script type="application/ld+json">{JSON.stringify(schemaWebPage)}</script>
         <script type="application/ld+json">
           {JSON.stringify(schemaService)}
         </script>
@@ -400,18 +403,17 @@ const ApiDevelopmentServices = () => {
 
               {/* ✅ ONE H1 */}
               <h1 className="api-hero__title">
-                Architect Secure, Resilient &<br />
+                API Development &<br />
                 <span className="api-hero__accent text-warning">
-                  Scalable API Infrastructures
+                  Integration Services
                 </span>
               </h1>
 
               <p className="api-hero__sub">
-                Stop worrying about broken integrations. QllmSoft builds robust
-                REST, GraphQL, and SOAP APIs that bridge the gap between your
-                apps, databases, and third party tools. We focus on clean code
-                and zero downtime architecture so your data moves exactly where
-                it needs to be.
+                Connect business applications, databases, and third-party tools
+                with APIs designed around your workflows. QllmSoft builds REST,
+                GraphQL, and SOAP services for teams that need a new backend,
+                reliable data exchange, or improvements to an existing integration.
               </p>
 
               <div className="api-hero__buttons">
@@ -440,8 +442,8 @@ const ApiDevelopmentServices = () => {
               >
                 {[
                   { num: "10+", label: "Years of Experience" },
-                  { num: "100%", label: "Upwork Success Rate" },
-                  { num: "50+", label: "APIs Delivered" },
+                  { num: "Read", label: "Client feedback" },
+                  { num: "Build", label: "Workflow-specific delivery" },
                   { num: "5★", label: "Client Reviews" },
                 ].map((s) => (
                   <div key={s.label} className="api-hero__stat">
@@ -542,24 +544,24 @@ const ApiDevelopmentServices = () => {
                 className={`api-about__text animate__animated ${aboutInView ? "animate__fadeInLeft" : ""}`}
               >
                 <h2 id="about-heading">
-                  API Engineering as Part of Full <br />
+                  Backend Engineering for <br />
                   <span className="api-hero__accent">
-                    Web Development Services
+                    Connected Business Systems
                   </span>
                 </h2>
                 <p>
-                  Every modern web platform is only as fast and reliable as
-                  the APIs underneath it. As part of our broader{" "}
-                  <strong>web development services</strong>, QllmSoft designs
-                  the REST, GraphQL, and SOAP layers that connect your
-                  frontend, database, and third-party tools — the piece most
-                  agencies bolt on late and regret.
+                  An API defines how applications exchange data and request actions.
+                  We plan endpoints, data contracts, authentication, and error handling
+                  around the systems you need to connect. For a complete browser-based
+                  product, see our{" "}
+                  <Link to="/web-application-development-services">web application development services</Link>.
+                  This service also covers standalone backends and integrations with an existing frontend.
                 </p>
 
                 <p>
                   Our specialized <strong>API development services</strong>{" "}
                   cater to high growth
-                  <Link to="/website-development-services">
+                  <Link to="/web-application-development-services">
                     {" "}
                     web platforms
                   </Link>{" "}
@@ -570,7 +572,7 @@ const ApiDevelopmentServices = () => {
                   is ready for global traffic and complex data handling. Looking
                   for the dedicated-team engagement model instead? See our{" "}
                   <Link to="/hire-dotnet-developers-pakistan">
-                    dedicated development team
+                    dedicated .NET developers
                   </Link>{" "}
                   page.
                 </p>
@@ -699,7 +701,7 @@ const ApiDevelopmentServices = () => {
                       <li>Single endpoint, flexible queries</li>
                       <li>Fetch exactly the data you need</li>
                       <li>Ideal for SaaS & mobile apps</li>
-                      <li>Reduces over fetching by 60%+</li>
+                      <li>Select fields to limit unnecessary data</li>
                     </ul>
                   </div>
                 </div>
@@ -795,10 +797,9 @@ const ApiDevelopmentServices = () => {
                 Why Invest in Professional API Development?
               </h2>
               <p>
-                In a connected economy, your API is your most valuable business
-                asset. Investing in high grade API development delivers
-                measurable ROI by unveiling new revenue paths and optimizing
-                core operations.
+                API development can reduce duplicate data entry and make business
+                systems easier to connect. The value depends on which manual steps
+                it replaces, how failures are handled, and who maintains the integration.
               </p>
             </div>
             <div className="api-invest__grid">
@@ -871,11 +872,11 @@ const ApiDevelopmentServices = () => {
           <div className="container">
             <div className="section-title text-center">
               <h2 id="case-study-heading">
-                Case Study: Building High Performance Systems
+                Example: Planning an API Backend
               </h2>
               <p>
-                How <strong>QllmSoft</strong> engineered a backend architecture
-                built for speed, security, and effortless scaling.
+                An illustrative implementation approach, not a measured client case study.
+                Architecture and testing should reflect your traffic, data, and integration requirements.
               </p>
             </div>
 
@@ -926,16 +927,16 @@ const ApiDevelopmentServices = () => {
             </div>
 
             <div className="case-study__results-strip">
-              <span className="results-badge">The Results</span>
+              <span className="results-badge">Design Goals</span>
               <div className="results-metrics">
                 <span>
-                  <strong>80% Lighter</strong> Database
+                  <strong>Cache</strong> Repeated Reads
                 </span>
                 <span>
                   <strong>Layered Auth</strong> Protection
                 </span>
                 <span>
-                  <strong>Instant</strong> Integrations
+                  <strong>Tested</strong> Integrations
                 </span>
               </div>
             </div>
@@ -972,7 +973,7 @@ const ApiDevelopmentServices = () => {
                 {
                   title:
                     "Proven Expertise in API Standards (REST, GraphQL, SOAP)",
-                  desc: "Ensure your partner is fluent in modern protocols. Our expertise in RESTful, GraphQL, and SOAP APIs guarantees your interfaces are flexible, maintainable, and compatible with both current and future technologies.",
+                  desc: "REST, GraphQL, and SOAP suit different integration requirements. Review protocol support, versioning, documentation, and the systems that will consume your API.",
                 },
                 {
                   title: "Reliable Post-Development Support",
@@ -1014,7 +1015,7 @@ const ApiDevelopmentServices = () => {
         >
           <div className="container">
             <div className="section-title">
-              <h2 id="edge-heading">Why We Are the Leading API Experts</h2>
+              <h2 id="edge-heading">How We Approach API Delivery</h2>
               <p>
                 Here's what sets us apart from every other API development
                 company on the market.
@@ -1054,7 +1055,7 @@ const ApiDevelopmentServices = () => {
                   num: "05",
                   icon: "bi-award",
                   title: "Verified Global Track Record",
-                  desc: "Top Rated Plus on Upwork. 5 star reviews on Freelancer. Serving clients across the globe . our reputation is backed by independent third party platforms.",
+                  desc: "Review project feedback on the linked platforms and ask about integration work similar to the systems you need to connect.",
                   highlight: false,
                 },
               ].map((e, i) => (
@@ -1214,7 +1215,7 @@ const ApiDevelopmentServices = () => {
                 {
                   category: "Frameworks & Runtimes",
                   color: "#2B6CB0",
-                  items: ["ASP.NET Core", "Node.js", "Express.js", ".NET 8"],
+                  items: ["ASP.NET Core", "Node.js", "Express.js", "ASP.NET Core"],
                 },
                 {
                   category: "API Standards",
@@ -1301,18 +1302,17 @@ const ApiDevelopmentServices = () => {
         ══════════════════════════════════════════════ */}
         <section
           className="section api-invest"
-          aria-labelledby="why-invest-heading"
+          aria-labelledby="client-value-heading"
         >
           <div className="container">
             <div className="section-title">
-              <h2 id="why-invest-heading">
+              <h2 id="client-value-heading">
                 The Strategic Value of Professional API Engineering
               </h2>
               <p>
-                In a hyper-connected global economy, your API is your most
-                valuable digital asset. Investing in enterprise grade API
-                architectures delivers measurable ROI by unlocking new revenue
-                streams and optimizing cross border operations.
+                A useful API gives each application a defined way to request data
+                and perform actions. Agree on ownership, permissions, failure handling,
+                and expected traffic before choosing the implementation.
               </p>
             </div>
 
@@ -1327,13 +1327,13 @@ const ApiDevelopmentServices = () => {
                 {
                   icon: "bi-link-45deg",
                   title: "Unify Fragmented Ecosystems",
-                  desc: "Eliminate operational bottlenecks between decoupled systems. We bridge the gap between global CRMs, enterprise ERPs, and cloud native services to guarantee real time data synchronization.",
+                  desc: "Connect CRMs, ERPs, and cloud services with defined data mappings, retry handling, and monitoring. Synchronization frequency depends on provider limits and business requirements.",
                   stat: "- Overhead",
                 },
                 {
                   icon: "bi-graph-up-arrow",
                   title: "Elastic Infrastructure Scaling",
-                  desc: "Legacy backends bottleneck growth under sudden traffic spikes. Our cloud native APIs are engineered using distributed microservices, allowing your platform to scale seamlessly from thousands to millions of concurrent users.",
+                  desc: "Plan capacity around expected traffic, database behavior, and external API limits. Load testing helps identify bottlenecks before choosing caching, background jobs, or additional infrastructure.",
                   stat: "+ Scalability",
                 },
                 {
@@ -1373,7 +1373,7 @@ const ApiDevelopmentServices = () => {
         {/* ── TESTIMONIALS ── */}
 
         <section className="testimonial-section">
-        
+
           <h2 id="testimonials-heading" className="sr-only">
             Client Reviews, QllmSoft Software Development agency
           </h2>
@@ -1393,8 +1393,8 @@ const ApiDevelopmentServices = () => {
         </section>
 
         <FounderNote
-          title="Powering the Digital Ecosystem with Robust APIs"
-          message="At QllmSoft, we understand that APIs are the silent engine of modern business connecting platforms, automating workflows, and unlocking data value. My mission is to ensure that your backend architecture is never a bottleneck. From our engineering hub  to clients worldwide, we specialize in crafting RESTful and GraphQL solutions that are not just functional, but high performance, secure, and built to handle the demands of global scale. We build the bridges that enable your business to grow without limits."
+          title="Plan for failed and repeated requests"
+          message="An integration needs clear rules for permissions, timeouts, retries, and records that arrive more than once. Agree on those behaviors with the people operating both systems, then test them alongside the successful request flow."
         />
 
         {/* ══════════════════════════════════════════════
@@ -1403,8 +1403,8 @@ const ApiDevelopmentServices = () => {
         <section
           className="section csd-faq api-faq"
           aria-labelledby="faq-heading"
-          itemScope
-          itemType="https://schema.org/FAQPage"
+
+
         >
           <div className="container">
             <div className="section-title">
@@ -1471,7 +1471,7 @@ const ApiDevelopmentServices = () => {
             <div className="api-cta__perks">
               <span>✓ Free consultation</span>
               <span>✓ Fixed-price quotes</span>
-              <span>✓ Response within 24 hours</span>
+              <span>✓ Discuss your requirements</span>
               <span>✓ Post-launch support included</span>
             </div>
 

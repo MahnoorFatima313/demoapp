@@ -5,9 +5,9 @@ import "./RelatedReading.css";
 const RELATED_READING = {
   "/custom-software-development-services": [
     {
-      slug: "custom-software-build-vs-buy-guide",
-      anchor: "Deciding whether to build, buy, configure, or integrate software",
-      title: "Build vs. Buy Software: A Practical Decision Guide",
+      slug: "custom-vs-saas-ecommerce-for-growing-smbs",
+      anchor: "Comparing custom software and SaaS for ecommerce operations",
+      title: "Custom vs. SaaS Ecommerce for Growing SMBs",
     },
     {
       slug: "when-internal-software-slows-teams-instead-of-helping",
@@ -17,7 +17,7 @@ const RELATED_READING = {
   ],
   "/web-application-development-services": [
     {
-      slug: "web-application-architecture-planning-guide",
+      slug: "web-application-planning-and-architecture-guide",
       anchor: "Planning a web application's architecture and requirements",
       title: "Planning Web Application Architecture: A Practical Guide",
     },
@@ -39,9 +39,9 @@ const RELATED_READING = {
   ],
   "/api-development-services": [
     {
-      slug: "rest-graphql-api-integration-guide",
-      anchor: "Choosing REST or GraphQL and planning reliable integrations",
-      title: "REST, GraphQL, and API Integration: A Practical Guide",
+      slug: "asp-net-core-development",
+      anchor: "Understanding ASP.NET Core for backend applications",
+      title: "ASP.NET Core Development",
     },
     {
       slug: "role-based-access-problems-why-teams-break-systems",

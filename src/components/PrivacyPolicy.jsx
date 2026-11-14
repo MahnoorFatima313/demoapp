@@ -2,12 +2,12 @@ import React ,{useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import './PrivacyPolicy.css';
-import privacyImage from "../assets/privacy-policy.webp"; 
+import privacyImage from "../assets/privacy-policy.webp";
 
 const PrivacyPolicy = () => {
      useEffect(() => {
             const reveals = document.querySelectorAll('.reveal');
-        
+
             const observer = new IntersectionObserver(
               (entries) => {
                 entries.forEach((entry) => {
@@ -18,15 +18,16 @@ const PrivacyPolicy = () => {
               },
               { threshold: 0.15 }
             );
-        
+
             reveals.forEach((el) => observer.observe(el));
-        
+
             return () => {
               reveals.forEach((el) => observer.unobserve(el));
             };
           }, []);
   return (
     <main className="privacy-policy-page">
+      <title>Privacy Policy | QllmSoft</title>
 
       {/* Hero Section */}
       <section className="privacy-hero reveal"
@@ -39,7 +40,7 @@ const PrivacyPolicy = () => {
                 color: "#fff",
                 marginTop: "-30px",
             }}
-            > 
+            >
         <div className="container">
           <h1>Privacy Policy</h1>
           <p className="privacy-hero-description">

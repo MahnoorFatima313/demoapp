@@ -1,0 +1,2308 @@
+﻿{
+  "generatedDate": "2026-11-14",
+  "scope": "Local source audit; HTTP status, rankings, and visible content depth require separate checks.",
+  "routes": [
+    {
+      "route": "/",
+      "classification": "Homepage",
+      "component": "Home",
+      "file": "src/pages/Home.jsx",
+      "title": "QllmSoft | Business Software, Web & Mobile Development",
+      "description": "Build software around your business workflows. Explore QllmSoft's custom systems, web applications, mobile apps and API integrations. Discuss your project.",
+      "h1": [],
+      "internalLinks": [
+        {
+          "destination": "/about",
+          "anchor": "Read the full company story"
+        },
+        {
+          "destination": "/custom-software-development-services",
+          "anchor": "Custom software development"
+        },
+        {
+          "destination": "/website-development-services",
+          "anchor": "Website development"
+        },
+        {
+          "destination": "/web-application-development-services",
+          "anchor": "Web application development"
+        },
+        {
+          "destination": "/api-development-services",
+          "anchor": "API development"
+        },
+        {
+          "destination": "/mobile-app-development",
+          "anchor": "Mobile app development"
+        },
+        {
+          "destination": "/ecommerce-development-services",
+          "anchor": "Custom ecommerce development"
+        },
+        {
+          "destination": "/services",
+          "anchor": "Explore all services"
+        },
+        {
+          "destination": "/healthcare-software-development-pakistan",
+          "anchor": "Healthcare"
+        },
+        {
+          "destination": "/finance-management-system",
+          "anchor": "Finance and fintech"
+        },
+        {
+          "destination": "/education-software-development-pakistan",
+          "anchor": "Education"
+        },
+        {
+          "destination": "/ecommerce-development-services",
+          "anchor": "Logistics and eCommerce"
+        },
+        {
+          "destination": "/real-estate-software-development",
+          "anchor": "Real estate"
+        },
+        {
+          "destination": "/projects",
+          "anchor": "Explore the project portfolio"
+        },
+        {
+          "destination": "/outsource-software-development-to-pakistan",
+          "anchor": "Read the full outsourcing model"
+        },
+        {
+          "destination": "/blog/{expression}",
+          "anchor": "Read article"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Get free consultation"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/",
+      "duplicateIds": [],
+      "sourceWords": 2979
+    },
+    {
+      "route": "/about",
+      "classification": "Utility or legal page",
+      "component": "About",
+      "file": "src/pages/About.jsx",
+      "title": "About QllmSoft | Software Development Company Serving Clients Worldwide",
+      "description": "QllmSoft has been building custom software for businesses worldwide since 2015. 50+ projects, clients across North America, Europe, and the Middle East, 100% Upwork Job Success Score.",
+      "h1": [
+        "A Software Development Company Building Real Products for Businesses Worldwide Since 2015"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/",
+          "anchor": "QllmSoft"
+        },
+        {
+          "destination": "/finance-management-system",
+          "anchor": "finance management system"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Get a Free Consultation"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/about",
+      "duplicateIds": [],
+      "sourceWords": 2378
+    },
+    {
+      "route": "/services",
+      "classification": "Utility or legal page",
+      "component": "Services",
+      "file": "src/pages/Services.jsx",
+      "title": "Custom Software Development Services | QllmSoft",
+      "description": "QllmSoft delivers custom software development, web apps, mobile apps, and AI solutions to businesses worldwide. Fixed price. Free quote in 24 hours.",
+      "h1": [
+        "Custom software development services for businesses worldwide"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/web-application-development-services",
+          "anchor": "enterprise web applications"
+        },
+        {
+          "destination": "/mobile-app-development",
+          "anchor": "mobile apps"
+        },
+        {
+          "destination": "/api-development-services",
+          "anchor": "business automation systems"
+        },
+        {
+          "destination": "/ai-powered-software-solutions",
+          "anchor": "AI powered software"
+        },
+        {
+          "destination": "/custom-software-development-services",
+          "anchor": "Custom software development"
+        },
+        {
+          "destination": "/website-development-services",
+          "anchor": "Website development"
+        },
+        {
+          "destination": "/web-application-development-services",
+          "anchor": "Web application development"
+        },
+        {
+          "destination": "/api-development-services",
+          "anchor": "API and backend development"
+        },
+        {
+          "destination": "/mobile-app-development",
+          "anchor": "Mobile app development"
+        },
+        {
+          "destination": "/legacy-system-modernization-services",
+          "anchor": "Need to migrate or modernize an existing system instead of building new? See legacy system modernization"
+        },
+        {
+          "destination": "/ai-powered-software-solutions",
+          "anchor": "Looking to add AI to an existing product? See AI powered software solutions"
+        },
+        {
+          "destination": "/hire-dotnet-developers-pakistan",
+          "anchor": "Read more about dedicated team and staff augmentation hiring"
+        },
+        {
+          "destination": "/outsource-software-development-to-pakistan",
+          "anchor": "Read the full outsourcing guide"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Get a free consultation"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/services",
+      "duplicateIds": [],
+      "sourceWords": 2983
+    },
+    {
+      "route": "/projects",
+      "classification": "Utility or legal page",
+      "component": "Projects",
+      "file": "src/pages/Projects.jsx",
+      "title": "Software Development Portfolio and Case Studies | QllmSoft",
+      "description": "Explore QllmSoft's featured enterprise software: AI document management, biometric attendance, HRMS, payroll, finance, logistics, and inventory systems.",
+      "h1": [
+        "Software development portfolio and verified case studies"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/services",
+          "anchor": "software development services"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "talk to our team"
+        },
+        {
+          "destination": "/projects/{expression}",
+          "anchor": "Read the full case study"
+        },
+        {
+          "destination": "/projects/{expression}",
+          "anchor": "{expression} {expression} {expression} {expression} {expression} View case study"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Request a free consultation"
+        },
+        {
+          "destination": "/software-development-cost-calculator",
+          "anchor": "Use the software cost calculator"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/projects",
+      "duplicateIds": [],
+      "sourceWords": 1284
+    },
+    {
+      "route": "/projects/:slug",
+      "classification": "Utility or legal page",
+      "component": "ProjectDetails",
+      "file": "src/pages/ProjectDetails.jsx",
+      "title": "{expression} | QllmSoft Case Study",
+      "description": "{expression}",
+      "h1": [
+        "{expression}"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/projects",
+          "anchor": "Back to Projects"
+        },
+        {
+          "destination": "/ai-document-management-software",
+          "anchor": "View the QllmDocs product overview"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Request a similar build"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/projects/{expression}",
+      "duplicateIds": [],
+      "sourceWords": 425
+    },
+    {
+      "route": "/privacy-policy",
+      "classification": "Utility or legal page",
+      "component": "PrivacyPolicy",
+      "file": "src/components/PrivacyPolicy.jsx",
+      "title": "Privacy Policy | QllmSoft",
+      "description": "",
+      "h1": [
+        "Privacy Policy"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/",
+          "anchor": "QllmSoft"
+        },
+        {
+          "destination": "/",
+          "anchor": "QllmSoft"
+        },
+        {
+          "destination": "/",
+          "anchor": "QllmSoft"
+        },
+        {
+          "destination": "/",
+          "anchor": "QllmSoft"
+        }
+      ],
+      "canonical": "",
+      "duplicateIds": [],
+      "sourceWords": 469
+    },
+    {
+      "route": "/terms-of-services",
+      "classification": "Utility or legal page",
+      "component": "TermsofServices",
+      "file": "src/components/TermsofServices.jsx",
+      "title": "Terms of Services | QllmSoft",
+      "description": "",
+      "h1": [
+        "Terms of Service"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/",
+          "anchor": "QllmSoft"
+        },
+        {
+          "destination": "/",
+          "anchor": "QllmSoft"
+        },
+        {
+          "destination": "/",
+          "anchor": "QllmSoft"
+        },
+        {
+          "destination": "/",
+          "anchor": "QllmSoft"
+        },
+        {
+          "destination": "/",
+          "anchor": "QllmSoft"
+        }
+      ],
+      "canonical": "",
+      "duplicateIds": [],
+      "sourceWords": 567
+    },
+    {
+      "route": "/blog",
+      "classification": "Utility or legal page",
+      "component": "Blog",
+      "file": "src/pages/Blog.jsx",
+      "title": "QllmSoft Insights | Software Development, Automation & API Insights",
+      "description": "Deep dive technical guides, architectural breakdowns, and strategic engineering insights from QllmSoft on custom software development, ASP.NET Core, automation, REST APIs, and building scalable digital platforms for modern businesses.",
+      "h1": [
+        "Our Blogs"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/blog/{expression}",
+          "anchor": "{expression}"
+        },
+        {
+          "destination": "/blog/{expression}",
+          "anchor": "Read More"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Contact Us"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/blog",
+      "duplicateIds": [],
+      "sourceWords": 380
+    },
+    {
+      "route": "/contact",
+      "classification": "Utility or legal page",
+      "component": "Contact",
+      "file": "src/pages/Contact.jsx",
+      "title": "Contact QllmSoft | Custom Software Development & API Solutions",
+      "description": "Get in touch with QllmSoft, a leading custom software development company delivering scalable ASP.NET Core, web application, and secure API solutions for startups and businesses worldwide. Let’s discuss your project and build reliable digital solutions together.",
+      "h1": [
+        "Contact Us"
+      ],
+      "internalLinks": [],
+      "canonical": "https://qllmsoft.com/contact",
+      "duplicateIds": [],
+      "sourceWords": 772
+    },
+    {
+      "route": "/blog/:slug",
+      "classification": "Informational blog article",
+      "component": "BlogArticle",
+      "file": "src/pages/BlogArticle.jsx",
+      "title": "{expression}",
+      "description": "{expression}",
+      "h1": [
+        "{expression}"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/blog",
+          "anchor": "Back to Blog"
+        },
+        {
+          "destination": "/author/{expression}",
+          "anchor": "{expression}"
+        },
+        {
+          "destination": "/author/{expression}",
+          "anchor": "{expression}"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Get Free Quote"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Contact Us Today"
+        }
+      ],
+      "canonical": "{expression}",
+      "duplicateIds": [],
+      "sourceWords": 662
+    },
+    {
+      "route": "/custom-software-development-services",
+      "classification": "Core commercial service page",
+      "component": "CustomSoftwareDevelopment",
+      "file": "src/pages/CustomSoftwareDevelopment.jsx",
+      "title": "Custom Software Development Services | QllmSoft",
+      "description": "Replace spreadsheet workarounds with custom business software, ERP modules and connected workflows. Discuss your requirements with QllmSoft.",
+      "h1": [
+        "Custom Software Development for Business Systems"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/contact",
+          "anchor": "Start your Project"
+        },
+        {
+          "destination": "/projects",
+          "anchor": "See Past Projects"
+        },
+        {
+          "destination": "/website-development-services",
+          "anchor": "business website or eCommerce store"
+        },
+        {
+          "destination": "/api-development-services",
+          "anchor": "API development and integration services"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Start the Conversation"
+        },
+        {
+          "destination": "/blog/custom-vs-saas-ecommerce-for-growing-smbs",
+          "anchor": "comparison of custom and SaaS ecommerce"
+        },
+        {
+          "destination": "/blog/how-to-avoid-technical-debt-in-custom-web-software",
+          "anchor": "how to avoid technical debt in custom web software"
+        },
+        {
+          "destination": "/software-development-cost-calculator",
+          "anchor": "software development cost calculator"
+        },
+        {
+          "destination": "/software-project-requirements-checklist",
+          "anchor": "software project requirements checklist"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Ask Us Directly"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Get Your Free Consultation"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/custom-software-development-services",
+      "duplicateIds": [],
+      "sourceWords": 3056
+    },
+    {
+      "route": "/website-development-services",
+      "classification": "Core commercial service page",
+      "component": "WebsiteDevelopmentServices",
+      "file": "src/pages/WebsiteDevelopmentServices.jsx",
+      "title": "Website Development for Business & eCommerce | QllmSoft",
+      "description": "Get a business website, ecommerce storefront or content-led site built around your goals. Discuss design, integrations and your project estimate.",
+      "h1": [
+        "Website Development for Business & eCommerce"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/web-application-development-services",
+          "anchor": "Web Application Development Services"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Get Free Consultation"
+        },
+        {
+          "destination": "/projects",
+          "anchor": "View Case Studies"
+        },
+        {
+          "destination": "/web-application-development-services",
+          "anchor": "web application"
+        },
+        {
+          "destination": "/custom-software-development-services",
+          "anchor": "software development services"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Inquire About This Project"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Request a Proposal"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Get Your Custom Proposal"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Request Your Free Quote Today"
+        },
+        {
+          "destination": "/blog",
+          "anchor": "Expert Blog"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/website-development-services",
+      "duplicateIds": [],
+      "sourceWords": 4974
+    },
+    {
+      "route": "/digital-marketing-services",
+      "classification": "Core commercial service page",
+      "component": "DigitalMarketingServices",
+      "file": "src/pages/Digitalmarketingservices.jsx",
+      "title": "Digital Marketing Services | SEO, Social Media & PPC | QllmSoft",
+      "description": "QllmSoft provides digital marketing services: SEO, social media marketing, PPC ads, content and email automation, with clear monthly reporting. Get a free strategy call.",
+      "h1": [
+        "Digital Marketing Services That Bring You Customers, Not Just Clicks"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/contact",
+          "anchor": "Book a Free Strategy Call"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Ask About {expression}"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Get a Free Audit"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/digital-marketing-services",
+      "duplicateIds": [],
+      "sourceWords": 2849
+    },
+    {
+      "route": "/ai-document-management-software",
+      "classification": "Product page",
+      "component": "QllmDocsPage",
+      "file": "src/pages/QllmDocsPage.jsx",
+      "title": "AI Document Management Software | QllmDocs by QllmSoft",
+      "description": "AI document management software for document controllers: searchable metadata, AskAI natural-language search, role-based access, encryption and Excel/CSV export.",
+      "h1": [
+        "AI Document Management Software to Organize, Search and Control Business Documents"
+      ],
+      "internalLinks": [],
+      "canonical": "https://qllmsoft.com/ai-document-management-software",
+      "duplicateIds": [],
+      "sourceWords": 1584
+    },
+    {
+      "route": "/document-controller-software",
+      "classification": "Redirected or retired URL",
+      "file": null,
+      "redirectTarget": "/ai-document-management-software"
+    },
+    {
+      "route": "/qllmdocs",
+      "classification": "Redirected or retired URL",
+      "file": null,
+      "redirectTarget": "/ai-document-management-software"
+    },
+    {
+      "route": "/api-development-services",
+      "classification": "Core commercial service page",
+      "component": "ApiDevelopmentServices",
+      "file": "src/pages/ApiDevelopmentServices.jsx",
+      "title": "API Development & Integration Services | QllmSoft",
+      "description": "Connect your apps, CRM and ERP with custom REST, GraphQL or SOAP APIs. Plan integrations, backend upgrades and project scope with QllmSoft.",
+      "h1": [
+        "API Development & Integration Services"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/contact",
+          "anchor": "Get a Free Consultation"
+        },
+        {
+          "destination": "/web-application-development-services",
+          "anchor": "web application development services"
+        },
+        {
+          "destination": "/web-application-development-services",
+          "anchor": "web platforms"
+        },
+        {
+          "destination": "/mobile-app-development",
+          "anchor": "mobile ecosystems"
+        },
+        {
+          "destination": "/hire-dotnet-developers-pakistan",
+          "anchor": "dedicated .NET developers"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Ask Us Directly"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Get Your Free Quote →"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/api-development-services",
+      "duplicateIds": [],
+      "sourceWords": 4875
+    },
+    {
+      "route": "/hire-dotnet-developers-pakistan",
+      "classification": "Supporting commercial landing page",
+      "component": "HireDotnetDevelopers",
+      "file": "src/pages/HireDotnetDevelopers.jsx",
+      "title": "Hire .NET Developers in Pakistan | Dedicated & Remote | QllmSoft",
+      "description": "Hire dedicated, remote, or offshore .NET developers in Pakistan. ASP.NET Core & .NET 8 experts, lower cost than US/UK agencies. Start in days.",
+      "h1": [
+        "Hire .NET Developers in Pakistan"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/contact",
+          "anchor": "Hire .NET Developers Now"
+        },
+        {
+          "destination": "/custom-software-development-services",
+          "anchor": "custom software development"
+        },
+        {
+          "destination": "/api-development-services",
+          "anchor": "REST API development"
+        },
+        {
+          "destination": "/website-development-services",
+          "anchor": "enterprise web applications"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Hire a Dedicated Developer"
+        },
+        {
+          "destination": "/legacy-system-modernization-services",
+          "anchor": "legacy system modernization services"
+        },
+        {
+          "destination": "/custom-software-development-services",
+          "anchor": "complete custom software build"
+        },
+        {
+          "destination": "/website-development-services",
+          "anchor": "complete custom web platform"
+        },
+        {
+          "destination": "/outsource-software-development-to-pakistan",
+          "anchor": "software outsourcing services"
+        },
+        {
+          "destination": "/hire-react-developers-pakistan",
+          "anchor": "Hire React Developers"
+        },
+        {
+          "destination": "/hire-angular-developers-pakistan",
+          "anchor": "Hire Angular Developers"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Ask Us Directly"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Hire .NET Developers Now"
+        },
+        {
+          "destination": "/custom-software-development-services",
+          "anchor": "Custom Software"
+        },
+        {
+          "destination": "/website-development-services",
+          "anchor": "Web Development"
+        },
+        {
+          "destination": "/api-development-services",
+          "anchor": "API Development"
+        },
+        {
+          "destination": "/mobile-app-development",
+          "anchor": "Mobile Apps"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/hire-dotnet-developers-pakistan",
+      "duplicateIds": [],
+      "sourceWords": 5111
+    },
+    {
+      "route": "/mobile-app-development",
+      "classification": "Core commercial service page",
+      "component": "MobileAppDevelopment",
+      "file": "src/pages/MobileAppDevelopment.jsx",
+      "title": "Mobile App Development for Android & iOS | QllmSoft",
+      "description": "Build an Android, iOS or cross-platform app around your users. Discuss device features, backend integrations, testing and release planning with QllmSoft.",
+      "h1": [
+        "Mobile App Development Services"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/contact",
+          "anchor": "Start Your Project"
+        },
+        {
+          "destination": "/projects",
+          "anchor": "View Our Work"
+        },
+        {
+          "destination": "/api-development-services",
+          "anchor": "API development and integration services"
+        },
+        {
+          "destination": "/blog/mobile-app-development-cost-in-pakistan",
+          "anchor": "guide to mobile app development cost factors"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Get Free Consultation"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Discuss Your Project"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Get a Free Quote"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Get a Free Consultation"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/mobile-app-development",
+      "duplicateIds": [],
+      "sourceWords": 5994
+    },
+    {
+      "route": "/outsource-software-development-to-pakistan",
+      "classification": "Supporting commercial landing page",
+      "component": "OutsourceSoftwareDevelopment",
+      "file": "src/pages/OutsourceSoftwareDevelopment.jsx",
+      "title": "Outsource Software Development to Pakistan | 60% Cost Savings | QllmSoft",
+      "description": "Outsource software development to Pakistan with QllmSoft. Save 60–70% on costs, access elite .NET, React, Flutter & AI developers, and accelerate delivery. Trusted by businesses in the US, UK, UAE, and Europe. Free consultation.",
+      "h1": [
+        "Outsource Software Development to Pakistan with QllmSoft"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/",
+          "anchor": "Home"
+        },
+        {
+          "destination": "/services",
+          "anchor": "Services"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Get Free Quote"
+        },
+        {
+          "destination": "/services",
+          "anchor": "View Our Services"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Enquire Now"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Ask Us Directly"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "📞 Get Free Consultation"
+        },
+        {
+          "destination": "/custom-software-development-services",
+          "anchor": "Custom Software"
+        },
+        {
+          "destination": "/website-development-services",
+          "anchor": "Web Development"
+        },
+        {
+          "destination": "/mobile-app-development",
+          "anchor": "Mobile Apps"
+        },
+        {
+          "destination": "/api-development-services",
+          "anchor": "API Development"
+        },
+        {
+          "destination": "/hire-dotnet-developers-pakistan",
+          "anchor": "Hire .NET Developers"
+        },
+        {
+          "destination": "/ai-powered-software-solutions",
+          "anchor": "AI Solutions"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/outsource-software-development-to-pakistan",
+      "duplicateIds": [],
+      "sourceWords": 5736
+    },
+    {
+      "route": "/ai-powered-software-solutions",
+      "classification": "Core commercial service page",
+      "component": "AiPoweredSoftware",
+      "file": "src/pages/AiPoweredSoftware.jsx",
+      "title": "AI-Powered Software Solutions | QllmSoft",
+      "description": "AI-powered software solutions by QllmSoft. Add AI to existing software or build new applications with data pipelines, evaluation, and production integration.",
+      "h1": [
+        "AI-Powered Software Solutions"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/contact",
+          "anchor": "Get Free AI Consultation"
+        },
+        {
+          "destination": "/projects",
+          "anchor": "View Our Work"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/ai-powered-software-solutions",
+      "duplicateIds": [],
+      "sourceWords": 4781
+    },
+    {
+      "route": "/hire-react-developers-pakistan",
+      "classification": "Supporting commercial landing page",
+      "component": "HireReactDevelopers",
+      "file": "src/pages/HireReactDevelopers.jsx",
+      "title": "Hire React Developers in Pakistan | Dedicated ReactJS Engineers | QllmSoft",
+      "description": "Hire expert React developers in Pakistan from QllmSoft. Dedicated, remote, and offshore ReactJS engineers for SPAs, dashboards, and full-stack apps.",
+      "h1": [
+        "Hire Expert React Developers in Pakistan"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/contact",
+          "anchor": "Hire React Developers Now"
+        },
+        {
+          "destination": "/website-development-services",
+          "anchor": "web development services"
+        },
+        {
+          "destination": "/api-development-services",
+          "anchor": "API development capabilities"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Enquire Now"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Hire React Developers Now"
+        },
+        {
+          "destination": "/hire-angular-developers-pakistan",
+          "anchor": "Hire Angular Developers"
+        },
+        {
+          "destination": "/hire-dotnet-developers-pakistan",
+          "anchor": "Hire .NET Developers"
+        },
+        {
+          "destination": "/mobile-app-development",
+          "anchor": "Mobile App Development"
+        },
+        {
+          "destination": "/website-development-services",
+          "anchor": "Web Development"
+        },
+        {
+          "destination": "/outsource-software-development-to-pakistan",
+          "anchor": "Outsource to Pakistan"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/hire-react-developers-pakistan",
+      "duplicateIds": [],
+      "sourceWords": 3348
+    },
+    {
+      "route": "/hire-angular-developers-pakistan",
+      "classification": "Supporting commercial landing page",
+      "component": "HireAngularDevelopers",
+      "file": "src/pages/HireAngularDevelopers.jsx",
+      "title": "Hire Angular Developers in Pakistan | Dedicated Angular Engineers | QllmSoft",
+      "description": "Hire expert Angular developers in Pakistan from QllmSoft. Dedicated, remote, and offshore Angular engineers for enterprise SPAs and full-stack Angular + .NET apps.",
+      "h1": [
+        "Hire Expert Angular Developers in Pakistan"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/contact",
+          "anchor": "Hire Angular Developers Now"
+        },
+        {
+          "destination": "/hire-dotnet-developers-pakistan",
+          "anchor": "ASP.NET Core backends"
+        },
+        {
+          "destination": "/api-development-services",
+          "anchor": "REST API development"
+        },
+        {
+          "destination": "/outsource-software-development-to-pakistan",
+          "anchor": "software outsourcing services"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Enquire Now"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Hire Angular Developers Now"
+        },
+        {
+          "destination": "/hire-react-developers-pakistan",
+          "anchor": "Hire React Developers"
+        },
+        {
+          "destination": "/hire-dotnet-developers-pakistan",
+          "anchor": "Hire .NET Developers"
+        },
+        {
+          "destination": "/website-development-services",
+          "anchor": "Web Development"
+        },
+        {
+          "destination": "/api-development-services",
+          "anchor": "API Development"
+        },
+        {
+          "destination": "/outsource-software-development-to-pakistan",
+          "anchor": "Outsource to Pakistan"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/hire-angular-developers-pakistan",
+      "duplicateIds": [],
+      "sourceWords": 3415
+    },
+    {
+      "route": "/healthcare-software-development-pakistan",
+      "classification": "Industry-specific landing page",
+      "component": "HealthcareSoftware",
+      "file": "src/pages/HealthcareSoftware.jsx",
+      "title": "Healthcare Software Development Services in Pakistan | HIPAA-Aligned | QllmSoft",
+      "description": "QllmSoft provides custom HIPAA-aligned healthcare software development in Pakistan — hospital management systems, EMR/EHR, telemedicine apps, clinic management, and healthcare automation.",
+      "h1": [
+        "Healthcare Software Development Services in Pakistan"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/contact",
+          "anchor": "Get a Free Consultation"
+        },
+        {
+          "destination": "/custom-software-development-services",
+          "anchor": "custom software development capabilities"
+        },
+        {
+          "destination": "/api-development-services",
+          "anchor": "secure API development"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Get Free Consultation"
+        },
+        {
+          "destination": "/education-software-development-pakistan",
+          "anchor": "Education Software"
+        },
+        {
+          "destination": "/custom-software-development-services",
+          "anchor": "Custom Software"
+        },
+        {
+          "destination": "/mobile-app-development",
+          "anchor": "Mobile App Development"
+        },
+        {
+          "destination": "/api-development-services",
+          "anchor": "API Development"
+        },
+        {
+          "destination": "/ai-powered-software-solutions",
+          "anchor": "AI Solutions"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/healthcare-software-development-pakistan",
+      "duplicateIds": [],
+      "sourceWords": 4085
+    },
+    {
+      "route": "/education-software-development-pakistan",
+      "classification": "Industry-specific landing page",
+      "component": "EducationSoftware",
+      "file": "src/pages/EducationSoftware.jsx",
+      "title": "Custom Education Software Development | LMS & School Management | QllmSoft",
+      "description": "QllmSoft builds custom EdTech solutions, scalable LMS platforms, next gen eLearning apps, and cloud based school management software for global institutions and startups.",
+      "h1": [
+        "Custom EdTech Software Development Services & Enterprise LMS Solutions"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/contact",
+          "anchor": "Book Solution Architecture Call"
+        },
+        {
+          "destination": "/mobile-app-development",
+          "anchor": "mobile app development services"
+        },
+        {
+          "destination": "/custom-software-development-services",
+          "anchor": "custom software capabilities"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Get a Free Demo"
+        },
+        {
+          "destination": "/healthcare-software-development-pakistan",
+          "anchor": "Healthcare Software"
+        },
+        {
+          "destination": "/custom-software-development-services",
+          "anchor": "Custom Software"
+        },
+        {
+          "destination": "/mobile-app-development",
+          "anchor": "Mobile App Development"
+        },
+        {
+          "destination": "/ai-powered-software-solutions",
+          "anchor": "AI Solutions"
+        },
+        {
+          "destination": "/outsource-software-development-to-pakistan",
+          "anchor": "Outsource to Pakistan"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/education-software-development-pakistan",
+      "duplicateIds": [],
+      "sourceWords": 4149
+    },
+    {
+      "route": "/legacy-system-modernization-services",
+      "classification": "Core commercial service page",
+      "component": "LegacyModernization",
+      "file": "src/pages/LegacyModernization.jsx",
+      "title": "Legacy System Modernization Services | Cloud Migration & .NET Upgrade | QllmSoft",
+      "description": "QllmSoft provides expert legacy system modernization services , application re-architecture, cloud migration, .NET Framework to ASP.NET Core migration, monolith to microservices, database modernization, and UI/UX upgrades. Serving enterprises and SMBs worldwide. Free assessment.",
+      "h1": [
+        "Legacy System Modernization Services Engineered for Scale"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/contact",
+          "anchor": "Get a Free Assessment"
+        },
+        {
+          "destination": "/hire-dotnet-developers-pakistan",
+          "anchor": "ASP.NET Core"
+        },
+        {
+          "destination": "/outsource-software-development-to-pakistan",
+          "anchor": "cloud migration to Azure and AWS"
+        },
+        {
+          "destination": "/api-development-services",
+          "anchor": "API development services"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Get a Free Assessment"
+        },
+        {
+          "destination": "/custom-software-development-services",
+          "anchor": "Custom Software"
+        },
+        {
+          "destination": "/api-development-services",
+          "anchor": "API Development"
+        },
+        {
+          "destination": "/hire-dotnet-developers-pakistan",
+          "anchor": "Hire .NET Developers"
+        },
+        {
+          "destination": "/website-development-services",
+          "anchor": "Web Development"
+        },
+        {
+          "destination": "/outsource-software-development-to-pakistan",
+          "anchor": "Outsource to Pakistan"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/legacy-system-modernization-services",
+      "duplicateIds": [],
+      "sourceWords": 4528
+    },
+    {
+      "route": "/web-application-development-services",
+      "classification": "Core commercial service page",
+      "component": "WebAppDevelopment",
+      "file": "src/pages/WebAppDevelopment.jsx",
+      "title": "Web Application Development: Portals & SaaS | QllmSoft",
+      "description": "Build a customer portal, internal web app or SaaS platform around your workflows. Discuss roles, integrations and a scoped project estimate.",
+      "h1": [
+        "Web Application Development Services"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/website-development-services",
+          "anchor": "Website Development Services"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Get a Free Quote"
+        },
+        {
+          "destination": "/projects",
+          "anchor": "Explore Project Work"
+        },
+        {
+          "destination": "/asp-net-core-development-services",
+          "anchor": "ASP.NET Core development services"
+        },
+        {
+          "destination": "/api-development-services",
+          "anchor": "REST or GraphQL API"
+        },
+        {
+          "destination": "/legacy-system-modernization-services",
+          "anchor": "legacy .NET Framework migration"
+        },
+        {
+          "destination": "/website-development-services",
+          "anchor": "business website"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Get a Free Quote"
+        },
+        {
+          "destination": "/website-development-services",
+          "anchor": "Website Development"
+        },
+        {
+          "destination": "/api-development-services",
+          "anchor": "API Development"
+        },
+        {
+          "destination": "/hire-dotnet-developers-pakistan",
+          "anchor": "Hire .NET Developers"
+        },
+        {
+          "destination": "/legacy-system-modernization-services",
+          "anchor": "Legacy Modernization"
+        },
+        {
+          "destination": "/outsource-software-development-to-pakistan",
+          "anchor": "Outsource to Pakistan"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/web-application-development-services",
+      "duplicateIds": [],
+      "sourceWords": 3730
+    },
+    {
+      "route": "/outsource-api-development-to-pakistan",
+      "classification": "Supporting commercial landing page",
+      "component": "OutsourceApiDevelopment",
+      "file": "src/pages/OutsourceApiDevelopment.jsx",
+      "title": "Outsource API Development to Pakistan | REST, GraphQL & Integration | QllmSoft",
+      "description": "Outsource API development to Pakistan with QllmSoft. Expert REST, GraphQL, gRPC, SOAP, and third-party integration API development at 50–65% lower cost than US/UK agencies. Serving startups, SMBs, SaaS, and enterprises globally. Free consultation.",
+      "h1": [
+        "Outsource API Development to Pakistan with QllmSoft"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/contact",
+          "anchor": "Get a Free Consultation"
+        },
+        {
+          "destination": "/api-development-services",
+          "anchor": "View API Services"
+        },
+        {
+          "destination": "/api-development-services",
+          "anchor": "API development services"
+        },
+        {
+          "destination": "/outsource-software-development-to-pakistan",
+          "anchor": "software outsourcing to Pakistan"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Get a Free Consultation"
+        },
+        {
+          "destination": "/api-development-services",
+          "anchor": "API Development Services"
+        },
+        {
+          "destination": "/outsource-software-development-to-pakistan",
+          "anchor": "Outsource Software"
+        },
+        {
+          "destination": "/custom-software-development-services",
+          "anchor": "Custom Software"
+        },
+        {
+          "destination": "/hire-dotnet-developers-pakistan",
+          "anchor": "Hire .NET Developers"
+        },
+        {
+          "destination": "/website-development-services",
+          "anchor": "Web Development"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/outsource-api-development-to-pakistan",
+      "duplicateIds": [],
+      "sourceWords": 3873
+    },
+    {
+      "route": "/real-estate-software-development",
+      "classification": "Industry-specific landing page",
+      "component": "RealEstateSoftware",
+      "file": "src/pages/RealEstateSoftware.jsx",
+      "title": "Real Estate Software Development Company in Pakistan | QllmSoft 2026",
+      "description": "Custom real estate software development in Pakistan. We build property management systems, real estate CRM, MLS portals, PropTech mobile apps & listing platforms. Trusted by agencies in USA, UAE & UK. Get a free quote.",
+      "h1": [
+        "Real Estate Software Development Company in Pakistan"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/contact",
+          "anchor": "Or Use Contact Form"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Ask Our Team"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/real-estate-software-development",
+      "duplicateIds": [],
+      "sourceWords": 5565
+    },
+    {
+      "route": "/finance-management-system",
+      "classification": "Industry-specific landing page",
+      "component": "FinanceManagementSystem",
+      "file": "src/pages/FinanceManagementSystem.jsx",
+      "title": "Finance Management System | Cloud Based & Automated Reporting | QllmSoft",
+      "description": "QllmSoft builds cloud-based finance management systems to automate financial reporting, budgeting, approvals, and multi-branch finance operations. Custom-built and secure.",
+      "h1": [
+        "Finance Management Software Built Around How You Actually Work"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/contact",
+          "anchor": "Get a Free Consultation"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Get Free Consultation"
+        },
+        {
+          "destination": "/custom-software-development-services",
+          "anchor": "Custom Software"
+        },
+        {
+          "destination": "/api-development-services",
+          "anchor": "API Development"
+        },
+        {
+          "destination": "/mobile-app-development",
+          "anchor": "Mobile App Development"
+        },
+        {
+          "destination": "/ai-powered-software-solutions",
+          "anchor": "AI Solutions"
+        },
+        {
+          "destination": "/services",
+          "anchor": "All Services"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/finance-management-system",
+      "duplicateIds": [],
+      "sourceWords": 3378
+    },
+    {
+      "route": "/write-for-us",
+      "classification": "Utility or legal page",
+      "component": "GuestPostPage",
+      "file": "src/pages/GuestPostPage.jsx",
+      "title": "Write for Us | Join Our Expert Contributor Network | QllmSoft",
+      "description": "Join QllmSoft as an Expert Contributor. Submit a guest post on LLMs, AI infrastructure, prompt engineering, MLOps, or developer tools.",
+      "h1": [
+        "Write what moves technology forward."
+      ],
+      "internalLinks": [],
+      "canonical": "https://qllmsoft.com/write-for-us",
+      "duplicateIds": [],
+      "sourceWords": 1798
+    },
+    {
+      "route": "/outsource-web-development-to-pakistan",
+      "classification": "Supporting commercial landing page",
+      "component": "OutsourceWebDevelopmentPakistan",
+      "file": "src/pages/OutsourceWebDevelopmentPakistan.jsx",
+      "title": "Outsource Web Development to Pakistan | QllmSoft",
+      "description": "Outsource web development to Pakistan through QllmSoft — project-based builds, a dedicated developer, or a full outsourced team, with clear IP ownership and NDA on day one.",
+      "h1": [
+        "Outsource Web Development to Pakistan"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/contact",
+          "anchor": "Talk to Us About Your Project"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Ask about this model →"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Get a Free Consultation"
+        },
+        {
+          "destination": "/website-development-services",
+          "anchor": "Web Development Services"
+        },
+        {
+          "destination": "/custom-software-development-services",
+          "anchor": "Software Development Services"
+        },
+        {
+          "destination": "/hire-react-developers-pakistan",
+          "anchor": "Hire React Developers"
+        },
+        {
+          "destination": "/hire-dotnet-developers-pakistan",
+          "anchor": "Hire .NET Developers"
+        },
+        {
+          "destination": "/remote-dedicated-development-teams",
+          "anchor": "Dedicated Development Teams"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/outsource-web-development-to-pakistan",
+      "duplicateIds": [],
+      "sourceWords": 3367
+    },
+    {
+      "route": "/software-development-cost-calculator",
+      "classification": "Core commercial service page",
+      "component": "CostCalculator",
+      "file": "src/pages/CostCalculator.jsx",
+      "title": "Free Software Development Cost Calculator | Instant Estimate – QllmSoft",
+      "description": "Estimate your software project cost and timeline in under a minute. Free instant range for web apps, mobile apps, enterprise software, and AI features, no email required to see it.",
+      "h1": [
+        "What Would Your Software Project Cost?"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/contact",
+          "anchor": "Talk to Our Team"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/software-development-cost-calculator",
+      "duplicateIds": [],
+      "sourceWords": 1322
+    },
+    {
+      "route": "/software-project-requirements-checklist",
+      "classification": "Utility or legal page",
+      "component": "RequirementsChecklist",
+      "file": "src/pages/RequirementsChecklist.jsx",
+      "title": "Software Project Requirements Checklist (Free PDF) – QllmSoft",
+      "description": "15 questions worth answering before you brief any development team. Read the full checklist on this page, or get the printable PDF and bonus template by email.",
+      "h1": [
+        "The Software Requirements Checklist We Use Internally"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/contact",
+          "anchor": "Talk to Our Team"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/software-project-requirements-checklist",
+      "duplicateIds": [],
+      "sourceWords": 1478
+    },
+    {
+      "route": "/ecommerce-development-services",
+      "classification": "Core commercial service page",
+      "component": "EcommerceDevelopmentServices",
+      "file": "src/pages/EcommerceDevelopmentServices.jsx",
+      "title": "Custom Ecommerce Development & Integrations | QllmSoft",
+      "description": "Build a custom storefront around your checkout, pricing and inventory workflows. Discuss ecommerce integrations, migration and ongoing costs with QllmSoft.",
+      "h1": [
+        "E-Commerce Development Services"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/contact",
+          "anchor": "Discuss Your Store Requirements"
+        },
+        {
+          "destination": "/blog/shopify-isnt-scaling-what-companies-do-next",
+          "anchor": "Shopify isn't scaling — what companies do next"
+        },
+        {
+          "destination": "/blog/custom-vs-saas-ecommerce-for-growing-smbs",
+          "anchor": "custom vs. SaaS e-commerce for growing SMBs"
+        },
+        {
+          "destination": "/blog/scalable-ecommerce-development-for-smbs",
+          "anchor": "scalable e-commerce development for SMBs"
+        },
+        {
+          "destination": "/web-application-development-services",
+          "anchor": "Web Application Development"
+        },
+        {
+          "destination": "/custom-software-development-services",
+          "anchor": "Custom Software Development"
+        },
+        {
+          "destination": "/api-development-services",
+          "anchor": "API Development Services"
+        },
+        {
+          "destination": "/software-project-requirements-checklist",
+          "anchor": "software project requirements checklist"
+        },
+        {
+          "destination": "/",
+          "anchor": "homepage"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Discuss Your Ecommerce Project"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/ecommerce-development-services",
+      "duplicateIds": [],
+      "sourceWords": 2126
+    },
+    {
+      "route": "/asp-net-core-development-services",
+      "classification": "Technology-specific landing page",
+      "component": "AspnetCoreDevelopmentServices",
+      "file": "src/pages/asp-net-core-development-services.jsx",
+      "title": "ASP.NET Core Development Services & Migration | QllmSoft",
+      "description": "Hire ASP.NET Core developers to build APIs and web applications or migrate from .NET Framework. C#, Azure, CI/CD and clear timelines. Talk to QllmSoft.",
+      "h1": [
+        "ASP.NET Core Development Services"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/web-application-development-services",
+          "anchor": "web application development services"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Discuss your project"
+        },
+        {
+          "destination": "/pricing-and-engagement-models",
+          "anchor": "View engagement models"
+        },
+        {
+          "destination": "/blog/role-based-vs-policy-based-authorization-asp-net-core",
+          "anchor": "role-based vs policy-based authorization in ASP.NET Core"
+        },
+        {
+          "destination": "/pricing-and-engagement-models",
+          "anchor": "pricing and engagement guide"
+        },
+        {
+          "destination": "/web-application-development-services",
+          "anchor": "web application development services"
+        },
+        {
+          "destination": "/api-development-services",
+          "anchor": "API development and integration services"
+        },
+        {
+          "destination": "/legacy-system-modernization-services",
+          "anchor": "legacy system modernization services"
+        },
+        {
+          "destination": "/contact",
+          "anchor": "Book an architecture review"
+        }
+      ],
+      "canonical": "https://qllmsoft.com/asp-net-core-development-services",
+      "duplicateIds": [],
+      "sourceWords": 2291
+    },
+    {
+      "route": "/wordpress-development-services",
+      "classification": "Technology-specific landing page",
+      "component": "WordPressDevelopmentServices",
+      "file": "src/pages/WordPressDevelopmentServices.jsx",
+      "title": "WordPress Development Services | QllmSoft",
+      "description": "Custom WordPress themes, plugin development, Elementor builds, and site migrations from QllmSoft. Sites your team can actually edit, without breaking them.",
+      "h1": [
+        "WordPress sites built to be edited, not feared"
+      ],
+      "internalLinks": [],
+      "canonical": "https://qllmsoft.com/wordpress-development-services",
+      "duplicateIds": [],
+      "sourceWords": 447
+    },
+    {
+      "route": "/custom-school-management-software-development",
+      "classification": "Industry-specific landing page",
+      "component": "CustomSchoolManagementSoftwareDevelopment",
+      "file": "src/pages/CustomSchoolManagementSoftwareDevelopment.jsx",
+      "title": "Custom School Management Software Development | QllmSoft",
+      "description": "Custom school management software from QllmSoft: admissions, attendance, fees, gradebooks, and parent access in one system built around how your school actually runs.",
+      "h1": [
+        "One system for admissions, attendance, fees, and grades"
+      ],
+      "internalLinks": [],
+      "canonical": "https://qllmsoft.com/custom-school-management-software-development",
+      "duplicateIds": [],
+      "sourceWords": 451
+    },
+    {
+      "route": "/custom-business-automation-solutions",
+      "classification": "Core commercial service page",
+      "component": "CustomBusinessAutomationSolutions",
+      "file": "src/pages/CustomBusinessAutomationSolutions.jsx",
+      "title": "Custom Business Automation Solutions | QllmSoft",
+      "description": "Custom business automation software from QllmSoft: replace manual approvals, spreadsheet handoffs, and repeated data entry with one connected system.",
+      "h1": [
+        "Replace the spreadsheet relay race with one system"
+      ],
+      "internalLinks": [],
+      "canonical": "https://qllmsoft.com/custom-business-automation-solutions",
+      "duplicateIds": [],
+      "sourceWords": 1899
+    },
+    {
+      "route": "/outsource-mobile-app-development-to-pakistan",
+      "classification": "Redirected or retired URL",
+      "file": null,
+      "redirectTarget": "/blog/outsource-mobile-app-development-to-pakistan"
+    },
+    {
+      "route": "/mobile-app-development-cost-in-pakistan",
+      "classification": "Redirected or retired URL",
+      "file": null,
+      "redirectTarget": "/blog/mobile-app-development-cost-in-pakistan"
+    },
+    {
+      "route": "/author/:authorSlug",
+      "classification": "Utility or legal page",
+      "component": "AuthorPage",
+      "file": "src/pages/AuthorPage.jsx",
+      "title": "{expression} – {expression} at QllmSoft | Author",
+      "description": "{expression} Read articles by {expression} on the QllmSoft blog.",
+      "h1": [
+        "{expression}"
+      ],
+      "internalLinks": [
+        {
+          "destination": "/blog/{expression}",
+          "anchor": "{expression}"
+        },
+        {
+          "destination": "/blog/{expression}",
+          "anchor": "Read More"
+        }
+      ],
+      "canonical": "{expression}",
+      "duplicateIds": [],
+      "sourceWords": 401
+    }
+  ],
+  "posts": [
+    {
+      "slug": "best-software-house-in-pakistan",
+      "route": "/blog/best-software-house-in-pakistan",
+      "classification": "Informational blog article",
+      "title": "10 Best Software Houses in Pakistan 2026 | Verified Engineering Review",
+      "description": "Discover the 10 best software houses in Pakistan for 2026. An unbiased engineering review covering tech stacks, delivery models, and global deployment reliability from Systems Limited to QllmSoft.",
+      "canonicalSource": "https://qllmsoft.com/blog/best-software-house-in-pakistan",
+      "category": "Industry Guide",
+      "author": "",
+      "date": "January 17, 2026"
+    },
+    {
+      "slug": "csharp-desktop-application-development",
+      "route": "/blog/csharp-desktop-application-development",
+      "classification": "Informational blog article",
+      "title": "C# Desktop Application Development Services | WPF, WinForms & .NET MAUI",
+      "description": "Enterprise-grade C# desktop application development using WPF, WinForms, and .NET MAUI. Modernize legacy codebases into secure, high-performance, offline-first applications. Pakistan-based .NET specialists.",
+      "canonicalSource": "https://qllmsoft.com/blog/csharp-desktop-application-development",
+      "category": "Development",
+      "author": "",
+      "date": "January 20, 2026"
+    },
+    {
+      "slug": "website-development-cost-in-pakistan",
+      "route": "/blog/website-development-cost-in-pakistan",
+      "classification": "Informational blog article",
+      "title": "Website Development Cost in Pakistan 2026 | Full Pricing Breakdown",
+      "description": "Complete breakdown of website development cost in Pakistan for 2026. Realistic pricing for corporate portfolios, WooCommerce stores, and custom enterprise web platforms. From PKR 35,000 to 500,000+.",
+      "canonicalSource": "https://qllmsoft.com/blog/website-development-cost-in-pakistan",
+      "category": "Pricing Guide",
+      "author": "",
+      "date": "January 13, 2026"
+    },
+    {
+      "slug": "outsource-software-development-to-pakistan",
+      "route": "/blog/outsource-software-development-to-pakistan",
+      "classification": "Informational blog article",
+      "title": "Outsource Software Development to Pakistan 2026 | Cost, Quality & Process",
+      "description": "Comprehensive guide to outsourcing software development to Pakistan in 2026. Explore cost arbitrage models, engineering capabilities, time zone frameworks, and delivery models used by global enterprises.",
+      "canonicalSource": "https://qllmsoft.com/blog/outsource-software-development-to-pakistan",
+      "category": "Outsourcing",
+      "author": "",
+      "date": "January 31, 2026"
+    },
+    {
+      "slug": "ai-powered-software-solutions",
+      "route": "/blog/ai-powered-software-solutions",
+      "classification": "Informational blog article",
+      "title": "AI Powered Software Solutions | Custom ML, NLP & Computer Vision Development",
+      "description": "Enterprise AI software development services - custom machine learning models, NLP pipelines, RAG systems, and computer vision automation. Secure, compliant AI engineering built for real business outcomes.",
+      "canonicalSource": "https://qllmsoft.com/blog/ai-powered-software-solutions",
+      "category": "AI & Innovation",
+      "author": "",
+      "date": "January 25, 2026"
+    },
+    {
+      "slug": "education-software-development-pakistan",
+      "route": "/blog/education-software-development-pakistan",
+      "classification": "Informational blog article",
+      "title": "Education Software Development Pakistan | LMS, SIS & School ERP Systems",
+      "description": "Enterprise-grade educational software and LMS development in Pakistan. Custom student information systems, school management ERP, and virtual learning platforms built for Pakistani institutions and international EdTech companies.",
+      "canonicalSource": "https://qllmsoft.com/blog/education-software-development-pakistan",
+      "category": "Education Tech",
+      "author": "",
+      "date": "January 31, 2026"
+    },
+    {
+      "slug": "mobile-app-development-cost-in-pakistan",
+      "route": "/blog/mobile-app-development-cost-in-pakistan",
+      "classification": "Informational blog article",
+      "title": "Mobile App Development Cost in Pakistan 2026 | iOS, Android & Flutter Pricing",
+      "description": "Exhaustive breakdown of mobile app development cost in Pakistan for 2026. Realistic pricing for native iOS, Android, Flutter, and React Native apps - from PKR 200,000 to 1,500,000+ with full engineering detail.",
+      "canonicalSource": "https://qllmsoft.com/blog/mobile-app-development-cost-in-pakistan",
+      "category": "Pricing Guide",
+      "author": "",
+      "date": "January 8, 2026"
+    },
+    {
+      "slug": "outsource-mobile-app-development-to-pakistan",
+      "route": "/blog/outsource-mobile-app-development-to-pakistan",
+      "classification": "Informational blog article",
+      "title": "Outsource Mobile App Development to Pakistan 2026 | Cost & Quality Guide",
+      "description": "Data-backed guide to outsourcing mobile app development to Pakistan. Compare development costs, explore engineering capabilities (Swift, Kotlin, Flutter, React Native), and understand cross-border delivery models for 2026.",
+      "canonicalSource": "https://qllmsoft.com/blog/outsource-mobile-app-development-to-pakistan",
+      "category": "Outsourcing",
+      "author": "",
+      "date": "January 8, 2026"
+    },
+    {
+      "slug": "scalable-ecommerce-development-for-smbs",
+      "route": "/blog/scalable-ecommerce-development-for-smbs",
+      "classification": "Informational blog article",
+      "title": "Scalable eCommerce Development for SMBs | Custom vs SaaS Solutions",
+      "description": "Custom scalable eCommerce platforms built for small and mid sized businesses. Secure payment integration, role based access, and enterprise grade architecture without enterprise level pricing.",
+      "canonicalSource": "https://qllmsoft.com/blog/scalable-ecommerce-development-for-smbs",
+      "category": "eCommerce",
+      "author": "",
+      "date": "January 28, 2026"
+    },
+    {
+      "slug": "asp-net-core-development",
+      "route": "/blog/asp-net-core-development",
+      "classification": "Informational blog article",
+      "title": "ASP.NET Core Development Services | Custom .NET Web Applications & APIs",
+      "description": "Expert ASP.NET Core development services for high performance, scalable web applications and REST APIs. C# .NET 8/9 specialists , enterprise web apps, cloud native solutions, and legacy system modernization.",
+      "canonicalSource": "https://qllmsoft.com/blog/asp-net-core-development",
+      "category": "Development",
+      "author": "",
+      "date": "January 22, 2026"
+    },
+    {
+      "slug": "hire-angular-developers-pakistan",
+      "route": "/blog/hire-angular-developers-pakistan",
+      "classification": "Informational blog article",
+      "title": "Hire Angular Developers in Pakistan 2026 | SPAs, Enterprise Web Apps",
+      "description": "Hire skilled Angular developers in Pakistan for SPAs, enterprise web applications, and full stack solutions. Flexible engagement models dedicated, part time, or project based. Competitive rates in 2026.",
+      "canonicalSource": "https://qllmsoft.com/blog/hire-angular-developers-pakistan",
+      "category": "Hiring",
+      "author": "",
+      "date": "January 31, 2026"
+    },
+    {
+      "slug": "mobile-app-devsecops-in-2026",
+      "route": "/blog/mobile-app-devsecops-in-2026",
+      "classification": "Informational blog article",
+      "title": "Mobile App DevSecOps 2026 | Security First iOS & Android Development",
+      "description": "Complete guide to Mobile App DevSecOps in 2026. Integrate security into every phase of your iOS and Android development lifecycle , automated testing, CI/CD pipelines, OWASP MASVS compliance, and runtime monitoring.",
+      "canonicalSource": "https://qllmsoft.com/blog/mobile-app-devsecops-in-2026",
+      "category": "Mobile Development",
+      "author": "",
+      "date": "April 6, 2026"
+    },
+    {
+      "slug": "shopify-isnt-scaling-what-companies-do-next",
+      "route": "/blog/shopify-isnt-scaling-what-companies-do-next",
+      "classification": "Informational blog article",
+      "title": "Shopify Scaling Problems? 3 Proven Paths Growing eCommerce Companies Take",
+      "description": "Shopify scaling issues are rarely about traffic they're about operations, workflows, and integrations. Learn when to optimize Shopify, build a custom layer, or migrate to a custom platform. A practical decision guide for growing businesses.",
+      "canonicalSource": "https://qllmsoft.com/blog/shopify-isnt-scaling-what-companies-do-next",
+      "category": "eCommerce",
+      "author": "",
+      "date": "April 22, 2026"
+    },
+    {
+      "slug": "custom-vs-saas-ecommerce-for-growing-smbs",
+      "route": "/blog/custom-vs-saas-ecommerce-for-growing-smbs",
+      "classification": "Informational blog article",
+      "title": "Custom vs SaaS eCommerce 2026 | When Growing SMBs Need to Move On",
+      "description": "SaaS eCommerce works when operations are simple. This guide explains when SaaS starts limiting SMB growth, the real hidden costs of scaling on SaaS, and how to decide between staying, optimizing, or moving to custom systems.",
+      "canonicalSource": "https://qllmsoft.com/blog/custom-vs-saas-ecommerce-for-growing-smbs",
+      "category": "eCommerce",
+      "author": "",
+      "date": "April 23, 2026"
+    },
+    {
+      "slug": "hiring-dotnet-developers-guide",
+      "route": "/blog/hiring-dotnet-developers-guide",
+      "classification": "Informational blog article",
+      "title": "Hire .NET Developers in Pakistan 2026 | Rates, Skills & Hiring Models",
+      "description": "Everything you need to hire dedicated .NET developers in Pakistan for 2026 real hourly rates ($10–$60/hr), core skill requirements, engagement models, and how QllmSoft delivers enterprise grade C#/.NET development.",
+      "canonicalSource": "https://qllmsoft.com/blog/hiring-dotnet-developers-guide",
+      "category": "Hiring Guide",
+      "author": "",
+      "date": "April 23, 2026"
+    },
+    {
+      "slug": "legacy-system-modernization-without-downtime-or-data-loss",
+      "route": "/blog/legacy-system-modernization-without-downtime-or-data-loss",
+      "classification": "Informational blog article",
+      "title": "Legacy System Modernization Without Downtime or Data Loss | Safe Migration Guide",
+      "description": "Modernizing legacy systems is high-risk when done wrong. This guide explains the most common failure patterns in legacy migrations and how growing companies modernize safely without downtime, data loss, or operational disruption.",
+      "canonicalSource": "https://qllmsoft.com/blog/legacy-system-modernization-without-downtime-or-data-loss",
+      "category": "Legacy Modernization",
+      "author": "",
+      "date": "April 24, 2026"
+    },
+    {
+      "slug": "when-internal-software-slows-teams-instead-of-helping",
+      "route": "/blog/when-internal-software-slows-teams-instead-of-helping",
+      "classification": "Informational blog article",
+      "title": "When Internal Software Slows Teams Down | Fixing Operational Bottlenecks",
+      "description": "Internal tools should speed teams up but many quietly create friction instead. This guide helps business leaders identify where internal software is hurting execution, and how to fix systems that no longer support growth.",
+      "canonicalSource": "https://qllmsoft.com/blog/when-internal-software-slows-teams-instead-of-helping",
+      "category": "Operations & Efficiency",
+      "author": "",
+      "date": "April 24, 2026"
+    },
+    {
+      "slug": "role-based-access-problems-why-teams-break-systems",
+      "route": "/blog/role-based-access-problems-why-teams-break-systems",
+      "classification": "Informational blog article",
+      "title": "Role-Based Access Control Problems | Why Teams Create Dangerous Workarounds",
+      "description": "When access controls are too rigid or misaligned with real workflows, teams create workarounds that introduce serious security and operational risk. This guide explains why access problems emerge and how companies fix them without slowing productivity.",
+      "canonicalSource": "https://qllmsoft.com/blog/role-based-access-problems-why-teams-break-systems",
+      "category": "Security & Operations",
+      "author": "",
+      "date": "April 25, 2026"
+    },
+    {
+      "slug": "custom-software-for-financial-services-compliance-and-growth",
+      "route": "/blog/custom-software-for-financial-services-compliance-and-growth",
+      "classification": "Informational blog article",
+      "title": "Custom Financial Services Software | Compliance, Security & Scalable Growth",
+      "description": "Financial services firms operate under strict regulatory pressure that off the shelf software cannot fully accommodate. This guide explains why custom systems enable both regulatory compliance and scalable, secure business growth.",
+      "canonicalSource": "https://qllmsoft.com/blog/custom-software-for-financial-services-compliance-and-growth",
+      "category": "Financial Services & Compliance",
+      "author": "ali-ilyas",
+      "date": "April 26, 2026"
+    },
+    {
+      "slug": "role-based-vs-policy-based-authorization-asp-net-core",
+      "route": "/blog/role-based-vs-policy-based-authorization-asp-net-core",
+      "classification": "Informational blog article",
+      "title": "Role-Based vs Policy-Based Authorization in ASP.NET Core (With Code Examples)",
+      "description": "Not sure whether to use roles or policies in ASP.NET Core? Learn how each approach works, where roles fall short, and how to combine both safely, with clear C# examples.",
+      "canonicalSource": "https://qllmsoft.com/blog/role-based-vs-policy-based-authorization-asp-net-core",
+      "category": "Development",
+      "author": "mahnoor-fatima",
+      "date": "October 10, 2026"
+    },
+    {
+      "slug": "marketing-tech-stack-for-enterprises",
+      "route": "/blog/marketing-tech-stack-for-enterprises",
+      "classification": "Informational blog article",
+      "title": "Marketing Tech Stack for Enterprises: How to Choose (2026)",
+      "description": "Learn how to choose a marketing tech stack for enterprises with a 7-step framework, a layer checklist and a weighted vendor scorecard to cut tool sprawl.",
+      "canonicalSource": "https://qllmsoft.com/blog/marketing-tech-stack-for-enterprises",
+      "category": "Digital Marketing",
+      "author": "ali-ilyas",
+      "date": "October 14, 2026"
+    },
+    {
+      "slug": "qllmsoft-at-banoqabil-graduation",
+      "route": "/blog/qllmsoft-at-banoqabil-graduation",
+      "classification": "Informational blog article",
+      "title": "QllmSoft at BanoQabil Graduation: Free IT Skills for Youth",
+      "description": "QllmSoft joined the BanoQabil Graduation as a volunteer digital marketing trainer. See the event highlights and how free IT courses are building digital careers across Pakistan.",
+      "canonicalSource": "https://qllmsoft.com/blog/qllmsoft-at-banoqabil-graduation",
+      "category": "Company News",
+      "author": "ali-ilyas",
+      "date": "October 18, 2026"
+    },
+    {
+      "slug": "how-to-organize-unorganized-documents-in-cloud-storage",
+      "route": "/blog/how-to-organize-unorganized-documents-in-cloud-storage",
+      "classification": "Informational blog article",
+      "title": "How to Organize Unorganized Documents in Cloud Storage (7 Steps)",
+      "description": "Learn how to organize unorganized documents in cloud storage with a 7-step process, a naming convention template, and metadata tips that help any team find files fast.",
+      "canonicalSource": "https://qllmsoft.com/blog/how-to-organize-unorganized-documents-in-cloud-storage",
+      "category": "Document Management",
+      "author": "mahnoor-fatima",
+      "date": "October 20, 2026"
+    },
+    {
+      "slug": "what-is-natural-language-search-in-document-management",
+      "route": "/blog/what-is-natural-language-search-in-document-management",
+      "classification": "Informational blog article",
+      "title": "What Is Natural Language Search in Document Management? (Guide)",
+      "description": "Natural language search lets you find documents by typing or saying a plain sentence. Learn how it works, how it differs from keyword search, and what to check before you choose it.",
+      "canonicalSource": "https://qllmsoft.com/blog/what-is-natural-language-search-in-document-management",
+      "category": "Document Management",
+      "author": "mahnoor-fatima",
+      "date": "October 20, 2026"
+    },
+    {
+      "slug": "how-to-export-metadata-from-pdf-to-excel-automatically",
+      "route": "/blog/how-to-export-metadata-from-pdf-to-excel-automatically",
+      "classification": "Informational blog article",
+      "title": "How to Export Metadata from PDF to Excel Automatically (2026 Guide)",
+      "description": "Learn how to export metadata from PDF to Excel automatically. Compare Python, ExifTool and one-click methods, then build a clean metadata spreadsheet for your team.",
+      "canonicalSource": "https://qllmsoft.com/blog/how-to-export-metadata-from-pdf-to-excel-automatically",
+      "category": "Document Management",
+      "author": "mahnoor-fatima",
+      "date": "October 21, 2026"
+    },
+    {
+      "slug": "is-aes-256-encryption-safe-enough-for-storing-sensitive-financial-documents",
+      "route": "/blog/is-aes-256-encryption-safe-enough-for-storing-sensitive-financial-documents",
+      "classification": "Informational blog article",
+      "title": "Is AES-256 Safe for Financial Documents? (2026 Security Guide)",
+      "description": "Discover if AES-256 encryption is safe enough for storing sensitive financial documents. Learn how modern document systems protect data at rest and in transit.",
+      "canonicalSource": "https://qllmsoft.com/blog/is-aes-256-encryption-safe-enough-for-storing-sensitive-financial-documents",
+      "category": "Security & Compliance",
+      "author": "mahnoor-fatima",
+      "date": "October 21, 2026"
+    },
+    {
+      "slug": "how-to-avoid-technical-debt-in-custom-web-software",
+      "route": "/blog/how-to-avoid-technical-debt-in-custom-web-software",
+      "classification": "Informational blog article",
+      "title": "How to Avoid Technical Debt in Custom Web Software",
+      "description": "Template or custom build? Learn how to avoid technical debt in custom web software with a clear decision table, 8 practices and a ready-to-use CI example.",
+      "canonicalSource": "https://qllmsoft.com/blog/how-to-avoid-technical-debt-in-custom-web-software",
+      "category": "Development",
+      "author": "mahnoor-fatima",
+      "date": "October 22, 2026"
+    },
+    {
+      "slug": "dotnet-10-aot-compilation-performance-benefits",
+      "route": "/blog/dotnet-10-aot-compilation-performance-benefits",
+      "classification": "Informational blog article",
+      "title": ".NET 10 AOT Compilation: Performance Benefits for Backends",
+      "description": ".NET 10 AOT compilation performance benefits explained: faster startup, lower memory, smaller images, plus trade-offs and a safe migration checklist.",
+      "canonicalSource": "https://qllmsoft.com/blog/dotnet-10-aot-compilation-performance-benefits",
+      "category": "Development",
+      "author": "mahnoor-fatima",
+      "date": "October 28, 2026"
+    },
+    {
+      "slug": "custom-saas-vs-website-template-roi",
+      "route": "/blog/custom-saas-vs-website-template-roi",
+      "classification": "Informational blog article",
+      "title": "Custom SaaS vs Website Template ROI: Real Cost Breakdown",
+      "description": "Custom SaaS vs website template ROI explained: compare 3-year costs, speed, conversions and payback time to decide which option fits your business best.",
+      "canonicalSource": "https://qllmsoft.com/blog/custom-saas-vs-website-template-roi",
+      "category": "Business & Strategy",
+      "author": "mahnoor-fatima",
+      "date": "October 28, 2026"
+    },
+    {
+      "slug": "offshore-software-development-fixed-price-model",
+      "route": "/blog/offshore-software-development-fixed-price-model",
+      "classification": "Informational blog article",
+      "title": "Offshore Software Development Partner: Fixed Price Model",
+      "description": "Offshore software development partner fixed price model explained: how it works, when it fits, and how to protect your budget from surprise overruns.",
+      "canonicalSource": "https://qllmsoft.com/blog/offshore-software-development-fixed-price-model",
+      "category": "Outsourcing",
+      "author": "mahnoor-fatima",
+      "date": "October 29, 2026"
+    },
+    {
+      "slug": "buy-custom-software-development-services",
+      "route": "/blog/buy-custom-software-development-services",
+      "classification": "Informational blog article",
+      "title": "Buy Custom Software Development Services: Buyer's Guide",
+      "description": "Buy custom software development services with confidence: build vs buy, a requirements template, cost drivers and a vendor scorecard to choose well.",
+      "canonicalSource": "https://qllmsoft.com/blog/buy-custom-software-development-services",
+      "category": "Buyer Guide",
+      "author": "ali-ilyas",
+      "date": "October 29, 2026"
+    },
+    {
+      "slug": "web-application-planning-and-architecture-guide",
+      "route": "/blog/web-application-planning-and-architecture-guide",
+      "classification": "Informational blog article",
+      "title": "Web Application Planning & Architecture Guide (2026)",
+      "description": "Plan your web app before you hire custom web application developers: scope, architecture choices, a planning checklist and how to brief a team.",
+      "canonicalSource": "https://qllmsoft.com/blog/web-application-planning-and-architecture-guide",
+      "category": "Development",
+      "author": "mahnoor-fatima",
+      "date": "October 31, 2026"
+    },
+    {
+      "slug": "hire-api-development-integration-services",
+      "route": "/blog/hire-api-development-integration-services",
+      "classification": "Informational blog article",
+      "title": "Hire API Development & Integration Services (REST, GraphQL)",
+      "description": "Hire API development and integration services the smart way: REST vs GraphQL, integration patterns, code examples and a vendor checklist to follow.",
+      "canonicalSource": "https://qllmsoft.com/blog/hire-api-development-integration-services",
+      "category": "Development",
+      "author": "mahnoor-fatima",
+      "date": "October 31, 2026"
+    },
+    {
+      "slug": "how-to-buy-mobile-app-development-services",
+      "route": "/blog/how-to-buy-mobile-app-development-services",
+      "classification": "Informational blog article",
+      "title": "How to Buy Mobile App Development Services (2026 Guide)",
+      "description": "Learn how to buy mobile app development services: what to include in scope, how pricing models differ, and the contract terms that protect you.",
+      "canonicalSource": "https://qllmsoft.com/blog/how-to-buy-mobile-app-development-services",
+      "category": "Mobile Development",
+      "author": "mahnoor-fatima",
+      "date": "November 1, 2026"
+    },
+    {
+      "slug": "how-to-vet-dotnet-developers-pakistan",
+      "route": "/blog/how-to-vet-dotnet-developers-pakistan",
+      "classification": "Informational blog article",
+      "title": "Hire .NET Developers in Pakistan: How to Vet Candidates",
+      "description": "Hire .NET developers in Pakistan with confidence: a 4-stage vetting process, interview questions, a code review test and red flags for .NET 10.",
+      "canonicalSource": "https://qllmsoft.com/blog/how-to-vet-dotnet-developers-pakistan",
+      "category": "Hiring Guide",
+      "author": "ali-ilyas",
+      "date": "November 2, 2026"
+    },
+    {
+      "slug": "enquire-about-custom-ai-projects",
+      "route": "/blog/enquire-about-custom-ai-projects",
+      "classification": "Informational blog article",
+      "title": "Enquire About Custom AI Projects: Implementation Guide",
+      "description": "Enquire about custom AI projects with a clear brief: readiness checklist, implementation steps, cost drivers, risks and what to ask any AI partner.",
+      "canonicalSource": "https://qllmsoft.com/blog/enquire-about-custom-ai-projects",
+      "category": "AI & Innovation",
+      "author": "mahnoor-fatima",
+      "date": "November 2, 2026"
+    },
+    {
+      "slug": "buy-education-software-lms-development",
+      "route": "/blog/buy-education-software-lms-development",
+      "classification": "Informational blog article",
+      "title": "Buy Education Software: LMS & SIS Development Guide",
+      "description": "Buy education software and LMS development with confidence: LMS vs SIS, must-have features, cost drivers, vendor checklist and a rollout plan.",
+      "canonicalSource": "https://qllmsoft.com/blog/buy-education-software-lms-development",
+      "category": "Education Tech",
+      "author": "mahnoor-fatima",
+      "date": "November 2, 2026"
+    },
+    {
+      "slug": "how-to-choose-an-ai-healthcare",
+      "route": "/blog/how-to-choose-an-ai-healthcare",
+      "classification": "Informational blog article",
+      "title": "How to Choose an AI Healthcare Software Company",
+      "description": "Learn how to choose an AI healthcare software development company by evaluating HIPAA compliance, clinical expertise, security, integration, and costs.",
+      "canonicalSource": "https://qllmsoft.com/blog/how-to-choose-an-ai-healthcare",
+      "category": "Healthcare AI",
+      "author": "mahnoor-fatima",
+      "date": "November 3, 2026"
+    }
+  ],
+  "iisRules": [
+    {
+      "name": "Canonical HTTPS and Non-WWW",
+      "pattern": "(.*)",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/{R:1}"
+    },
+    {
+      "name": "Remove Trailing Slash",
+      "pattern": "(.+)/$",
+      "action": "Redirect",
+      "target": "/{R:1}"
+    },
+    {
+      "name": "Remove HTML Extension",
+      "pattern": "^(.*?)\\.html$",
+      "action": "Redirect",
+      "target": "/{R:1}"
+    },
+    {
+      "name": "Redirect top-software-house-in-pakistan",
+      "pattern": "^top-software-house-in-pakistan/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/blog/best-software-house-in-pakistan"
+    },
+    {
+      "name": "Redirect best-software-house-in-lalamusa",
+      "pattern": "^best-software-house-in-lalamusa/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/blog/best-software-house-in-pakistan"
+    },
+    {
+      "name": "Redirect document-control-software",
+      "pattern": "^document-control-software/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/ai-document-management-software"
+    },
+    {
+      "name": "Redirect old secure-web-apps-post",
+      "pattern": "^blog-post/how-we-build-secure-web-apps/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/blog"
+    },
+    {
+      "name": "Redirect old agile-tools-post",
+      "pattern": "^blog-post/top-5-tools-for-agile-teams/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/blog"
+    },
+    {
+      "name": "Redirect blog-post mobile-app-devsecops",
+      "pattern": "^blog-post/mobile-app-devsecops/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/blog/mobile-app-devsecops-in-2026"
+    },
+    {
+      "name": "Redirect asp-net-core-development",
+      "pattern": "^asp-net-core-development/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/asp-net-core-development-services"
+    },
+    {
+      "name": "Redirect blog-post role-based-access-ecommerce-operations",
+      "pattern": "^blog-post/role-based-access-ecommerce-operations/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/blog/role-based-access-problems-why-teams-break-systems"
+    },
+    {
+      "name": "Redirect csharp-desktop-application-development",
+      "pattern": "^csharp-desktop-application-development/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/blog/csharp-desktop-application-development"
+    },
+    {
+      "name": "Redirect scalable-ecommerce-development-for-smbs",
+      "pattern": "^scalable-ecommerce-development-for-smbs/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/blog/scalable-ecommerce-development-for-smbs"
+    },
+    {
+      "name": "Redirect blog-post website-development-cost-in-pakistan",
+      "pattern": "^blog-post/website-development-cost-in-pakistan/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/blog/website-development-cost-in-pakistan"
+    },
+    {
+      "name": "Redirect blog-post custom-vs-saas-ecommerce",
+      "pattern": "^blog-post/custom-vs-saas-ecommerce-platforms-for-growing-businesses/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/blog/custom-vs-saas-ecommerce-for-growing-smbs"
+    },
+    {
+      "name": "Redirect blog-post legacy-vs-rebuilding",
+      "pattern": "^blog-post/legacy-system-modernization-vs-rebuilding/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/blog/legacy-system-modernization-without-downtime-or-data-loss"
+    },
+    {
+      "name": "Redirect blog-post legacy-cost-2026",
+      "pattern": "^blog-post/legacy-system-modernization-cost-in-2026/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/blog/legacy-system-modernization-without-downtime-or-data-loss"
+    },
+    {
+      "name": "Redirect blog-post security-challenges-ecommerce",
+      "pattern": "^blog-post/security-challenges-scalable-ecommerce-smbs/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/blog/scalable-ecommerce-development-for-smbs"
+    },
+    {
+      "name": "Redirect blog-post shopify-limitations",
+      "pattern": "^blog-post/how-smbs-can-build-scalable-ecommerce-platforms-without-shopify-limitations/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/blog/shopify-isnt-scaling-what-companies-do-next"
+    },
+    {
+      "name": "Redirect blog-post custom-software-growth-2026",
+      "pattern": "^blog-post/custom-software-business-growth-2026/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/custom-software-development-services"
+    },
+    {
+      "name": "Redirect blog-post custom-software-future",
+      "pattern": "^blog-post/why-custom-software-is-the-future/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/custom-software-development-services"
+    },
+    {
+      "name": "Redirect old resources hub",
+      "pattern": "^resources/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/blog"
+    },
+    {
+      "name": "Gone blog-post pakistani-businesses-go-global",
+      "pattern": "^blog-post/pakistani-businesses-go-global-tech-strategy/?$",
+      "action": "CustomResponse",
+      "status": "410"
+    },
+    {
+      "name": "Gone blog-post mobile-app-performance-optimization",
+      "pattern": "^blog-post/mobile-app-performance-optimization/?$",
+      "action": "CustomResponse",
+      "status": "410"
+    },
+    {
+      "name": "Gone orphan pdfs",
+      "pattern": "^pdfs/.*\\.pdf$",
+      "action": "CustomResponse",
+      "status": "410"
+    },
+    {
+      "name": "Gone blog-post catch-all",
+      "pattern": "^blog-post/.*$",
+      "action": "CustomResponse",
+      "status": "410"
+    },
+    {
+      "name": "SEO best-software-house consolidation",
+      "pattern": "^best-software-house-in-pakistan/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/blog/best-software-house-in-pakistan"
+    },
+    {
+      "name": "SEO website-development-cost consolidation",
+      "pattern": "^website-development-cost-in-pakistan/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/blog/website-development-cost-in-pakistan"
+    },
+    {
+      "name": "SEO outsource-software-development blog consolidation",
+      "pattern": "^blog/outsource-software-development-to-pakistan/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/outsource-software-development-to-pakistan"
+    },
+    {
+      "name": "SEO AI software consolidation",
+      "pattern": "^blog/ai-powered-software-solutions/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/ai-powered-software-solutions"
+    },
+    {
+      "name": "SEO education software consolidation",
+      "pattern": "^blog/education-software-development-pakistan/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/education-software-development-pakistan"
+    },
+    {
+      "name": "SEO mobile-app-development-cost consolidation",
+      "pattern": "^mobile-app-development-cost-in-pakistan/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/blog/mobile-app-development-cost-in-pakistan"
+    },
+    {
+      "name": "SEO outsource-mobile-app consolidation",
+      "pattern": "^outsource-mobile-app-development-to-pakistan/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/blog/outsource-mobile-app-development-to-pakistan"
+    },
+    {
+      "name": "SEO hire-angular-developers consolidation",
+      "pattern": "^blog/hire-angular-developers-pakistan/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/hire-angular-developers-pakistan"
+    },
+    {
+      "name": "Redirect document-controller-software",
+      "pattern": "^document-controller-software/?$",
+      "action": "Redirect",
+      "target": "https://qllmsoft.com/ai-document-management-software"
+    },
+    {
+      "name": "Serve prerendered page",
+      "pattern": "^(.+?)/?$",
+      "action": "Rewrite",
+      "target": "{R:1}/index.html"
+    },
+    {
+      "name": "React Router SPA",
+      "pattern": ".*",
+      "action": "Rewrite",
+      "target": "/index.html"
+    }
+  ],
+  "counts": {
+    "routes": 42,
+    "articles": 38,
+    "sitemap": 69,
+    "explicitPrerender": 57
+  },
+  "missingInternalDestinations": [
+    {
+      "source": "/outsource-web-development-to-pakistan",
+      "destination": "/remote-dedicated-development-teams",
+      "anchor": "Dedicated Development Teams"
+    },
+    {
+      "source": "/asp-net-core-development-services",
+      "destination": "/pricing-and-engagement-models",
+      "anchor": "View engagement models"
+    },
+    {
+      "source": "/asp-net-core-development-services",
+      "destination": "/pricing-and-engagement-models",
+      "anchor": "pricing and engagement guide"
+    },
+    {
+      "source": "/education-software-development-pakistan",
+      "destination": "/blog/lms-sis-integration-migration-guide",
+      "anchor": "Planning LMS/SIS data integration, migration, and rollout"
+    }
+  ],
+  "internalRedirects": [
+    {
+      "source": "/ai-powered-software-solutions",
+      "destination": "/blog/ai-powered-software-solutions",
+      "anchor": "Planning an AI implementation from use case through deployment",
+      "rule": "SEO AI software consolidation"
+    },
+    {
+      "source": "/education-software-development-pakistan",
+      "destination": "/blog/education-software-development-pakistan",
+      "anchor": "Planning LMS and SIS workflows, integrations, and rollout",
+      "rule": "SEO education software consolidation"
+    }
+  ],
+  "sitemapMissingSource": [],
+  "sitemapRedirectSources": [],
+  "articlesMissingExplicitPrerender": [
+    "/blog/dotnet-10-aot-compilation-performance-benefits",
+    "/blog/custom-saas-vs-website-template-roi",
+    "/blog/offshore-software-development-fixed-price-model",
+    "/blog/buy-custom-software-development-services",
+    "/blog/web-application-planning-and-architecture-guide",
+    "/blog/hire-api-development-integration-services",
+    "/blog/how-to-buy-mobile-app-development-services",
+    "/blog/how-to-vet-dotnet-developers-pakistan",
+    "/blog/enquire-about-custom-ai-projects",
+    "/blog/buy-education-software-lms-development",
+    "/blog/how-to-choose-an-ai-healthcare"
+  ],
+  "articlesMissingSitemap": [],
+  "warnings": [
+    "Source metadata containing expressions is not resolved. Inspect rendered HTML.",
+    "react-snap crawling may discover routes beyond the explicit include list; absence is a coverage risk, not proof of omission."
+  ]
+}

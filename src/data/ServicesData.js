@@ -20,9 +20,9 @@ export const SERVICES = [
   //CUSTOM SOFTWARE 
   {
     id: "best-software-house",
-    title: "Best Software House",
-    desc: "Top tier engineering standards and proven project delivery in Pakistan.",
-    link: "/best-software-house-in-pakistan",
+    title: "Choosing a Software Partner",
+    desc: "Questions to consider when comparing development partners in Pakistan.",
+    link: "/blog/best-software-house-in-pakistan",
     image: SoftwareHouseImg,
     categories: ["custom-software", "website"]
   },
@@ -37,7 +37,7 @@ export const SERVICES = [
   {
     id: "healthcare",
     title: "Healthcare Software",
-    desc: "HIPAA compliant healthcare portals for patient management.",
+    desc: "Patient and staff workflows with defined access and integration requirements.",
     link: "/healthcare-software-development-pakistan",
     image: HealthcareSoftware,
     categories: ["custom-software", "mobile", "website"]
