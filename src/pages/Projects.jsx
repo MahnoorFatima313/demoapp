@@ -7,6 +7,8 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { projectsData } from "../data/mock";
+import heroVideo from "../assets/herovdTrim .mp4";
+import ParticleField from "../components/ParticleField";
 import {
   schemaOrganization, schemaFounder, schemaWebsite,
   buildBreadcrumb, buildFAQSchema, FACTS,
@@ -138,6 +140,23 @@ const Projects = () => {
       <main className="projects-page" id="main-content" role="main">
         {/* HERO */}
         <section className="projects-hero reveal" aria-labelledby="projects-hero-heading">
+          <video
+            className="projects-hero-video"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-hidden="true"
+          >
+            <source src={heroVideo} type="video/mp4" />
+          </video>
+          <div className="projects-hero-grid" aria-hidden="true" />
+          <ParticleField
+            palette="dark"
+            density={8000}
+            className="projects-hero-particles"
+          />
           <div className="container">
             <h1 id="projects-hero-heading">Software development portfolio and verified case studies</h1>
             <p>

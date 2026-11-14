@@ -5,6 +5,8 @@ import { Calendar, ArrowRight } from 'lucide-react';
 import blogPostsData from '../data/blogPostsData';
 import './Blog.css';
 import { schemaOrganization } from "../data/schema";
+import heroVideo from "../assets/herovdTrim .mp4";
+import ParticleField from "../components/ParticleField";
 
 /* Blog Card */
 const BlogCardItem = ({ slug, post, priority }) => {
@@ -79,7 +81,25 @@ const Blog = () => {
     <main className="blog-page">
       {/* Hero Section */}
       <section className="blog-hero">
+        <video
+          className="blog-hero-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+        <div className="blog-hero-grid" aria-hidden="true" />
+        <ParticleField
+          palette="dark"
+          density={8000}
+          className="blog-hero-particles"
+        />
         <div className="container">
+          <span className="blog-hero-eyebrow">QllmSoft Insights</span>
           <h1>Our Blogs</h1>
           <p>
             Stay updated with the latest trends, insights, and best practices
