@@ -1,0 +1,825 @@
+{
+  "checkedAt": "2026-11-15T04:35:12.642Z",
+  "note": "Direct HTTP observations, not cached search results. HTML inspected without executing JavaScript.",
+  "results": [
+    {
+      "group": "crawledNotIndexed",
+      "route": "/hire-angular-developers-pakistan",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/hire-angular-developers-pakistan",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/hire-angular-developers-pakistan",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "crawledNotIndexed",
+      "route": "/projects/inventory-management-system",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/projects/inventory-management-system",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/projects/inventory-management-system",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "crawledNotIndexed",
+      "route": "/projects/logistics-fleet-management-system",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/projects/logistics-fleet-management-system",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/projects/logistics-fleet-management-system",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "crawledNotIndexed",
+      "route": "/legacy-system-modernization-services",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/legacy-system-modernization-services",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/legacy-system-modernization-services",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "duplicate",
+      "route": "/contact-us",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/contact-us",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/contact-us",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "duplicate",
+      "route": "/digital-marketing-seo-services",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/digital-marketing-seo-services",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/digital-marketing-seo-services",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "duplicate",
+      "route": "/custom-",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/custom-",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/custom-",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "duplicate",
+      "route": "/search?q={search_term_string}",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/search?q={search_term_string}",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/search?q={search_term_string}",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "duplicate",
+      "route": "/index",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/index",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/index",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "duplicate",
+      "route": "/blog-post/legacy-system-modernization-cost-in-2026",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/blog-post/legacy-system-modernization-cost-in-2026",
+          "status": 301,
+          "location": "https://qllmsoft.com/blog/legacy-system-modernization-without-downtime-or-data-loss"
+        },
+        {
+          "url": "https://qllmsoft.com/blog/legacy-system-modernization-without-downtime-or-data-loss",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/blog/legacy-system-modernization-without-downtime-or-data-loss",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "duplicate",
+      "route": "/blog-post/role-based-access-ecommerce-operations",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/blog-post/role-based-access-ecommerce-operations",
+          "status": 301,
+          "location": "https://qllmsoft.com/blog/role-based-access-problems-why-teams-break-systems"
+        },
+        {
+          "url": "https://qllmsoft.com/blog/role-based-access-problems-why-teams-break-systems",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/blog/role-based-access-problems-why-teams-break-systems",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "duplicate",
+      "route": "/outsource-web-development-to-pakistan",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/outsource-web-development-to-pakistan",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/outsource-web-development-to-pakistan",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "duplicate",
+      "route": "/blog-post/pakistani-businesses-go-global-tech-strategy",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/blog-post/pakistani-businesses-go-global-tech-strategy",
+          "status": 410,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/blog-post/pakistani-businesses-go-global-tech-strategy",
+      "title": "",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 35,
+      "htmlBytes": 35,
+      "wordpress": false,
+      "reactShell": false
+    },
+    {
+      "group": "duplicate",
+      "route": "/blog-post/security-challenges-scalable-ecommerce-smbs",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/blog-post/security-challenges-scalable-ecommerce-smbs",
+          "status": 301,
+          "location": "https://qllmsoft.com/blog/scalable-ecommerce-development-for-smbs"
+        },
+        {
+          "url": "https://qllmsoft.com/blog/scalable-ecommerce-development-for-smbs",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/blog/scalable-ecommerce-development-for-smbs",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "redirect",
+      "route": "/blog/outsource-software-development-to-pakistan",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/blog/outsource-software-development-to-pakistan",
+          "status": 301,
+          "location": "https://qllmsoft.com/outsource-software-development-to-pakistan"
+        },
+        {
+          "url": "https://qllmsoft.com/outsource-software-development-to-pakistan",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/outsource-software-development-to-pakistan",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "redirect",
+      "route": "/blog-post/custom-software-business-growth-2026",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/blog-post/custom-software-business-growth-2026",
+          "status": 301,
+          "location": "https://qllmsoft.com/custom-software-development-services"
+        },
+        {
+          "url": "https://qllmsoft.com/custom-software-development-services",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/custom-software-development-services",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "redirect",
+      "route": "/blog-post/why-custom-software-is-the-future",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/blog-post/why-custom-software-is-the-future",
+          "status": 301,
+          "location": "https://qllmsoft.com/custom-software-development-services"
+        },
+        {
+          "url": "https://qllmsoft.com/custom-software-development-services",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/custom-software-development-services",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "redirect",
+      "route": "/document-control-software",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/document-control-software",
+          "status": 301,
+          "location": "https://qllmsoft.com/ai-document-management-software"
+        },
+        {
+          "url": "https://qllmsoft.com/ai-document-management-software",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/ai-document-management-software",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "redirect",
+      "route": "/blog-post/legacy-system-modernization-vs-rebuilding",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/blog-post/legacy-system-modernization-vs-rebuilding",
+          "status": 301,
+          "location": "https://qllmsoft.com/blog/legacy-system-modernization-without-downtime-or-data-loss"
+        },
+        {
+          "url": "https://qllmsoft.com/blog/legacy-system-modernization-without-downtime-or-data-loss",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/blog/legacy-system-modernization-without-downtime-or-data-loss",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "redirect",
+      "route": "/blog-post/top-5-tools-for-agile-teams",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/blog-post/top-5-tools-for-agile-teams",
+          "status": 301,
+          "location": "https://qllmsoft.com/blog"
+        },
+        {
+          "url": "https://qllmsoft.com/blog",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/blog",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "redirect",
+      "route": "/scalable-ecommerce-development-for-smbs",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/scalable-ecommerce-development-for-smbs",
+          "status": 301,
+          "location": "https://qllmsoft.com/blog/scalable-ecommerce-development-for-smbs"
+        },
+        {
+          "url": "https://qllmsoft.com/blog/scalable-ecommerce-development-for-smbs",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/blog/scalable-ecommerce-development-for-smbs",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "redirect",
+      "route": "/mobile-app-development-cost-in-pakistan",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/mobile-app-development-cost-in-pakistan",
+          "status": 301,
+          "location": "https://qllmsoft.com/blog/mobile-app-development-cost-in-pakistan"
+        },
+        {
+          "url": "https://qllmsoft.com/blog/mobile-app-development-cost-in-pakistan",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/blog/mobile-app-development-cost-in-pakistan",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "redirect",
+      "route": "/projects/sticker-smash-photo-editor-app",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/projects/sticker-smash-photo-editor-app",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/projects/sticker-smash-photo-editor-app",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "redirect",
+      "route": "/resources",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/resources",
+          "status": 301,
+          "location": "https://qllmsoft.com/blog"
+        },
+        {
+          "url": "https://qllmsoft.com/blog",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/blog",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "redirect",
+      "route": "/website-development-cost-in-pakistan",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/website-development-cost-in-pakistan",
+          "status": 301,
+          "location": "https://qllmsoft.com/blog/website-development-cost-in-pakistan"
+        },
+        {
+          "url": "https://qllmsoft.com/blog/website-development-cost-in-pakistan",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/blog/website-development-cost-in-pakistan",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "redirect",
+      "route": "/best-software-house-in-pakistan",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/best-software-house-in-pakistan",
+          "status": 301,
+          "location": "https://qllmsoft.com/blog/best-software-house-in-pakistan"
+        },
+        {
+          "url": "https://qllmsoft.com/blog/best-software-house-in-pakistan",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/blog/best-software-house-in-pakistan",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "redirect",
+      "route": "/top-software-house-in-pakistan",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/top-software-house-in-pakistan",
+          "status": 301,
+          "location": "https://qllmsoft.com/blog/best-software-house-in-pakistan"
+        },
+        {
+          "url": "https://qllmsoft.com/blog/best-software-house-in-pakistan",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/blog/best-software-house-in-pakistan",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "redirect",
+      "route": "/blog-post/website-development-cost-in-pakistan",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/blog-post/website-development-cost-in-pakistan",
+          "status": 301,
+          "location": "https://qllmsoft.com/blog/website-development-cost-in-pakistan"
+        },
+        {
+          "url": "https://qllmsoft.com/blog/website-development-cost-in-pakistan",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/blog/website-development-cost-in-pakistan",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "redirect",
+      "route": "/qllmdocs",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/qllmdocs",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/qllmdocs",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "redirect",
+      "route": "/blog/ai-powered-software-solutions",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/blog/ai-powered-software-solutions",
+          "status": 301,
+          "location": "https://qllmsoft.com/ai-powered-software-solutions"
+        },
+        {
+          "url": "https://qllmsoft.com/ai-powered-software-solutions",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/ai-powered-software-solutions",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "redirect",
+      "route": "/document-control-software?ref=producthunt",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/document-control-software?ref=producthunt",
+          "status": 301,
+          "location": "https://qllmsoft.com/ai-document-management-software?ref=producthunt"
+        },
+        {
+          "url": "https://qllmsoft.com/ai-document-management-software?ref=producthunt",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/ai-document-management-software?ref=producthunt",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "redirect",
+      "route": "/csharp-desktop-application-development",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/csharp-desktop-application-development",
+          "status": 301,
+          "location": "https://qllmsoft.com/blog/csharp-desktop-application-development"
+        },
+        {
+          "url": "https://qllmsoft.com/blog/csharp-desktop-application-development",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/blog/csharp-desktop-application-development",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "redirect",
+      "route": "/asp-net-core-development",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/asp-net-core-development",
+          "status": 301,
+          "location": "https://qllmsoft.com/asp-net-core-development-services"
+        },
+        {
+          "url": "https://qllmsoft.com/asp-net-core-development-services",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/asp-net-core-development-services",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    },
+    {
+      "group": "redirect",
+      "route": "/blog-post/mobile-app-devsecops",
+      "hops": [
+        {
+          "url": "https://qllmsoft.com/blog-post/mobile-app-devsecops",
+          "status": 301,
+          "location": "https://qllmsoft.com/blog/mobile-app-devsecops-in-2026"
+        },
+        {
+          "url": "https://qllmsoft.com/blog/mobile-app-devsecops-in-2026",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://qllmsoft.com/blog/mobile-app-devsecops-in-2026",
+      "title": "QllmSoft | Custom Software Development",
+      "canonicals": [],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1": [],
+      "bodyTextLength": 1185,
+      "htmlBytes": 3091,
+      "wordpress": false,
+      "reactShell": true
+    }
+  ]
+}

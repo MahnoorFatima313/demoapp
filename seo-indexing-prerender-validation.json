@@ -1,0 +1,45 @@
+{
+  "results": [
+    {
+      "route": "/hire-angular-developers-pakistan",
+      "titles": 1,
+      "descriptions": 1,
+      "canonicals": [
+        "https://qllmsoft.com/hire-angular-developers-pakistan"
+      ],
+      "h1": 1,
+      "textLength": 13564
+    },
+    {
+      "route": "/legacy-system-modernization-services",
+      "titles": 1,
+      "descriptions": 1,
+      "canonicals": [
+        "https://qllmsoft.com/legacy-system-modernization-services"
+      ],
+      "h1": 1,
+      "textLength": 13758
+    },
+    {
+      "route": "/projects/inventory-management-system",
+      "titles": 1,
+      "descriptions": 1,
+      "canonicals": [
+        "https://qllmsoft.com/projects/inventory-management-system"
+      ],
+      "h1": 1,
+      "textLength": 2359
+    },
+    {
+      "route": "/projects/logistics-fleet-management-system",
+      "titles": 1,
+      "descriptions": 1,
+      "canonicals": [
+        "https://qllmsoft.com/projects/logistics-fleet-management-system"
+      ],
+      "h1": 1,
+      "textLength": 2570
+    }
+  ],
+  "proposedXmlParsed": true
+}

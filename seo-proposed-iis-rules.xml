@@ -1,0 +1,29 @@
+<!-- Review record: approved by the user and copied into public/web.config.
+     This standalone file is not loaded by IIS. No deployment performed.
+     Rules follow canonical-domain normalization and precede Remove Trailing Slash. -->
+<rules>
+  <rule name="Alias contact-us to contact" stopProcessing="true">
+    <match url="^contact-us/?$" />
+    <action type="Redirect" url="https://qllmsoft.com/contact" redirectType="Permanent" />
+  </rule>
+  <rule name="Alias digital-marketing-seo-services" stopProcessing="true">
+    <match url="^digital-marketing-seo-services/?$" />
+    <action type="Redirect" url="https://qllmsoft.com/digital-marketing-services" redirectType="Permanent" />
+  </rule>
+  <rule name="Alias index to homepage" stopProcessing="true">
+    <match url="^index/?$" />
+    <action type="Redirect" url="https://qllmsoft.com/" redirectType="Permanent" />
+  </rule>
+  <rule name="Alias qllmdocs to product" stopProcessing="true">
+    <match url="^qllmdocs/?$" />
+    <action type="Redirect" url="https://qllmsoft.com/ai-document-management-software" redirectType="Permanent" />
+  </rule>
+  <rule name="Missing truncated custom URL" stopProcessing="true">
+    <match url="^custom-/?$" />
+    <action type="CustomResponse" statusCode="404" statusReason="Not Found" statusDescription="No page exists at this address" />
+  </rule>
+  <rule name="Missing unimplemented search URL" stopProcessing="true">
+    <match url="^search/?$" />
+    <action type="CustomResponse" statusCode="404" statusReason="Not Found" statusDescription="This site has no search page" />
+  </rule>
+</rules>

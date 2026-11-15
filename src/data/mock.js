@@ -356,7 +356,7 @@ export const projectsData = [
     title: "Logistics & Fleet Management System",
     shape: "helix",
     accent: "#63b3ed",
-    shortDescription: "Shipment tracking, multi-warehouse stock movement, and carrier manifests in one interface.",
+    shortDescription: "A logistics web application bringing shipment records, warehouse stock movements and carrier manifests into one operational interface.",
     stack: ["C#", "ASP.NET MVC", "Angular", "JavaScript", "SQL Server", "Telerik Controls", "GitHub"],
     category: "Logistics Intelligence",
     problem: "Logistics operations required visibility across shipments, warehouses, inventory movements, and carrier documentation.",
@@ -365,7 +365,35 @@ export const projectsData = [
     listTitle: "Key capabilities:",
     list: ["Shipment tracking", "Multi-warehouse stock movement", "Carrier manifests", "Inventory monitoring"],
     impact: ["Centralized logistics visibility", "Shipments and warehouses together", "Tracked inventory movement"],
+  contextSections: [
+  {
+    "heading": "Shipment and warehouse workflows",
+    "text": "The documented project combines shipment tracking, stock movement across warehouses, carrier manifests, and inventory monitoring. These records support an operational view of what is moving, where it is recorded, and which documentation accompanies the shipment. This description does not imply GPS tracking or automatic route optimization."
   },
+  {
+    "heading": "Planning carrier and system integration",
+    "text": "A similar build should establish shipment identifiers, status definitions, warehouse ownership, and the system responsible for each update. If carrier APIs are required, confirm access, update frequency, provider limits, and what happens when a status update fails. These are requirements to assess rather than additional claimed project features."
+  },
+  {
+    "heading": "Release and operating checks",
+    "text": "For a new logistics implementation, reconcile shipment and stock records before release. Test duplicate updates, corrections, missing data, and user permissions. Assign ownership of carrier changes, backup recovery, and monitoring so operational exceptions have a clear handling process."
+  }
+],
+relatedLinks: [
+  {
+    "path": "/projects/inventory-management-system",
+    "label": "inventory management project"
+  },
+  {
+    "path": "/web-application-development-services",
+    "label": "business web application development"
+  },
+  {
+    "path": "/api-development-services",
+    "label": "carrier and business-system API integrations"
+  }
+],
+},
   {
     id: 7,
     slug: "inventory-management-system",
@@ -373,16 +401,44 @@ export const projectsData = [
     title: "Inventory Management System",
     shape: "cube",
     accent: "#63b3ed",
-    shortDescription: "1,000+ SKUs with automated stock records, monitoring, and low-stock alerts.",
+    shortDescription: "A web-based inventory project for product records, stock movements, inventory monitoring and low-stock alerts.",
     stack: ["C#", "ASP.NET Core", "JavaScript", "SQL Server", "Telerik Controls", "GitHub"],
     category: "Inventory Control",
     problem: "Managing a large product catalog required accurate stock movement tracking and timely identification of inventory shortages.",
-    approach: "QllmSoft developed a web-based inventory management system supporting 1,000+ SKUs, automated stock movement records, inventory monitoring, and low-stock alerting.",
+    approach: "QllmSoft developed a web-based inventory management system with product records, stock movement history, inventory monitoring, and low-stock alerts.",
     result: "The system provided centralized inventory visibility and automated monitoring of stock levels and movements.",
     listTitle: "Key capabilities:",
-    list: ["1,000+ SKU catalog", "Automated stock movement records", "Inventory monitoring", "Low-stock alerting"],
+    list: ["Product catalog and stock records", "Automated stock movement records", "Inventory monitoring", "Low-stock alerting"],
     impact: ["Centralized inventory visibility", "Automated stock monitoring", "Timely shortage alerts"],
+  contextSections: [
+  {
+    "heading": "Inventory workflow and record visibility",
+    "text": "The documented feature set connects a product catalog with recorded stock movements, inventory monitoring, and low-stock alerts. The useful distinction is between the current balance and the records that explain how it changed. Staff can review the movement history when investigating a discrepancy."
   },
+  {
+    "heading": "Planning a similar inventory system",
+    "text": "Before scoping a similar build, define product identifiers, units of measure, warehouse ownership, adjustment permissions, and how opening balances will be checked. Decide which system owns product and stock data when accounting or ecommerce tools are involved. These are planning considerations, not claims that every option was included in this project."
+  },
+  {
+    "heading": "Validation and ongoing operation",
+    "text": "For a new implementation, test receipts, issues, corrections, and alert thresholds against representative records. Reconcile imported balances with the agreed source and assign responsibility for backups, access reviews, and exception handling."
+  }
+],
+relatedLinks: [
+  {
+    "path": "/projects/logistics-fleet-management-system",
+    "label": "shipment and warehouse operations project"
+  },
+  {
+    "path": "/custom-software-development-services",
+    "label": "custom business software development"
+  },
+  {
+    "path": "/api-development-services",
+    "label": "inventory system integrations"
+  }
+],
+},
 ];
 
 
