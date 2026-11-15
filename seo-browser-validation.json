@@ -1,0 +1,706 @@
+{
+  "scope": "Prerendered HTML reloaded with JavaScript, three viewports per page; external scripts/images blocked and external CSS stubbed for isolated checks.",
+  "presentationAttributesUnchanged": true,
+  "pageErrors": [],
+  "linkTargets": [
+    {
+      "path": "/about",
+      "h1": "A Software Development Company Building Real Products for Businesses Worldwide Since 2015",
+      "canonical": "https://qllmsoft.com/about"
+    },
+    {
+      "path": "/contact",
+      "h1": "Contact Us",
+      "canonical": "https://qllmsoft.com/contact"
+    },
+    {
+      "path": "/blog",
+      "h1": "Our Blogs",
+      "canonical": "https://qllmsoft.com/blog"
+    },
+    {
+      "path": "/asp-net-core-development-services",
+      "h1": "ASP.NET Core Development Services",
+      "canonical": "https://qllmsoft.com/asp-net-core-development-services"
+    },
+    {
+      "path": "/blog/mobile-app-development-cost-in-pakistan",
+      "h1": "Mobile App Development Cost in Pakistan 2026 | Full Pricing Guide",
+      "canonical": "https://qllmsoft.com/blog/mobile-app-development-cost-in-pakistan"
+    },
+    {
+      "path": "/software-project-requirements-checklist",
+      "h1": "The Software Requirements Checklist We Use Internally",
+      "canonical": "https://qllmsoft.com/software-project-requirements-checklist"
+    },
+    {
+      "path": "/ai-document-management-software",
+      "h1": "AI Document Management Software to Organize, Search and Control Business Documents",
+      "canonical": "https://qllmsoft.com/ai-document-management-software"
+    },
+    {
+      "path": "/blog/web-application-planning-and-architecture-guide",
+      "h1": "Web Application Planning and Architecture: What to Decide Before You Hire Developers",
+      "canonical": "https://qllmsoft.com/blog/web-application-planning-and-architecture-guide"
+    }
+  ],
+  "navigation": [
+    {
+      "route": "/custom-software-development-services",
+      "titles": 1,
+      "descriptions": 1,
+      "canonicals": 1
+    },
+    {
+      "route": "/api-development-services",
+      "titles": 1,
+      "descriptions": 1,
+      "canonicals": 1
+    },
+    {
+      "route": "/web-application-development-services",
+      "titles": 1,
+      "descriptions": 1,
+      "canonicals": 1
+    },
+    {
+      "route": "/website-development-services",
+      "titles": 1,
+      "descriptions": 1,
+      "canonicals": 1
+    },
+    {
+      "route": "/mobile-app-development",
+      "titles": 1,
+      "descriptions": 1,
+      "canonicals": 1
+    },
+    {
+      "route": "/ecommerce-development-services",
+      "titles": 1,
+      "descriptions": 1,
+      "canonicals": 1
+    }
+  ],
+  "checks": [
+    {
+      "route": "/",
+      "width": 1440,
+      "title": "QllmSoft | Business Software, Web & Mobile Development",
+      "metadataValid": true,
+      "titleCount": 1,
+      "descriptionCount": 1,
+      "canonical": [
+        "https://qllmsoft.com/"
+      ],
+      "h1": [
+        "Custom Software & AIFor Your Business Workflows"
+      ],
+      "duplicateIds": [],
+      "faqMicrodataCount": 0,
+      "jsonLdTypes": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "Service",
+        "FAQPage"
+      ],
+      "overflow": false,
+      "blockedOrBrokenImages": [],
+      "screenshot": "home-1440.png"
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "title": "QllmSoft | Business Software, Web & Mobile Development",
+      "metadataValid": true,
+      "titleCount": 1,
+      "descriptionCount": 1,
+      "canonical": [
+        "https://qllmsoft.com/"
+      ],
+      "h1": [
+        "Custom Software & AIFor Your Business Workflows"
+      ],
+      "duplicateIds": [],
+      "faqMicrodataCount": 0,
+      "jsonLdTypes": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "Service",
+        "FAQPage"
+      ],
+      "overflow": false,
+      "blockedOrBrokenImages": [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blazor/blazor-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "https://cdn.jsdelivr.net/gh/callback-io/allogo@main/public/logos/dotnet/icon.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xamarin/xamarin-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuredevops/azuredevops-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blazor/blazor-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "https://cdn.jsdelivr.net/gh/callback-io/allogo@main/public/logos/dotnet/icon.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xamarin/xamarin-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuredevops/azuredevops-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+      ],
+      "screenshot": "home-768.png"
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "title": "QllmSoft | Business Software, Web & Mobile Development",
+      "metadataValid": true,
+      "titleCount": 1,
+      "descriptionCount": 1,
+      "canonical": [
+        "https://qllmsoft.com/"
+      ],
+      "h1": [
+        "Custom Software & AIFor Your Business Workflows"
+      ],
+      "duplicateIds": [],
+      "faqMicrodataCount": 0,
+      "jsonLdTypes": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "Service",
+        "FAQPage"
+      ],
+      "overflow": false,
+      "blockedOrBrokenImages": [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blazor/blazor-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "https://cdn.jsdelivr.net/gh/callback-io/allogo@main/public/logos/dotnet/icon.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xamarin/xamarin-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuredevops/azuredevops-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blazor/blazor-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "https://cdn.jsdelivr.net/gh/callback-io/allogo@main/public/logos/dotnet/icon.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xamarin/xamarin-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuredevops/azuredevops-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+      ],
+      "screenshot": "home-390.png"
+    },
+    {
+      "route": "/custom-software-development-services",
+      "width": 1440,
+      "title": "Custom Software Development Services | QllmSoft",
+      "metadataValid": true,
+      "titleCount": 1,
+      "descriptionCount": 1,
+      "canonical": [
+        "https://qllmsoft.com/custom-software-development-services"
+      ],
+      "h1": [
+        "Custom Software Development for Business Systems"
+      ],
+      "duplicateIds": [],
+      "faqMicrodataCount": 0,
+      "jsonLdTypes": [
+        "Organization",
+        "Service",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "overflow": false,
+      "blockedOrBrokenImages": [],
+      "screenshot": "custom-software-development-services-1440.png"
+    },
+    {
+      "route": "/custom-software-development-services",
+      "width": 768,
+      "title": "Custom Software Development Services | QllmSoft",
+      "metadataValid": true,
+      "titleCount": 1,
+      "descriptionCount": 1,
+      "canonical": [
+        "https://qllmsoft.com/custom-software-development-services"
+      ],
+      "h1": [
+        "Custom Software Development for Business Systems"
+      ],
+      "duplicateIds": [],
+      "faqMicrodataCount": 0,
+      "jsonLdTypes": [
+        "Organization",
+        "Service",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "overflow": false,
+      "blockedOrBrokenImages": [],
+      "screenshot": "custom-software-development-services-768.png"
+    },
+    {
+      "route": "/custom-software-development-services",
+      "width": 390,
+      "title": "Custom Software Development Services | QllmSoft",
+      "metadataValid": true,
+      "titleCount": 1,
+      "descriptionCount": 1,
+      "canonical": [
+        "https://qllmsoft.com/custom-software-development-services"
+      ],
+      "h1": [
+        "Custom Software Development for Business Systems"
+      ],
+      "duplicateIds": [],
+      "faqMicrodataCount": 0,
+      "jsonLdTypes": [
+        "Organization",
+        "Service",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "overflow": false,
+      "blockedOrBrokenImages": [],
+      "screenshot": "custom-software-development-services-390.png"
+    },
+    {
+      "route": "/api-development-services",
+      "width": 1440,
+      "title": "API Development & Integration Services | QllmSoft",
+      "metadataValid": true,
+      "titleCount": 1,
+      "descriptionCount": 1,
+      "canonical": [
+        "https://qllmsoft.com/api-development-services"
+      ],
+      "h1": [
+        "API Development &Integration Services"
+      ],
+      "duplicateIds": [],
+      "faqMicrodataCount": 0,
+      "jsonLdTypes": [
+        "Organization",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "overflow": false,
+      "blockedOrBrokenImages": [
+        "https://qllmsoft.com/images/api-services.webp"
+      ],
+      "screenshot": "api-development-services-1440.png"
+    },
+    {
+      "route": "/api-development-services",
+      "width": 768,
+      "title": "API Development & Integration Services | QllmSoft",
+      "metadataValid": true,
+      "titleCount": 1,
+      "descriptionCount": 1,
+      "canonical": [
+        "https://qllmsoft.com/api-development-services"
+      ],
+      "h1": [
+        "API Development &Integration Services"
+      ],
+      "duplicateIds": [],
+      "faqMicrodataCount": 0,
+      "jsonLdTypes": [
+        "Organization",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "overflow": false,
+      "blockedOrBrokenImages": [],
+      "screenshot": "api-development-services-768.png"
+    },
+    {
+      "route": "/api-development-services",
+      "width": 390,
+      "title": "API Development & Integration Services | QllmSoft",
+      "metadataValid": true,
+      "titleCount": 1,
+      "descriptionCount": 1,
+      "canonical": [
+        "https://qllmsoft.com/api-development-services"
+      ],
+      "h1": [
+        "API Development &Integration Services"
+      ],
+      "duplicateIds": [],
+      "faqMicrodataCount": 0,
+      "jsonLdTypes": [
+        "Organization",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "overflow": false,
+      "blockedOrBrokenImages": [],
+      "screenshot": "api-development-services-390.png"
+    },
+    {
+      "route": "/web-application-development-services",
+      "width": 1440,
+      "title": "Web Application Development: Portals & SaaS | QllmSoft",
+      "metadataValid": true,
+      "titleCount": 1,
+      "descriptionCount": 1,
+      "canonical": [
+        "https://qllmsoft.com/web-application-development-services"
+      ],
+      "h1": [
+        "Web ApplicationDevelopment Services"
+      ],
+      "duplicateIds": [],
+      "faqMicrodataCount": 0,
+      "jsonLdTypes": [
+        "Organization",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "overflow": false,
+      "blockedOrBrokenImages": [],
+      "screenshot": "web-application-development-services-1440.png"
+    },
+    {
+      "route": "/web-application-development-services",
+      "width": 768,
+      "title": "Web Application Development: Portals & SaaS | QllmSoft",
+      "metadataValid": true,
+      "titleCount": 1,
+      "descriptionCount": 1,
+      "canonical": [
+        "https://qllmsoft.com/web-application-development-services"
+      ],
+      "h1": [
+        "Web ApplicationDevelopment Services"
+      ],
+      "duplicateIds": [],
+      "faqMicrodataCount": 0,
+      "jsonLdTypes": [
+        "Organization",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "overflow": false,
+      "blockedOrBrokenImages": [],
+      "screenshot": "web-application-development-services-768.png"
+    },
+    {
+      "route": "/web-application-development-services",
+      "width": 390,
+      "title": "Web Application Development: Portals & SaaS | QllmSoft",
+      "metadataValid": true,
+      "titleCount": 1,
+      "descriptionCount": 1,
+      "canonical": [
+        "https://qllmsoft.com/web-application-development-services"
+      ],
+      "h1": [
+        "Web ApplicationDevelopment Services"
+      ],
+      "duplicateIds": [],
+      "faqMicrodataCount": 0,
+      "jsonLdTypes": [
+        "Organization",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "overflow": false,
+      "blockedOrBrokenImages": [],
+      "screenshot": "web-application-development-services-390.png"
+    },
+    {
+      "route": "/website-development-services",
+      "width": 1440,
+      "title": "Website Development for Business & eCommerce | QllmSoft",
+      "metadataValid": true,
+      "titleCount": 1,
+      "descriptionCount": 1,
+      "canonical": [
+        "https://qllmsoft.com/website-development-services"
+      ],
+      "h1": [
+        "Website Development for Business & eCommerce"
+      ],
+      "duplicateIds": [],
+      "faqMicrodataCount": 0,
+      "jsonLdTypes": [
+        "Organization",
+        "Service",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "overflow": false,
+      "blockedOrBrokenImages": [],
+      "screenshot": "website-development-services-1440.png"
+    },
+    {
+      "route": "/website-development-services",
+      "width": 768,
+      "title": "Website Development for Business & eCommerce | QllmSoft",
+      "metadataValid": true,
+      "titleCount": 1,
+      "descriptionCount": 1,
+      "canonical": [
+        "https://qllmsoft.com/website-development-services"
+      ],
+      "h1": [
+        "Website Development for Business & eCommerce"
+      ],
+      "duplicateIds": [],
+      "faqMicrodataCount": 0,
+      "jsonLdTypes": [
+        "Organization",
+        "Service",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "overflow": false,
+      "blockedOrBrokenImages": [],
+      "screenshot": "website-development-services-768.png"
+    },
+    {
+      "route": "/website-development-services",
+      "width": 390,
+      "title": "Website Development for Business & eCommerce | QllmSoft",
+      "metadataValid": true,
+      "titleCount": 1,
+      "descriptionCount": 1,
+      "canonical": [
+        "https://qllmsoft.com/website-development-services"
+      ],
+      "h1": [
+        "Website Development for Business & eCommerce"
+      ],
+      "duplicateIds": [],
+      "faqMicrodataCount": 0,
+      "jsonLdTypes": [
+        "Organization",
+        "Service",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "overflow": false,
+      "blockedOrBrokenImages": [],
+      "screenshot": "website-development-services-390.png"
+    },
+    {
+      "route": "/mobile-app-development",
+      "width": 1440,
+      "title": "Mobile App Development for Android & iOS | QllmSoft",
+      "metadataValid": true,
+      "titleCount": 1,
+      "descriptionCount": 1,
+      "canonical": [
+        "https://qllmsoft.com/mobile-app-development"
+      ],
+      "h1": [
+        "Mobile AppDevelopmentServices"
+      ],
+      "duplicateIds": [],
+      "faqMicrodataCount": 0,
+      "jsonLdTypes": [
+        "Organization",
+        "Service",
+        "WebPage",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "overflow": false,
+      "blockedOrBrokenImages": [],
+      "screenshot": "mobile-app-development-1440.png"
+    },
+    {
+      "route": "/mobile-app-development",
+      "width": 768,
+      "title": "Mobile App Development for Android & iOS | QllmSoft",
+      "metadataValid": true,
+      "titleCount": 1,
+      "descriptionCount": 1,
+      "canonical": [
+        "https://qllmsoft.com/mobile-app-development"
+      ],
+      "h1": [
+        "Mobile AppDevelopmentServices"
+      ],
+      "duplicateIds": [],
+      "faqMicrodataCount": 0,
+      "jsonLdTypes": [
+        "Organization",
+        "Service",
+        "WebPage",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "overflow": false,
+      "blockedOrBrokenImages": [],
+      "screenshot": "mobile-app-development-768.png"
+    },
+    {
+      "route": "/mobile-app-development",
+      "width": 390,
+      "title": "Mobile App Development for Android & iOS | QllmSoft",
+      "metadataValid": true,
+      "titleCount": 1,
+      "descriptionCount": 1,
+      "canonical": [
+        "https://qllmsoft.com/mobile-app-development"
+      ],
+      "h1": [
+        "Mobile AppDevelopmentServices"
+      ],
+      "duplicateIds": [],
+      "faqMicrodataCount": 0,
+      "jsonLdTypes": [
+        "Organization",
+        "Service",
+        "WebPage",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "overflow": false,
+      "blockedOrBrokenImages": [],
+      "screenshot": "mobile-app-development-390.png"
+    },
+    {
+      "route": "/ecommerce-development-services",
+      "width": 1440,
+      "title": "Custom Ecommerce Development & Integrations | QllmSoft",
+      "metadataValid": true,
+      "titleCount": 1,
+      "descriptionCount": 1,
+      "canonical": [
+        "https://qllmsoft.com/ecommerce-development-services"
+      ],
+      "h1": [
+        "E-Commerce Development Services"
+      ],
+      "duplicateIds": [],
+      "faqMicrodataCount": 0,
+      "jsonLdTypes": [
+        "WebPage",
+        "Organization",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "overflow": false,
+      "blockedOrBrokenImages": [
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "screenshot": "ecommerce-development-services-1440.png"
+    },
+    {
+      "route": "/ecommerce-development-services",
+      "width": 768,
+      "title": "Custom Ecommerce Development & Integrations | QllmSoft",
+      "metadataValid": true,
+      "titleCount": 1,
+      "descriptionCount": 1,
+      "canonical": [
+        "https://qllmsoft.com/ecommerce-development-services"
+      ],
+      "h1": [
+        "E-Commerce Development Services"
+      ],
+      "duplicateIds": [],
+      "faqMicrodataCount": 0,
+      "jsonLdTypes": [
+        "WebPage",
+        "Organization",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "overflow": false,
+      "blockedOrBrokenImages": [
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "screenshot": "ecommerce-development-services-768.png"
+    },
+    {
+      "route": "/ecommerce-development-services",
+      "width": 390,
+      "title": "Custom Ecommerce Development & Integrations | QllmSoft",
+      "metadataValid": true,
+      "titleCount": 1,
+      "descriptionCount": 1,
+      "canonical": [
+        "https://qllmsoft.com/ecommerce-development-services"
+      ],
+      "h1": [
+        "E-Commerce Development Services"
+      ],
+      "duplicateIds": [],
+      "faqMicrodataCount": 0,
+      "jsonLdTypes": [
+        "WebPage",
+        "Organization",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "overflow": false,
+      "blockedOrBrokenImages": [
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "screenshot": "ecommerce-development-services-390.png"
+    }
+  ]
+}

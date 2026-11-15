@@ -12,9 +12,11 @@ const batch2 = process.argv.includes('--batch-2');
 const batch3 = process.argv.includes('--batch-3');
 const review = process.argv.includes('--review');
 const navigationOnly = process.argv.includes('--navigation-only');
-const pages = review ? ['Home', 'CustomSoftwareDevelopment', 'ApiDevelopmentServices', 'WebAppDevelopment', 'WebsiteDevelopmentServices', 'MobileAppDevelopment', 'EcommerceDevelopmentServices'] : batch3 ? ['MobileAppDevelopment', 'EcommerceDevelopmentServices'] : batch2 ? ['WebAppDevelopment', 'WebsiteDevelopmentServices'] : ['CustomSoftwareDevelopment', 'ApiDevelopmentServices'];
-const routes = review ? ['/', '/custom-software-development-services', '/api-development-services', '/web-application-development-services', '/website-development-services', '/mobile-app-development', '/ecommerce-development-services'] : batch3 ? ['/mobile-app-development', '/ecommerce-development-services'] : batch2 ? ['/web-application-development-services', '/website-development-services'] : ['/custom-software-development-services', '/api-development-services'];
-const output = path.join(root, 'build', review ? 'seo-final-review' : batch3 ? 'seo-validation-batch3' : batch2 ? 'seo-validation-batch2' : 'seo-validation');
+const apiOnly = process.argv.includes('--api-only');
+const indexing = process.argv.includes('--indexing');
+const pages = indexing ? ['HireAngularDevelopers', 'LegacyModernization', 'ProjectDetails'] : apiOnly ? ['ApiDevelopmentServices'] : review ? ['Home', 'CustomSoftwareDevelopment', 'ApiDevelopmentServices', 'WebAppDevelopment', 'WebsiteDevelopmentServices', 'MobileAppDevelopment', 'EcommerceDevelopmentServices'] : batch3 ? ['MobileAppDevelopment', 'EcommerceDevelopmentServices'] : batch2 ? ['WebAppDevelopment', 'WebsiteDevelopmentServices'] : ['CustomSoftwareDevelopment', 'ApiDevelopmentServices'];
+const routes = indexing ? ['/hire-angular-developers-pakistan', '/legacy-system-modernization-services', '/projects/inventory-management-system', '/projects/logistics-fleet-management-system'] : apiOnly ? ['/api-development-services'] : review ? ['/', '/custom-software-development-services', '/api-development-services', '/web-application-development-services', '/website-development-services', '/mobile-app-development', '/ecommerce-development-services'] : batch3 ? ['/mobile-app-development', '/ecommerce-development-services'] : batch2 ? ['/web-application-development-services', '/website-development-services'] : ['/custom-software-development-services', '/api-development-services'];
+const output = path.join(root, 'build', indexing ? 'seo-indexing-review' : apiOnly ? 'seo-api-image-check' : review ? 'seo-final-review' : batch3 ? 'seo-validation-batch3' : batch2 ? 'seo-validation-batch2' : 'seo-validation');
 fs.mkdirSync(output, { recursive: true });
 function presentation(source) {
   const values = [];
@@ -26,7 +28,17 @@ function presentation(source) {
 for (const page of pages) {
   const file = `src/pages/${page}.jsx`;
   const before = execFileSync('git', ['show', `HEAD:${file}`], { cwd: root, encoding: 'utf8' });
-  assert.deepEqual(presentation(fs.readFileSync(path.join(root, file), 'utf8')), presentation(before), `${page}: presentation attributes changed`);
+  const current = presentation(fs.readFileSync(path.join(root, file), 'utf8'));
+  if (page === 'ProjectDetails') {
+    // Optional content uses existing paragraph classes. Existing presentation
+    // attributes must remain intact and in order, allowing those extra sections.
+    let cursor = 0;
+    for (const value of presentation(before)) {
+      cursor = current.indexOf(value, cursor);
+      assert.ok(cursor >= 0, 'ProjectDetails: existing presentation changed');
+      cursor++;
+    }
+  } else assert.deepEqual(current, presentation(before), `${page}: presentation attributes changed`);
 }
 const mime = { '.js': 'application/javascript', '.css': 'text/css', '.html': 'text/html', '.webp': 'image/webp', '.png': 'image/png', '.svg': 'image/svg+xml', '.jpg': 'image/jpeg', '.woff2': 'font/woff2' };
 const server = http.createServer((req, res) => {
@@ -63,7 +75,7 @@ const server = http.createServer((req, res) => {
     for (const route of (navigationOnly ? [] : routes)) {
       for (const width of [1440, 768, 390]) {
         await page.setViewport({ width, height: 900 });
-        await page.goto(`http://127.0.0.1:${server.address().port}${route}`, { waitUntil: 'networkidle0' });
+        await page.goto(`http://127.0.0.1:${server.address().port}${route}`, { waitUntil: 'domcontentloaded' });
         await page.waitForSelector('main h1');
         await page.waitForFunction(() => document.querySelector('main h1')?.dataset.prerenderReady !== 'false');
         // Exercise intersection-triggered content without altering animation styles.
@@ -84,24 +96,30 @@ const server = http.createServer((req, res) => {
           duplicateIds: [...new Set([...document.querySelectorAll('[id]')].map(n => n.id).filter((id, i, ids) => ids.indexOf(id) !== i))],
           faqMicrodataCount: document.querySelectorAll('[itemtype="https://schema.org/FAQPage"]').length,
           internalLinks: [...document.querySelectorAll('main a[href], .related-reading a[href]')].map(n => ({ href: n.getAttribute('href'), anchor: n.textContent.trim() })).filter(l => l.href.startsWith('/')),
+          referenceLinks: [...document.querySelectorAll('main a[href]')].filter(n => /^https:\/\/(angular\.dev|learn\.microsoft\.com)\//.test(n.href)).map(n => ({ href: n.href, anchor: n.textContent.trim(), rel: n.rel })),
           overflow: document.documentElement.scrollWidth > innerWidth,
           brokenImages: [...document.querySelectorAll('main img')].filter(n => n.complete && !n.naturalWidth).map(n => n.getAttribute('src')),
         }));
         assert.equal(details.h1.length, 1, `${route}: H1 count`);
         details.metadataValid = details.titles.length === 1 && details.description.length === 1 && details.canonical.length === 1 && details.canonical[0] === `https://qllmsoft.com${route}`;
-        assert.ok(details.jsonLdTypes.includes('Service'), `${route}: Service JSON-LD`);
+        assert.ok(details.jsonLdTypes.includes(route.startsWith('/projects/') ? 'CreativeWork' : 'Service'), `${route}: appropriate JSON-LD`);
         assert.deepEqual(details.duplicateIds, [], `${route}: duplicate element IDs`);
         assert.equal(details.faqMicrodataCount, 0, `${route}: duplicate FAQ representation`);
-        const screenshot = `${route === '/' ? 'home' : route.slice(1)}-${width}.png`;
+        if (indexing) {
+          assert.ok(details.referenceLinks.length > 0, `${route}: useful official reference`);
+          assert.ok(details.referenceLinks.every(n => n.anchor.length > 8 && n.rel.includes('noopener')), `${route}: reference labels and safe new tabs`);
+          assert.ok(details.internalLinks.length >= 3, `${route}: contextual internal links`);
+        }
+        const screenshot = `${route === '/' ? 'home' : route.slice(1).replaceAll('/', '-')}-${width}.png`;
         await page.screenshot({ path: path.join(output, screenshot), fullPage: true });
         await page.screenshot({ path: path.join(output, screenshot.replace('.png', '-hero.png')) });
         results.push({ route, width, ...details, screenshot });
       }
     }
     const linkTargets = [];
-    for (const route of (navigationOnly ? [] : review ? ['/about', '/contact', '/blog', '/asp-net-core-development-services', '/blog/mobile-app-development-cost-in-pakistan', '/software-project-requirements-checklist', '/ai-document-management-software', '/blog/web-application-planning-and-architecture-guide'] : batch3 ? ['/blog/mobile-app-development-cost-in-pakistan', '/software-project-requirements-checklist', '/blog/custom-vs-saas-ecommerce-for-growing-smbs', '/api-development-services'] : batch2 ? ['/asp-net-core-development-services', '/blog/web-application-planning-and-architecture-guide'] : ['/web-application-development-services', '/api-development-services', '/blog/custom-vs-saas-ecommerce-for-growing-smbs', '/blog/asp-net-core-development'])) {
+    for (const route of (navigationOnly || apiOnly ? [] : review ? ['/about', '/contact', '/blog', '/asp-net-core-development-services', '/blog/mobile-app-development-cost-in-pakistan', '/software-project-requirements-checklist', '/ai-document-management-software', '/blog/web-application-planning-and-architecture-guide'] : batch3 ? ['/blog/mobile-app-development-cost-in-pakistan', '/software-project-requirements-checklist', '/blog/custom-vs-saas-ecommerce-for-growing-smbs', '/api-development-services'] : batch2 ? ['/asp-net-core-development-services', '/blog/web-application-planning-and-architecture-guide'] : ['/web-application-development-services', '/api-development-services', '/blog/custom-vs-saas-ecommerce-for-growing-smbs', '/blog/asp-net-core-development'])) {
       try {
-      await page.goto(`http://127.0.0.1:${server.address().port}${route}`, { waitUntil: 'networkidle0' });
+      await page.goto(`http://127.0.0.1:${server.address().port}${route}`, { waitUntil: 'domcontentloaded' });
       await page.waitForSelector('h1', { timeout: 10000 });
       const actual = await page.evaluate(() => ({ path: location.pathname, h1: document.querySelector('h1')?.textContent.trim(), canonical: document.querySelector('link[rel="canonical"]')?.href }));
       assert.equal(actual.path, route, 'Link destination redirected');
@@ -112,9 +130,20 @@ const server = http.createServer((req, res) => {
       }
     }
     const navigation = [];
-    fs.writeFileSync(path.join(output, 'results.json'), JSON.stringify({ presentationAttributesUnchanged: true, pageErrors: errors, linkTargets, navigation, results }, null, 2));
+    const legalTitles = [];
+    if (apiOnly) {
+      for (const [route, title] of [['/privacy-policy', 'Privacy Policy | QllmSoft'], ['/terms-of-services', 'Terms of Services | QllmSoft']]) {
+        await page.goto(`http://127.0.0.1:${server.address().port}${route}`, { waitUntil: 'domcontentloaded' });
+        await page.waitForFunction(title => document.title === title, {}, title);
+        const count = await page.evaluate(() => document.querySelectorAll('title').length);
+        assert.equal(count, 1, `${route}: title count`);
+        legalTitles.push({ route, title, count });
+      }
+      assert.ok(results.every(r => r.brokenImages.length === 0), 'API local images must load');
+    }
+    fs.writeFileSync(path.join(output, 'results.json'), JSON.stringify({ presentationAttributesUnchanged: true, pageErrors: errors, linkTargets, navigation, legalTitles, results }, null, 2));
     if (review) {
-      await page.goto(`http://127.0.0.1:${server.address().port}/`, { waitUntil: 'networkidle0' });
+      await page.goto(`http://127.0.0.1:${server.address().port}/`, { waitUntil: 'domcontentloaded' });
       await page.waitForFunction(() => document.querySelector('main h1')?.dataset.prerenderReady === 'true');
       for (const route of routes.slice(1)) {
         // Click the actual rendered link, preserving client-side routing.
@@ -133,8 +162,8 @@ const server = http.createServer((req, res) => {
         await page.waitForFunction(() => location.pathname === '/' && document.querySelector('link[rel="canonical"]')?.href === 'https://qllmsoft.com/');
       }
     }
-    fs.writeFileSync(path.join(output, 'results.json'), JSON.stringify({ presentationAttributesUnchanged: true, pageErrors: errors, linkTargets, navigation, results }, null, 2));
-    console.log(JSON.stringify({ presentationAttributesUnchanged: true, pageErrors: errors, linkTargets, checks: results.map(r => ({ route: r.route, width: r.width, metadataValid: r.metadataValid, descriptionCount: r.description.length, titleCount: r.titles.length, overflow: r.overflow, brokenImages: r.brokenImages, title: r.title })) }, null, 2));
+    fs.writeFileSync(path.join(output, 'results.json'), JSON.stringify({ presentationAttributesUnchanged: true, pageErrors: errors, linkTargets, navigation, legalTitles, results }, null, 2));
+    console.log(JSON.stringify({ presentationAttributesUnchanged: true, pageErrors: errors, linkTargets, legalTitles, checks: results.map(r => ({ route: r.route, width: r.width, metadataValid: r.metadataValid, descriptionCount: r.description.length, titleCount: r.titles.length, overflow: r.overflow, brokenImages: r.brokenImages, title: r.title })) }, null, 2));
     assert.equal(errors.length, 0, 'Browser JavaScript errors');
     assert.ok(linkTargets.every(r => !r.error), 'A link target did not render; see results.json');
     assert.ok(results.every(r => r.metadataValid), `Rendered metadata has duplicates; see ${path.relative(root, output)}/results.json`);

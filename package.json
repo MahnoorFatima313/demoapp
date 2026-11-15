@@ -159,10 +159,17 @@
       "/blog/what-is-natural-language-search-in-document-management",
       "/blog/how-to-export-metadata-from-pdf-to-excel-automatically",
       "/blog/is-aes-256-encryption-safe-enough-for-storing-sensitive-financial-documents",
-      "/blog/how-to-avoid-technical-debt-in-custom-web-software"
+      "/blog/how-to-avoid-technical-debt-in-custom-web-software",
+      "/projects/ai-document-management-system",
+      "/projects/biometric-attendance-management-system",
+      "/projects/human-resource-management-system",
+      "/projects/payroll-management-system",
+      "/projects/financial-management-system",
+      "/projects/logistics-fleet-management-system",
+      "/projects/inventory-management-system"
     ],
-    "skipThirdPartyRequests": true,
-    "waitFor": "h1:not([data-prerender-ready=\"false\"])"
+    "skipThirdPartyRequests": false,
+    "waitFor": "body:not(:has([data-prerender-ready=\"false\"]))"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

@@ -56,6 +56,24 @@ for (const match of blogSource.matchAll(/^  "([^"]+)": \{$/gm)) {
   }
 }
 
+// Project detail routes are parameterized in App.js. Read their actual data
+// rather than silently omitting them or guessing URLs from unrelated exports.
+const parser = require("@babel/parser");
+const traverse = require("@babel/traverse").default;
+const projectAst = parser.parse(
+  fs.readFileSync(path.join(projectRoot, "src", "data", "mock.js"), "utf8"),
+  { sourceType: "module", plugins: ["jsx"] },
+);
+traverse(projectAst, {
+  VariableDeclarator({ node }) {
+    if (node.id.name !== "projectsData") return;
+    for (const project of node.init.elements) {
+      const slug = project.properties.find(property => property.key.name === "slug")?.value.value;
+      if (slug) routes.add(`/projects/${slug}`);
+    }
+  },
+});
+
 const entries = [...routes].map((route) => {
   const location = `${siteUrl}${route}`;
   return (

@@ -20,6 +20,8 @@ import FounderNote from "../components/FounderNote";
 import { schemaOrganization } from "../data/schema";
 
 const PAGE_URL = "https://qllmsoft.com/legacy-system-modernization-services";
+const PAGE_TITLE = "Legacy System Modernization Services | QllmSoft";
+const PAGE_DESCRIPTION = "Modernize existing software with a plan for dependencies, business rules, data migration and release risk. Discuss an assessment of your legacy system.";
 const OG_IMAGE =
   "https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg";
 
@@ -249,28 +251,28 @@ const schemaBreadcrumb = {
 };
 const FAQ_DATA = [
   {
-    q: "What is legacy system modernization and why does it matter?",
-    a: "Legacy system modernization is the process of upgrading outdated software applications, infrastructure, or technology stacks to meet current performance, security, scalability, and integration requirements. Rather than rebuilding everything from scratch, modernization preserves valuable business logic while replacing the technical foundation, eliminating security vulnerabilities, reducing maintenance costs, and enabling cloud adoption, API connectivity, and modern user experience.",
+    q: "When should a legacy system be modernized?",
+    a: "Assess modernization when unsupported dependencies, difficult changes, unreliable integrations, or operational problems create a measurable risk. Identify the affected workflows and maintenance burden first. A targeted change may be enough; a complete rewrite should not be the default.",
   },
   {
-    q: "How do you modernize a legacy system without disrupting live operations?",
-    a: "We use a phased modernization approach , analyzing the system first, modernizing non-critical modules before core components, maintaining parallel operation during transition periods, and using feature flags and staged rollouts to minimize risk. Every modernization engagement includes a rollback plan and is executed during lower-traffic windows to protect operational continuity.",
+    q: "How do you reduce disruption during modernization?",
+    a: "Map business-critical workflows and external dependencies, then choose a release approach appropriate to the system. Rehearse data migration, reconcile records, test integrations, and agree on backups, rollback, and any necessary maintenance window. Phased work can reduce risk but cannot guarantee zero downtime.",
   },
   {
-    q: "What is the difference between refactoring, re-platforming, and rebuilding a legacy system?",
-    a: "Refactoring improves the internal code structure without changing external behaviour  ideal for systems with sound business logic but poor code quality. Re-platforming moves the application to a new infrastructure or framework with targeted improvements, balancing cost and impact. Rebuilding redesigns the application from scratch using modern architecture  justified when the legacy system fundamentally cannot support future business needs. QllmSoft recommends the right approach after a thorough assessment of your system's technical debt, business criticality, and modernization goals.",
+    q: "How do you choose between refactoring, replatforming and rebuilding?",
+    a: "Refactoring improves code while retaining its external behavior. Replatforming changes the runtime or hosting environment with selected application changes. Rebuilding replaces part or all of the application. Compare dependency compatibility, business requirements, operating costs, and the risk of each path before choosing.",
   },
   {
-    q: "Can you migrate our .NET Framework application to ASP.NET Core?",
-    a: "Yes. We specialise in .NET Framework to ASP.NET Core migrations assessing compatibility, refactoring controllers and data access layers, migrating authentication from Forms Auth to ASP.NET Core Identity, updating third-party dependencies, and implementing CI/CD pipelines for the modernized application. We preserve all business logic throughout the migration with zero data loss.",
+    q: "Can you move .NET Framework applications to modern .NET?",
+    a: "Start with the application model, dependencies, authentication, data access, and deployment environment. Some technologies need replacement rather than a direct upgrade. Validate business rules with regression tests and rehearse any data conversion before release.",
   },
   {
-    q: "How long does legacy system modernization typically take?",
-    a: "A focused re-platforming engagement  for example, migrating a .NET Framework web application to ASP.NET Core with cloud deployment  typically takes 8–16 weeks. A full re-architecture from monolith to microservices, including API design, service decomposition, and infrastructure migration, typically takes 20–36 weeks depending on system complexity. We provide a detailed timeline estimate following the initial assessment.",
+    q: "What affects modernization cost and timeline?",
+    a: "Code quality, undocumented rules, dependency compatibility, data volumes, test coverage, and integration access determine the effort. Discovery should identify uncertainties and a small pilot scope. Use the pilot results to refine estimates and release milestones.",
   },
   {
-    q: "What ROI can we expect from legacy system modernization?",
-    a: "Businesses typically see 30–60% reductions in annual maintenance costs within 12 months of modernization, alongside significant improvements in development velocity (new features shipped faster), system performance (faster response times and higher availability), and security posture (elimination of unpatched vulnerability exposure). The exact ROI depends on the current maintenance burden and the modernization scope  which we calculate during discovery.",
+    q: "How should we measure whether modernization helped?",
+    a: "Record a baseline for relevant workflows before making changes: failure rates, task completion time, response times, release effort, or maintenance incidents. Agree on acceptance criteria and measure the same workload afterward. Do not assume a fixed percentage saving or ROI.",
   },
 ];
 
@@ -299,16 +301,16 @@ const FAQItem = ({ faq, index }) => {
   return (
     <div
       className={`faq-item ${open ? "faq-item--open" : ""}`}
-      itemScope
-      itemProp="mainEntity"
-      itemType="https://schema.org/Question"
+
+
+
     >
       <button
         className="faq-question"
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
         aria-controls={id}
-        itemProp="name"
+
       >
         <span>{faq.q}</span>
         <span className="faq-icon" aria-hidden="true">
@@ -319,11 +321,11 @@ const FAQItem = ({ faq, index }) => {
         <div
           id={id}
           className="faq-answer"
-          itemScope
-          itemProp="acceptedAnswer"
-          itemType="https://schema.org/Answer"
+
+
+
         >
-          <p itemProp="text">{faq.a}</p>
+          <p >{faq.a}</p>
         </div>
       )}
     </div>
@@ -359,13 +361,10 @@ const LegacyModernization = () => {
   return (
     <>
       <Helmet>
-        <title>
-          Legacy System Modernization Services | Cloud Migration & .NET Upgrade
-          | QllmSoft
-        </title>
+        <title>{PAGE_TITLE}</title>
         <meta
           name="description"
-          content="QllmSoft provides expert legacy system modernization services , application re-architecture, cloud migration, .NET Framework to ASP.NET Core migration, monolith to microservices, database modernization, and UI/UX upgrades. Serving enterprises and SMBs worldwide. Free assessment."
+          content={PAGE_DESCRIPTION}
         />
         <meta
           name="keywords"
@@ -382,11 +381,11 @@ const LegacyModernization = () => {
         <meta property="og:site_name" content="QllmSoft" />
         <meta
           property="og:title"
-          content="Legacy System Modernization Services | Cloud Migration & .NET Upgrade | QllmSoft"
+          content={PAGE_TITLE}
         />
         <meta
           property="og:description"
-          content="Expert legacy system modernization , application re-architecture, cloud migration, .NET upgrade, database modernization. Zero-disruption, phased approach for enterprises and SMBs."
+          content={PAGE_DESCRIPTION}
         />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:width" content="1200" />
@@ -399,11 +398,11 @@ const LegacyModernization = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Legacy System Modernization Services | QllmSoft"
+          content={PAGE_TITLE}
         />
         <meta
           name="twitter:description"
-          content="Application re-architecture, cloud migration, .NET upgrade, and database modernization, zero disruption, phased delivery."
+          content={PAGE_DESCRIPTION}
         />
         <meta name="twitter:image" content={OG_IMAGE} />
         <script type="application/ld+json">{JSON.stringify(schemaOrganization)}</script>
@@ -448,12 +447,7 @@ const LegacyModernization = () => {
                 <em>Engineered for Scale</em>
               </h1>
               <p className="ip-hero__sub">
-                Don't let technical debt choke your growth. QllmSoft securely
-                refactors fragmented, costly legacy architectures into{" "}
-                <strong>high performance, cloud native applications</strong>.
-                From decoupling rigid monolithic environments to deploying
-                scalable microservices, we optimize software efficiency with
-                zero operational disruption.
+                Improve an existing system without assuming it needs a complete rebuild. QllmSoft assesses dependencies, business rules, integrations, and deployment constraints, then scopes the changes and release plan around the workflows you need to protect.
               </p>
               <div className="ip-hero__buttons">
                 <Link
@@ -474,7 +468,7 @@ const LegacyModernization = () => {
                 </a>
               </div>
               <div className="ip-hero__trust">
-                <span>✓ Zero Disruption Phased Approach</span>
+                <span>✓ Phased delivery and recovery planning</span>
                 <span className="ip-hero__trust-sep" />
                 <span>✓ Business Logic Preserved</span>
                 <span className="ip-hero__trust-sep" />
@@ -527,10 +521,10 @@ const LegacyModernization = () => {
               ))}
               <div className="ip-hero__stats">
                 {[
-                  { num: "10+", label: "Years Experience" },
-                  { num: "30–60%", label: "Maintenance Cost Reduction" },
-                  { num: "0", label: "Downtime Target" },
-                  { num: "5★", label: "Client Rating" },
+                  { num: "Scope", label: "Role and deliverables" },
+                  { num: "Code", label: "Dependencies reviewed" },
+                  { num: "Test", label: "Acceptance criteria" },
+                  { num: "Plan", label: "Release responsibilities" },
                 ].map((s) => (
                   <div key={s.label} className="ip-hero__stat">
                     <span className="ip-hero__stat-num">{s.num}</span>
@@ -548,52 +542,33 @@ const LegacyModernization = () => {
             <div className="ip-intro__layout">
               <div className="ip-intro__text">
                 <h2 id="intro-heading">
-                  Legacy System Modernization Services That Preserve Business
-                  Logic While Eliminating Technical Debt
+                  Assess What to Retain, Upgrade or Replace
                 </h2>
                 <p>
-                  Legacy systems are rarely just a technology problem. They are
-                  a business risk. Every year a mission-critical application
-                  runs on an unsupported .NET Framework version, an end-of-life
-                  database, or a tightly coupled monolithic architecture is
-                  another year of growing vulnerability exposure, spiralling
-                  maintenance costs, and lost developer productivity. And every
-                  integration request that your legacy system blocks is a
-                  feature your competitors are shipping instead.
+                  An older system can still contain valuable business rules and reliable workflows. The question is which limitations create an actual operational risk: unsupported components, recurring incidents, slow changes, or integrations that no longer meet business needs. Document that baseline before choosing a modernization approach.
                 </p>
                 <p>
-                  At QllmSoft, we approach legacy system modernization
-                  differently from the typical "big bang rewrite" that has
-                  derailed many modernization initiatives. We use a{" "}
-                  <strong>phased, risk-first methodology</strong> ,
-                  comprehensive technical assessment first, targeted
-                  module-by-module modernization second, and validated
-                  performance improvement at every stage. Business logic that
-                  has years of refinement embedded in it is preserved and
-                  re-expressed in modern, maintainable code not discarded.
+                  Use an assessment to identify dependencies and undocumented rules. A <strong>phased, risk-first plan</strong> can start with a small pilot and use its results to refine the scope. Validate required behavior, data conversion, and operating costs instead of assuming that a new framework alone will solve the problem.
                 </p>
                 <p>
-                  We have modernized financial platforms, ERP systems,
-                  healthcare applications, and enterprise CRM systems for
-                  clients across the globe - .NET Framework to{" "}
-                  <Link to="/hire-dotnet-developers-pakistan">
+                  For .NET applications, review the path from .NET Framework to{" "}
+                  <Link to="/asp-net-core-development-services">
                     ASP.NET Core
                   </Link>{" "}
-                  migrations, Java EE to Spring Boot upgrades, monolith
-                  decomposition, and full{" "}
+                  alongside dependency compatibility and deployment requirements. If you need a separate delivery team, review our{" "}
                   <Link to="/outsource-software-development-to-pakistan">
-                    cloud migration to Azure and AWS
+                    software outsourcing engagement options
                   </Link>
                   . Explore our{" "}
                   <Link to="/api-development-services">
                     API development services
                   </Link>{" "}
                   for post-modernization integration capability.
-                </p>
+                 For .NET compatibility and upgrade planning, consult <a href="https://learn.microsoft.com/en-us/dotnet/core/porting/" target="_blank" rel="noopener noreferrer">Microsoft's application upgrade guidance</a>. For release considerations, see our <Link to="/blog/legacy-system-modernization-without-downtime-or-data-loss">legacy migration planning guide</Link>.</p>
                 <div className="ip-intro__badges">
                   {[
-                    "Phased Zero-Disruption Approach",
-                    "Business Logic 100% Preserved",
+                    "Phased Release Planning",
+                    "Business Rules Reviewed",
                     "Rollback Planning Included",
                     "Post-Migration Optimization",
                   ].map((b) => (
@@ -611,27 +586,27 @@ const LegacyModernization = () => {
                 {[
                   {
                     Icon: IconDollarSign,
-                    num: "30–60%",
+                    num: "Scope",
                     label:
-                      "Reduction in annual maintenance costs post-modernization",
+                      "Role and deliverables",
                   },
                   {
                     Icon: IconShield,
-                    num: "100%",
+                    num: "Code",
                     label:
-                      "Critical vulnerabilities eliminated in assessed systems",
+                      "Dependencies reviewed",
                   },
                   {
                     Icon: IconTrending,
-                    num: "3–5×",
+                    num: "Test",
                     label:
-                      "Faster feature delivery after architectural modernization",
+                      "Acceptance criteria",
                   },
                   {
                     Icon: IconRefreshCw,
-                    num: "0",
+                    num: "Plan",
                     label:
-                      "Target business disruption days during phased migration",
+                      "Release responsibilities",
                   },
                 ].map((s, i) => (
                   <div key={i} className="ip-stat-card">
@@ -782,12 +757,12 @@ const LegacyModernization = () => {
                 {
                   Icon: IconCode,
                   title: "Legacy Application Assessment & Roadmapping",
-                  desc: "Every engagement begins with a comprehensive technical audit, codebase analysis, dependency mapping, security vulnerability assessment, and business risk evaluation. We deliver a clear modernization roadmap with phased milestones, cost estimates, and ROI projections before any development begins.",
+                  desc: "Every engagement begins with a comprehensive technical audit, codebase analysis, dependency mapping, security vulnerability assessment, and business risk evaluation. We deliver a clear modernization roadmap with phased milestones, cost drivers, dependencies, and measurable acceptance criteria before wider implementation.",
                   tags: [
                     "Codebase Audit",
                     "Dependency Review",
                     "Risk Analysis",
-                    "ROI Projection",
+                    "Cost Drivers",
                     "Phased Roadmap",
                   ],
                 },
@@ -818,11 +793,11 @@ const LegacyModernization = () => {
                 {
                   Icon: IconLayout,
                   title: "UI/UX Modernization",
-                  desc: "We rebuild legacy user interfaces using modern frontend frameworks  React, Angular, or Blazor  creating mobile-responsive, accessible, and intuitive interfaces that reduce training time, improve staff productivity, and meet WCAG 2.1 accessibility standards for customer-facing applications.",
+                  desc: "Update the interface around the tasks people need to complete. Choose React, Angular or Blazor according to the application and team, then test navigation, forms, responsive layouts and agreed accessibility requirements with representative users.",
                   tags: [
                     "React / Angular",
                     "Mobile-Responsive",
-                    "WCAG Accessibility",
+                    "Accessibility Review",
                     "Figma Prototyping",
                     "Component Library",
                   ],
@@ -986,7 +961,7 @@ const LegacyModernization = () => {
           <div className="container">
             <div className="section-title">
               <h2 id="process-heading">
-                How We Modernize Legacy Systems Without Disrupting Your Business
+                How We Modernize Legacy Systems With Release and Recovery Planning
               </h2>
               <p>
                 A risk-first, phased methodology that protects operational
@@ -1030,7 +1005,7 @@ const LegacyModernization = () => {
                   n: "06",
                   icon: "bi-bar-chart",
                   title: "Post-Migration Monitoring & Optimization",
-                  desc: "Post-migration, we monitor performance metrics, error rates, and security telemetry delivering a 30-day post-migration health report and implementing optimizations identified from real production usage patterns.",
+                  desc: "Agree on a post-migration monitoring period, alert ownership and support responsibilities before release. Review performance metrics, error rates and security events against the baseline, then prioritize changes using production evidence.",
                 },
               ].map((step, i) => (
                 <li
@@ -1074,27 +1049,27 @@ const LegacyModernization = () => {
                 {
                   Icon: IconCode,
                   title: "Deep .NET & Enterprise Technology Expertise",
-                  desc: "Our engineers are specialists in .NET Framework to ASP.NET Core migrations, Java EE modernization, and legacy database upgrades  with 10+ years of production experience in enterprise environments where getting it wrong is not an option.",
+                  desc: "Review relevant application experience before assigning the work. For .NET systems, assess framework dependencies, database access, integrations and deployment constraints together rather than treating the upgrade as a version change alone.",
                 },
                 {
                   Icon: IconRefreshCw,
                   title: "Phased Approach That Protects Business Continuity",
-                  desc: "We never modernize mission-critical systems as a single high-risk rewrite. Every engagement uses a phased approach with parallel operation, staged cutover, and rollback planning  protecting your business at every step.",
+                  desc: "Choose phased replacement, parallel operation or a planned cutover according to system dependencies and business tolerance for disruption. Document recovery steps and rehearse the release approach before changing production.",
                 },
                 {
                   Icon: IconShield,
                   title: "Security-First Modernization Standards",
-                  desc: "We treat modernization as a security remediation opportunity  eliminating known vulnerabilities, implementing modern authentication standards, and hardening infrastructure security alongside every architectural improvement.",
+                  desc: "Review unsupported components, authentication, authorization, secrets and infrastructure settings. Prioritize identified risks and verify the agreed controls; changing the architecture does not by itself establish security.",
                 },
                 {
                   Icon: IconCloud,
                   title: "Cloud-Native Deployment Expertise",
-                  desc: "We are experienced with Microsoft Azure, AWS, and hybrid cloud environments deploying modernized applications with containerization, auto-scaling, managed databases, and cost optimization from day one.",
+                  desc: "Compare the current hosting environment with Azure, AWS or hybrid options using workload needs, operating skills, data requirements and expected costs. Containers and autoscaling are options to assess rather than default requirements.",
                 },
                 {
                   Icon: IconTrending,
-                  title: "Measurable ROI at Every Phase",
-                  desc: "Every modernization phase has measurable success criteria  performance benchmarks, maintenance cost reduction targets, and developer productivity metrics. We do not just modernize; we prove the value of each investment.",
+                  title: "Acceptance Criteria for Each Phase",
+                  desc: "Agree on success criteria before implementation. Depending on the problem, measure response times, release reliability, support effort or workflow completion against the baseline. Use the evidence to decide whether to expand the next phase.",
                 },
               ].map((w, i) => (
                 <article
@@ -1118,16 +1093,16 @@ const LegacyModernization = () => {
         <TestimonialSection />
 
         <FounderNote
-          title="Real Production Stability, No Pitch Deck Promises"
-          message="At QllmSoft, we don't look at legacy modernization through the lens of a generic code vendor. Your existing systems represent a decade of hard earned operational intelligence they shouldn't be blindly thrown out for a trendy, unstable rewrite that falls apart the moment it hits production workloads. I personally lead our elite engineering squad through a disciplined, phased remediation process. Operating from our secure tech center, we focus on surgically extracting monolithic debt and upgrading deprecated frameworks into rock solid, cloud native architectures. We protect your business logic with zero downtime execution because your technology should drive bottom line revenue, not engineering overhead."
+          title="Start with the workflows that must keep working"
+          message="A modernization plan should make the existing rules, dependencies, and operating constraints visible. Use an assessment and a small pilot to test assumptions, then agree on data validation, release acceptance, and recovery before wider changes."
         />
 
         {/* FAQ */}
         <section
           className="section csd-faq ip-faq"
           aria-labelledby="faq-heading"
-          itemScope
-          itemType="https://schema.org/FAQPage"
+
+
         >
           <div className="container">
             <div className="section-title">
@@ -1151,7 +1126,7 @@ const LegacyModernization = () => {
           <div className="container ip-cta__inner">
             <div className="ip-cta__left">
               <h2 id="cta-heading">
-                Ready to Modernize Your Legacy System Without Disruption?
+                Ready to Modernize Your Legacy System With a Clear Release Plan?
               </h2>
               <p className="ip-cta__desc">
                 Whether you need a .NET migration, a cloud transition, a
@@ -1180,9 +1155,9 @@ const LegacyModernization = () => {
               <div className="ip-cta__perks">
                 {[
                   "✓ Free technical assessment",
-                  "✓ Phased zero-disruption approach",
-                  "✓ Business logic 100% preserved",
-                  "✓ 30-day post-migration support",
+                  "✓ Phased release planning",
+                  "✓ Business rules reviewed",
+                  "✓ Support period agreed before release",
                 ].map((p) => (
                   <span key={p}>{p}</span>
                 ))}
@@ -1203,7 +1178,7 @@ const LegacyModernization = () => {
                   rel="noopener noreferrer"
                   className="ip-cta__contact-row"
                 >
-                  💬 WhatsApp - replies in 5 mins
+                  💬 WhatsApp - discuss your requirements
                 </a>
                 <a href="tel:+923348229288" className="ip-cta__contact-row">
                   📞 +92 334 8229288

@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { ArrowLeft, Tag, CheckCircle, TrendingUp, Layers, Code2 } from "lucide-react";
 
 import { Abstract3D } from "./Projects";
-import "./Projects.css"; 
+import "./Projects.css";
 import { projectsData } from "../data/mock";
 import { buildBreadcrumb } from "../data/schema";
 import "./ProjectDetails.css";
@@ -79,6 +79,32 @@ const ProjectDetails = () => {
                 <p className="paragraph">{project.approach}</p>
                 <h3>The result</h3>
                 <p className="paragraph">{project.result}</p>
+                {project.contextSections?.map(section => (
+                  <React.Fragment key={section.heading}>
+                    <h3>{section.heading}</h3>
+                    <p className="paragraph">{section.text}</p>
+                  </React.Fragment>
+                ))}
+                {project.relatedLinks && (
+                  <p className="paragraph">
+                    Related requirements:{" "}
+                    {project.relatedLinks.map((item, index) => (
+                      <React.Fragment key={item.path}>
+                        {index > 0 && ", "}<Link to={item.path}>{item.label}</Link>
+                      </React.Fragment>
+                    ))}.
+                  </p>
+                )}
+                {project.slug === 'inventory-management-system' && (
+                  <p className="paragraph">
+                    For implementation planning, Microsoft's <a href="https://learn.microsoft.com/en-us/ef/core/saving/transactions" target="_blank" rel="noopener noreferrer">Entity Framework Core transaction guidance</a> explains how related database changes can succeed or roll back together. Transaction boundaries are one consideration when designing stock updates; they do not replace reconciliation and operational checks.
+                  </p>
+                )}
+                {project.slug === 'logistics-fleet-management-system' && (
+                  <p className="paragraph">
+                    When planning a new carrier integration, consult Microsoft's <a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-requests" target="_blank" rel="noopener noreferrer">ASP.NET Core HTTP client guidance</a> alongside the carrier's API documentation. Authentication, timeouts and duplicate-request handling need agreement for each integration; this is planning guidance rather than a claim about this project's implementation.
+                  </p>
+                )}
                 {project.productUrl && (
                   <>
                     <h3>Our product: QllmDocs</h3>

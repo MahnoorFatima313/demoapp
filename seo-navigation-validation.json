@@ -1,0 +1,42 @@
+{
+  "scope": "Client-rendered navigation using contextual homepage links",
+  "pageErrors": [],
+  "navigation": [
+    {
+      "route": "/custom-software-development-services",
+      "titles": 1,
+      "descriptions": 1,
+      "canonicals": 1
+    },
+    {
+      "route": "/api-development-services",
+      "titles": 1,
+      "descriptions": 1,
+      "canonicals": 1
+    },
+    {
+      "route": "/web-application-development-services",
+      "titles": 1,
+      "descriptions": 1,
+      "canonicals": 1
+    },
+    {
+      "route": "/website-development-services",
+      "titles": 1,
+      "descriptions": 1,
+      "canonicals": 1
+    },
+    {
+      "route": "/mobile-app-development",
+      "titles": 1,
+      "descriptions": 1,
+      "canonicals": 1
+    },
+    {
+      "route": "/ecommerce-development-services",
+      "titles": 1,
+      "descriptions": 1,
+      "canonicals": 1
+    }
+  ]
+}
