@@ -1647,7 +1647,7 @@
   border: 1px solid rgba(255, 255, 255, .86);
   border-radius: 24px;
   background: linear-gradient(145deg, #f8fafd, #e8eef5);
-  box-shadow: 16px 16px 36px rgba(30, 50, 77, .14), -12px -12px 30px rgba(255, 255, 255, .92), inset 0 1px 0 #fff;
+  box-shadow: 16px 16px 36px rgba(30, 50, 77, .14), -12px -12px 30px rgba(10, 18, 36, 0.412), inset 0 1px 0 #0112226c;
 }
 
 .services-trust-item {
