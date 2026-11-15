@@ -47,46 +47,17 @@ const BlogSection = ({ heading, paragraphs, list, html, table, detailedList }) =
           paragraphs.map((p, i) => <SectionParagraph key={i} text={p} />)}
 
         {detailedList && (
-          <div
-            className="detailed-blog-list"
-            style={{ marginTop: "1.5rem", marginBottom: "1.5rem" }}
-          >
+          <div className="detailed-blog-list">
             {detailedList.map((item, itemIdx) => (
-              <div
-                key={itemIdx}
-                className="detailed-blog-card"
-                style={{
-                  padding: "15px",
-                  background: "#f9f9f9",
-                  borderRadius: "8px",
-                  marginBottom: "15px",
-                  borderLeft: "4px solid #0066cc",
-                }}
-              >
-                <h3 style={{ margin: "0 0 5px 0", color: "#111" }}>{item.name}</h3>
-                <p
-                  style={{
-                    fontSize: "12px",
-                    color: "#666",
-                    fontWeight: "bold",
-                    margin: "0 0 8px 0",
-                  }}
-                >
+              <div key={itemIdx} className="detailed-blog-card">
+                <h3 className="detailed-blog-card__name">{item.name}</h3>
+                <p className="detailed-blog-card__hub">
                   HUB: {item.hub}
                 </p>
-                <p style={{ margin: "0 0 8px 0", fontSize: "14px" }}>
+                <p className="detailed-blog-card__specialties">
                   <strong>Specialties:</strong> {item.specialties}
                 </p>
-                <p
-                  style={{
-                    fontStyle: "italic",
-                    color: "#444",
-                    margin: "0",
-                    background: "#fff",
-                    padding: "10px",
-                    borderRadius: "4px",
-                  }}
-                >
+                <p className="detailed-blog-card__insight">
                   "{item.insight}"
                 </p>
               </div>

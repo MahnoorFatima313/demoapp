@@ -11,6 +11,7 @@ import {
   authorId,
   personSchema,
 } from "../data/authorsData";
+import ParticleField from "../components/ParticleField";
 import "./AuthorPage.css";
 
 const SITE = "https://qllmsoft.com";
@@ -81,13 +82,11 @@ const AuthorPage = () => {
 
       {/* Hero */}
       <section className="author-hero">
-        <div className="author-shapes" aria-hidden="true">
-          <span className="shape shape--blob"></span>
-          <span className="shape shape--ring"></span>
-          <span className="shape shape--triangle"></span>
-          <span className="shape shape--dots"></span>
-          <span className="shape shape--square"></span>
-        </div>
+        <ParticleField
+          palette="dark"
+          density={10000}
+          className="author-hero-particles"
+        />
 
         <div className="container author-hero__inner">
           <div className="author-avatar">

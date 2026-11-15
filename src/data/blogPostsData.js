@@ -78,6 +78,9 @@ import aiEnquiryRoadmap from '../assets/Blog_Imgs/custom-ai-project-implementati
 import eduBuyArchitecture from '../assets/Blog_Imgs/lms-sis-fee-system-architecture.webp';
 import healthcareVendorHero from '../assets/Blog_Imgs/choose-ai-healthcare-software-company-hero.webp';
 import healthcareVendorChecklist from '../assets/Blog_Imgs/ai-healthcare-vendor-evaluation-checklist.webp';
+import dotnet8EosHero from '../assets/Blog_Imgs/dotnet-8-end-of-support-hero.webp';
+import dotnet8EosTimeline from '../assets/Blog_Imgs/dotnet-support-timeline.webp';
+
 
  
 
@@ -8882,6 +8885,321 @@ Decision:        Meet target = proceed. Miss target = adjust or stop.</code></pr
           "When choosing an AI healthcare software development company you need to find a balance between technical ability, clinical knowledge, security, integration and long term ownership. Be clear on what you want from your business and ensure they can prove what they say. Consider how the solution will perform in a real healthcare environment.",
           "Choosing the right partner can help your medical business implement AI responsibly, keeping patient data safe and creating software that will be useful as your needs change."
         ]
+      }
+    ]
+  },
+
+
+  // ══════════════════════════════════════════════════════════
+  // .NET 8 END OF SUPPORT: WHAT TO DO NOW
+  // ══════════════════════════════════════════════════════════
+  "dotnet-8-end-of-support-what-to-do-now": {
+    author: "mahnoor-fatima",
+    title: ".NET 8 End of Support: What to Do Now (Upgrade Guide)",
+    seoTitle: ".NET 8 End of Support: What to Do Now (Upgrade Guide)",
+    description: ".NET 8 end of support passed on November 10, 2026. See what to do now: assess risk, upgrade to .NET 10 step by step, and stay secure. Checklist included.",
+    canonicalUrl: `${BLOG_BASE}/dotnet-8-end-of-support-what-to-do-now`,
+    category: "Development",
+    date: "November 14, 2026",
+    dateModified: "November 14, 2026",
+    readTime: "12 min read",
+    image: dotnet8EosHero,
+    imageMeta: {
+      alt: ".NET 8 end of support: .NET 8 ended on November 10, 2026 with no security patches, and .NET 10 LTS is supported until November 2028",
+      caption: ".NET 8 has reached end of support. Here is what to do now.",
+      width: 1200,
+      height: 675
+    },
+
+    secondaryImage: dotnet8EosTimeline,
+    secondaryImageMeta: {
+      alt: "Support timeline: .NET 8 and .NET 9 both ended support on November 10, 2026, while .NET 10 LTS is supported until November 2028",
+      caption: ".NET support timeline: where your version stands."
+    },
+    seoMeta: {
+      ogType: "article",
+      ogTitle: ".NET 8 End of Support: What to Do Now | QllmSoft",
+      ogDescription: ".NET 8 and .NET 9 reached end of support on November 10, 2026. A practical guide: find affected apps, assess risk, upgrade to .NET 10 step by step and reduce exposure while you do.",
+      twitterCard: "summary_large_image",
+      robots: "index, follow",
+      keywords: ".NET 8 end of support what to do now, .NET 8 end of life, upgrade .NET 8 to .NET 10, .NET 8 EOL, migrate to .NET 10, .NET 9 end of support, .NET upgrade checklist"
+    },
+    schemas: [
+      breadcrumb("dotnet-8-end-of-support-what-to-do-now", ".NET 8 End of Support: What to Do Now"),
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": ".NET 8 End of Support: What to Do Now (Upgrade Guide)",
+        "description": "What .NET 8 end of support means, how to find and prioritize affected applications, and how to upgrade to .NET 10 safely.",
+        "image": [dotnet8EosHero, dotnet8EosTimeline],
+        "datePublished": "2026-11-14T09:00:00+05:00",
+        "dateModified": "2026-11-14T09:00:00+05:00",
+        "author": articleAuthorSchema("mahnoor-fatima"),
+        "publisher": publisherSchema,
+        "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/dotnet-8-end-of-support-what-to-do-now` }
+      }
+    ],
+    internalLinks: [
+      int("/asp-net-core-development-services", "ASP.NET Core Development Services"),
+      int("/hire-dotnet-developers-pakistan", "Hire .NET Developers in Pakistan"),
+      int("/blog/dotnet-10-aot-compilation-performance-benefits", ".NET 10 AOT Compilation: Performance Benefits"),
+      int("/blog/legacy-system-modernization-without-downtime-or-data-loss", "Legacy System Modernization Without Downtime"),
+      int("/blog/how-to-avoid-technical-debt-in-custom-web-software", "How to Avoid Technical Debt in Custom Web Software"),
+      int("/blog/how-to-vet-dotnet-developers-pakistan", "Hire .NET Developers in Pakistan: How to Vet Candidates")
+    ],
+    externalLinks: [
+      { href: "https://devblogs.microsoft.com/dotnet/dotnet-8-9-end-of-support/", label: "Microsoft .NET Blog: .NET 8 and .NET 9 end of support" },
+      { href: "https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core", label: "Microsoft: .NET support policy" },
+      { href: "https://learn.microsoft.com/en-us/dotnet/core/compatibility/10.0", label: "Microsoft Docs: Breaking changes in .NET 10" },
+      { href: "https://learn.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview", label: "Microsoft Docs: .NET Upgrade Assistant" }
+    ],
+
+    sections: [
+      {
+        heading: "What Just Happened to .NET 8",
+        paragraphs: [
+          "On November 10, 2026, .NET 8 reached the end of its support window. Microsoft announced that .NET 9 ended on the same day, so every application still running on either version is now outside support. If your team is searching for what to do about .NET 8 end of support, the short version is this: nothing breaks today, but from now on you are the one carrying the security risk, and the longer you wait the more expensive the upgrade becomes.",
+          "This guide explains what end of support really means, how to find and rank the applications affected, a step-by-step path to .NET 10, and what to do if you cannot upgrade immediately. It is written for engineering leads, CTOs and business owners who run .NET systems."
+        ]
+      },
+      {
+        heading: "Quick Answer: What Should You Do Now?",
+        html: `
+          <div style="background:#eff6ff;padding:16px 20px;border-radius:8px;margin:0 0 20px 0;">
+            <p><strong>Short answer</strong></p>
+            <ul>
+              <li><strong>Your apps still run,</strong> but .NET 8 and .NET 9 no longer receive security fixes or technical support from Microsoft.</li>
+              <li><strong>Inventory first.</strong> Find every project, container image and build agent that still targets .NET 8 or .NET 9.</li>
+              <li><strong>Prioritize by exposure.</strong> Internet-facing APIs and anything that handles sensitive data go first.</li>
+              <li><strong>Upgrade to .NET 10,</strong> the long-term support release supported until November 2028. Moving straight from 8 to 10 is fine, as long as you review the breaking changes for both releases.</li>
+              <li><strong>If you cannot upgrade this month,</strong> reduce exposure, set a firm deadline and monitor for new .NET vulnerabilities.</li>
+            </ul>
+          </div>
+          <p><strong>In this guide</strong></p>
+          <ol>
+            <li><a href="#what-it-means">What end of support means in practice</a></li>
+            <li><a href="#risk">Who is most at risk</a></li>
+            <li><a href="#inventory">Step 1: Find everything that still uses .NET 8</a></li>
+            <li><a href="#upgrade">Step 2: Upgrade to .NET 10</a></li>
+            <li><a href="#pipeline">Step 3: Update containers and pipelines</a></li>
+            <li><a href="#test">Step 4: Test and roll out safely</a></li>
+            <li><a href="#cannot-yet">If you cannot upgrade yet</a></li>
+            <li><a href="#plan">A 30-60-90 day plan</a></li>
+            <li><a href="#help">When to bring in help</a></li>
+            <li><a href="#faq">Frequently asked questions</a></li>
+          </ol>
+        `
+      },
+      {
+        heading: "What .NET 8 End of Support Means in Practice",
+        html: `
+          <span id="what-it-means"></span>
+          <p>According to Microsoft's <a href="https://devblogs.microsoft.com/dotnet/dotnet-8-9-end-of-support/" target="_blank" rel="noopener noreferrer">announcement</a>, applications built on .NET 8 or .NET 9 will continue to run after November 10, 2026, but Microsoft no longer issues security updates or provides technical support for them. The timeline above shows how the versions line up.</p>
+          <p>In practical terms:</p>
+          <ul>
+            <li><strong>Nothing stops working.</strong> There is no switch that disables your apps, so there is no emergency outage.</li>
+            <li><strong>New vulnerabilities will not be fixed for you.</strong> When a security issue is found in the runtime or in ASP.NET Core, the fix will ship only for supported versions. Unsupported versions stay exposed.</li>
+            <li><strong>Support is gone.</strong> If you hit a bug in the runtime, you cannot rely on Microsoft support for .NET 8 or .NET 9.</li>
+            <li><strong>Tooling will move on.</strong> Microsoft has said Visual Studio will mark the .NET 8 and .NET 9 components as out of support, and ecosystem libraries tend to drop older targets over time.</li>
+            <li><strong>Compliance questions follow.</strong> Auditors and customers increasingly ask whether your software runs on supported components, so end-of-support runtimes can become a finding.</li>
+          </ul>
+          <p>Exactly why .NET 8 ended: it is a long-term support release, which in the <a href="https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core" target="_blank" rel="noopener noreferrer">.NET support policy</a> means three years, not indefinite support. .NET 9 was a standard-term release with a 24-month window, and both windows closed on the same day.</p>
+        `
+      },
+      {
+        heading: "Who Is Most at Risk and What to Fix First",
+        html: `<span id="risk"></span><p>Not every application carries the same risk. Use this table to rank your estate so that you spend effort where an unpatched runtime would hurt most.</p>`,
+        table: {
+          headers: ["Situation", "Risk level", "Why", "Suggested priority"],
+          rows: [
+            ["Internet-facing API or website on .NET 8 or 9", "High", "Directly reachable by attackers, and any future runtime flaw stays open", "Upgrade first, within weeks"],
+            ["Apps handling payments, health or personal data", "High", "Compliance exposure on top of security risk", "Upgrade first, document the plan"],
+            ["Internal web apps behind a VPN", "Medium", "Smaller attack surface, but internal threats and lateral movement still matter", "Upgrade in the next cycle"],
+            ["Background services and scheduled jobs", "Medium", "Often forgotten, but they hold credentials and data access", "Include in the inventory and schedule"],
+            ["Desktop apps (WPF, WinForms) on .NET 8", "Medium", "Lower network exposure, but still unsupported", "Upgrade with the next release"],
+            ["Container images and CI build agents", "Medium", "Base images and SDKs on old versions slow every future upgrade", "Update together with the apps"],
+            ["Old .NET Framework apps (4.x)", "Separate issue", "Different support model, usually tied to Windows, but a good time to plan modernization", "Plan modernization separately"]
+          ]
+        }
+      },
+      {
+        heading: "Step 1: Find Everything That Still Uses .NET 8",
+        html: `
+          <span id="inventory"></span>
+          <p>You cannot upgrade what you cannot see. Spend the first day building an inventory. These commands are a starting point, and you should adapt them to your repositories and tools.</p>
+          <p><strong>Find target frameworks in your source code (Linux, macOS or Git Bash):</strong></p>
+          <pre style="background:#0f172a;color:#e2e8f0;padding:16px;border-radius:8px;overflow-x:auto;font-size:14px;line-height:1.6;"><code># Every project and the framework it targets
+grep -R --include=*.csproj -E "&lt;TargetFrameworks?&gt;" .
+
+# Pinned SDK versions
+grep -R --include=global.json "version" .
+
+# Container images
+grep -R --include=Dockerfile -E "mcr.microsoft.com/dotnet" .</code></pre>
+          <p><strong>PowerShell equivalent:</strong></p>
+          <pre style="background:#0f172a;color:#e2e8f0;padding:16px;border-radius:8px;overflow-x:auto;font-size:14px;line-height:1.6;"><code>Get-ChildItem -Recurse -Filter *.csproj |
+  Select-String -Pattern "&lt;TargetFrameworks?&gt;" |
+  Select-Object Path, Line</code></pre>
+          <p><strong>Check what is installed on a server or build agent:</strong></p>
+          <pre style="background:#0f172a;color:#e2e8f0;padding:16px;border-radius:8px;overflow-x:auto;font-size:14px;line-height:1.6;"><code>dotnet --list-runtimes
+dotnet --list-sdks</code></pre>
+          <p><strong>Check your dependencies for known problems:</strong></p>
+          <pre style="background:#0f172a;color:#e2e8f0;padding:16px;border-radius:8px;overflow-x:auto;font-size:14px;line-height:1.6;"><code>dotnet list package --vulnerable --include-transitive
+dotnet list package --outdated</code></pre>
+          <p>Do not forget the places that are easy to miss: CI and CD pipeline definitions, Azure Functions or other hosting configuration, scheduled jobs, internal tools that nobody owns, and third-party applications you run that were built on .NET. For vendor software, ask the supplier when they will ship a version on .NET 10.</p>
+          <p>Record each finding in a simple register with the owner, the framework, the exposure and the target date. That register becomes your upgrade plan.</p>
+        `
+      },
+      {
+        heading: "Step 2: Upgrade to .NET 10",
+        html: `
+          <span id="upgrade"></span>
+          <p>.NET 10 is a long-term support release supported until November 2028, so it is the right target for almost every team. You do not need to stop at .NET 9 on the way. Microsoft recommends upgrading to .NET 10, and you can go from .NET 8 directly. The one rule is that you must review breaking changes for every release you skip, which here means both .NET 9 and .NET 10.</p>
+          <h3>Make a plan for each application</h3>
+          <ol>
+            <li><strong>Create a branch</strong> and make sure the existing test suite passes on .NET 8 before you change anything. A clean starting point makes every later failure meaningful.</li>
+            <li><strong>Read the breaking changes</strong> for <a href="https://learn.microsoft.com/en-us/dotnet/core/compatibility/10.0" target="_blank" rel="noopener noreferrer">.NET 10</a> and for .NET 9, and note the ones that touch features you use.</li>
+            <li><strong>Optionally run the analyzer.</strong> The <a href="https://learn.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview" target="_blank" rel="noopener noreferrer">.NET Upgrade Assistant</a> can help find issues in larger solutions, but treat its output as suggestions.</li>
+            <li><strong>Change the target framework</strong> and update packages.</li>
+            <li><strong>Build, fix and test</strong> until everything is green.</li>
+          </ol>
+          <h3>The core change</h3>
+          <pre style="background:#0f172a;color:#e2e8f0;padding:16px;border-radius:8px;overflow-x:auto;font-size:14px;line-height:1.6;"><code>&lt;!-- Before --&gt;
+&lt;PropertyGroup&gt;
+  &lt;TargetFramework&gt;net8.0&lt;/TargetFramework&gt;
+&lt;/PropertyGroup&gt;
+
+&lt;!-- After --&gt;
+&lt;PropertyGroup&gt;
+  &lt;TargetFramework&gt;net10.0&lt;/TargetFramework&gt;
+&lt;/PropertyGroup&gt;</code></pre>
+          <p>If you pin the SDK, update <strong>global.json</strong> too, so every developer and build agent uses the same version:</p>
+          <pre style="background:#0f172a;color:#e2e8f0;padding:16px;border-radius:8px;overflow-x:auto;font-size:14px;line-height:1.6;"><code>{
+  "sdk": {
+    "version": "10.0.100",
+    "rollForward": "latestFeature"
+  }
+}</code></pre>
+          <p>Use the exact SDK version your team has installed, since the number above is only an example. Then update the Microsoft packages that follow the framework version, such as ASP.NET Core and Entity Framework Core packages, to their .NET 10 releases, and update third-party packages to versions that support .NET 10.</p>
+          <h3>Common friction points</h3>
+          <ul>
+            <li><strong>Packages that have not caught up.</strong> Check each key dependency for .NET 10 support. If one has not, look for a maintained alternative or contact the maintainer.</li>
+            <li><strong>Behavior changes in data access.</strong> Entity Framework Core releases include behavior changes. Review them and test your queries, migrations and performance.</li>
+            <li><strong>Serialization and middleware changes.</strong> Some defaults change between releases, so run integration tests against real requests.</li>
+            <li><strong>Reflection-heavy code.</strong> If you plan to use Native AOT later, plan for that separately, as described in our guide to <a href="https://qllmsoft.com/blog/dotnet-10-aot-compilation-performance-benefits">.NET 10 AOT compilation performance benefits</a>.</li>
+          </ul>
+        `
+      },
+      {
+        heading: "Step 3: Update Containers, Build Agents and Pipelines",
+        html: `
+          <span id="pipeline"></span>
+          <p>An upgraded project that still builds on an old SDK image, or deploys to a server with only the old runtime, will fail. Update the whole chain together.</p>
+          <p><strong>Dockerfile:</strong></p>
+          <pre style="background:#0f172a;color:#e2e8f0;padding:16px;border-radius:8px;overflow-x:auto;font-size:14px;line-height:1.6;"><code># Before
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+
+# After
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
+FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS runtime</code></pre>
+          <p><strong>GitHub Actions:</strong></p>
+          <pre style="background:#0f172a;color:#e2e8f0;padding:16px;border-radius:8px;overflow-x:auto;font-size:14px;line-height:1.6;"><code>- uses: actions/setup-dotnet@v4
+  with:
+    dotnet-version: 10.0.x</code></pre>
+          <p>Do the same for Azure DevOps, GitLab CI or any other build system, for hosting runtime settings, and for any server where you install the runtime directly. If you host on a managed platform, check the provider's documentation to confirm that .NET 10 is available on your plan before you schedule the release.</p>
+        `
+      },
+      {
+        heading: "Step 4: Test and Roll Out Safely",
+        html: `
+          <span id="test"></span>
+          <p>Treat a runtime upgrade as a real release, not as a formality. A safe rollout looks like this:</p>
+          <ul>
+            <li><strong>Run the full automated test suite</strong> and add tests around anything risky that has none, such as serialization, authentication and data access.</li>
+            <li><strong>Compare performance</strong> on realistic data. A newer runtime is often faster, but verify it for your workload.</li>
+            <li><strong>Deploy to a staging environment</strong> that mirrors production, and run smoke tests against it.</li>
+            <li><strong>Release gradually.</strong> Use a canary, a single region or a small share of traffic first, and keep the previous build ready for a rollback.</li>
+            <li><strong>Watch logs and metrics</strong> closely for the first days, especially error rates, latency and memory.</li>
+          </ul>
+          <p>If a service has no tests at all, that is a signal to add a minimal safety net before upgrading, which also reduces future technical debt, as we explain in <a href="https://qllmsoft.com/blog/how-to-avoid-technical-debt-in-custom-web-software">how to avoid technical debt in custom web software</a>.</p>
+        `
+      },
+      {
+        heading: "If You Cannot Upgrade Yet: Reduce Exposure",
+        html: `
+          <span id="cannot-yet"></span>
+          <p>Some systems cannot move in a few weeks because of a blocking dependency, a vendor product or limited team capacity. If that is your situation, do not leave it open-ended. Reduce the risk while you work toward the upgrade:</p>
+          <ul>
+            <li><strong>Set a firm deadline</strong> and an owner, and record it in your risk register so it does not drift.</li>
+            <li><strong>Limit exposure.</strong> Keep the application behind a web application firewall, restrict network access, remove public endpoints that are not needed and segment it from sensitive systems.</li>
+            <li><strong>Harden what you control.</strong> Apply least-privilege access, rotate secrets, keep dependencies and the operating system patched, and keep logging and alerting active.</li>
+            <li><strong>Watch for new advisories.</strong> Follow Microsoft's security announcements for .NET. Once a new vulnerability is published, assume that unsupported versions will not receive a fix.</li>
+            <li><strong>Check your obligations.</strong> If you handle regulated data or have contractual security commitments, tell your security and compliance leads now, and document your mitigation plan.</li>
+            <li><strong>Do not assume a third party will patch for you.</strong> Some operating system vendors or platforms may offer their own support arrangements for .NET builds. Confirm the details in writing before you rely on them.</li>
+          </ul>
+          <p>These steps lower risk, but they do not replace upgrading. They buy you time to do it properly.</p>
+        `
+      },
+      {
+        heading: "A 30-60-90 Day Plan",
+        html: `<span id="plan"></span><p>A simple schedule keeps the work moving. Adjust the scope to the size of your estate.</p>`,
+        table: {
+          headers: ["Timeframe", "Focus", "Outcome"],
+          rows: [
+            ["First 30 days", "Inventory, risk ranking, breaking-change review, upgrade of the highest-risk internet-facing apps", "A complete register and the most exposed systems on .NET 10"],
+            ["Days 31 to 60", "Upgrade remaining production services, update containers and pipelines, chase vendor versions", "Most production workloads supported, build chain updated"],
+            ["Days 61 to 90", "Upgrade internal tools, desktop apps and low-risk services, remove old SDKs and images", "No workloads left on .NET 8 or .NET 9"],
+            ["Ongoing", "Plan upgrades for each annual release, keep dependencies current, schedule support-date reviews", "No repeat of the same scramble in 2028"]
+          ]
+        }
+      },
+      {
+        heading: "When to Bring in Help",
+        html: `
+          <span id="help"></span>
+          <p>Many teams can handle an upgrade in-house. Consider outside help when:</p>
+          <ul>
+            <li>You have many applications and no clear inventory or owners.</li>
+            <li>Key services have no tests, so every change feels risky.</li>
+            <li>Your system depends on old frameworks or libraries that block the upgrade, which usually means a phased modernization is needed. Our guide to <a href="https://qllmsoft.com/blog/legacy-system-modernization-without-downtime-or-data-loss">legacy system modernization without downtime or data loss</a> explains how to do that safely.</li>
+            <li>Your team is stretched thin, and an upgrade project would stall feature work.</li>
+          </ul>
+          <p>Our <a href="https://qllmsoft.com/asp-net-core-development-services">ASP.NET Core development services</a> include runtime upgrades, modernization and performance work. If you need extra engineers for the upgrade, you can <a href="https://qllmsoft.com/hire-dotnet-developers-pakistan">hire .NET developers in Pakistan</a>, and our guide on <a href="https://qllmsoft.com/blog/how-to-vet-dotnet-developers-pakistan">how to vet .NET developers</a> explains how to choose well.</p>
+        `
+      },
+      {
+        heading: "Frequently Asked Questions",
+        html: `
+          <span id="faq"></span>
+          <h3>When did .NET 8 reach end of support?</h3>
+          <p>.NET 8 reached end of support on November 10, 2026. .NET 9 ended on the same day. .NET 10 is the long-term support release, supported until November 2028.</p>
+
+          <h3>Will my .NET 8 application stop working?</h3>
+          <p>No. Applications built on .NET 8 continue to run. What changes is that Microsoft no longer issues security updates or technical support for it.</p>
+
+          <h3>Can I upgrade straight from .NET 8 to .NET 10?</h3>
+          <p>Yes. Microsoft recommends upgrading to .NET 10, and you do not need to install .NET 9 first. Review the breaking changes for both .NET 9 and .NET 10, since you skip a release.</p>
+
+          <h3>How long does the upgrade take?</h3>
+          <p>It depends on the size and health of the application. A well-tested service with current dependencies can move quickly, while a large system with outdated packages and no tests takes longer. The inventory and breaking-change review give you a realistic estimate.</p>
+
+          <h3>Should I move to .NET 10 or wait for the next release?</h3>
+          <p>Move to .NET 10. It is a long-term support release, so it gives you a stable target through November 2028. Waiting leaves you on an unsupported runtime.</p>
+        `
+      },
+      {
+        heading: "Conclusion: Treat End of Support as a Deadline You Have Already Passed",
+        html: `
+          <p>.NET 8 reaching end of support is not an emergency outage, but it is a real security and compliance deadline that has now passed. The path forward is clear: inventory what you run, rank it by exposure, upgrade the riskiest systems to .NET 10 first, update your containers and pipelines, and test before each release. If you cannot move quickly, reduce exposure and set a firm date.</p>
+          <p>If you want a second pair of hands, explore our <a href="https://qllmsoft.com/asp-net-core-development-services">ASP.NET Core development services</a> or <a href="https://qllmsoft.com/contact">book a free consultation</a>. We will review your estate and help you plan the upgrade.</p>
+          <div class="contact-box">
+            <p><strong>Need help upgrading from .NET 8 to .NET 10?</strong></p>
+            <p><strong>Email:</strong> <a class="u-email" href="mailto:qllmsoft@gmail.com">qllmsoft@gmail.com</a></p>
+            <p><strong>WhatsApp:</strong> <a class="p-tel" href="tel:+923348229288">+92 334 8229288</a></p>
+            <p><strong>Contact:</strong> <a class="u-url" href="https://qllmsoft.com/contact">qllmsoft.com/contact</a></p>
+          </div>
+        `
       }
     ]
   },
