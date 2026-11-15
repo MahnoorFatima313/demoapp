@@ -166,7 +166,11 @@
       "/projects/payroll-management-system",
       "/projects/financial-management-system",
       "/projects/logistics-fleet-management-system",
-      "/projects/inventory-management-system"
+      "/projects/inventory-management-system",
+      "/blog/how-to-choose-an-ai-healthcare",
+      "/blog/school-fee-reconciliation-software-pakistan",
+      "/blog/biometric-attendance-payroll-integration-pakistan",
+      "/blog/excel-to-inventory-software-migration-pakistan"
     ],
     "skipThirdPartyRequests": false,
     "waitFor": "body:not(:has([data-prerender-ready=\"false\"]))"

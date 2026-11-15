@@ -5,6 +5,11 @@ import "./RelatedReading.css";
 const RELATED_READING = {
   "/custom-software-development-services": [
     {
+      slug: "excel-to-inventory-software-migration-pakistan",
+      anchor: "Preparing an Excel-to-inventory software migration in Pakistan",
+      title: "From Excel to Inventory Software: A Migration Checklist",
+    },
+    {
       slug: "custom-vs-saas-ecommerce-for-growing-smbs",
       anchor: "Comparing custom software and SaaS for ecommerce operations",
       title: "Custom vs. SaaS Ecommerce for Growing SMBs",
@@ -38,6 +43,11 @@ const RELATED_READING = {
     },
   ],
   "/api-development-services": [
+    {
+      slug: "biometric-attendance-payroll-integration-pakistan",
+      anchor: "Planning biometric attendance and payroll integration in Pakistan",
+      title: "Attendance-to-Payroll Integration: What to Specify",
+    },
     {
       slug: "asp-net-core-development",
       anchor: "Understanding ASP.NET Core for backend applications",
@@ -111,6 +121,11 @@ const RELATED_READING = {
     },
   ],
   "/education-software-development-pakistan": [
+    {
+      slug: "school-fee-reconciliation-software-pakistan",
+      anchor: "Matching school fee collections, challans and bank records",
+      title: "School Fee Reconciliation Software in Pakistan",
+    },
     {
       slug: "education-software-development-pakistan",
       anchor: "Planning LMS and SIS workflows, integrations, and rollout",
