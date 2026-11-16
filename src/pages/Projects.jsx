@@ -6,6 +6,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { motion, useReducedMotion } from "framer-motion";
 import { projectsData } from "../data/mock";
 import heroVideo from "../assets/herovdTrim .mp4";
 import ParticleField from "../components/ParticleField";
@@ -110,6 +111,8 @@ const schemaTech = {
 const schemaFAQ = buildFAQSchema(faqItems);
 
 const Projects = () => {
+  const reduceMotion = useReducedMotion();
+
   useEffect(() => {
     const els = document.querySelectorAll(".reveal");
     const io = new IntersectionObserver(
@@ -198,17 +201,51 @@ const Projects = () => {
             </div>
             <div className="case-grid">
               {caseStudies.map((c, i) => (
-                <article key={c.slug} className="case-card glass-card reveal" style={{ transitionDelay: `${i * 90}ms` }}
-                  itemScope itemType="https://schema.org/CreativeWork">
-                  <div className="case-media"><img src={c.image} alt={c.title} loading="lazy" onError={(e) => { e.currentTarget.style.display = "none"; }} /></div>
-                  <span className="case-badge">{c.category}</span>
-                  <h3 itemProp="name">{c.title}</h3>
-                  <p className="case-stack"><strong>Stack:</strong> {c.stack.join(", ")}</p>
-                  <p><strong>Problem:</strong> {c.problem}</p>
-                  <p><strong>Approach:</strong> {c.approach}</p>
-                  <p><strong>Result:</strong> {c.result}</p>
-                  <Link to={`/projects/${c.slug}`} className="story-link">Read the full case study</Link>
-                </article>
+                <motion.article
+                  key={c.slug}
+                  className="case-card glass-card"
+                  itemScope
+                  itemType="https://schema.org/CreativeWork"
+                  initial={reduceMotion ? false : { opacity: 0, y: 32 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.16 }}
+                  transition={{ duration: reduceMotion ? 0 : 0.6, delay: reduceMotion ? 0 : i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  <div className="case-media">
+                    <img src={c.image} alt={c.title} loading="lazy" onError={(e) => { e.currentTarget.style.display = "none"; }} />
+                    <span className="case-index" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="case-media-label">Featured project</span>
+                  </div>
+                  <div className="case-content">
+                    <span className="case-badge">{c.category}</span>
+                    <h3 itemProp="name">{c.title}</h3>
+                    <p className="case-summary">{c.shortDescription}</p>
+                    <ul className="chip-row case-stack">
+                      {c.stack.slice(0, 3).map((tech) => <li key={tech}>{tech}</li>)}
+                      {c.stack.length > 3 && <li>+{c.stack.length - 3}</li>}
+                    </ul>
+                    <details className="case-extra">
+                      <summary>Challenge &amp; approach</summary>
+                      <div className="case-extra-content">
+                        <div className="case-detail">
+                          <span className="case-detail-label">The challenge</span>
+                          <p>{c.problem}</p>
+                        </div>
+                        <div className="case-detail">
+                          <span className="case-detail-label">What we delivered</span>
+                          <p>{c.approach}</p>
+                        </div>
+                      </div>
+                    </details>
+                    <div className="case-detail case-detail-result">
+                      <span className="case-detail-label">The outcome</span>
+                      <p>{c.result}</p>
+                    </div>
+                    <Link to={`/projects/${c.slug}`} className="story-link">
+                      Read the full case study <span aria-hidden="true">↗</span>
+                    </Link>
+                  </div>
+                </motion.article>
               ))}
             </div>
           </div>

@@ -20,9 +20,11 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { servicesData } from "../data/mock";
+import heroVideo from "../assets/herovdTrim .mp4";
 import "./Services.css";
 import "animate.css";
 import ServiceCard from "../components/ServiceCard";
+import ParticleField from "../components/ParticleField";
 import {
   schemaOrganization,
   schemaFounder,
@@ -175,7 +177,25 @@ const Services = () => {
       <main className="services-page" id="main-content" role="main">
         {/* ── HERO ── */}
         <section className="services-hero" aria-labelledby="svc-hero-h1">
+          <video
+            className="services-hero-video"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-hidden="true"
+          >
+            <source src={heroVideo} type="video/mp4" />
+          </video>
+          <div className="services-hero-grid" aria-hidden="true" />
+          <ParticleField
+            palette="dark"
+            density={8000}
+            className="services-hero-particles"
+          />
           <div className="container">
+            <span className="services-hero-eyebrow">Software solutions built around your business</span>
             <h1 id="svc-hero-h1">Custom software development services for businesses worldwide</h1>
             <p>
               QllmSoft engineers production ready{" "}
@@ -191,17 +211,17 @@ const Services = () => {
         </section>
 
         {/* ── TRUST BAND ── */}
-        <section aria-label="QllmSoft verified metrics" style={{ background: "#021a4a", padding: "28px 0" }}>
-          <div className="container" style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
+        <section className="services-trust-band" aria-label="QllmSoft verified metrics">
+          <div className="container services-trust-inner">
             {[
               { num: FACTS.yearsExperience, lbl: "Years experience" },
               { num: FACTS.projectsDelivered, lbl: "Projects delivered" },
               { num: FACTS.upworkScore, lbl: "Upwork job success" },
               { num: `${FACTS.freelancerRating}★`, lbl: `${FACTS.reviewCount} verified reviews` },
             ].map((s, i) => (
-              <div key={i} style={{ flex: 1, minWidth: 140, textAlign: "center", padding: "12px 16px" }}>
-                <span style={{ display: "block", fontSize: "2rem", fontWeight: 900, color: "#fec304" }}>{s.num}</span>
-                <span style={{ fontSize: ".75rem", color: "rgba(255,255,255,.65)", textTransform: "uppercase", letterSpacing: "1.2px" }}>
+              <div className="services-trust-item" key={i}>
+                <span className="services-trust-number">{s.num}</span>
+                <span className="services-trust-label">
                   {s.lbl}
                 </span>
               </div>
@@ -210,7 +230,7 @@ const Services = () => {
         </section>
 
         {/* ── MACRO CONTEXT DEFINITION ── this is what makes the pillar unique versus Home ── */}
-        <section className="section" aria-labelledby="what-is-heading">
+        <section className="section services-definition" aria-labelledby="what-is-heading">
           <div className="container" style={{ maxWidth: "820px" }}>
             <h2 id="what-is-heading">What counts as a software development service here</h2>
             <p>
@@ -329,7 +349,7 @@ const Services = () => {
         </section>
 
         {/* ── ENGAGEMENT MODELS ── new content that adds genuine topical breadth ── */}
-        <section className="section" style={{ background: "#F7FAFC" }} aria-labelledby="engagement-heading">
+        <section className="section services-engagement" aria-labelledby="engagement-heading">
           <div className="container">
             <div className="section-title">
               <h2 id="engagement-heading">Three ways to engage QllmSoft</h2>
@@ -353,7 +373,7 @@ const Services = () => {
         </section>
 
         {/* ── INDUSTRIES ── */}
-        <section className="section" aria-labelledby="industries-heading">
+        <section className="section services-industries" aria-labelledby="industries-heading">
           <div className="container">
             <div className="section-title">
               <h2 id="industries-heading">Industries QllmSoft has built for repeatedly</h2>
@@ -388,7 +408,7 @@ const Services = () => {
         </section>
 
         {/* ── OUTSOURCING TRUST ── */}
-        <section className="section" style={{ background: "#F7FAFC" }} aria-labelledby="outsource-h2">
+        <section className="section services-outsource" aria-labelledby="outsource-h2">
           <div className="container">
             <div className="section-title">
               <h2 id="outsource-h2">Working with QllmSoft as an international client</h2>
@@ -408,7 +428,7 @@ const Services = () => {
         </section>
 
         {/* ── FAQ ── the only page carrying this specific question set ── */}
-        <section className="section faq-seo-section" style={{ background: "#F7FAFC" }} aria-labelledby="faq-heading" itemScope itemType="https://schema.org/FAQPage">
+        <section className="section faq-seo-section services-faq" aria-labelledby="faq-heading" itemScope itemType="https://schema.org/FAQPage">
           <div className="container">
             <div className="section-title">
               <h2 id="faq-heading">Frequently asked questions</h2>
@@ -420,25 +440,20 @@ const Services = () => {
                   itemScope
                   itemProp="mainEntity"
                   itemType="https://schema.org/Question"
-                  style={{ border: "1px solid #EDF2F7", borderRadius: 10, marginBottom: 14, overflow: "hidden", background: "#fff" }}
+                  className="services-faq-item"
                 >
                   <button
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
                     aria-expanded={openFaq === i}
                     itemProp="name"
-                    style={{
-                      width: "100%", textAlign: "left", padding: "20px 24px",
-                      background: openFaq === i ? "#1E5AA8" : "#fff", border: "none", cursor: "pointer",
-                      display: "flex", justifyContent: "space-between", fontWeight: 700,
-                      color: openFaq === i ? "#fff" : "#1A365D",
-                    }}
+                    className="services-faq-question"
                   >
                     {item.q}
                     <span>{openFaq === i ? "−" : "+"}</span>
                   </button>
                   {openFaq === i && (
-                    <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                      <p itemProp="text" style={{ padding: "0 24px 20px", margin: 0, color: "#4A5568", lineHeight: 1.75 }}>
+                    <div className="services-faq-answer" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                      <p itemProp="text">
                         {item.a}
                       </p>
                     </div>
@@ -449,7 +464,7 @@ const Services = () => {
           </div>
         </section>
 
-        <section className="section cta-section" aria-labelledby="cta-h2">
+        <section className="section cta-section services-cta" aria-labelledby="cta-h2">
           <div className="container">
             <div className="cta-content">
               <h2 id="cta-h2">Ready to scope your project?</h2>
