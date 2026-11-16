@@ -256,29 +256,11 @@ const CustomSoftwareDevelopment = () => {
             <div className="about-content">
               <article className={`about-text animate__animated ${aboutInView ? "animate__fadeInLeft" : ""}`}>
                 <h2 id="about-heading">When Custom Software Development Is the Right Call</h2>
-                <p>
-                  Most businesses should not build custom software, and we say that to
-                  clients more often than you'd expect. If a spreadsheet, a CRM, or a
-                  $30-a-month SaaS tool does the job, buying it will always beat
-                  building it. Custom software development services earn their cost
-                  once you're past that point — paying for features you never use,
-                  working around a workflow the vendor never designed for, or waiting
-                  on a support ticket for a fix that will never come because your use
-                  case isn't common enough to matter to them.
-                </p>
+                <p>Compare a ready-made product, configuration and integration before commissioning a new system. Custom software is worth assessing when important workflows, permissions or reporting requirements cannot be supported reliably by those options. Consider the cost of operating and changing the system as well as the initial build.</p>
                 <p>
                   A useful brief describes the work that is difficult today: reconciling records across systems, routing approvals, or finding reliable operational information. These are example use cases. Identify the people, data, and decisions involved before choosing whether to configure, integrate, or build.
                 </p>
-                <p>
-                  If your project is closer to a public-facing{" "}
-                  <Link to="/website-development-services">business website or eCommerce store</Link>
-                  , that falls under our web development services instead, this page
-                  is specifically about internal and business-specific software: the
-                  tools that run your operations rather than face your customers.
-                  For software that needs to exchange records with an existing CRM or ERP,
-                  explore our{" "}
-                  <Link to="/api-development-services">API development and integration services</Link>.
-                </p>
+                <p>This service focuses on business applications: internal tools, operational platforms and modules connected to existing systems. For a marketing site, see <Link to="/website-development-services">website development</Link>; for a browser-based product, see <Link to="/web-application-development-services">web application development</Link>. When the main need is exchanging records with a CRM, ERP or provider, review <Link to="/api-development-services">API development and integration</Link> before deciding to replace the application.</p>
               </article>
 
               <aside className={`csd-about__stats animate__animated ${aboutInView ? "animate__fadeInRight" : ""}`} aria-label="Company track record">
@@ -368,22 +350,15 @@ const CustomSoftwareDevelopment = () => {
                 <p className="project-narrative">
                   QllmDocs brings document organization, permissions, audit history, and search into a separate product associated with QllmSoft. Review its documented capabilities against your workflow rather than assuming it is included in a custom software project.
                 </p>
-                <p className="project-narrative">
-                  It handles role-based access so only the right people can see or
-                  edit sensitive files, keeps a full audit trail of every change, and
-                  runs on Azure with encrypted storage. None of that is exotic
-                  technology. What matters is that it was built around how document
-                  approval chains actually happen in practice, rather than a generic
-                  file-sharing model with permissions bolted on as an afterthought.
-                </p>
+                <p className="project-narrative">The documented product scope includes role-based access, document metadata, encryption, two-factor authentication and ASKAI document search. Review the <Link to="/ai-document-management-software">QllmDocs product overview</Link> and confirm required access rules, event logging, retention and export behavior during evaluation. A product example does not establish that every custom project includes those features.</p>
                 <div className="project-features-grid">
                   <div className="feature-item">
                     <h5>Role-Based Access</h5>
                     <p>Permissions tied to actual job function, not a flat admin/user split.</p>
                   </div>
                   <div className="feature-item">
-                    <h5>Full Audit Trail</h5>
-                    <p>Every edit, view, and share is logged and reviewable.</p>
+                    <h5>Event History Review</h5>
+                    <p>Confirm the events recorded, who can review them and how long they are retained.</p>
                   </div>
                   <div className="feature-item">
                     <h5>Azure Cloud Storage</h5>
@@ -391,7 +366,7 @@ const CustomSoftwareDevelopment = () => {
                   </div>
                   <div className="feature-item">
                     <h5>AI-Assisted Search</h5>
-                    <p>Finds documents by content, not just filename, cutting search time significantly.</p>
+                    <p>Natural-language document search alongside structured metadata and filters.</p>
                   </div>
                 </div>
               </div>
@@ -409,18 +384,18 @@ const CustomSoftwareDevelopment = () => {
           <div className="container">
             <div className="section-title">
               <h2 id="process-heading">Our Software Development Process, Start to Finish</h2>
-              <p>These steps happen in this order for a reason — skipping the early ones is where most failed software projects go wrong.</p>
+              <p>Discovery identifies the first useful release. Design, implementation and review can then iterate around agreed acceptance criteria, with dependencies and unresolved questions kept visible.</p>
             </div>
 
             <div className="csd-process__layout">
               <ol className="csd-process__steps" aria-label="Software development process steps">
                 {[
-                  { n: "1", title: "Discovery Call", desc: "We ask what's broken today, not what features you think you want. Often these are different things, and finding that out early saves months later." },
-                  { n: "2", title: "Scoping & Estimate", desc: "You get a written scope, a realistic timeline, and a cost range before any contract is signed — no vague 'it depends' answers." },
-                  { n: "3", title: "Requirements Documentation", desc: "We document exactly what the software needs to do, in plain language you can sanity-check before a single screen is designed." },
+                  { n: "1", title: "Discovery Call", desc: "Describe the work, users and records involved. Identify a baseline and the decisions the first release needs to support before choosing features." },
+                  { n: "2", title: "Scoping & Estimate", desc: "Define deliverables, exclusions, dependencies and acceptance criteria. Where the code or data needs investigation, agree on discovery before committing to a wider implementation estimate." },
+                  { n: "3", title: "Requirements Documentation", desc: "Record business rules, permissions, integrations and exception cases in language the people approving the system can review." },
                   { n: "4", title: "Design & Prototyping", desc: "Wireframes and, where it matters, a clickable prototype so you're reacting to something real instead of imagining the final product." },
-                  { n: "5", title: "Development in Sprints", desc: "Two-week build cycles with something demoable at the end of each one — you're never waiting three months to see if it's on track." },
-                  { n: "6", title: "Testing & QA", desc: "Manual and automated testing before anything reaches production, including the edge cases that only show up once real users touch it." },
+                  { n: "5", title: "Development in Sprints", desc: "Agree on an iteration length and review schedule. Demonstrate working behavior and record decisions, open questions and approved scope changes." },
+                  { n: "6", title: "Testing & QA", desc: "Test agreed workflows, permissions, imports and failure cases. Reconcile migrated records and rehearse deployment or recovery steps appropriate to the release." },
                   { n: "7", title: "Launch & Support Window", desc: "Plan deployment, monitoring, documentation, and defect reporting. Agree on the initial support window and ongoing maintenance responsibilities before launch." },
                 ].map((step, i) => (
                   <li key={i} className={`csd-process__step animate__animated ${processInView ? "animate__fadeInLeft" : ""}`} style={{ animationDelay: `${i * 0.08}s` }}>
@@ -454,22 +429,8 @@ const CustomSoftwareDevelopment = () => {
           <div className="container">
             <div className="section-title">
               <h2 id="tech-heading">The Technology Stack Behind Our Software Development Services</h2>
-              <p>
-                We standardize on a smaller set of tools we know deeply rather than chasing
-                every new framework, it's what makes long-term maintenance predictable instead
-                of a guessing game for whoever inherits the code next.
-              </p>
-              <p>
-                Comparing ecommerce options? Start with our{" "}
-                <Link to="/blog/custom-vs-saas-ecommerce-for-growing-smbs">
-                  comparison of custom and SaaS ecommerce
-                </Link>
-                , then see{" "}
-                <Link to="/blog/how-to-avoid-technical-debt-in-custom-web-software">
-                  how to avoid technical debt in custom web software
-                </Link>{" "}
-                for ways to keep future changes manageable.
-              </p>
+              <p>Choose the stack according to deployment constraints, existing code, operating skills and expected changes. Dependencies need supported versions, license review and a maintenance owner. Security requirements can be discussed using the <a href="https://asvs.owasp.org/" target="_blank" rel="noopener noreferrer">OWASP Application Security Verification Standard</a>; the relevant checks and any independent assessment should be agreed for your scope.</p>
+              <p>Planning an inventory replacement? Use our <Link to="/blog/excel-to-inventory-software-migration-pakistan">Excel-to-inventory migration checklist</Link> to prepare product identifiers, units and opening balances. The <Link to="/projects/inventory-management-system">inventory project</Link> provides a documented workflow example, while our <Link to="/blog/how-to-avoid-technical-debt-in-custom-web-software">technical debt guide</Link> covers decisions that affect later maintenance.</p>
             </div>
             <ul className="csd-tech__grid" aria-label="Programming languages and frameworks used by QllmSoft">
               {["ASP.NET Core", "React.js", "Angular", "SQL Server", "Microsoft Azure", "Entity Framework", "Docker", "Git & DevOps"].map((t) => (
@@ -520,7 +481,7 @@ const CustomSoftwareDevelopment = () => {
             <p className="section-eyebrow">Common Questions</p>
             <div className="section-title">
               <h2 id="faq-heading">Frequently Asked Questions About Software Development Services</h2>
-              <p>Can't find your answer here? Reach out directly — we respond within a few hours on business days.</p>
+              <p>Have a workflow or handover question not covered here? Share the current process and the systems involved so we can discuss the scope.</p>
             </div>
             <div className="csd-faq__list">
               {FAQ_DATA.map((faq, i) => (

@@ -1,0 +1,195 @@
+{
+  "errors": [],
+  "results": [
+    {
+      "width": 1440,
+      "listing": {
+        "count": 34,
+        "position": 1,
+        "title": "How to Choose an AI Healthcare Software Development Company for Your Medical Business"
+      },
+      "article": {
+        "title": "Choosing an AI Healthcare Software Company: Vendor Checklist",
+        "titles": 1,
+        "descriptions": 1,
+        "canonical": [
+          "https://qllmsoft.com/blog/how-to-choose-an-ai-healthcare"
+        ],
+        "h1": 1,
+        "author": true,
+        "references": [
+          "https://www.hhs.gov/hipaa/for-professionals/special-topics/health-information-technology/cloud-computing/index.html",
+          "https://www.nist.gov/itl/ai-risk-management-framework",
+          "https://www.hl7.org/fhir/overview.html"
+        ],
+        "internal": [
+          "/blog",
+          "/author/mahnoor-fatima",
+          "/api-development-services",
+          "/software-project-requirements-checklist",
+          "/healthcare-software-development-pakistan",
+          "/author/mahnoor-fatima",
+          "/contact",
+          "/contact"
+        ],
+        "schema": [
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://qllmsoft.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://qllmsoft.com/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "How to Choose an AI Healthcare Software Company",
+                "item": "https://qllmsoft.com/blog/how-to-choose-an-ai-healthcare"
+              }
+            ]
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "How to Choose an AI Healthcare Software Development Company for Your Medical Business",
+            "description": "Compare AI healthcare software vendors on workflow fit, data safeguards, EHR integration, model evaluation, delivery costs and long-term ownership.",
+            "image": [
+              "https://qllmsoft.com/static/media/choose-ai-healthcare-software-company-hero.ec82110a54062b272bf3.webp",
+              "https://qllmsoft.com/static/media/ai-healthcare-vendor-evaluation-checklist.1f99e341685a757bce0b.webp"
+            ],
+            "datePublished": "2026-11-03T09:00:00+05:00",
+            "dateModified": "2026-11-15T09:00:00+05:00",
+            "author": {
+              "@type": "Person",
+              "@id": "https://qllmsoft.com/author/mahnoor-fatima#person",
+              "name": "Mahnoor Fatima",
+              "url": "https://qllmsoft.com/author/mahnoor-fatima",
+              "sameAs": [
+                "https://www.linkedin.com/in/mahnoorfatima313/",
+                "https://github.com/MahnoorFatima313"
+              ]
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "QllmSoft",
+              "url": "https://qllmsoft.com",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://qllmsoft.com/logo.png"
+              }
+            },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://qllmsoft.com/blog/how-to-choose-an-ai-healthcare"
+            }
+          }
+        ],
+        "overflow": false
+      }
+    },
+    {
+      "width": 390,
+      "listing": {
+        "count": 34,
+        "position": 1,
+        "title": "How to Choose an AI Healthcare Software Development Company for Your Medical Business"
+      },
+      "article": {
+        "title": "Choosing an AI Healthcare Software Company: Vendor Checklist",
+        "titles": 1,
+        "descriptions": 1,
+        "canonical": [
+          "https://qllmsoft.com/blog/how-to-choose-an-ai-healthcare"
+        ],
+        "h1": 1,
+        "author": true,
+        "references": [
+          "https://www.hhs.gov/hipaa/for-professionals/special-topics/health-information-technology/cloud-computing/index.html",
+          "https://www.nist.gov/itl/ai-risk-management-framework",
+          "https://www.hl7.org/fhir/overview.html"
+        ],
+        "internal": [
+          "/blog",
+          "/author/mahnoor-fatima",
+          "/api-development-services",
+          "/software-project-requirements-checklist",
+          "/healthcare-software-development-pakistan",
+          "/author/mahnoor-fatima",
+          "/contact",
+          "/contact"
+        ],
+        "schema": [
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://qllmsoft.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://qllmsoft.com/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "How to Choose an AI Healthcare Software Company",
+                "item": "https://qllmsoft.com/blog/how-to-choose-an-ai-healthcare"
+              }
+            ]
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "How to Choose an AI Healthcare Software Development Company for Your Medical Business",
+            "description": "Compare AI healthcare software vendors on workflow fit, data safeguards, EHR integration, model evaluation, delivery costs and long-term ownership.",
+            "image": [
+              "https://qllmsoft.com/static/media/choose-ai-healthcare-software-company-hero.ec82110a54062b272bf3.webp",
+              "https://qllmsoft.com/static/media/ai-healthcare-vendor-evaluation-checklist.1f99e341685a757bce0b.webp"
+            ],
+            "datePublished": "2026-11-03T09:00:00+05:00",
+            "dateModified": "2026-11-15T09:00:00+05:00",
+            "author": {
+              "@type": "Person",
+              "@id": "https://qllmsoft.com/author/mahnoor-fatima#person",
+              "name": "Mahnoor Fatima",
+              "url": "https://qllmsoft.com/author/mahnoor-fatima",
+              "sameAs": [
+                "https://www.linkedin.com/in/mahnoorfatima313/",
+                "https://github.com/MahnoorFatima313"
+              ]
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "QllmSoft",
+              "url": "https://qllmsoft.com",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://qllmsoft.com/logo.png"
+              }
+            },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://qllmsoft.com/blog/how-to-choose-an-ai-healthcare"
+            }
+          }
+        ],
+        "overflow": false
+      }
+    }
+  ]
+}

@@ -13,10 +13,15 @@ const batch3 = process.argv.includes('--batch-3');
 const review = process.argv.includes('--review');
 const navigationOnly = process.argv.includes('--navigation-only');
 const apiOnly = process.argv.includes('--api-only');
-const indexing = process.argv.includes('--indexing');
+const commercialReview = process.argv.includes('--commercial-review');
+const indexing = process.argv.includes('--indexing') || commercialReview;
 const pages = indexing ? ['HireAngularDevelopers', 'LegacyModernization', 'ProjectDetails'] : apiOnly ? ['ApiDevelopmentServices'] : review ? ['Home', 'CustomSoftwareDevelopment', 'ApiDevelopmentServices', 'WebAppDevelopment', 'WebsiteDevelopmentServices', 'MobileAppDevelopment', 'EcommerceDevelopmentServices'] : batch3 ? ['MobileAppDevelopment', 'EcommerceDevelopmentServices'] : batch2 ? ['WebAppDevelopment', 'WebsiteDevelopmentServices'] : ['CustomSoftwareDevelopment', 'ApiDevelopmentServices'];
 const routes = indexing ? ['/hire-angular-developers-pakistan', '/legacy-system-modernization-services', '/projects/inventory-management-system', '/projects/logistics-fleet-management-system'] : apiOnly ? ['/api-development-services'] : review ? ['/', '/custom-software-development-services', '/api-development-services', '/web-application-development-services', '/website-development-services', '/mobile-app-development', '/ecommerce-development-services'] : batch3 ? ['/mobile-app-development', '/ecommerce-development-services'] : batch2 ? ['/web-application-development-services', '/website-development-services'] : ['/custom-software-development-services', '/api-development-services'];
-const output = path.join(root, 'build', indexing ? 'seo-indexing-review' : apiOnly ? 'seo-api-image-check' : review ? 'seo-final-review' : batch3 ? 'seo-validation-batch3' : batch2 ? 'seo-validation-batch2' : 'seo-validation');
+const output = path.join(root, 'build', commercialReview ? 'seo-commercial-review' : indexing ? 'seo-indexing-review' : apiOnly ? 'seo-api-image-check' : review ? 'seo-final-review' : batch3 ? 'seo-validation-batch3' : batch2 ? 'seo-validation-batch2' : 'seo-validation');
+if (commercialReview) {
+  pages.splice(0, pages.length, 'CustomSchoolManagementSoftwareDevelopment', 'CustomSoftwareDevelopment', 'ApiDevelopmentServices');
+  routes.splice(0, routes.length, '/custom-school-management-software-development', '/custom-software-development-services', '/api-development-services');
+}
 fs.mkdirSync(output, { recursive: true });
 function presentation(source) {
   const values = [];
@@ -96,7 +101,7 @@ const server = http.createServer((req, res) => {
           duplicateIds: [...new Set([...document.querySelectorAll('[id]')].map(n => n.id).filter((id, i, ids) => ids.indexOf(id) !== i))],
           faqMicrodataCount: document.querySelectorAll('[itemtype="https://schema.org/FAQPage"]').length,
           internalLinks: [...document.querySelectorAll('main a[href], .related-reading a[href]')].map(n => ({ href: n.getAttribute('href'), anchor: n.textContent.trim() })).filter(l => l.href.startsWith('/')),
-          referenceLinks: [...document.querySelectorAll('main a[href]')].filter(n => /^https:\/\/(angular\.dev|learn\.microsoft\.com)\//.test(n.href)).map(n => ({ href: n.href, anchor: n.textContent.trim(), rel: n.rel })),
+          referenceLinks: [...document.querySelectorAll('main a[href]')].filter(n => /^https:\/\/(angular\.dev|learn\.microsoft\.com|asvs\.owasp\.org|api-security\.owasp\.org|spec\.openapis\.org)\//.test(n.href)).map(n => ({ href: n.href, anchor: n.textContent.trim(), rel: n.rel })),
           overflow: document.documentElement.scrollWidth > innerWidth,
           brokenImages: [...document.querySelectorAll('main img')].filter(n => n.complete && !n.naturalWidth).map(n => n.getAttribute('src')),
         }));

@@ -62,7 +62,7 @@ const Blog = () => {
     
    <SEO
     title="QllmSoft Insights | Software Development, Automation & API Insights"
-    description="Deep dive technical guides, architectural breakdowns, and strategic engineering insights  from QllmSoft on custom software development, ASP.NET Core, automation, REST APIs, and building scalable digital platforms for modern businesses."
+    description="Practical software development guides from QllmSoft: custom systems, ASP.NET Core, APIs, automation, security, mobile apps, and digital operations for growing businesses."
     url="https://qllmsoft.com/blog"
     image="https://qllmsoft.com/og-blog.jpg"
     schema={{
@@ -99,11 +99,11 @@ const Blog = () => {
           className="blog-hero-particles"
         />
         <div className="container">
-          <span className="blog-hero-eyebrow">QllmSoft Insights</span>
-          <h1>Our Blogs</h1>
+          <h1>Software development insights for practical business decisions</h1>
           <p>
-            Stay updated with the latest trends, insights, and best practices
-            in software development, technology, and digital transformation.
+            Read clear, experience-led guidance on planning, buying, building, and
+            improving software. Each article connects technical choices to delivery
+            risk, operating cost, security, and the outcomes a business actually needs.
           </p>
         </div>
       </section>
@@ -113,7 +113,7 @@ const Blog = () => {
         <div className="container">
           <div className="section-title">
             <h2>Latest Articles</h2>
-            <p>Explore our insights on technology and software development</p>
+            <p>Browse technical explainers, implementation guides, and Pakistan-focused software advice.</p>
           </div>
 
           <div className="blog-grid">

@@ -1066,19 +1066,15 @@ const HireDotnetDevelopers = () => {
                   key={i}
                   className={`dotnet-review-card animate__animated ${reviewInView ? 'animate__fadeInUp' : ''}`}
                   style={{ animationDelay: `${i * 0.1}s` }}
-                  itemScope itemType="https://schema.org/Review"
                 >
                   <div
                     className="dotnet-review-card__stars"
                     aria-label="5 out of 5 stars"
-                    itemProp="reviewRating" itemScope itemType="https://schema.org/Rating"
                   >
-                    <meta itemProp="ratingValue" content="5" />
-                    <meta itemProp="bestRating"  content="5" />
                     ★★★★★
                   </div>
-                  <p className="dotnet-review-card__text" itemProp="reviewBody">{r.text}</p>
-                  <div className="dotnet-review-card__author" itemProp="author" itemScope itemType="https://schema.org/Person">
+                  <p className="dotnet-review-card__text">{r.text}</p>
+                  <div className="dotnet-review-card__author">
                     <img
                       src={r.img}
                       alt={`${r.name} — verified QllmSoft .NET developer client review from ${r.loc}`}
@@ -1087,7 +1083,7 @@ const HireDotnetDevelopers = () => {
                       height="48"
                     />
                     <div>
-                      <strong itemProp="name">{r.name}</strong>
+                      <strong>{r.name}</strong>
                       <span>{r.loc} — Freelancer</span>
                     </div>
                   </div>

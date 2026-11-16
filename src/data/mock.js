@@ -297,6 +297,11 @@ export const projectsData = [
     listTitle: "Key capabilities:",
     list: ["Real-time biometric log processing", "Configurable shift rules", "Automated workflows", "Business-rule enforcement"],
     impact: ["1,000+ active users", "One platform for attendance data", "Configurable workforce policies"],
+    relatedLinks: [
+      { path: "/blog/biometric-attendance-payroll-integration-pakistan", label: "attendance-to-payroll integration planning guide" },
+      { path: "/projects/payroll-management-system", label: "payroll management project" },
+      { path: "/api-development-services", label: "system integration services" },
+    ],
   },
   {
     id: 3,
@@ -428,6 +433,10 @@ relatedLinks: [
   {
     "path": "/projects/logistics-fleet-management-system",
     "label": "shipment and warehouse operations project"
+  },
+  {
+    "path": "/blog/excel-to-inventory-software-migration-pakistan",
+    "label": "Excel inventory migration checklist for Pakistani businesses"
   },
   {
     "path": "/custom-software-development-services",

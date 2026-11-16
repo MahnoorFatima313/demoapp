@@ -341,12 +341,12 @@ const OutsourceApiDevelopment = () => {
                 {name:'Mohammad I.', loc:'Amman, Jordan',          img:'https://qllmsoft.com/images/Muhammad I.webp',text:'"QllmSoft built a complex API integration between our CRM, payment gateway, and logistics provider. The result was clean, well-tested, and handled every edge case we threw at it. My most reliable API development partner."'},
                 {name:'Fernando M.', loc:'Miramar, United States', img:'https://qllmsoft.com/images/fernandoM.webp', text:'"Outsourcing our GraphQL API to QllmSoft was the right decision. The architecture they designed is scalable, the queries are efficient, and the documentation means our frontend team integrated in a day. Genuinely excellent work."'},
               ].map((r,i)=>(
-                <article key={i} className={`ip-review-card animate__animated ${revInView?'animate__fadeInUp':''}`} style={{animationDelay:`${i*0.1}s`}} itemScope itemType="https://schema.org/Review">
-                  <div className="ip-review-card__stars" aria-label="5 out of 5 stars" itemProp="reviewRating" itemScope itemType="https://schema.org/Rating"><meta itemProp="ratingValue" content="5"/><meta itemProp="bestRating" content="5"/>★★★★★</div>
-                  <p className="ip-review-card__text" itemProp="reviewBody">{r.text}</p>
-                  <div className="ip-review-card__author" itemProp="author" itemScope itemType="https://schema.org/Person">
+                <article key={i} className={`ip-review-card animate__animated ${revInView?'animate__fadeInUp':''}`} style={{animationDelay:`${i*0.1}s`}}>
+                  <div className="ip-review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                  <p className="ip-review-card__text">{r.text}</p>
+                  <div className="ip-review-card__author">
                     <img src={r.img} alt={`${r.name} — verified QllmSoft API outsourcing client from ${r.loc}`} loading="lazy" width="44" height="44"/>
-                    <div><strong itemProp="name">{r.name}</strong><span>{r.loc} — Freelancer</span></div>
+                    <div><strong>{r.name}</strong><span>{r.loc} — Freelancer</span></div>
                   </div>
                 </article>
               ))}

@@ -6,6 +6,8 @@
 // ============================================================
 
 import { articleAuthorSchema } from "./authorsData";
+import inventoryGuideImage from '../assets/inventorymanagement.jpg';
+import attendanceGuideImage from '../assets/HUMANResources.jpg';
 import shopifyImg from "../assets/shopify.webp";
 import LegacyModernization from "../assets/Legacy-system-risk.webp";
 import CustomvsEcommerceImg from "../assets/SaaS-Ecommerce.webp";
@@ -121,6 +123,19 @@ const breadcrumb = (slug, label) => ({
 
 // ─── Internal link helper ────────────────────────────────────
 const int = (path, label) => ({ href: `${SITE_URL}${path}`, label });
+
+const pakistanWorkflowGuide = ({ slug, title, seoTitle, description, image, alt, minutes }) => ({
+  author: 'zain-ul-abedin', title, seoTitle, description,
+  canonicalUrl: `${BLOG_BASE}/${slug}`, category: 'Business Software Pakistan',
+  date: 'November 15, 2026', dateModified: 'November 15, 2026', readTime: `${minutes} min read`,
+  image, imageMeta: { alt },
+  schemas: [breadcrumb(slug, title), {
+    '@context': 'https://schema.org', '@type': 'Article', headline: title, description,
+    image: [image], datePublished: '2026-11-15T09:00:00+05:00', dateModified: '2026-11-15T09:00:00+05:00',
+    author: articleAuthorSchema('zain-ul-abedin'), publisher: publisherSchema,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${BLOG_BASE}/${slug}` },
+  }],
+});
 
 // ============================================================
 export const blogPostsData = {
@@ -8621,12 +8636,12 @@ Decision:        Meet target = proceed. Miss target = adjust or stop.</code></pr
   "how-to-choose-an-ai-healthcare": {
     author: "mahnoor-fatima",
     title: "How to Choose an AI Healthcare Software Development Company for Your Medical Business",
-    seoTitle: "How to Choose an AI Healthcare Software Company",
-    description: "Learn how to choose an AI healthcare software development company by evaluating HIPAA compliance, clinical expertise, security, integration, and costs.",
+    seoTitle: "Choosing an AI Healthcare Software Company: Vendor Checklist",
+    description: "Compare AI healthcare software vendors on workflow fit, data safeguards, EHR integration, model evaluation, delivery costs and long-term ownership.",
     canonicalUrl: `${BLOG_BASE}/how-to-choose-an-ai-healthcare`,
     category: "Healthcare AI",
     date: "November 3, 2026",
-    dateModified: "November 3, 2026",
+    dateModified: "November 15, 2026",
     readTime: "9 min read",
     image: healthcareVendorHero,
     imageMeta: {
@@ -8644,10 +8659,10 @@ Decision:        Meet target = proceed. Miss target = adjust or stop.</code></pr
     seoMeta: {
       ogType: "article",
       ogTitle: "How to Choose an AI Healthcare Software Company",
-      ogDescription: "Learn how to choose an AI healthcare software development company by evaluating HIPAA compliance, clinical expertise, security, integration, and costs.",
+      ogDescription: "Compare AI healthcare software vendors on workflow fit, data safeguards, EHR integration, model evaluation, delivery costs and long-term ownership.",
       twitterCard: "summary_large_image",
       robots: "index, follow",
-      keywords: "how to build a healthcare app"
+      keywords: "choose AI healthcare software development company, healthcare AI vendor evaluation, EHR integration"
     },
     schemas: [
       breadcrumb("how-to-choose-an-ai-healthcare", "How to Choose an AI Healthcare Software Company"),
@@ -8655,18 +8670,21 @@ Decision:        Meet target = proceed. Miss target = adjust or stop.</code></pr
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "How to Choose an AI Healthcare Software Development Company for Your Medical Business",
-        "description": "Learn how to choose an AI healthcare software development company by evaluating HIPAA compliance, clinical expertise, security, integration, and costs.",
+        "description": "Compare AI healthcare software vendors on workflow fit, data safeguards, EHR integration, model evaluation, delivery costs and long-term ownership.",
         "image": [healthcareVendorHero, healthcareVendorChecklist],
         "datePublished": "2026-11-03T09:00:00+05:00",
-        "dateModified": "2026-11-03T09:00:00+05:00",
+        "dateModified": "2026-11-15T09:00:00+05:00",
         "author": articleAuthorSchema("mahnoor-fatima"),
         "publisher": publisherSchema,
         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/how-to-choose-an-ai-healthcare` }
       }
     ],
-    // The supplied article contains no links, so none are added here.
-    internalLinks: [],
-    externalLinks: [],
+    internalLinks: [int("/healthcare-software-development-pakistan", "Healthcare software development"), int("/api-development-services", "Healthcare API integration planning"), int("/software-project-requirements-checklist", "Software requirements checklist")],
+    externalLinks: [
+      { href: "https://www.hhs.gov/hipaa/for-professionals/special-topics/health-information-technology/cloud-computing/index.html", label: "HHS HIPAA cloud computing guidance" },
+      { href: "https://www.hl7.org/fhir/overview.html", label: "HL7 FHIR overview" },
+      { href: "https://www.nist.gov/itl/ai-risk-management-framework", label: "NIST AI Risk Management Framework" }
+    ],
 
     sections: [
       {
@@ -8674,16 +8692,16 @@ Decision:        Meet target = proceed. Miss target = adjust or stop.</code></pr
         paragraphs: [
           "Healthcare organisations are starting to invest in AI solutions to improve the patient experience and lighten workloads. However, there can be issues if you don’t pick the right partner. They may have impressive AI capabilities but not know how clinical workflows work, how to protect patient data, or how to run a medical business.",
           "To help you choose the right AI healthcare software development company for your business, you need to focus on finding a company that knows how to address your challenges, build secure and interoperable software and ensure you have safeguards in place for responsible AI.",
-          "If you’re running a medical practice, hospital, healthcare start-up or telehealth business consider the following:"
+          "Use this guide to shortlist a development partner, request comparable evidence and define a pilot. It focuses on buying decisions rather than instructions for building a healthcare app. Start with one workflow and distinguish administrative assistance from software that influences clinical decisions."
         ]
       },
       {
-        heading: "1. Know what you want from your healthcare business",
+        heading: "1. Define the workflow before choosing an AI vendor",
         html: `
           <p>Before looking at different software development companies, you need to understand what you want your AI to help with. This will help you understand if you’re getting the right proposal and not paying for unwanted features.</p>
           <p>Some common uses for healthcare AI are:</p>
           <ul>
-            <li>Clinical documentation – Auto-generate clinical notes.</li>
+            <li>Clinical documentation – Draft notes for review and approval by an authorised clinician.</li>
             <li>Patient engagement – Appointment reminders, patient forms and communication.</li>
             <li>Medical imaging – Assistance for qualified professionals.</li>
             <li>Predictive analytics – To help identify patterns that can aid population management.</li>
@@ -8694,7 +8712,7 @@ Decision:        Meet target = proceed. Miss target = adjust or stop.</code></pr
         `
       },
       {
-        heading: "2. Healthcare experience",
+        heading: "2. Verify relevant healthcare delivery experience",
         html: `
           <p>Not all software development companies will have experience with healthcare software. Medical software can be sensitive, complex and has a lot of responsibility.</p>
           <p>Ask them about their experience with:</p>
@@ -8711,11 +8729,11 @@ Decision:        Meet target = proceed. Miss target = adjust or stop.</code></pr
         `
       },
       {
-        heading: "3. HIPAA compliance and security",
+        heading: "3. Establish data responsibilities and security evidence",
         html: `
           <p>You must be very careful with patient data throughout development, delivery &amp; maintenance. In the US, there are rules set out in the Health Insurance Portability and Accountability Act (HIPAA).</p>
-          <p>If they develop, receive, maintain or transmit protected health information on behalf of a covered entity then they may be considered a business associate. Depending on your relationship with them, you may need to have a business associate agreement (BAA).</p>
-          <p>Read up on the HIPAA guidelines for cloud computing from the U.S. Department of Health and Human Services.</p>
+          <p>For US deployments, determine whether HIPAA applies and which parties are covered entities, business associates or subcontractors. A provider that creates, receives, maintains or transmits protected health information on behalf of a covered entity may have business-associate obligations. Review the relationship and required agreements with the organisation’s privacy and legal teams before giving access to patient data.</p>
+          <p>The <a href="https://www.hhs.gov/hipaa/for-professionals/special-topics/health-information-technology/cloud-computing/index.html" target="_blank" rel="noopener noreferrer">HHS guidance on HIPAA and cloud computing</a> explains responsibilities for handling electronic protected health information. Request a data-flow diagram covering the application, hosting provider, model service, logs and backups. Encryption and a signed agreement are parts of the assessment, not proof that the complete service is compliant. For other markets, establish the applicable local requirements separately.</p>
           <p>Before signing any contracts ask them how they will address:</p>
           <ul>
             <li>Data encryption.</li>
@@ -8732,7 +8750,7 @@ Decision:        Meet target = proceed. Miss target = adjust or stop.</code></pr
         heading: "4. AI expertise & safety",
         html: `
           <p>Healthcare AI can be complicated. Simply adding a popular language model or machine learning framework won’t always work. The models can cause inaccuracies, variation between patient groups and reduced reliability if the workflow or data changes.</p>
-          <p>Ask them how they’ll test the models and monitor them after deployment.</p>
+          <p>Ask for an evaluation plan before selecting a model. Identify the intended users, permitted inputs, unacceptable errors and who can approve an output. Compare the proposed system with the current workflow on a representative held-out test set. For generated notes, assess missing facts, unsupported statements and the time clinicians spend correcting drafts; a single accuracy percentage cannot capture all of these risks.</p><p>Use the <a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener noreferrer">NIST AI Risk Management Framework</a> to structure risk discussions. It is a voluntary framework, not a healthcare approval or compliance certificate. Agree on escalation, monitoring and rollback criteria before the pilot starts.</p>
           <p>Consider:</p>
           <ul>
             <li>Data – Ensure training and testing data is relevant to what you want to do. You should also look at if there are any data issues such as missing, inconsistent or lack of representation.</li>
@@ -8762,14 +8780,14 @@ Decision:        Meet target = proceed. Miss target = adjust or stop.</code></pr
             <li>DICOM – Medical imaging information standards.</li>
             <li>EHR vendor APIs.</li>
           </ul>
-          <p>Ask them to provide an integration plan. This should include what data sources they’ll be using, what permissions they’ll need, how the data will map, any error handling and testing.</p>
+          <p>Request an integration plan naming the EHR product, supported API version, available resources, permissions, patient matching rules and test environment. The <a href="https://www.hl7.org/fhir/overview.html" target="_blank" rel="noopener noreferrer">HL7 FHIR overview</a> explains the exchange standard; saying “FHIR compatible” does not establish that two products support the same profiles or workflows. Check the actual vendor documentation and sandbox.</p><p>For write-back operations, require a plan for duplicate requests, validation failures and reconciliation. Confirm API access charges and vendor approval lead times. Our <a href="/api-development-services">API development and integration services</a> describe the delivery work to discuss when defining these interfaces.</p>
           <p>An example would be if you’re using an AI documentation tool then you should ensure they’ve thought about how clinicians will review the documentation, correct any errors and move the approved information to the correct patient record.</p>
         `
       },
       {
         heading: "6. Process & team",
         html: `
-          <p>A reputable <a href="https://bitrupt.co/industries/healthtech">AI healthcare software development company</a> will have an open process. Ask if they have a process in place for:</p>
+          <p>Ask each shortlisted company to explain its delivery process and name the people responsible for clinical review, engineering, security and acceptance. Use a <a href="/software-project-requirements-checklist">software project requirements checklist</a> to record assumptions before comparing proposals. Look for a clear process covering:</p>
           <ol>
             <li>Analyse requirements.</li>
             <li>Design interfaces.</li>
@@ -8793,7 +8811,7 @@ Decision:        Meet target = proceed. Miss target = adjust or stop.</code></pr
         `
       },
       {
-        heading: "7. Costs",
+        heading: "7. Compare total ownership costs and assumptions",
         html: `
           <p>The cheapest option may end up costing you more if they don’t factor in integration, security and model maintenance.</p>
           <p>Ask about the overall cost of:</p>
@@ -8835,7 +8853,7 @@ Decision:        Meet target = proceed. Miss target = adjust or stop.</code></pr
         `
       },
       {
-        heading: "9. Checklist for vendor",
+        heading: "9. Compare vendors using the same evidence checklist",
         html: `
           <p>Before making your final decision ensure you’re comparing them based on the same criteria.</p>
           <table style="width:100%;border-collapse:collapse;margin:0 0 20px 0;">
@@ -8852,8 +8870,8 @@ Decision:        Meet target = proceed. Miss target = adjust or stop.</code></pr
               <tr><td style="padding:10px;border:1px solid #e2e8f0;">Integration</td><td style="padding:10px;border:1px solid #e2e8f0;">Integration architecture &amp; testing.</td></tr>
               <tr><td style="padding:10px;border:1px solid #e2e8f0;">Delivery</td><td style="padding:10px;border:1px solid #e2e8f0;">Milestones &amp; team members.</td></tr>
               <tr><td style="padding:10px;border:1px solid #e2e8f0;">Cost</td><td style="padding:10px;border:1px solid #e2e8f0;">Detailed costs.</td></tr>
-              <tr><td style="padding:10px;border:1px solid #e2e8f0;">Ownership</td><td style="padding:10px;border:1px solid #e2e8f0;">Ownership.</td></tr>
-              <tr><td style="padding:10px;border:1px solid #e2e8f0;">Support</td><td style="padding:10px;border:1px solid #e2e8f0;">Support.</td></tr>
+              <tr><td style="padding:10px;border:1px solid #e2e8f0;">Ownership</td><td style="padding:10px;border:1px solid #e2e8f0;">Custom-code rights, third-party licences and tested data export.</td></tr>
+              <tr><td style="padding:10px;border:1px solid #e2e8f0;">Support</td><td style="padding:10px;border:1px solid #e2e8f0;">Support hours, incident escalation, recovery targets and exit assistance.</td></tr>
             </tbody>
           </table>
           <p>Score each company against what you’re looking for. If they have any weaknesses then investigate further. Ask your shortlisted vendors how they’d approach your use case. What are the limitations? What could go wrong?</p>
@@ -8880,11 +8898,450 @@ Decision:        Meet target = proceed. Miss target = adjust or stop.</code></pr
         `
       },
       {
-        heading: "Summary",
+        heading: "Choose a partner on evidence, then validate a pilot",
+        html: `<p>For a scoped delivery discussion, review our <a href="/healthcare-software-development-pakistan">healthcare software development services</a>. Bring the workflow, integration list and evaluation requirements to the conversation; confirm the clinical, privacy and regulatory responsibilities separately.</p><p>When choosing an AI healthcare software development company you need to find a balance between technical ability, clinical knowledge, security, integration and long term ownership. Be clear on what you want from your business and ensure they can prove what they say. Consider how the solution will perform in a real healthcare environment.</p><p>Shortlist partners whose evidence matches the risk of your use case. Proceed with a pilot only after agreeing on data access, evaluation criteria, clinical oversight where needed and a stop-or-expand decision. Keep the original workflow available until the new process meets the agreed acceptance criteria.</p>`,
+
+      }
+    ]
+  },
+  "school-fee-reconciliation-software-pakistan": {
+    ...pakistanWorkflowGuide({
+      slug: 'school-fee-reconciliation-software-pakistan',
+      title: 'School Fee Reconciliation Software in Pakistan: A Practical Buying Guide',
+      seoTitle: 'School Fee Reconciliation Software Pakistan | Buying Guide',
+      description: 'Match school challans, receipts and bank collections. A Pakistan-focused guide to reconciliation rules, payment integrations, exceptions and vendor demos.',
+      image: eduBuyHero, alt: 'Education software illustration for a school fee reconciliation planning guide', minutes: 7,
+    }),
+    sections: [
+      { heading: 'Start with the payment record, not the dashboard', paragraphs: [
+        'School fee reconciliation software matches money received against the correct student account and fee demand. For a school in Pakistan collecting through a counter, bank deposits and a digital provider, the useful question is whether the system can explain every receipt, outstanding balance and unresolved payment at the end of a collection cycle.',
+        'A paid label on a challan is only one part of that process. The finance team also needs to know which transaction created it, whether the bank or provider confirms it, how it was allocated and who approved any correction. This guide helps school owners and accounts teams specify that workflow before buying a module or commissioning an integration.',
+        'Use your actual collection channels and fee rules when comparing vendors. A small school may need a reliable import-and-review process; a multi-campus institution may need provider integration and central oversight. Both need traceable records.',
+      ] },
+      { heading: 'Define the records that must agree', html: `<p>Keep the student ledger, payment record and settlement evidence connected. They answer different questions:</p>`, table: {
+        headers: ['Record', 'Question it answers', 'Useful identifiers'], rows: [
+          ['Fee demand or challan', 'What does the student owe?', 'Student ID, campus, billing period, challan number'],
+          ['Receipt or provider transaction', 'What payment was received?', 'Transaction ID, channel, amount, payment time'],
+          ['Bank or settlement record', 'What reached the institution’s account?', 'Bank reference, settlement batch, gross and net amounts'],
+          ['Allocation entry', 'Which outstanding items did it clear?', 'Receipt ID, fee item, amount allocated, approving user'],
+        ],
+      } },
+      { heading: 'Write matching rules before importing transactions', html: `<p>Give each challan a stable identifier and decide which reference the payment channel returns. Match on verified identifiers and amounts where possible. A parent name alone is a weak match: siblings, spelling differences and shared payer accounts can make it ambiguous.</p><p>Specify partial payments, advance payments, concessions and arrears separately. If a parent pays for two children in one transfer, the software needs an approved allocation rather than a guess. If a provider deducts a service charge, preserve the gross payment, charge and net settlement as separate values.</p><p>For example, suppose two outstanding demands are PKR 6,000 and PKR 4,000. A PKR 10,000 transfer without a student or challan reference should enter a review queue until the payer and allocation are confirmed. This is an illustrative test case, not a recommended fee or an accounting policy. Your accounts team should define the actual posting rules.</p>` },
+      { heading: 'Choose payment connections available to your institution', html: `<p>Ask your bank or payment provider what identifiers, transaction reports and integration access it can supply. Some institutions can use scheduled statement imports; others may have access to a bill-collection service or an approved merchant integration. Confirm onboarding, charges, testing access and support responsibilities before estimating development.</p><p><a href="https://1link.net.pk/products-services/bill-payment-service" target="_blank" rel="noopener noreferrer">1LINK’s bill-payment service overview</a> describes its collection offering. <a href="https://www.sbp.org.pk/our-subsidiaries/raast/raast-person-to-merchant" target="_blank" rel="noopener noreferrer">SBP’s Raast person-to-merchant overview</a> provides context for merchant payments. These are different arrangements; neither means that a school can connect directly without an eligible provider relationship.</p><p>A parent’s payment screenshot can support an investigation, but should not by itself mark the ledger as reconciled. Confirm against the agreed bank or provider record. Our <a href="/api-development-services">API development and integration services</a> cover the software work to discuss once provider access and responsibilities are clear.</p>` },
+      { heading: 'Make exceptions a daily workflow', paragraphs: [
+        'Create a queue for missing references, unmatched amounts, duplicate imports, reversals and payments received after a challan expires. Each item should have an owner, evidence and a resolution history. Re-running the same statement or receiving the same provider notification must not create another receipt.',
+        'Separate permissions for recording a payment, approving a refund, changing a concession and reopening a closed period. Preserve the original entry and a linked correction instead of silently overwriting history. Decide when an unresolved item should be escalated to the school’s finance lead.',
+        'For multiple campuses, define whether each campus owns a bank account and ledger, or whether a central team allocates collections. The campus printed on a challan should remain available in reports even when payments settle centrally.',
+      ] },
+      { heading: 'Run a demo using your difficult cases', table: {
+        headers: ['Test case', 'What to verify'], rows: [
+          ['Import the same bank file twice', 'One payment record and a visible duplicate result'],
+          ['Pay part of a demand', 'Correct remaining balance and receipt allocation'],
+          ['Reverse a confirmed transaction', 'Linked reversal, permission check and updated balance'],
+          ['Receive a payment with no usable reference', 'Review queue without an automatic student match'],
+          ['Settle several payments after charges', 'Gross-to-net breakdown and unexplained difference report'],
+        ],
+      } },
+      { heading: 'Pilot one complete fee cycle', html: `<p>Bring a sample student list, opening balances, challan formats and redacted payment files to discovery. Agree on the source of opening balances and reconcile them before switching systems. Limit access to student and payer information, and define how long supporting files are retained.</p><p>Pilot a manageable group through demand generation, collection, reconciliation and reporting. Compare closing balances with the approved finance record. Investigate every difference before expanding; do not measure success only by the number of challans generated.</p><p>Compare proposals on data cleanup, payment-provider work, exception handling, training, ongoing charges and support. A fixed feature list without these assumptions is difficult to price reliably. Our <a href="/custom-school-management-software-development">custom school management software service</a> is the relevant next step for a workflow-specific scope; the broader <a href="/blog/buy-education-software-lms-development">education software buying guide</a> can help if you are selecting an entire platform.</p>` },
+      { heading: 'Can we keep our existing school software?', paragraphs: [
+        'Possibly. First check whether it provides stable student identifiers, exports and a supported way to record payment allocations. A reconciliation layer can be enough when those interfaces are usable. Replacing the whole SIS is a separate decision, justified by wider record or workflow problems rather than reconciliation alone.',
+      ] },
+    ],
+  },
+  "biometric-attendance-payroll-integration-pakistan": {
+    ...pakistanWorkflowGuide({
+      slug: 'biometric-attendance-payroll-integration-pakistan',
+      title: 'Biometric Attendance and Payroll Integration in Pakistan: What to Specify',
+      seoTitle: 'Biometric Attendance Payroll Integration Pakistan | Guide',
+      description: 'Plan attendance-to-payroll integration for Pakistani teams: device compatibility, shifts, missed punches, approvals, offline imports and payroll validation.',
+      image: attendanceGuideImage, alt: 'Human resources software illustration for attendance and payroll integration planning', minutes: 7,
+    }),
+    sections: [
+      { heading: 'A recorded punch is an input, not a salary decision', paragraphs: [
+        'Biometric attendance and payroll integration connects recorded check-ins with reviewed attendance, approved adjustments and the inputs used for a payroll run. For a Pakistani business with shifts, multiple sites or an existing salary system, the integration needs to preserve those steps rather than turn every missing punch into an automatic deduction.',
+        'Start by naming the problem. Are staff copying totals between spreadsheets, correcting overnight shifts or matching device IDs to employees? The answer determines whether you need a device connector, an attendance rules layer, a payroll export or a broader system replacement.',
+        'This guide is for HR, operations and finance teams planning the software workflow. It does not prescribe overtime rates, salary deductions or statutory calculations. Have your authorised HR and payroll advisers approve the applicable rules, then test that the software implements them.',
+      ] },
+      { heading: 'Check device access before choosing a platform', html: `<p>List each device model, firmware version, site and supported export method. Ask the vendor to demonstrate how records will be retrieved using an approved API, SDK or file export. Brand-level compatibility claims are insufficient if the actual model or firmware has not been tested.</p><p>Map device employee IDs to a controlled employee master. Preserve the source device, event time, event identifier when available and import batch. A staff transfer between sites should not create a second person in payroll. Agree how inactive employees and reused badge numbers will be handled.</p><p>For weak or intermittent connections, plan a delayed import and a visible sync status. A failed connection means attendance data is incomplete, not that employees were absent. Protect device credentials and restrict network access rather than exposing terminals directly to the public internet.</p>` },
+      { heading: 'Separate raw events, attendance and payroll inputs', table: {
+        headers: ['Layer', 'Keep here', 'Approval or control'], rows: [
+          ['Raw device events', 'Original punch, device and import reference', 'Duplicate detection and restricted access'],
+          ['Attendance interpretation', 'Shift assignment, paired events and exceptions', 'Supervisor review of missing or conflicting events'],
+          ['Approved period summary', 'Reviewed attendance, leave and authorised adjustments', 'HR approval and a period lock'],
+          ['Payroll input', 'Agreed fields for the target payroll system', 'Finance reconciliation and controlled release'],
+        ],
+      } },
+      { heading: 'Define shift boundaries using real examples', html: `<p>A shift beginning at 10 p.m. and ending at 6 a.m. crosses a calendar boundary. Specify which work date owns it, how breaks are recorded and what happens when an employee changes shifts. Do not pair events solely because they occur on the same calendar day.</p><p>Test missing check-outs, repeated scans, early arrivals, leave that overlaps a shift and a delayed upload after the payroll cutoff. Decide which cases can be resolved automatically and which require a person’s approval. Retain the original event alongside any manual correction, including the reason and approver.</p><p>Device clocks and application timestamps need an explicit interpretation. Store the event’s context and use a consistent reporting time zone. Microsoft’s <a href="https://learn.microsoft.com/en-us/dotnet/standard/datetime/choosing-between-datetime" target="_blank" rel="noopener noreferrer">guide to date and time types</a> explains technical choices for .NET implementations; it does not define your employment or payroll policy.</p>` },
+      { heading: 'Make the payroll handoff repeatable', paragraphs: [
+        'Agree on the employee key, pay-period identifier, field definitions, decimal precision and file or API format with the payroll owner. Distinguish worked time, approved overtime and payable amounts. Which system calculates each item should be documented before integration starts.',
+        'Give every export a batch reference and track whether it has been accepted. Resubmitting a failed batch should not double-count the inputs. If a correction arrives after the period is locked, use the authorised adjustment process instead of quietly changing the exported totals.',
+        'Reconcile employee counts, attendance totals and exceptions between the approved attendance summary and payroll inputs. Store enough detail to explain a disputed figure without granting payroll staff unrestricted access to device administration.',
+      ] },
+      { heading: 'Limit the employee data you move', html: `<p>Work out whether the integration needs attendance events only. Do not copy fingerprint images or biometric templates into the business application simply because a device can export them. Document who can access personal information, the purpose of collection, retention, backups and the procedure for revoking access.</p><p>The <a href="https://www.nist.gov/privacy-framework" target="_blank" rel="noopener noreferrer">NIST Privacy Framework</a> is a useful risk-management reference, not a statement of Pakistani legal compliance. Confirm your organisation’s applicable obligations separately. Restrict test environments to synthetic or appropriately protected records.</p>` },
+      { heading: 'Acceptance tests before the first live payroll', list: [
+        'Import one event twice and confirm it remains a single source record.',
+        'Process an overnight shift and confirm the agreed work date and duration.',
+        'Upload delayed events and confirm incomplete attendance is flagged for review.',
+        'Approve a missed punch and verify the original event history is retained.',
+        'Resubmit a payroll batch and confirm that inputs are not counted twice.',
+        'Lock a period, make a correction and verify the authorised adjustment route.',
+      ] },
+      { heading: 'Scope a pilot around one site and a full pay period', html: `<p>Run a controlled comparison with the current process for a complete pay period. Include shift changes and known exceptions, and ask HR and finance to explain any differences before accepting the results. Agree on a fallback if a connector or payroll handoff fails.</p><p>Bring the device list, redacted exports, current shift policies and target payroll format to discovery. Review our <a href="/projects/biometric-attendance-management-system">biometric attendance project</a> and <a href="/projects/payroll-management-system">payroll management project</a> as examples of documented project scopes; they do not establish compatibility with every device. For a connector or data handoff, discuss <a href="/api-development-services">API and system integration work</a>. An <a href="/software-project-requirements-checklist">agreed requirements checklist</a> makes competing estimates easier to compare.</p>` },
+    ],
+  },
+  "excel-to-inventory-software-migration-pakistan": {
+    ...pakistanWorkflowGuide({
+      slug: 'excel-to-inventory-software-migration-pakistan',
+      title: 'From Excel to Inventory Software in Pakistan: A Migration Checklist',
+      seoTitle: 'Excel to Inventory Software Pakistan | Migration Checklist',
+      description: 'Move inventory from Excel with checked product IDs, carton-to-piece units, opening balances and warehouse records. Includes a worked example and rollout tests.',
+      image: inventoryGuideImage, alt: 'Inventory management illustration for an Excel stock migration checklist', minutes: 7,
+    }),
+    sections: [
+      { heading: 'Move the stock records, not just the spreadsheet', paragraphs: [
+        'Moving from Excel to inventory software requires a checked product master, agreed units, verified opening balances and a controlled point at which the new system becomes the stock record. Importing a spreadsheet successfully only proves that a file was accepted; it does not prove the resulting inventory is correct.',
+        'For a Pakistani wholesaler, distributor or growing retailer, the difficult records may include cartons and loose pieces, stock held at different godowns, inconsistent supplier names or transactions entered after a count. Work through those issues before deciding how much software to buy or build.',
+        'This checklist helps owners and operations teams prepare a migration and evaluate implementation proposals. It addresses quantity and record controls. Tax treatment, financial valuation and invoicing requirements should be agreed with the responsible advisers as a separate part of the scope.',
+      ] },
+      { heading: 'Decide whether a spreadsheet is still sufficient', paragraphs: [
+        'A controlled spreadsheet may remain practical when one person maintains a small catalog and there is little simultaneous activity. Consider a system when several people receive or issue stock, balances differ between locations, adjustments are hard to explain or the same data is re-entered for sales and purchasing.',
+        'Try a ready-made product against your real workflows before choosing custom development. A standard platform may cover the need. Custom work is more relevant when permissions, integrations or operating rules cannot be met through configuration without unreliable workarounds.',
+      ] },
+      { heading: 'Prepare a product master with stable identifiers', html: `<p>Assign one product ID to each distinct stock item. Keep supplier codes, barcodes and descriptions in separate fields rather than treating them as interchangeable identities. Where the same item has two spellings, resolve the duplicate with the stock owner before combining quantities.</p><p>Preserve leading zeros in identifiers and confirm date, number and text formats during import. Microsoft’s <a href="https://learn.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard?view=sql-server-ver17" target="_blank" rel="noopener noreferrer">SQL Server flat-file import guidance</a> explains type inference and import options. Previewing an inferred schema is useful, but business validation still requires your agreed product and quantity rules.</p><p>Choose how to handle inactive products, returns, damaged goods and negative balances. Flag unresolved records instead of silently discarding them or inventing replacement quantities. Keep a mapping from every imported record to its source row and import batch.</p>` },
+      { heading: 'Make carton-to-piece conversions explicit', html: `<p>Choose a base unit for each item and record approved conversions. “One box” is not a reliable quantity unless the product’s pack size is known. Different products can have different pack sizes, and a supplier’s new pack configuration may need a separately controlled record.</p><p>For an illustrative item, one carton contains 12 pieces. Opening stock of 8 cartons plus 5 loose pieces equals 101 pieces. Selling 2 cartons should reduce available stock by 24 pieces, leaving 77 pieces before other movements. Use this example to test conversion logic; it is not a rule that all cartons contain 12 items.</p><p>Decide which screens accept packs, which accept loose units and how quantities display on purchase, transfer and sales records. For goods sold by weight or length, specify decimal precision and rounding with the operations team.</p>` },
+      { heading: 'Separate opening quantities by stock location', table: {
+        headers: ['Field', 'Why it matters', 'Example to test'], rows: [
+          ['Product ID', 'Identifies the exact item', 'Same description with different pack sizes'],
+          ['Location', 'Prevents a business-wide total hiding local shortages', 'Main godown and branch counter'],
+          ['Base-unit quantity', 'Supports consistent movements', 'Cartons converted to approved piece count'],
+          ['Stock status', 'Separates usable and unavailable goods', 'Damaged items excluded from saleable stock'],
+          ['Count and cutoff reference', 'Explains when the opening figure was agreed', 'Goods received after the count'],
+        ],
+      } },
+      { heading: 'Rehearse the import and reconcile the result', html: `<p>Import into a test environment first. Compare product counts, quantities by product and location, rejected rows and duplicate records against the approved source. A matching grand total can hide two products with opposite errors, so reconcile at the level people use to make stock decisions.</p><p>Record whether a repeated import replaces a draft batch, adds a new movement or is rejected. Re-running an opening-balance file must not double the stock. If records fail validation, give users a specific error and a way to correct the source.</p><p>Where an application uses related database updates, <a href="https://learn.microsoft.com/en-us/ef/core/saving/transactions" target="_blank" rel="noopener noreferrer">EF Core transaction guidance</a> describes committing or rolling back database work together. Transaction handling supports a reliable import, but cannot correct an incorrect physical count or unit conversion.</p>` },
+      { heading: 'Test normal work after the opening import', list: [
+        'Receive a carton, sell loose units and compare the base-unit balance.',
+        'Transfer stock between locations and verify both sides of the transfer.',
+        'Record a return and confirm the stock status and original transaction link.',
+        'Correct a quantity with approval and retain the adjustment reason.',
+        'Have two users update the same item and check for lost or conflicting changes.',
+        'Restore a backup in a test environment and reconcile the restored balances.',
+      ] },
+      { heading: 'Agree on a cutoff, a fallback and ownership', html: `<p>Name the person who approves opening balances and the person who authorises the switch. At the agreed cutoff, freeze the source or log every subsequent movement for controlled entry. Two independently edited stock records will drift even when both tools work correctly.</p><p>Define how the team will continue receiving and issuing goods if the new system is temporarily unavailable. Set a limit on the fallback period and reconcile any manual records before normal use resumes. Train staff on exceptions and corrections as well as the happy path.</p><p>Our <a href="/projects/inventory-management-system">inventory management project</a> documents product records, movements, monitoring and alerts. For a different workflow, discuss <a href="/custom-software-development-services">custom business software development</a> and any <a href="/api-development-services">accounting or ecommerce integrations</a> separately. Bring sample files, unit definitions and unresolved discrepancies to the discussion so the estimate covers the migration work as well as the application.</p>` },
+    ],
+  },
+
+
+  // ══════════════════════════════════════════════════════════
+  // .NET 8 END OF SUPPORT: WHAT TO DO NOW
+  // ══════════════════════════════════════════════════════════
+  "dotnet-8-end-of-support-what-to-do-now": {
+    author: "mahnoor-fatima",
+    title: ".NET 8 End of Support: What to Do Now (Upgrade Guide)",
+    seoTitle: ".NET 8 End of Support: What to Do Now (Upgrade Guide)",
+    description: ".NET 8 end of support passed on November 10, 2026. See what to do now: assess risk, upgrade to .NET 10 step by step, and stay secure. Checklist included.",
+    canonicalUrl: `${BLOG_BASE}/dotnet-8-end-of-support-what-to-do-now`,
+    category: "Development",
+    date: "November 14, 2026",
+    dateModified: "November 14, 2026",
+    readTime: "12 min read",
+    image: dotnet8EosHero,
+    imageMeta: {
+      alt: ".NET 8 end of support: .NET 8 ended on November 10, 2026 with no security patches, and .NET 10 LTS is supported until November 2028",
+      caption: ".NET 8 has reached end of support. Here is what to do now.",
+      width: 1200,
+      height: 675
+    },
+
+    secondaryImage: dotnet8EosTimeline,
+    secondaryImageMeta: {
+      alt: "Support timeline: .NET 8 and .NET 9 both ended support on November 10, 2026, while .NET 10 LTS is supported until November 2028",
+      caption: ".NET support timeline: where your version stands."
+    },
+    seoMeta: {
+      ogType: "article",
+      ogTitle: ".NET 8 End of Support: What to Do Now | QllmSoft",
+      ogDescription: ".NET 8 and .NET 9 reached end of support on November 10, 2026. A practical guide: find affected apps, assess risk, upgrade to .NET 10 step by step and reduce exposure while you do.",
+      twitterCard: "summary_large_image",
+      robots: "index, follow",
+      keywords: ".NET 8 end of support what to do now, .NET 8 end of life, upgrade .NET 8 to .NET 10, .NET 8 EOL, migrate to .NET 10, .NET 9 end of support, .NET upgrade checklist"
+    },
+    schemas: [
+      breadcrumb("dotnet-8-end-of-support-what-to-do-now", ".NET 8 End of Support: What to Do Now"),
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": ".NET 8 End of Support: What to Do Now (Upgrade Guide)",
+        "description": "What .NET 8 end of support means, how to find and prioritize affected applications, and how to upgrade to .NET 10 safely.",
+        "image": [dotnet8EosHero, dotnet8EosTimeline],
+        "datePublished": "2026-11-14T09:00:00+05:00",
+        "dateModified": "2026-11-14T09:00:00+05:00",
+        "author": articleAuthorSchema("mahnoor-fatima"),
+        "publisher": publisherSchema,
+        "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/dotnet-8-end-of-support-what-to-do-now` }
+      }
+    ],
+    internalLinks: [
+      int("/asp-net-core-development-services", "ASP.NET Core Development Services"),
+      int("/hire-dotnet-developers-pakistan", "Hire .NET Developers in Pakistan"),
+      int("/blog/dotnet-10-aot-compilation-performance-benefits", ".NET 10 AOT Compilation: Performance Benefits"),
+      int("/blog/legacy-system-modernization-without-downtime-or-data-loss", "Legacy System Modernization Without Downtime"),
+      int("/blog/how-to-avoid-technical-debt-in-custom-web-software", "How to Avoid Technical Debt in Custom Web Software"),
+      int("/blog/how-to-vet-dotnet-developers-pakistan", "Hire .NET Developers in Pakistan: How to Vet Candidates")
+    ],
+    externalLinks: [
+      { href: "https://devblogs.microsoft.com/dotnet/dotnet-8-9-end-of-support/", label: "Microsoft .NET Blog: .NET 8 and .NET 9 end of support" },
+      { href: "https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core", label: "Microsoft: .NET support policy" },
+      { href: "https://learn.microsoft.com/en-us/dotnet/core/compatibility/10.0", label: "Microsoft Docs: Breaking changes in .NET 10" },
+      { href: "https://learn.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview", label: "Microsoft Docs: .NET Upgrade Assistant" }
+    ],
+
+    sections: [
+      {
+        heading: "What Just Happened to .NET 8",
         paragraphs: [
-          "When choosing an AI healthcare software development company you need to find a balance between technical ability, clinical knowledge, security, integration and long term ownership. Be clear on what you want from your business and ensure they can prove what they say. Consider how the solution will perform in a real healthcare environment.",
-          "Choosing the right partner can help your medical business implement AI responsibly, keeping patient data safe and creating software that will be useful as your needs change."
+          "On November 10, 2026, .NET 8 reached the end of its support window. Microsoft announced that .NET 9 ended on the same day, so every application still running on either version is now outside support. If your team is searching for what to do about .NET 8 end of support, the short version is this: nothing breaks today, but from now on you are the one carrying the security risk, and the longer you wait the more expensive the upgrade becomes.",
+          "This guide explains what end of support really means, how to find and rank the applications affected, a step-by-step path to .NET 10, and what to do if you cannot upgrade immediately. It is written for engineering leads, CTOs and business owners who run .NET systems."
         ]
+      },
+      {
+        heading: "Quick Answer: What Should You Do Now?",
+        html: `
+          <div style="background:#eff6ff;padding:16px 20px;border-radius:8px;margin:0 0 20px 0;">
+            <p><strong>Short answer</strong></p>
+            <ul>
+              <li><strong>Your apps still run,</strong> but .NET 8 and .NET 9 no longer receive security fixes or technical support from Microsoft.</li>
+              <li><strong>Inventory first.</strong> Find every project, container image and build agent that still targets .NET 8 or .NET 9.</li>
+              <li><strong>Prioritize by exposure.</strong> Internet-facing APIs and anything that handles sensitive data go first.</li>
+              <li><strong>Upgrade to .NET 10,</strong> the long-term support release supported until November 2028. Moving straight from 8 to 10 is fine, as long as you review the breaking changes for both releases.</li>
+              <li><strong>If you cannot upgrade this month,</strong> reduce exposure, set a firm deadline and monitor for new .NET vulnerabilities.</li>
+            </ul>
+          </div>
+          <p><strong>In this guide</strong></p>
+          <ol>
+            <li><a href="#what-it-means">What end of support means in practice</a></li>
+            <li><a href="#risk">Who is most at risk</a></li>
+            <li><a href="#inventory">Step 1: Find everything that still uses .NET 8</a></li>
+            <li><a href="#upgrade">Step 2: Upgrade to .NET 10</a></li>
+            <li><a href="#pipeline">Step 3: Update containers and pipelines</a></li>
+            <li><a href="#test">Step 4: Test and roll out safely</a></li>
+            <li><a href="#cannot-yet">If you cannot upgrade yet</a></li>
+            <li><a href="#plan">A 30-60-90 day plan</a></li>
+            <li><a href="#help">When to bring in help</a></li>
+            <li><a href="#faq">Frequently asked questions</a></li>
+          </ol>
+        `
+      },
+      {
+        heading: "What .NET 8 End of Support Means in Practice",
+        html: `
+          <span id="what-it-means"></span>
+          <p>According to Microsoft's <a href="https://devblogs.microsoft.com/dotnet/dotnet-8-9-end-of-support/" target="_blank" rel="noopener noreferrer">announcement</a>, applications built on .NET 8 or .NET 9 will continue to run after November 10, 2026, but Microsoft no longer issues security updates or provides technical support for them. The timeline above shows how the versions line up.</p>
+          <p>In practical terms:</p>
+          <ul>
+            <li><strong>Nothing stops working.</strong> There is no switch that disables your apps, so there is no emergency outage.</li>
+            <li><strong>New vulnerabilities will not be fixed for you.</strong> When a security issue is found in the runtime or in ASP.NET Core, the fix will ship only for supported versions. Unsupported versions stay exposed.</li>
+            <li><strong>Support is gone.</strong> If you hit a bug in the runtime, you cannot rely on Microsoft support for .NET 8 or .NET 9.</li>
+            <li><strong>Tooling will move on.</strong> Microsoft has said Visual Studio will mark the .NET 8 and .NET 9 components as out of support, and ecosystem libraries tend to drop older targets over time.</li>
+            <li><strong>Compliance questions follow.</strong> Auditors and customers increasingly ask whether your software runs on supported components, so end-of-support runtimes can become a finding.</li>
+          </ul>
+          <p>Exactly why .NET 8 ended: it is a long-term support release, which in the <a href="https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core" target="_blank" rel="noopener noreferrer">.NET support policy</a> means three years, not indefinite support. .NET 9 was a standard-term release with a 24-month window, and both windows closed on the same day.</p>
+        `
+      },
+      {
+        heading: "Who Is Most at Risk and What to Fix First",
+        html: `<span id="risk"></span><p>Not every application carries the same risk. Use this table to rank your estate so that you spend effort where an unpatched runtime would hurt most.</p>`,
+        table: {
+          headers: ["Situation", "Risk level", "Why", "Suggested priority"],
+          rows: [
+            ["Internet-facing API or website on .NET 8 or 9", "High", "Directly reachable by attackers, and any future runtime flaw stays open", "Upgrade first, within weeks"],
+            ["Apps handling payments, health or personal data", "High", "Compliance exposure on top of security risk", "Upgrade first, document the plan"],
+            ["Internal web apps behind a VPN", "Medium", "Smaller attack surface, but internal threats and lateral movement still matter", "Upgrade in the next cycle"],
+            ["Background services and scheduled jobs", "Medium", "Often forgotten, but they hold credentials and data access", "Include in the inventory and schedule"],
+            ["Desktop apps (WPF, WinForms) on .NET 8", "Medium", "Lower network exposure, but still unsupported", "Upgrade with the next release"],
+            ["Container images and CI build agents", "Medium", "Base images and SDKs on old versions slow every future upgrade", "Update together with the apps"],
+            ["Old .NET Framework apps (4.x)", "Separate issue", "Different support model, usually tied to Windows, but a good time to plan modernization", "Plan modernization separately"]
+          ]
+        }
+      },
+      {
+        heading: "Step 1: Find Everything That Still Uses .NET 8",
+        html: `
+          <span id="inventory"></span>
+          <p>You cannot upgrade what you cannot see. Spend the first day building an inventory. These commands are a starting point, and you should adapt them to your repositories and tools.</p>
+          <p><strong>Find target frameworks in your source code (Linux, macOS or Git Bash):</strong></p>
+          <pre style="background:#0f172a;color:#e2e8f0;padding:16px;border-radius:8px;overflow-x:auto;font-size:14px;line-height:1.6;"><code># Every project and the framework it targets
+grep -R --include=*.csproj -E "&lt;TargetFrameworks?&gt;" .
+
+# Pinned SDK versions
+grep -R --include=global.json "version" .
+
+# Container images
+grep -R --include=Dockerfile -E "mcr.microsoft.com/dotnet" .</code></pre>
+          <p><strong>PowerShell equivalent:</strong></p>
+          <pre style="background:#0f172a;color:#e2e8f0;padding:16px;border-radius:8px;overflow-x:auto;font-size:14px;line-height:1.6;"><code>Get-ChildItem -Recurse -Filter *.csproj |
+  Select-String -Pattern "&lt;TargetFrameworks?&gt;" |
+  Select-Object Path, Line</code></pre>
+          <p><strong>Check what is installed on a server or build agent:</strong></p>
+          <pre style="background:#0f172a;color:#e2e8f0;padding:16px;border-radius:8px;overflow-x:auto;font-size:14px;line-height:1.6;"><code>dotnet --list-runtimes
+dotnet --list-sdks</code></pre>
+          <p><strong>Check your dependencies for known problems:</strong></p>
+          <pre style="background:#0f172a;color:#e2e8f0;padding:16px;border-radius:8px;overflow-x:auto;font-size:14px;line-height:1.6;"><code>dotnet list package --vulnerable --include-transitive
+dotnet list package --outdated</code></pre>
+          <p>Do not forget the places that are easy to miss: CI and CD pipeline definitions, Azure Functions or other hosting configuration, scheduled jobs, internal tools that nobody owns, and third-party applications you run that were built on .NET. For vendor software, ask the supplier when they will ship a version on .NET 10.</p>
+          <p>Record each finding in a simple register with the owner, the framework, the exposure and the target date. That register becomes your upgrade plan.</p>
+        `
+      },
+      {
+        heading: "Step 2: Upgrade to .NET 10",
+        html: `
+          <span id="upgrade"></span>
+          <p>.NET 10 is a long-term support release supported until November 2028, so it is the right target for almost every team. You do not need to stop at .NET 9 on the way. Microsoft recommends upgrading to .NET 10, and you can go from .NET 8 directly. The one rule is that you must review breaking changes for every release you skip, which here means both .NET 9 and .NET 10.</p>
+          <h3>Make a plan for each application</h3>
+          <ol>
+            <li><strong>Create a branch</strong> and make sure the existing test suite passes on .NET 8 before you change anything. A clean starting point makes every later failure meaningful.</li>
+            <li><strong>Read the breaking changes</strong> for <a href="https://learn.microsoft.com/en-us/dotnet/core/compatibility/10.0" target="_blank" rel="noopener noreferrer">.NET 10</a> and for .NET 9, and note the ones that touch features you use.</li>
+            <li><strong>Optionally run the analyzer.</strong> The <a href="https://learn.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview" target="_blank" rel="noopener noreferrer">.NET Upgrade Assistant</a> can help find issues in larger solutions, but treat its output as suggestions.</li>
+            <li><strong>Change the target framework</strong> and update packages.</li>
+            <li><strong>Build, fix and test</strong> until everything is green.</li>
+          </ol>
+          <h3>The core change</h3>
+          <pre style="background:#0f172a;color:#e2e8f0;padding:16px;border-radius:8px;overflow-x:auto;font-size:14px;line-height:1.6;"><code>&lt;!-- Before --&gt;
+&lt;PropertyGroup&gt;
+  &lt;TargetFramework&gt;net8.0&lt;/TargetFramework&gt;
+&lt;/PropertyGroup&gt;
+
+&lt;!-- After --&gt;
+&lt;PropertyGroup&gt;
+  &lt;TargetFramework&gt;net10.0&lt;/TargetFramework&gt;
+&lt;/PropertyGroup&gt;</code></pre>
+          <p>If you pin the SDK, update <strong>global.json</strong> too, so every developer and build agent uses the same version:</p>
+          <pre style="background:#0f172a;color:#e2e8f0;padding:16px;border-radius:8px;overflow-x:auto;font-size:14px;line-height:1.6;"><code>{
+  "sdk": {
+    "version": "10.0.100",
+    "rollForward": "latestFeature"
+  }
+}</code></pre>
+          <p>Use the exact SDK version your team has installed, since the number above is only an example. Then update the Microsoft packages that follow the framework version, such as ASP.NET Core and Entity Framework Core packages, to their .NET 10 releases, and update third-party packages to versions that support .NET 10.</p>
+          <h3>Common friction points</h3>
+          <ul>
+            <li><strong>Packages that have not caught up.</strong> Check each key dependency for .NET 10 support. If one has not, look for a maintained alternative or contact the maintainer.</li>
+            <li><strong>Behavior changes in data access.</strong> Entity Framework Core releases include behavior changes. Review them and test your queries, migrations and performance.</li>
+            <li><strong>Serialization and middleware changes.</strong> Some defaults change between releases, so run integration tests against real requests.</li>
+            <li><strong>Reflection-heavy code.</strong> If you plan to use Native AOT later, plan for that separately, as described in our guide to <a href="https://qllmsoft.com/blog/dotnet-10-aot-compilation-performance-benefits">.NET 10 AOT compilation performance benefits</a>.</li>
+          </ul>
+        `
+      },
+      {
+        heading: "Step 3: Update Containers, Build Agents and Pipelines",
+        html: `
+          <span id="pipeline"></span>
+          <p>An upgraded project that still builds on an old SDK image, or deploys to a server with only the old runtime, will fail. Update the whole chain together.</p>
+          <p><strong>Dockerfile:</strong></p>
+          <pre style="background:#0f172a;color:#e2e8f0;padding:16px;border-radius:8px;overflow-x:auto;font-size:14px;line-height:1.6;"><code># Before
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+
+# After
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
+FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS runtime</code></pre>
+          <p><strong>GitHub Actions:</strong></p>
+          <pre style="background:#0f172a;color:#e2e8f0;padding:16px;border-radius:8px;overflow-x:auto;font-size:14px;line-height:1.6;"><code>- uses: actions/setup-dotnet@v4
+  with:
+    dotnet-version: 10.0.x</code></pre>
+          <p>Do the same for Azure DevOps, GitLab CI or any other build system, for hosting runtime settings, and for any server where you install the runtime directly. If you host on a managed platform, check the provider's documentation to confirm that .NET 10 is available on your plan before you schedule the release.</p>
+        `
+      },
+      {
+        heading: "Step 4: Test and Roll Out Safely",
+        html: `
+          <span id="test"></span>
+          <p>Treat a runtime upgrade as a real release, not as a formality. A safe rollout looks like this:</p>
+          <ul>
+            <li><strong>Run the full automated test suite</strong> and add tests around anything risky that has none, such as serialization, authentication and data access.</li>
+            <li><strong>Compare performance</strong> on realistic data. A newer runtime is often faster, but verify it for your workload.</li>
+            <li><strong>Deploy to a staging environment</strong> that mirrors production, and run smoke tests against it.</li>
+            <li><strong>Release gradually.</strong> Use a canary, a single region or a small share of traffic first, and keep the previous build ready for a rollback.</li>
+            <li><strong>Watch logs and metrics</strong> closely for the first days, especially error rates, latency and memory.</li>
+          </ul>
+          <p>If a service has no tests at all, that is a signal to add a minimal safety net before upgrading, which also reduces future technical debt, as we explain in <a href="https://qllmsoft.com/blog/how-to-avoid-technical-debt-in-custom-web-software">how to avoid technical debt in custom web software</a>.</p>
+        `
+      },
+      {
+        heading: "If You Cannot Upgrade Yet: Reduce Exposure",
+        html: `
+          <span id="cannot-yet"></span>
+          <p>Some systems cannot move in a few weeks because of a blocking dependency, a vendor product or limited team capacity. If that is your situation, do not leave it open-ended. Reduce the risk while you work toward the upgrade:</p>
+          <ul>
+            <li><strong>Set a firm deadline</strong> and an owner, and record it in your risk register so it does not drift.</li>
+            <li><strong>Limit exposure.</strong> Keep the application behind a web application firewall, restrict network access, remove public endpoints that are not needed and segment it from sensitive systems.</li>
+            <li><strong>Harden what you control.</strong> Apply least-privilege access, rotate secrets, keep dependencies and the operating system patched, and keep logging and alerting active.</li>
+            <li><strong>Watch for new advisories.</strong> Follow Microsoft's security announcements for .NET. Once a new vulnerability is published, assume that unsupported versions will not receive a fix.</li>
+            <li><strong>Check your obligations.</strong> If you handle regulated data or have contractual security commitments, tell your security and compliance leads now, and document your mitigation plan.</li>
+            <li><strong>Do not assume a third party will patch for you.</strong> Some operating system vendors or platforms may offer their own support arrangements for .NET builds. Confirm the details in writing before you rely on them.</li>
+          </ul>
+          <p>These steps lower risk, but they do not replace upgrading. They buy you time to do it properly.</p>
+        `
+      },
+      {
+        heading: "A 30-60-90 Day Plan",
+        html: `<span id="plan"></span><p>A simple schedule keeps the work moving. Adjust the scope to the size of your estate.</p>`,
+        table: {
+          headers: ["Timeframe", "Focus", "Outcome"],
+          rows: [
+            ["First 30 days", "Inventory, risk ranking, breaking-change review, upgrade of the highest-risk internet-facing apps", "A complete register and the most exposed systems on .NET 10"],
+            ["Days 31 to 60", "Upgrade remaining production services, update containers and pipelines, chase vendor versions", "Most production workloads supported, build chain updated"],
+            ["Days 61 to 90", "Upgrade internal tools, desktop apps and low-risk services, remove old SDKs and images", "No workloads left on .NET 8 or .NET 9"],
+            ["Ongoing", "Plan upgrades for each annual release, keep dependencies current, schedule support-date reviews", "No repeat of the same scramble in 2028"]
+          ]
+        }
+      },
+      {
+        heading: "When to Bring in Help",
+        html: `
+          <span id="help"></span>
+          <p>Many teams can handle an upgrade in-house. Consider outside help when:</p>
+          <ul>
+            <li>You have many applications and no clear inventory or owners.</li>
+            <li>Key services have no tests, so every change feels risky.</li>
+            <li>Your system depends on old frameworks or libraries that block the upgrade, which usually means a phased modernization is needed. Our guide to <a href="https://qllmsoft.com/blog/legacy-system-modernization-without-downtime-or-data-loss">legacy system modernization without downtime or data loss</a> explains how to do that safely.</li>
+            <li>Your team is stretched thin, and an upgrade project would stall feature work.</li>
+          </ul>
+          <p>Our <a href="https://qllmsoft.com/asp-net-core-development-services">ASP.NET Core development services</a> include runtime upgrades, modernization and performance work. If you need extra engineers for the upgrade, you can <a href="https://qllmsoft.com/hire-dotnet-developers-pakistan">hire .NET developers in Pakistan</a>, and our guide on <a href="https://qllmsoft.com/blog/how-to-vet-dotnet-developers-pakistan">how to vet .NET developers</a> explains how to choose well.</p>
+        `
+      },
+      {
+        heading: "Frequently Asked Questions",
+        html: `
+          <span id="faq"></span>
+          <h3>When did .NET 8 reach end of support?</h3>
+          <p>.NET 8 reached end of support on November 10, 2026. .NET 9 ended on the same day. .NET 10 is the long-term support release, supported until November 2028.</p>
+
+          <h3>Will my .NET 8 application stop working?</h3>
+          <p>No. Applications built on .NET 8 continue to run. What changes is that Microsoft no longer issues security updates or technical support for it.</p>
+
+          <h3>Can I upgrade straight from .NET 8 to .NET 10?</h3>
+          <p>Yes. Microsoft recommends upgrading to .NET 10, and you do not need to install .NET 9 first. Review the breaking changes for both .NET 9 and .NET 10, since you skip a release.</p>
+
+          <h3>How long does the upgrade take?</h3>
+          <p>It depends on the size and health of the application. A well-tested service with current dependencies can move quickly, while a large system with outdated packages and no tests takes longer. The inventory and breaking-change review give you a realistic estimate.</p>
+
+          <h3>Should I move to .NET 10 or wait for the next release?</h3>
+          <p>Move to .NET 10. It is a long-term support release, so it gives you a stable target through November 2028. Waiting leaves you on an unsupported runtime.</p>
+        `
+      },
+      {
+        heading: "Conclusion: Treat End of Support as a Deadline You Have Already Passed",
+        html: `
+          <p>.NET 8 reaching end of support is not an emergency outage, but it is a real security and compliance deadline that has now passed. The path forward is clear: inventory what you run, rank it by exposure, upgrade the riskiest systems to .NET 10 first, update your containers and pipelines, and test before each release. If you cannot move quickly, reduce exposure and set a firm date.</p>
+          <p>If you want a second pair of hands, explore our <a href="https://qllmsoft.com/asp-net-core-development-services">ASP.NET Core development services</a> or <a href="https://qllmsoft.com/contact">book a free consultation</a>. We will review your estate and help you plan the upgrade.</p>
+          <div class="contact-box">
+            <p><strong>Need help upgrading from .NET 8 to .NET 10?</strong></p>
+            <p><strong>Email:</strong> <a class="u-email" href="mailto:qllmsoft@gmail.com">qllmsoft@gmail.com</a></p>
+            <p><strong>WhatsApp:</strong> <a class="p-tel" href="tel:+923348229288">+92 334 8229288</a></p>
+            <p><strong>Contact:</strong> <a class="u-url" href="https://qllmsoft.com/contact">qllmsoft.com/contact</a></p>
+          </div>
+        `
       }
     ]
   },
@@ -9204,7 +9661,5 @@ FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS runtime</code></pre>
     ]
   },
 };
-
-
 
 export default blogPostsData;

@@ -147,6 +147,7 @@
       "/blog/custom-software-for-financial-services-compliance-and-growth",
       "/blog/legacy-system-modernization-without-downtime-or-data-loss",
       "/blog/hiring-dotnet-developers-guide",
+      "/blog/dotnet-8-end-of-support-what-to-do-now",
       "/blog/best-software-house-in-pakistan",
       "/blog/website-development-cost-in-pakistan",
       "/blog/mobile-app-development-cost-in-pakistan",
@@ -166,7 +167,11 @@
       "/projects/payroll-management-system",
       "/projects/financial-management-system",
       "/projects/logistics-fleet-management-system",
-      "/projects/inventory-management-system"
+      "/projects/inventory-management-system",
+      "/blog/how-to-choose-an-ai-healthcare",
+      "/blog/school-fee-reconciliation-software-pakistan",
+      "/blog/biometric-attendance-payroll-integration-pakistan",
+      "/blog/excel-to-inventory-software-migration-pakistan"
     ],
     "skipThirdPartyRequests": false,
     "waitFor": "body:not(:has([data-prerender-ready=\"false\"]))"

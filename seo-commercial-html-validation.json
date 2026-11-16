@@ -1,0 +1,63 @@
+{
+  "results": [
+    {
+      "route": "/custom-school-management-software-development",
+      "title": "Custom School Management Software Development | QllmSoft",
+      "titles": 1,
+      "descriptions": [
+        "Build school software around admissions, attendance, fees and report cards. Scope roles, data migration, payment connections and a phased rollout with QllmSoft."
+      ],
+      "canonicals": [
+        "https://qllmsoft.com/custom-school-management-software-development"
+      ],
+      "h1": 1,
+      "schemas": [
+        "Service",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "words": 673
+    },
+    {
+      "route": "/custom-software-development-services",
+      "title": "Custom Software Development Services | QllmSoft",
+      "titles": 1,
+      "descriptions": [
+        "Replace spreadsheet workarounds with custom business software, ERP modules and connected workflows. Discuss your requirements with QllmSoft."
+      ],
+      "canonicals": [
+        "https://qllmsoft.com/custom-software-development-services"
+      ],
+      "h1": 1,
+      "schemas": [
+        "Organization",
+        "Service",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "words": 1369
+    },
+    {
+      "route": "/api-development-services",
+      "title": "API Development & Integration Services | QllmSoft",
+      "titles": 1,
+      "descriptions": [
+        "Connect your apps, CRM and ERP with custom REST, GraphQL or SOAP APIs. Plan integrations, backend upgrades and project scope with QllmSoft."
+      ],
+      "canonicals": [
+        "https://qllmsoft.com/api-development-services"
+      ],
+      "h1": 1,
+      "schemas": [
+        "Organization",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "words": 1803
+    }
+  ],
+  "sharedLongParagraphs": []
+}

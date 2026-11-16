@@ -57,7 +57,6 @@ const Contact = () => {
   };
   const orgSchema = schemaOrganization;
  const handleSubmit = async (e) => {
-  debugger;
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -122,7 +121,7 @@ const Contact = () => {
     <>
     <SEO
   title="Contact QllmSoft | Custom Software Development & API Solutions"
-  description="Get in touch with QllmSoft, a leading custom software development company delivering scalable ASP.NET Core, web application, and secure API solutions for startups and businesses worldwide. Let’s discuss your project and build reliable digital solutions together."
+  description="Talk with QllmSoft about custom software, web applications, mobile products, or secure API integrations. Share your goals and receive a practical next-step recommendation for your project."
   url="https://qllmsoft.com/contact"
   image="https://qllmsoft.com/og-contact.jpg"
   schema={{
@@ -162,8 +161,9 @@ const Contact = () => {
           <span className="contact-hero-eyebrow">Let’s talk about your project</span>
           <h1>Contact Us</h1>
           <p>
-            Have a project in mind? Let's discuss how we can help transform 
-            your ideas into reality. Get in touch with our team today.
+            Tell us what is slowing the business down, what you need to launch,
+            or which system needs replacing. We will help you clarify scope,
+            technical options, and the most sensible next step.
           </p>
         </div>
       </section>
@@ -176,7 +176,8 @@ const Contact = () => {
             <div className="contact-info">
               <h2 className="contact-info-title">Contact QllmSoft</h2>
               <p className="contact-info-subtitle">
-                We build growth-driven digital products and services.
+                Share your goals, current workflow, budget range, and timeline.
+                The more context you provide, the more useful our first response will be.
               </p>
 
               <div className="contact-details">

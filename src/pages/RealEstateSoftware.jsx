@@ -791,28 +791,22 @@ const RealEstateSoftware = () => {
                   key={i}
                   className={`res-review-card${reviewInView ? ' res-review-card--in' : ''}`}
                   style={{ animationDelay: `${i * 0.1}s` }}
-                  itemScope itemType="https://schema.org/Review"
                 >
                   <div
                     className="res-review-card__stars"
                     aria-label="5 out of 5 stars"
-                    itemProp="reviewRating"
-                    itemScope
-                    itemType="https://schema.org/Rating"
                   >
-                    <meta itemProp="ratingValue" content="5" />
-                    <meta itemProp="bestRating"  content="5" />
                     {[...Array(5)].map((_, si) => (
                       <span key={si} className="res-star"><IconStar size={16} /></span>
                     ))}
                   </div>
-                  <p className="res-review-card__text" itemProp="reviewBody">"{r.text}"</p>
-                  <div className="res-review-card__author" itemProp="author" itemScope itemType="https://schema.org/Person">
+                  <p className="res-review-card__text">"{r.text}"</p>
+                  <div className="res-review-card__author">
                     <div className="res-review-card__avatar" aria-hidden="true">
                       {r.name.split(' ').map(n => n[0]).join('')}
                     </div>
                     <div>
-                      <strong itemProp="name">{r.name}</strong>
+                      <strong>{r.name}</strong>
                       <span>{r.loc}</span>
                     </div>
                   </div>
