@@ -391,18 +391,28 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
+<url>
     <loc>https://qllmsoft.com/blog/school-fee-reconciliation-software-pakistan</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
+<url>
     <loc>https://qllmsoft.com/blog/biometric-attendance-payroll-integration-pakistan</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
+<url>
     <loc>https://qllmsoft.com/blog/excel-to-inventory-software-migration-pakistan</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qllmsoft.com/blog/dotnet-8-end-of-support-what-to-do-now</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qllmsoft.com/blog/sdk</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

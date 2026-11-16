@@ -9029,6 +9029,7 @@ Decision:        Meet target = proceed. Miss target = adjust or stop.</code></pr
       ] },
       { heading: 'Agree on a cutoff, a fallback and ownership', html: `<p>Name the person who approves opening balances and the person who authorises the switch. At the agreed cutoff, freeze the source or log every subsequent movement for controlled entry. Two independently edited stock records will drift even when both tools work correctly.</p><p>Define how the team will continue receiving and issuing goods if the new system is temporarily unavailable. Set a limit on the fallback period and reconcile any manual records before normal use resumes. Train staff on exceptions and corrections as well as the happy path.</p><p>Our <a href="/projects/inventory-management-system">inventory management project</a> documents product records, movements, monitoring and alerts. For a different workflow, discuss <a href="/custom-software-development-services">custom business software development</a> and any <a href="/api-development-services">accounting or ecommerce integrations</a> separately. Bring sample files, unit definitions and unresolved discrepancies to the discussion so the estimate covers the migration work as well as the application.</p>` },
     ],
+  },
 
 
   // ══════════════════════════════════════════════════════════

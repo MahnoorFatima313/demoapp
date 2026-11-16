@@ -439,14 +439,13 @@ const HireReactDevelopers = () => {
                 {name:'Mohammad I.',loc:'Amman, Jordan',img:'https://qllmsoft.com/images/Muhammad I.webp',text:'"My go-to React development team for storefront and dashboard work. Clean code, proactive communication, and a genuine understanding of what the frontend needs to do for the business."'},
                 {name:'Fernando M.',loc:'Miramar, United States',img:'https://qllmsoft.com/images/fernandoM.webp',text:'"The React dashboard they built has run in production for months without a single stability issue. They flagged a couple of edge cases we hadn\'t thought of before they became bugs."'},
               ].map((r,i)=>(
-                <article key={i} className={`hd-review-card animate__animated ${reviewInView?'animate__fadeInUp':''}`} style={{animationDelay:`${i*0.1}s`}} itemScope itemType="https://schema.org/Review">
-                  <div className="hd-review-card__stars" aria-label="5 out of 5 stars" itemProp="reviewRating" itemScope itemType="https://schema.org/Rating">
-                    <meta itemProp="ratingValue" content="5" /><meta itemProp="bestRating" content="5" />★★★★★
+                <article key={i} className={`hd-review-card animate__animated ${reviewInView?'animate__fadeInUp':''}`} style={{animationDelay:`${i*0.1}s`}}>
+                  <div className="hd-review-card__stars" aria-label="5 out of 5 stars">★★★★★
                   </div>
-                  <p className="hd-review-card__text" itemProp="reviewBody">{r.text}</p>
-                  <div className="hd-review-card__author" itemProp="author" itemScope itemType="https://schema.org/Person">
+                  <p className="hd-review-card__text">{r.text}</p>
+                  <div className="hd-review-card__author">
                     <img src={r.img} alt={`${r.name} — verified QllmSoft React developer client from ${r.loc}`} loading="lazy" width="46" height="46" />
-                    <div><strong itemProp="name">{r.name}</strong><span>{r.loc} — Freelancer</span></div>
+                    <div><strong>{r.name}</strong><span>{r.loc} — Freelancer</span></div>
                   </div>
                 </article>
               ))}
