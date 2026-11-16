@@ -266,28 +266,83 @@
 
 /* Hero Section*/
 .projects-hero {
-  background:
-    linear-gradient(135deg, rgba(26, 54, 93, 0.95), rgba(43, 108, 176, 0.15)),
-    url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&q=80");
-  background-size: cover;
-  background-position: center;
-  padding: 90px 0;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  margin-top: -20px;
+  padding: 84px 0;
+  background: #07172c;
   text-align: center;
   color: #fff;
-  margin-top: -30px;
+}
+
+.projects-hero-video {
+  position: absolute;
+  z-index: -2;
+  inset: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  object-fit: cover;
+  opacity: 0.48;
+  filter: blur(4px) saturate(0.8) brightness(0.55);
+  transform: scale(1.03);
+  pointer-events: none;
+}
+
+.projects-hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    radial-gradient(circle at 78% 28%, rgba(52, 139, 255, 0.3), transparent 30%),
+    linear-gradient(110deg, rgba(4, 17, 35, 0.86), rgba(8, 41, 79, 0.68));
+  pointer-events: none;
+}
+
+.projects-hero-grid {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  opacity: 0.12;
+  background-image:
+    linear-gradient(rgba(185, 218, 255, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(185, 218, 255, 0.2) 1px, transparent 1px);
+  background-size: 56px 56px;
+  transform: perspective(700px) rotateX(62deg) scale(1.45) translateY(28%);
+  transform-origin: center bottom;
+  mask-image: linear-gradient(to bottom, transparent 12%, #000 100%);
+  pointer-events: none;
+}
+
+.projects-hero-particles {
+  opacity: 0.7;
+}
+
+.projects-hero .container {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 48px, 900px);
 }
 
 .projects-hero h1 {
-  font-size: 2.5rem;
-  color: #ffffff;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
+  color: #fff;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+  text-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 .projects-hero p {
-  font-size: 1.15rem;
-  color: rgba(255, 255, 255, 0.92);
-  max-width: 700px;
   margin: 0 auto;
+  color: rgba(238, 246, 255, 0.9);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  max-width: 700px;
   line-height: 1.7;
 }
 
@@ -676,12 +731,28 @@
     margin-top: 120px;
   }
 
+  .projects-hero {
+    min-height: 320px;
+    padding: 72px 0;
+  }
+
   .projects-hero h1 {
-    font-size: 1.75rem;
+    font-size: clamp(2.1rem, 8vw, 3.2rem);
   }
 
   .projects-hero p {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-hero {
+    min-height: 290px;
+    padding: 60px 0;
+  }
+
+  .projects-hero .container {
+    width: calc(100% - 36px);
   }
 }
 
