@@ -69,6 +69,7 @@ const FinanceManagementSystem = lazy(
 const GuestPostPage = lazy(
 	() => import("./pages/GuestPostPage"),
 );
+const PakistanWorkflowSoftware = lazy(() => import("./pages/PakistanWorkflowSoftware"));
 import "./styles/global.css";
 import "./App.css";
 import { HelmetProvider } from "react-helmet-async";
@@ -208,6 +209,9 @@ function App() {
 								element={<FinanceManagementSystem />}
 							/>
 							<Route path="/write-for-us" element={<GuestPostPage />} />
+							<Route path="/payroll-software-development-pakistan" element={<PakistanWorkflowSoftware />} />
+							<Route path="/inventory-management-software-pakistan" element={<PakistanWorkflowSoftware />} />
+							<Route path="/clinic-management-software-pakistan" element={<PakistanWorkflowSoftware />} />
 							<Route
 								path="/outsource-web-development-to-pakistan"
 								element={<OutsourceWebDevelopmentPakistan />}
