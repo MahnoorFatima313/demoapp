@@ -82,6 +82,8 @@ import healthcareVendorHero from '../assets/Blog_Imgs/choose-ai-healthcare-softw
 import healthcareVendorChecklist from '../assets/Blog_Imgs/ai-healthcare-vendor-evaluation-checklist.webp';
 import dotnet8EosHero from '../assets/Blog_Imgs/dotnet-8-end-of-support-hero.webp';
 import dotnet8EosTimeline from '../assets/Blog_Imgs/dotnet-support-timeline.webp';
+import dotnetUpgradeHero from '../assets/Blog_Imgs/upgrade-dotnet-8-to-10-checklist-hero.webp';
+import dotnetUpgradePhases from '../assets/Blog_Imgs/dotnet-upgrade-five-phases.webp';
 
 
  
@@ -9660,6 +9662,298 @@ FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS runtime</code></pre>
       }
     ]
   },
+
+  // ══════════════════════════════════════════════════════════
+  // UPGRADE .NET 8 TO .NET 10 CHECKLIST FOR SMALL TEAMS
+  // ══════════════════════════════════════════════════════════
+  "upgrade-dotnet-8-to-10-checklist-for-small-teams": {
+    author: "mahnoor-fatima",
+    title: "Upgrade .NET 8 to .NET 10: Checklist for Small Teams",
+    seoTitle: "Upgrade .NET 8 to .NET 10 Checklist for Small Teams",
+    description: "A practical, small-team checklist for upgrading .NET 8 applications to .NET 10, covering scope, breaking changes, dependencies, testing, deployment and rollback.",
+    canonicalUrl: `${BLOG_BASE}/upgrade-dotnet-8-to-10-checklist-for-small-teams`,
+    category: "Development",
+    date: "November 17, 2026",
+    dateModified: "November 17, 2026",
+    readTime: "15 min read",
+    image: dotnetUpgradeHero,
+    imageMeta: {
+      alt: "Small-team checklist for upgrading applications from .NET 8 to the .NET 10 LTS release",
+      caption: "An upgrade checklist designed to keep work small, visible and reversible.",
+      width: 1200,
+      height: 675
+    },
+    secondaryImage: dotnetUpgradePhases,
+    secondaryImageMeta: {
+      alt: "Five phases of a .NET 8 to .NET 10 upgrade for a small team",
+      caption: "Inventory, migrate, update dependencies, test and release."
+    },
+    seoMeta: {
+      ogType: "article",
+      ogTitle: "Upgrade .NET 8 to .NET 10: Checklist for Small Teams",
+      ogDescription: "A step-by-step .NET 8 to .NET 10 upgrade checklist for small teams, with scope control, dependency updates, testing and rollout guidance.",
+      twitterCard: "summary_large_image",
+      robots: "index, follow",
+      keywords: "upgrade .NET 8 to .NET 10 checklist, small team .NET upgrade, migrate ASP.NET Core 8 to 10, .NET 8 end of support, .NET 10 migration, upgrade checklist"
+    },
+    schemas: [
+      breadcrumb("upgrade-dotnet-8-to-10-checklist-for-small-teams", "Upgrade .NET 8 to .NET 10 Checklist"),
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Upgrade .NET 8 to .NET 10: Checklist for Small Teams",
+        "description": "A practical migration checklist for small teams upgrading .NET 8 applications to .NET 10.",
+        "image": [dotnetUpgradeHero, dotnetUpgradePhases],
+        "datePublished": "2026-11-17T09:00:00+05:00",
+        "dateModified": "2026-11-17T09:00:00+05:00",
+        "author": articleAuthorSchema("mahnoor-fatima"),
+        "publisher": publisherSchema,
+        "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/upgrade-dotnet-8-to-10-checklist-for-small-teams` }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Do small teams need to upgrade through .NET 9?", "acceptedAnswer": { "@type": "Answer", "text": "No. You can upgrade a .NET 8 project directly to .NET 10, but review breaking changes and behavior changes for both releases you skip." } },
+          { "@type": "Question", "name": "How long does a .NET 8 to .NET 10 upgrade take?", "acceptedAnswer": { "@type": "Answer", "text": "A small, well-tested application with current dependencies may take days. Large applications or systems with outdated packages, missing tests and difficult deployments need a staged plan and can take several weeks." } },
+          { "@type": "Question", "name": "What should a team upgrade first?", "acceptedAnswer": { "@type": "Answer", "text": "Start with internet-facing services and applications that process sensitive data. Upgrade one representative service end to end, then use the resulting process as the template for the rest." } }
+        ]
+      }
+    ],
+    internalLinks: [
+      int("/asp-net-core-development-services", "ASP.NET Core Development Services"),
+      int("/hire-dotnet-developers-pakistan", "Hire .NET Developers in Pakistan"),
+      int("/blog/dotnet-8-end-of-support-what-to-do-now", ".NET 8 End of Support: What to Do Now"),
+      int("/blog/dotnet-10-aot-compilation-performance-benefits", ".NET 10 AOT Compilation Benefits"),
+      int("/blog/how-to-avoid-technical-debt-in-custom-web-software", "How to Avoid Technical Debt"),
+      int("/blog/legacy-system-modernization-without-downtime-or-data-loss", "Legacy System Modernization")
+    ],
+    externalLinks: [
+      { href: "https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core", label: "Microsoft: .NET support policy" },
+      { href: "https://learn.microsoft.com/en-us/dotnet/core/compatibility/10.0", label: "Microsoft Docs: .NET 10 breaking changes" },
+      { href: "https://learn.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview", label: "Microsoft Docs: .NET Upgrade Assistant" },
+      { href: "https://learn.microsoft.com/en-us/dotnet/core/docker/build-container", label: "Microsoft Docs: Containerize a .NET application" }
+    ],
+    sections: [
+      {
+        heading: "A Practical Upgrade Checklist for Small Teams",
+        paragraphs: [
+          "Upgrading .NET 8 to .NET 10 is usually straightforward for one healthy application, but the work becomes risky when the runtime, NuGet packages, build images, hosting configuration and deployment process all change at once. For a small team, the safest approach is to upgrade one representative application end to end, document what worked and then repeat the process for the next service.",
+          ".NET 8 reached end of support on November 10, 2026. .NET 10 is the long-term support target and is supported until November 2028. This checklist does not promise that every package or project will compile unchanged; it gives a small team enough control to find issues early and keep an older build available while the migration is in progress."
+        ]
+      },
+      {
+        heading: "Start with a One-Page Upgrade Brief",
+        html: `
+          <p>Before changing code, write down a short upgrade brief for each application:</p>
+          <table>
+            <tr><th>Question</th><th>Minimum answer</th></tr>
+            <tr><td>What does the application do?</td><td>Primary users, workload and critical business outcomes</td></tr>
+            <tr><td>Where does it run?</td><td>Hosting platform, OS, containers, IIS or Azure service</td></tr>
+            <tr><td>What must continue working?</td><td>Authentication, payments, integrations, reports and data access</td></tr>
+            <tr><td>How is it tested?</td><td>Unit, integration, browser and operational smoke tests</td></tr>
+            <tr><td>How is it released?</td><td>CI/CD pipeline, rollback method and owner</td></tr>
+            <tr><td>Who accepts the upgrade?</td><td>Engineering lead, operations owner and a business contact</td></tr>
+          </table>
+          <p>Keep the scope to the runtime and required compatibility updates. Separate new features, UI redesign and architecture replacement into a later backlog. Combining them makes it harder to identify whether a failure came from the framework, a dependency or new product code.</p>
+        `
+      },
+      {
+        heading: "Phase 1: Inventory the Application Estate",
+        table: {
+          headers: ["Check", "Command or location", "Expected action"],
+          rows: [
+            ["Project targets", "Search *.csproj for <TargetFramework>", "Identify net8.0, net9.0 and mixed-framework solutions"],
+            ["Pinned SDK", "Check global.json", "Plan one .NET 10 SDK version for developers and CI"],
+            ["Container images", "Check Dockerfiles and base-image tags", "Replace SDK and ASP.NET runtime 8.0 tags with 10.0"],
+            ["Server runtimes", "dotnet --list-runtimes", "Update only the hosting and build environments in the deployment plan"],
+            ["Dependencies", "dotnet list package --outdated", "Distinguish framework packages, direct dependencies and transitive packages"],
+            ["Vulnerabilities", "dotnet list package --vulnerable --include-transitive", "Resolve actionable findings before or during the upgrade"],
+            ["Pipelines", "GitHub Actions, Azure DevOps or GitLab CI", "Update setup-dotnet, SDK containers and artifact scripts"],
+            ["Production configuration", "Environment settings and secrets", "Verify compatibility; do not copy unsupported settings into .NET 10"]
+          ]
+        }
+      },
+      {
+        heading: "Before You Change Anything: Establish a Baseline",
+        html: `
+          <ol>
+            <li>Create a dedicated migration branch and record the current commit.</li>
+            <li>Run the application against its real database copy or an approved test dataset.</li>
+            <li>Run the complete available test suite on .NET 8 and fix unrelated test failures only if they block a meaningful baseline.</li>
+            <li>Capture build duration, startup time and one or two critical endpoint timings.</li>
+            <li>Confirm that the current deployment can be rolled back within the agreed release window.</li>
+            <li>Take a verified backup or snapshot if the upgrade changes database schema or persistent configuration.</li>
+          </ol>
+          <p>The goal is to make every failure after the migration attributable to a known change. Without a baseline, a team can spend several days arguing whether a regression is caused by .NET 10 or existed before the upgrade.</p>
+        `
+      },
+      {
+        heading: "Phase 2: Review Breaking Changes and Dependencies",
+        html: `
+          <p>Read Microsoft's <a href="https://learn.microsoft.com/en-us/dotnet/core/compatibility/10.0" target="_blank" rel="noopener noreferrer">.NET 10 compatibility and breaking-change documentation</a>. Review .NET 9 changes as well because a direct 8-to-10 jump skips that release. A search through the changelog is not enough; tie each relevant feature to code in the application.</p>
+          <p>Prioritize these areas:</p>
+          <ul>
+            <li><strong>ASP.NET Core:</strong> middleware, authentication, authorization, routing, request limits and response defaults.</li>
+            <li><strong>Entity Framework Core:</strong> package compatibility, migrations, query behavior and provider support.</li>
+            <li><strong>Serialization:</strong> JSON naming, enum handling, null values, date formats and custom converters.</li>
+            <li><strong>Dependency injection:</strong> constructor changes, validation and service lifetime assumptions.</li>
+            <li><strong>Cryptography and identity:</strong> certificate handling, password settings and platform dependencies.</li>
+            <li><strong>Reflection and dynamic code:</strong> assembly loading, trimming and Native AOT only if it is actually part of the plan.</li>
+          </ul>
+          <p>The <a href="https://learn.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview" target="_blank" rel="noopener noreferrer">.NET Upgrade Assistant</a> can produce a useful migration report for larger solutions. Treat every automated edit as a proposal: review package changes and project-file rewrites before testing.</p>
+        `
+      },
+      {
+        heading: "Phase 3: Change the Target Framework",
+        html: `
+          <p>Update the TargetFramework in project files and solution-wide SDK settings:</p>
+          <pre style="background:#0f172a;color:#e2e8f0;padding:16px;border-radius:8px;overflow-x:auto;font-size:14px;line-height:1.6;"><code>&lt;!-- Before --&gt;
+&lt;PropertyGroup&gt;
+  &lt;TargetFramework&gt;net8.0&lt;/TargetFramework&gt;
+&lt;/PropertyGroup&gt;
+
+&lt;!-- After --&gt;
+&lt;PropertyGroup&gt;
+  &lt;TargetFramework&gt;net10.0&lt;/TargetFramework&gt;
+&lt;/PropertyGroup&gt;</code></pre>
+          <p>If the team uses global.json, pin an SDK version that all developers and build agents actually support:</p>
+          <pre style="background:#0f172a;color:#e2e8f0;padding:16px;border-radius:8px;overflow-x:auto;font-size:14px;line-height:1.6;"><code>{
+  "sdk": {
+    "version": "10.0.100",
+    "rollForward": "latestFeature"
+  }
+}</code></pre>
+          <p>The version above is an example; use the SDK version approved by your team and verify it against the local and CI toolchains. Then update ASP.NET Core, Entity Framework Core and other Microsoft packages to compatible .NET 10 releases. Update third-party dependencies only as needed, and prefer maintained versions that explicitly support net10.0.</p>
+        `
+      },
+      {
+        heading: "Update Containers and Build Pipelines Together",
+        html: `
+          <p>A project can compile successfully while the deployment still uses an unsupported runtime. Update the complete build and hosting chain:</p>
+          <pre style="background:#0f172a;color:#e2e8f0;padding:16px;border-radius:8px;overflow-x:auto;font-size:14px;line-height:1.6;"><code># Docker build and runtime examples
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
+FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS runtime</code></pre>
+          <pre style="background:#0f172a;color:#e2e8f0;padding:16px;border-radius:8px;overflow-x:auto;font-size:14px;line-height:1.6;"><code>- uses: actions/setup-dotnet@v4
+  with:
+    dotnet-version: 10.0.x</code></pre>
+          <p>Check Azure DevOps, GitLab CI, Jenkins, IIS servers, Azure App Service, Azure Container Apps or other managed hosting. Confirm that the target platform supplies the .NET 10 runtime or that its container model can. Do not assume that an SDK update will automatically change the runtime used in production.</p>
+          <p>Microsoft's <a href="https://learn.microsoft.com/en-us/dotnet/core/docker/build-container" target="_blank" rel="noopener noreferrer">container build guidance</a> is useful for multi-stage builds, base-image choices and deployment patterns.</p>
+        `
+      },
+      {
+        heading: "Phase 4: Test the Upgrade Like a Release",
+        list: [
+          "Run the full automated test suite and record all failures, whether or not they appear framework-related.",
+          "Add or repair tests around authentication, serialization, authorization, database migrations and external integrations.",
+          "Run the API contract or consumer tests against the upgraded build.",
+          "Load realistic test data and verify pagination, reports, large uploads and background jobs.",
+          "Compare startup time and key endpoint latency with the baseline.",
+          "Check logs, health checks, metrics and application-insights events in staging.",
+          "Test graceful failure for unavailable databases and third-party services.",
+          "Restore a backup into staging and verify that data access and migrations remain compatible."
+        ]
+      },
+      {
+        heading: "Run a Small-Scale Rollout",
+        table: {
+          headers: ["Stage", "What to verify", "Exit decision"],
+          rows: [
+            ["Developer environment", "Build, tests and common workflows", "No local setup or package assumptions remain"],
+            ["Staging", "Real integrations, configuration and database behavior", "Acceptance tests pass and baseline metrics are understood"],
+            ["Canary or limited users", "Authentication, errors, latency and rollback", "No unexpected dependency or runtime failures"],
+            ["One application region", "Monitoring, logs and support workflow", "Production owner agrees to expand"],
+            ["Full production", "Capacity, backups and support coverage", "Keep the previous artifact available for rollback"]
+          ]
+        }
+      },
+      {
+        heading: "Decision Checklist for the Upgrade Release",
+        html: `
+          <div style="background:#eff6ff;padding:16px 20px;border-radius:8px;margin:0 0 20px 0;">
+            <p><strong>Go only when most of these answers are yes:</strong></p>
+            <ul>
+              <li>The application builds and tests on the approved .NET 10 SDK.</li>
+              <li>Framework and third-party packages are compatible and supported.</li>
+              <li>Containers, servers and CI/CD use matching runtime versions.</li>
+              <li>Database migrations, integration contracts and authentication are tested.</li>
+              <li>Rollback uses the previous deployment artifact and verified configuration.</li>
+              <li>A named person monitors the release and a support window is agreed.</li>
+              <li>Known limitations are documented, including any package or feature that is deferred.</li>
+            </ul>
+          </div>
+        `
+      },
+      {
+        heading: "Common Problems Small Teams Encounter",
+        table: {
+          headers: ["Problem", "Likely cause", "Safe response"],
+          rows: [
+            ["Build works locally but fails in CI", "Different SDK, package source or global.json", "Pin and print the SDK and dependency versions in CI"],
+            ["Tests pass but staging behaves differently", "Configuration, database provider or environment dependency", "Diff approved settings and test with realistic infrastructure"],
+            ["Package blocks the project", "Dependency target or unsupported transitive package", "Upgrade, replace or isolate it; do not suppress every warning"],
+            ["Authentication fails after deployment", "Middleware order or changed defaults", "Compare security configuration and integration tests"],
+            ["Queries become slower", "EF Core behavior or missing query plan", "Profile the code and database before changing the model"],
+            ["Container starts, app does not serve traffic", "Wrong runtime image or missing native dependency", "Inspect startup logs and health endpoint"],
+            ["No clear owner for a second service", "Untracked repository or undocumented deployment", "Pause and add it to the inventory before production changes"]
+          ]
+        }
+      },
+      {
+        heading: "A 30-60-90 Day Plan for a Small Team",
+        table: {
+          headers: ["Timeframe", "Focus", "Deliverable"],
+          rows: [
+            ["Days 1-30", "Inventory, risk ranking and first representative upgrade", "Supported migration pattern and a risk-based application backlog"],
+            ["Days 31-60", "Upgrade internet-facing and sensitive-data services", "Production applications on .NET 10 with rollback evidence"],
+            ["Days 61-90", "Upgrade remaining internal services and desktop workloads", "No production workload left on .NET 8; old SDKs removed from pipelines"],
+            ["Ongoing", "Review dependencies, support dates and SDK changes each quarter", "No repeat of an unsupported-runtime scramble"]
+          ]
+        }
+      },
+      {
+        heading: "When a Small Team Should Ask for Extra Help",
+        paragraphs: [
+          "A two-person team can often complete a single modern ASP.NET Core service upgrade. Extra help becomes valuable when the estate has many applications, deployment processes differ, the database has complicated migrations or no one can confidently describe the integration dependencies.",
+          "Bring in a focused upgrade specialist for an application audit, package compatibility review or paired migration. They should leave the team with repeatable scripts, test coverage and a deployment checklist rather than a custom patch that only they understand."
+        ]
+      },
+      {
+        heading: "Frequently Asked Questions",
+        html: `
+          <h3>Do small teams need to upgrade through .NET 9?</h3>
+          <p>No. A project can move directly from .NET 8 to .NET 10. However, review .NET 9 and .NET 10 compatibility notes because you are skipping a release and both runtimes have accumulated behavior changes.</p>
+
+          <h3>How long does a .NET 8 to .NET 10 upgrade take?</h3>
+          <p>A clean, tested application with current dependencies can move quickly. A large system with old packages, missing tests or difficult deployments needs staged work and may take several weeks. Inventory and a proof-of-concept upgrade produce the most realistic estimate.</p>
+
+          <h3>Should we upgrade every project at once?</h3>
+          <p>No. Upgrade one representative application end to end, including its CI/CD process and deployment. Use the documented result to estimate and migrate the remaining applications.</p>
+
+          <h3>What should be upgraded first?</h3>
+          <p>Start with internet-facing services and applications that process sensitive data or cannot afford downtime. Then move internal services and desktop applications by risk and operational need.</p>
+
+          <h3>Does .NET 10 automatically make our application faster?</h3>
+          <p>Not automatically. Framework improvements may improve some workloads, but configuration, database access, middleware and application design determine the result. Benchmark important endpoints before and after the migration.</p>
+        `
+      },
+      {
+        heading: "Conclusion: Make the Upgrade Reversible",
+        html: `
+          <p>A strong upgrade for a small team is one where scope is visible, the baseline is understood, the build and deployment chain move together, and every release can be reversed. Upgrade one representative application, document the friction and repeat the process rather than trying to migrate the entire estate through an improvised weekend change.</p>
+          <p>Explore our <a href="https://qllmsoft.com/asp-net-core-development-services">ASP.NET Core development services</a>, read the <a href="https://qllmsoft.com/blog/dotnet-8-end-of-support-what-to-do-now">.NET 8 end-of-support guide</a>, or <a href="https://qllmsoft.com/contact">contact QllmSoft</a> for help planning and testing your upgrade.</p>
+          <div class="contact-box">
+            <p><strong>Need help upgrading .NET 8 to .NET 10?</strong></p>
+            <p><strong>Email:</strong> <a class="u-email" href="mailto:qllmsoft@gmail.com">qllmsoft@gmail.com</a></p>
+            <p><strong>WhatsApp:</strong> <a class="p-tel" href="tel:+923348229288">+92 334 8229288</a></p>
+            <p><strong>Contact:</strong> <a class="u-url" href="https://qllmsoft.com/contact">qllmsoft.com/contact</a></p>
+          </div>
+        `
+      }
+    ]
+  },
+
+
 };
 
 export default blogPostsData;
