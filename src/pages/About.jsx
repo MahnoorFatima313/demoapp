@@ -41,6 +41,7 @@
  */
 
 import React, { useEffect } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import ceoImg from "../assets/ceo-qllmsoft.webp";
@@ -147,6 +148,8 @@ const industries = [
    ABOUT PAGE
 ═══════════════════════════════════════════════════════════ */
 const About = () => {
+  const reduceMotion = useReducedMotion();
+
   useEffect(() => {
     const reveals = document.querySelectorAll(".reveal");
 
@@ -165,6 +168,19 @@ const About = () => {
 
     return () => reveals.forEach((el) => observer.unobserve(el));
   }, []);
+
+  const serviceLinks = [
+    { to: "/services", label: "All Services" },
+    { to: "/custom-software-development-services", label: "Custom Software" },
+    { to: "/web-application-development-services", label: "Web Applications" },
+    { to: "/mobile-app-development", label: "Mobile Apps" },
+    { to: "/ai-powered-software-solutions", label: "AI Solutions" },
+    { to: "/outsource-software-development-to-pakistan", label: "Outsourcing" },
+    { to: "/legacy-system-modernization-services", label: "Legacy Modernization" },
+    { to: "/hire-dotnet-developers-pakistan", label: "Hire Developers" },
+    { to: "/healthcare-software-development-pakistan", label: "Healthcare Software" },
+    { to: "/education-software-development-pakistan", label: "Education Software" },
+  ];
 
   return (
     <>
@@ -476,7 +492,15 @@ const About = () => {
 
     <ul className="ind-grid">
       {industries.map((item, i) => (
-        <li key={item.title} className="ind-card">
+        <motion.li
+          key={item.title}
+          className="ind-card"
+          initial={reduceMotion ? false : { opacity: 0, y: 30, scale: 0.97 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.55, delay: i * 0.08, ease: [0.2, 0.75, 0.25, 1] }}
+          whileHover={reduceMotion ? undefined : { y: -7, scale: 1.015 }}
+        >
           <span className="ind-number" aria-hidden="true">
             {String(i + 1).padStart(2, "0")}
           </span>
@@ -492,7 +516,7 @@ const About = () => {
               <i className="bi bi-arrow-right"></i>
             </span>
           )}
-        </li>
+        </motion.li>
       ))}
     </ul>
   </div>
@@ -512,41 +536,71 @@ const About = () => {
             </div>
 
             <div className="vm-stack">
-              <div className="vm-row">
-                <div className="vm-image">
-                  <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80"
-                    alt="QllmSoft vision, a software development partner for businesses worldwide"
-                    loading="lazy"
-                  />
-                </div>
-
-                <div className="vm-content">
-                  <div className="vm-icon">
-                    <Eye size={26} />
+              <motion.div
+                className="vm-row"
+                initial={reduceMotion ? false : { opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.25 }}
+                transition={{ duration: 0.65, ease: [0.2, 0.75, 0.25, 1] }}
+              >
+                <article className="vm-terminal-window">
+                  <div className="vm-terminal-bar">
+                    <span className="vm-terminal-controls" aria-hidden="true">
+                      <i />
+                      <i />
+                      <i />
+                    </span>
+                    <span className="vm-terminal-label">qllmsoft / vision</span>
+                    <span className="vm-terminal-state">CONNECTED</span>
                   </div>
-                  <h3>Our Vision</h3>
-                  <p>{aboutContent.vision}</p>
-                </div>
-              </div>
-
-              <div className="vm-row reverse">
-                <div className="vm-content">
-                  <div className="vm-icon">
-                    <Target size={26} />
+                  <div className="vm-content">
+                    <p className="vm-terminal-command" aria-hidden="true">
+                      <span>qllmsoft@about:~$</span> cat vision.md
+                    </p>
+                    <div className="vm-icon" aria-hidden="true">
+                      <Eye size={24} />
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>{aboutContent.vision}</p>
+                    <span className="vm-terminal-meta" aria-hidden="true">
+                      process complete <i /> exit code 0
+                    </span>
                   </div>
-                  <h3>Our Mission</h3>
-                  <p>{aboutContent.mission}</p>
-                </div>
+                </article>
+              </motion.div>
 
-                <div className="vm-image">
-                  <img
-                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80"
-                    alt="QllmSoft mission, measurable business outcomes through custom software"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
+              <motion.div
+                className="vm-row reverse"
+                initial={reduceMotion ? false : { opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.25 }}
+                transition={{ duration: 0.65, ease: [0.2, 0.75, 0.25, 1] }}
+              >
+                <article className="vm-terminal-window">
+                  <div className="vm-terminal-bar">
+                    <span className="vm-terminal-controls" aria-hidden="true">
+                      <i />
+                      <i />
+                      <i />
+                    </span>
+                    <span className="vm-terminal-label">qllmsoft / mission</span>
+                    <span className="vm-terminal-state">RUNNING</span>
+                  </div>
+                  <div className="vm-content">
+                    <p className="vm-terminal-command" aria-hidden="true">
+                      <span>qllmsoft@about:~$</span> cat mission.md
+                    </p>
+                    <div className="vm-icon" aria-hidden="true">
+                      <Target size={24} />
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>{aboutContent.mission}</p>
+                    <span className="vm-terminal-meta" aria-hidden="true">
+                      process complete <i /> exit code 0
+                    </span>
+                  </div>
+                </article>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -559,17 +613,42 @@ const About = () => {
           itemType="https://schema.org/Person"
         >
           <div className="container">
-            <div className="ceo-card">
-              <div className="ceo-image">
-                <img
-                  src={ceoImg}
-                  alt="Zain Ul Abedin, Founder and CEO of QllmSoft"
-                  loading="lazy"
-                  itemProp="image"
-                />
-              </div>
+            <motion.div
+              className="ceo-card"
+              initial={reduceMotion ? false : { opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.65, ease: [0.2, 0.75, 0.25, 1] }}
+            >
+              <aside className="ceo-profile">
+                <div className="ceo-image">
+                  <img
+                    src={ceoImg}
+                    alt="Zain Ul Abedin, Founder and CEO of QllmSoft"
+                    loading="lazy"
+                    itemProp="image"
+                  />
+                </div>
+                <span className="ceo-profile-kicker">Leadership profile</span>
+                <div className="ceo-identity">
+                  <h3 itemProp="name">Zain Ul Abedin</h3>
+                  <span itemProp="jobTitle">Founder &amp; CEO, QllmSoft</span>
+                </div>
+                <a
+                  href="https://www.linkedin.com/in/zain-ul-abedin-b09a613b/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="linkedin-btn"
+                  aria-label="Connect with Zain Ul Abedin on LinkedIn"
+                  itemProp="sameAs"
+                >
+                  <Linkedin size={18} />
+                  <span>Connect on LinkedIn</span>
+                </a>
+              </aside>
 
               <div className="ceo-content">
+                <span className="ceo-message-label">A note from our founder</span>
                 <h2 id="ceo-heading">Message from the CEO</h2>
 
                 <p>
@@ -593,104 +672,52 @@ const About = () => {
                   sending us new projects today.
                 </p>
 
-                <div className="ceo-identity">
-                  <h4 itemProp="name">Zain Ul Abedin</h4>
-                  <span itemProp="jobTitle">Founder &amp; CEO, QllmSoft</span>
-                </div>
-
-                <a
-                  href="https://www.linkedin.com/in/zain-ul-abedin-b09a613b/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="linkedin-btn"
-                  aria-label="Connect with Zain Ul Abedin on LinkedIn"
-                  itemProp="sameAs"
-                >
-                  <Linkedin size={18} />
-                </a>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
         {/* ── INTERNAL LINKS ── */}
         <section
-          className="section"
-          style={{ background: "#F7FAFC", padding: "48px 0" }}
+          className="section about-explore-section"
           aria-labelledby="explore-heading"
         >
           <div className="container">
-            <div className="section-title reveal">
+            <motion.div
+              className="section-title reveal"
+              initial={reduceMotion ? false : { opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
               <h2 id="explore-heading">
                 Explore What QllmSoft Can Build for Your Business
               </h2>
-            </div>
-            <nav aria-label="QllmSoft services navigation" className="reveal">
-              <div
-                style={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  gap: "12px",
-                  justifyContent: "center",
-                }}
+            </motion.div>
+            <nav aria-label="QllmSoft services navigation" className="about-service-marquee">
+              <motion.div
+                className="about-service-track"
+                animate={reduceMotion ? undefined : { x: ["0%", "-50%"] }}
+                transition={reduceMotion ? undefined : { duration: 34, ease: "linear", repeat: Infinity }}
               >
-                {[
-                  { to: "/services", label: "All Services" },
-                  {
-                    to: "/custom-software-development-services",
-                    label: "Custom Software",
-                  },
-                  {
-                    to: "/web-application-development-services",
-                    label: "Web Applications",
-                  },
-                  { to: "/mobile-app-development", label: "Mobile Apps" },
-                  {
-                    to: "/ai-powered-software-solutions",
-                    label: "AI Solutions",
-                  },
-                  {
-                    to: "/outsource-software-development-to-pakistan",
-                    label: "Outsourcing",
-                  },
-                  {
-                    to: "/legacy-system-modernization-services",
-                    label: "Legacy Modernization",
-                  },
-                  {
-                    to: "/hire-dotnet-developers-pakistan",
-                    label: "Hire Developers",
-                  },
-                  {
-                    to: "/healthcare-software-development-pakistan",
-                    label: "Healthcare Software",
-                  },
-                  {
-                    to: "/education-software-development-pakistan",
-                    label: "Education Software",
-                  },
-                  
-                ].map((item) => (
-                  <Link
-                    key={item.to}
-                    to={item.to}
-                    style={{
-                      display: "inline-block",
-                      padding: "10px 20px",
-                      background: "#fff",
-                      border: "1px solid #E2E8F0",
-                      borderRadius: "6px",
-                      color: "#1E5AA8",
-                      fontWeight: "600",
-                      fontSize: "0.9rem",
-                      textDecoration: "none",
-                      transition: "all 0.2s",
-                    }}
+                {[false, true].map((duplicate) => (
+                  <div
+                    className="about-service-group"
+                    key={duplicate ? "duplicate" : "primary"}
+                    aria-hidden={duplicate || undefined}
                   >
-                    {item.label}
-                  </Link>
+                    {serviceLinks.map((item) => (
+                      <Link
+                        key={item.to}
+                        to={item.to}
+                        tabIndex={duplicate ? -1 : undefined}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
                 ))}
-              </div>
+              </motion.div>
             </nav>
           </div>
         </section>
@@ -714,10 +741,12 @@ const About = () => {
               <Link to="/contact" className="btn btn-primary">
                 Get a Free Consultation
               </Link>
-              <LeadMagnetBanner variant="calculator" />
             </div>
           </div>
         </section>
+        <div className="about-calculator-promo">
+          <LeadMagnetBanner variant="calculator" />
+        </div>
       </main>
     </>
   );
