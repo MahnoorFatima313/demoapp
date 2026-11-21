@@ -342,28 +342,22 @@ const Home = () => {
                   Software that connects the work across your business
                 </h2>
                 <p className="direct-answer">
-                  QllmSoft is a <strong>custom software development company</strong> founded in{" "}
-                  {FACTS.foundingYear}. We build business systems, web applications, mobile apps and
-                  integrations for teams whose requirements need more than a standard product configuration.
-                  The starting point is the work people need to complete and the systems they already use.
+               Founded in  2015,  <span className="mustard-highlight">QllmSoft</span> is a <strong>custom software development company</strong>
+                 . When standard, ready made software is not enough for your business, we step in to create custom web applications, mobile application, and system integrations. We specialize in helping teams , When standard software packages fall short.To build the right solution, we start by understanding your teams's daily workflow and the existing tools you already use.
                 </p>
                 <p>
-                  Founder Zain Ul Abedin leads the team. Our development work includes ASP.NET Core and C#,
-                  React, Angular, SQL Server, and mobile frameworks such as Flutter and React Native.
-                  Technology choices depend on the existing environment, required device capabilities,
-                  integrations, and the people who will maintain the software.
+                 Led by Founder Zain Ul Abedin. Our team builds software using ASP.NET Core, C#, React, Angular, SQL Server, and Mobile tools like Flutter And React Native. We select the best tech stack for your project by looking at your current systems, device needs, integrations, and future maintenance requirements. We also provide AI-powered solutions to help businesses automate tasks and gain insights from their data.
                 </p>
                 <p>
-                  To assess previous client feedback, review our profiles on{" "}
+                  You can read feedbacks from our previous clients on our {" "}
                   <a href="https://www.upwork.com/freelancers/zainulabedinpk" target="_blank" rel="noopener noreferrer">
                     Upwork
                   </a>
-                  , and on{" "}
+                  , and {" "}
                   <a href="https://www.freelancer.com/u/mrprogrmmr" target="_blank" rel="noopener noreferrer">
-                    Freelancer
+                    Freelancer profiles.
                   </a>
-                  . Ask for examples relevant to your workflow and discuss the delivery responsibilities
-                  before selecting a development partner.
+                  Before choosing a development partner, we recommend asking for work samples that match your daily workflow and clearly discussing who handles what during delivery.
                 </p>
                 <Link to="/about" className="btn btn-primary" aria-label="Learn more about QllmSoft">
                   Read the full company story
@@ -379,8 +373,7 @@ const Home = () => {
             <div className="section-title">
               <h2 id="services-heading">What we build</h2>
               <p>
-                Choose a starting point based on what you need to deliver. The service pages explain the
-                scope, implementation decisions and information needed for a project discussion.
+               Pick a starting point based on the specific solution you need to build. Each service page outlines the project scope, key implementation choices, and the information required to get our discussion started.
               </p>
             </div>
 

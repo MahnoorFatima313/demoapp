@@ -326,6 +326,12 @@
 
 }
 
+.mustard-highlight {
+  color: black;
+  font-weight: 700;
+  background: #fdf189;
+}
+
 .about-description,
 .about-text p {
   font-size: 1rem;
