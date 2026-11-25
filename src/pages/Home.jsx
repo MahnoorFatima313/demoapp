@@ -80,7 +80,7 @@ const schemaHomeService = buildServiceSchema({
 const homeFaqItems = [
   {
     q: "Who is QllmSoft and what does the company actually do?",
-    a: `QllmSoft is a custom software development company founded in ${FACTS.foundingYear}. The team designs and builds enterprise web applications, mobile apps, business automation systems, and AI powered tools for clients that need software built around their specific operations rather than adapted from a generic template.`,
+  a: `Founded in ${FACTS.foundingYear}, QllmSoft is a custom software development company. We design and build web applications, mobile apps, business automation systems, and AI-powered tools tailored to your daily operations not adapted from generic templates.`,
   },
   {
     q: "Does QllmSoft only take on large enterprise projects, or also smaller ones?",
@@ -153,14 +153,13 @@ const engagementSteps = [
     ),
     body: (
       <>
-        Identify the users, workflows, integrations and constraints. Agree on deliverables,
-        assumptions and acceptance criteria so proposals can be compared on the same basis.
+        Identify who will use the software, how tasks flow, what systems need to connect, and any technical limits.Agree on deliverables, assumptions, and acceptance criteria so you can compare quotes accurately.
       </>
     ),
   },
   {
     n: "02",
-    title: "Agree on ownership and handover",
+    title: "Confirm ownership and handover",
     icon: (
       <svg {...stepIconProps}>
         <circle cx="8" cy="15" r="4" />
@@ -171,9 +170,7 @@ const engagementSteps = [
     ),
     body: (
       <>
-        Confirm source-code rights, repository access, documentation and hosting ownership.
-        Identify third-party subscriptions and licenses that will remain part of the system.
-      </>
+      Set clear terms around source code rights, repository access, technical guides, and server hosting.list any third-party tools or software licenses that will stay with the system after launch. </>
     ),
   },
   {
@@ -203,7 +200,7 @@ const engagementSteps = [
   },
   {
     n: "04",
-    title: "Decide how the system will be maintained",
+    title: "Set a maintenance plan",
     icon: (
       <svg {...stepIconProps}>
         <circle cx="12" cy="12" r="9" />
@@ -212,8 +209,7 @@ const engagementSteps = [
     ),
     body: (
       <>
-        Assign responsibility for monitoring, backups, updates and incident response.
-        Confirm the initial support period and ongoing maintenance scope in the agreement.
+     Decide who handles uptime monitoring, data backups, software updates, and bug fixes after launch. Define the initial support period and ongoing maintenance terms in your contract
       </>
     ),
   },
@@ -384,31 +380,25 @@ const Home = () => {
                 <strong>
                   <Link to="/custom-software-development-services">Custom software development</Link>
                 </strong>{" "}
-                helps teams replace spreadsheet handoffs, approval bottlenecks or disconnected records.
-                First assess whether configuring an existing product or adding an integration would meet
-                the need before committing to a custom system.
+                replace your messy spreadsheets, slow approval chains, and disconnected records with software built for your workflow. Before jumping into a custom build, always check whether adjusting an existing tool or connecting two apps will get the job done.
               </p>
               <p>
                 <strong>
                   <Link to="/website-development-services">Website development</Link>
                 </strong>{" "}
-                focuses on public-facing business sites and content that help prospective customers
-                understand your offer. Plan content editing, forms, analytics and technical SEO together.
+              Build public facing business websites that clearly explain your services to buyers. Plan your content editor, forms, analytics, and technical SEO as a single unit.
               </p>
               <p>
                 <strong>
                   <Link to="/web-application-development-services">Web application development</Link>
                 </strong>{" "}
-                covers customer portals, staff applications and SaaS platforms. Define who can access
-                each record, how tasks move between users, and which systems the application connects to.
+               We build web applications like SaaS products, client portals, and internal dashboards. Define user access levels, task workflows, and required system connections early in the process.
               </p>
               <p>
                 <strong>
                   <Link to="/api-development-services">API development</Link>
                 </strong>{" "}
-                covers the backend layer connecting a frontend, a database, and third party services such as
-                payment gateways or CRMs, using REST, GraphQL, or SOAP depending on what the integration
-                actually requires.
+                APIs work behind the scenes to let your website, database, and outside services like CRMs or payment processors talk to each other. We choose between REST, GraphQL, or SOAP based on what your integration actually needs.
               </p>
               <p>
                 <strong>
@@ -438,34 +428,33 @@ const Home = () => {
             <div className="section-title">
               <h2 id="industries-heading">Industry workflows and requirements</h2>
               <p>
-                Each sector has different users, records, integrations and risk considerations. These pages
-                describe industry-specific applications and the requirements to assess before a project begins.
+               Every industry handles different users, records, integrations, and security risks. Explore these pages to see how we tailor software for different sectors and what to plan for before kicking off your build.
               </p>
             </div>
             <div className="why-grid">
               <article className="why-card">
                 <h3><Link to="/healthcare-software-development-pakistan">Healthcare</Link></h3>
-                <p>Clinic booking systems, patient portals, and hospital management platforms built with role based access controls around sensitive patient data.</p>
+                <p>We build appointment booking tools, patient portals, and hospital platforms with role-based access to keep private medical records safe.</p>
               </article>
               <article className="why-card">
                 <h3><Link to="/finance-management-system">Finance and fintech</Link></h3>
-                <p>Financial reporting dashboards, budgeting and approval systems, and payment integrations, including the platform detailed in the case study below.</p>
+                <p>Track numbers and manage approvals with financial dashboards, budgeting software, and payment connections , like the solution highlighted in our case study below.</p>
               </article>
               <article className="why-card">
                 <h3><Link to="/education-software-development-pakistan">Education</Link></h3>
-                <p>School management systems, learning management platforms, and online examination tools for institutions managing multiple campuses.</p>
+                <p>Manage multiple campuses smoothly with all-in-one school software, e-learning platforms, and online testing tools</p>
               </article>
               <article className="why-card">
                 <h3><Link to="/ecommerce-development-services">Logistics and eCommerce</Link></h3>
-                <p>Inventory tracking, delivery routing tools, and custom storefronts for retailers who have outgrown what a template store platform can support.</p>
+                <p>Move beyond basic store templates with custom e-commerce sites, live inventory tracking, and delivery route planners.</p>
               </article>
               <article className="why-card">
                 <h3><Link to="/real-estate-software-development">Real estate</Link></h3>
-                <p>Property listing portals, tenant management platforms, and lease tracking systems for agencies and property managers.</p>
+                <p>Help agencies and property managers stay organized with property listing portals, tenant hubs, and automated lease trackers.</p>
               </article>
               <article className="why-card">
                 <h3>HR and enterprise operations</h3>
-                <p>Payroll systems, employee portals, and attendance tracking tools for operations heavy organizations replacing manual processes.</p>
+                <p>Eliminate manual admin work in operations-heavy companies using custom payroll tools, staff portals, and attendance trackers.</p>
               </article>
             </div>
           </div>
@@ -483,7 +472,7 @@ const Home = () => {
                 What the engagement actually looks like
               </h2>
               <p className="mt-4 text-base leading-7 text-slate-600 sm:text-lg">
-                Make the delivery responsibilities clear before development starts.
+              We establish clear delivery responsibilities before writing a single line of code.
               </p>
             </div>
 
@@ -567,9 +556,7 @@ const Home = () => {
               <div className="outsourcing-text">
                 <h2>Outsourcing software development, briefly</h2>
                 <p>
-                  An external development partner can provide delivery capacity or technical skills your
-                  internal team needs. It also requires clear ownership of scope, access, review and release.
-                  Agree on communication, decision-making and handover before work begins.
+                An external development partner gives your internal team extra capacity and specialized technical skills. Success depends on clear rules for scope, system access, reviews, and releases. Set your communication, decision making, and handover processes before starting work.
                 </p>
                 <Link to="/outsource-software-development-to-pakistan" className="story-link">
                   Read the full outsourcing model
@@ -726,8 +713,7 @@ const Home = () => {
             <div className="cta-content">
               <h2 id="cta-heading">What would you like your software to do better?</h2>
               <p>
-                Share your current process, the people involved and the systems you need to connect.
-                We can discuss the requirements, delivery options and next steps for an estimate.
+              Walk us through your current workflow, the team members involved, and the tools you need to connect. From there , We will review your needs, discuss delivery options, and define the next steps for a project estimate.
               </p>
               <div className="cta-buttons">
                 <Link to="/contact" className="btn btn-primary" aria-label="Get a free software development consultation">
