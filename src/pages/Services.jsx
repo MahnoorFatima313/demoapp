@@ -104,12 +104,12 @@ const faqItems = [
 const schemaFAQ = buildFAQSchema(faqItems);
 
 const processSteps = [
-  { n: "01", title: "Discovery and requirements", desc: "Workshops mapping workflows and constraints, ending in a formal scope document and a fixed price quote." },
-  { n: "02", title: "Solution architecture", desc: "System design, technology selection, and security modeling, reviewed and agreed before any code is written." },
-  { n: "03", title: "Agile development", desc: "Two week sprints with a working demo on staging at the end of each one, and full client visibility into the backlog." },
-  { n: "04", title: "QA and security testing", desc: "Functional testing, load testing, and OWASP Top 10 penetration testing completed before anything reaches production." },
-  { n: "05", title: "Deployment", desc: "A zero downtime CI/CD launch, monitoring setup, and full technical documentation handed over to the client." },
-  { n: "06", title: "30 day post launch support", desc: "Bug resolution and monitoring included at no cost, with optional long term SLA support available after that window." },
+  { n: "01", title: "Discovery and requirements", desc: "We start with focused workshops to map how your team works and identify any technical limits, giving you a clear project scope and a fixed price quote before coding begins." },
+  { n: "02", title: "Solution architecture", desc: "We map out the system structure, choose the right technologies, and plan your security setup , reviewing and agreeing on everything together before any coding starts." },
+  { n: "03", title: "Agile development", desc: "We build in focused two week sprints, delivering a working demo on a staging environment at the end of every cycle while giving you complete visibility into our task backlog." },
+  { n: "04", title: "QA and security testing", desc: "Before anything reaches your live users, we run thorough functional checks, load testing, and OWASP Top 10 security testing so you can launch with confidence." },
+  { n: "05", title: "Deployment", desc: "We handle a smooth, zero downtime CI/CD launch, set up real time monitoring, and hand over complete technical documentation so your team owns every detail from day one." },
+  { n: "06", title: "30 day post launch support", desc: "We include free bug fixes and active monitoring right after launch so everything settles smoothly, with flexible long term SLA support plans available once that window ends." },
 ];
 
 const industries = [
@@ -122,9 +122,9 @@ const industries = [
 ];
 
 const engagementModels = [
-  { model: "Fixed price project", best: "A defined project with a clear start and end date", detail: "Scope is written and priced before work begins. The price does not change unless the scope does." },
-  { model: "Dedicated development team", best: "Ongoing product development needing consistent capacity", detail: "One or more engineers work exclusively on a single client's product, integrated into that client's own sprint cycle and tools." },
-  { model: "Staff augmentation", best: "An existing internal team that needs temporary extra capacity", detail: "Engineers plug into an already running internal team for a defined period, without the overhead of a full hiring process." },
+  { model: "Fixed price project", best: "We document and price the full scope before any work begins. Your cost stays fixed unless you decide to change the scope." },
+  { model: "Dedicated development team", best: "Ongoing product development needing consistent capacity", detail: "Get one or more engineers dedicated solely to your product, working right inside your existing sprint cycles, tools, and team workflow." },
+  { model: "Staff augmentation", best: "Our engineers step directly into your active workflow for a set period, giving you immediate capacity without the cost and delay of full time hiring." },
 ];
 
 const Services = () => {
@@ -234,17 +234,10 @@ const Services = () => {
           <div className="container" style={{ maxWidth: "820px" }}>
             <h2 id="what-is-heading">What counts as a software development service here</h2>
             <p>
-              A software development service, in the way QllmSoft scopes and prices these projects, is any
-              engagement that ends in a working piece of software the client owns outright. That includes a
-              public website, a login protected web application, a mobile app, a backend API that connects two
-              other systems, or an internal tool that never faces a customer at all. Ongoing retainer style
-              marketing work is offered separately through our digital marketing services.
+  At QllmSoft, a software development service is any scoped, fixed-price project that results in working software you own completely. Whether you need a public website, login protected web apps, mobile apps, backend APIs, or internal team tools, it falls under this roof (Ongoing marketing retainers are handled separately under our digital marketing services.).
             </p>
             <p>
-              The five sections below cover the categories that make up nearly every project QllmSoft has run
-              since {FACTS.foundingYear}. Each one links to a dedicated page with full technical detail. What
-              follows here is enough to decide which category a project actually falls into before reading
-              further.
+           The five sections below cover almost every project type we have delivered since 2015. Each links to a full technical page, giving you just enough detail here to see which category matches your needs.
             </p>
           </div>
         </section>
@@ -270,65 +263,39 @@ const Services = () => {
             <div className="csd-about" style={{ marginTop: "40px" }}>
               <h3><Link to="/custom-software-development-services">Custom software development</Link></h3>
               <p>
-                This is the right category when the deliverable is an internal system rather than something
-                customers ever see: dashboards, approval workflows, inventory trackers, or ERP modules that
-                connect into tools a company already runs. It is the wrong category for a public marketing site,
-                which falls under website development instead.
+             This is the right fit when you are building internal tools purely for your own team, think dashboards, approval workflows, inventory trackers, or ERP add-ons that connect to software you already run. (If you want a public-facing marketing site, check out website development instead.)
               </p>
               <p>
-                Projects in this category are scoped individually because there is no standard shape to an
-                internal tool. A payroll system and a warehouse inventory tracker share almost nothing in common
-                architecturally, even though both count as custom software.
+               Every internal system is scoped individually because architectures vary widely a payroll tool and a warehouse tracker share very little under the hood.
               </p>
 
               <h3><Link to="/website-development-services">Website development</Link></h3>
               <p>
-                This covers business and eCommerce websites meant to be found in search and to convert visitors
-                into leads or customers. These builds are custom coded rather than assembled from a page builder,
-                specifically because unused plugin weight and template bloat are two of the most common causes of
-                poor Core Web Vitals scores and slow organic growth.
+              This focuses on public business and eCommerce sites designed to show up on Google and convert visitors into customers. We write clean custom code rather than relying on bloated page builders, because extra plugins and heavy themes are the main reasons sites fail Core Web Vitals and struggle to grow organic traffic.
               </p>
               <p>
-                This is not the right category for a system with user logins, role based permissions, or complex
-                business logic behind the scenes. That work belongs under web application development instead,
-                even though both categories technically produce a website.
+             Note that if your site needs user accounts, permission levels, or custom business workflows, it fits under web application development even though users still access it through a browser.
               </p>
 
               <h3><Link to="/web-application-development-services">Web application development</Link></h3>
               <p>
-                This covers enterprise portals, SaaS platforms, and any system where the primary interface sits
-                behind a login. QllmSoft builds these specifically on ASP.NET Core, chosen for its performance
-                under concurrent load and its native integration with Azure hosting, documented directly in{" "}
-                <a href="https://learn.microsoft.com/en-us/aspnet/core/" target="_blank" rel="noopener noreferrer nofollow">
-                  Microsoft's official ASP.NET Core documentation
-                </a>
-                .
+             Covers SaaS platforms, enterprise portals, and browser-based systems behind a login. QllmSoft builds these on ASP.NET Core for reliable performance under heavy concurrent load and native Azure hosting integration.
               </p>
               <p>
-                A project belongs here rather than under custom software development when the deliverable is
-                specifically a web based application accessed through a browser, as opposed to a desktop tool or
-                an offline system.
+             Choose this over custom software when the final deliverable runs specifically in a web browser rather than on a desktop or offline.
               </p>
 
               <h3><Link to="/api-development-services">API and backend development</Link></h3>
               <p>
-                This is the connective layer rather than a standalone product: a REST, GraphQL, or SOAP endpoint
-                that lets a frontend, a database, and third party services like a payment gateway or CRM
-                communicate. Businesses commission this category on its own when an existing frontend already
-                exists and only needs a new or modernized backend.
+                Instead of a visual screen, this service delivers the connective layer REST, GraphQL, or SOAP endpoints that lets your app, database, and external tools like CRMs or payment processors share data. Teams usually request this on its own when their user interface is already built and they just need a new or modernized backend.
               </p>
               <p>
-                Most web application projects include API work by default, since a modern web app needs a backend
-                to function. This becomes its own separate engagement specifically when the API is the entire
-                deliverable, with no accompanying frontend build.
+                Most web apps naturally include API work, so this stands alone only when the backend connection is the entire deliverable.
               </p>
 
               <h3><Link to="/mobile-app-development">Mobile app development</Link></h3>
               <p>
-                Android and iOS apps, built primarily in Flutter for a single shared codebase across both
-                platforms, which lowers cost and keeps feature parity automatic between the two versions. Native
-                Swift or Kotlin is used instead specifically when a project requires direct hardware access, such
-                as background Bluetooth scanning, that Flutter's plugin ecosystem cannot expose reliably.
+               We create iOS and Android apps mostly with Flutter, using a single shared codebase to keep development costs lower and ensure both versions stay completely in sync. If your app requires direct device hardware control such as background Bluetooth scanning we use native Swift or Kotlin instead.
               </p>
               <p>
                 Every mobile build includes API work behind it as well, since a mobile app with no backend can
@@ -355,12 +322,14 @@ const Services = () => {
               <h2 id="engagement-heading">Three ways to engage QllmSoft</h2>
               <p>Which model fits depends on whether a project has a defined end date or is ongoing.</p>
             </div>
-            <div className="why-grid">
-              {engagementModels.map((m) => (
-                <article key={m.model} className="why-card">
-                  <h3>{m.model}</h3>
-                  <p><strong>Best for:</strong> {m.best}</p>
-                  <p>{m.detail}</p>
+            <div className="engagement-model-grid">
+              {engagementModels.map((m, index) => (
+                <article key={m.model} className={`why-card engagement-model-card engagement-model-card--${index + 1}`}>
+                  <div className="engagement-model-card__content">
+                    <h3>{m.model}</h3>
+                    <p><strong>Best for:</strong> {m.best}</p>
+                    <p>{m.detail}</p>
+                  </div>
                 </article>
               ))}
             </div>

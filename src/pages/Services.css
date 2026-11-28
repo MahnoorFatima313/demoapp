@@ -1856,6 +1856,74 @@
   min-height: 100%;
 }
 
+.services-page .engagement-model-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-items: center;
+  gap: clamp(18px, 3vw, 36px);
+}
+
+.services-page .engagement-model-card {
+  display: grid;
+  place-items: center;
+  width: min(100%, 340px);
+  aspect-ratio: 1;
+  padding: clamp(24px, 3vw, 38px);
+  border: 1px solid rgba(255, 255, 255, .9);
+  border-radius: 50%;
+  text-align: center;
+}
+
+.services-page .engagement-model-card--1 {
+  background: radial-gradient(circle at 30% 25%, #f7f8f9, #e1e4e8 78%);
+}
+
+.services-page .engagement-model-card--2 {
+  background: radial-gradient(circle at 30% 25%, #eef2f8, #cbd7e7 78%);
+}
+
+.services-page .engagement-model-card--3 {
+  background: radial-gradient(circle at 30% 25%, #fbf5e5, #e9d8a6 78%);
+}
+
+.services-page .engagement-model-card__content {
+  max-width: 260px;
+}
+
+.services-page .engagement-model-card h3 {
+  margin-bottom: 12px;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+}
+
+.services-page .engagement-model-card p {
+  font-size: .88rem;
+  line-height: 1.55;
+}
+
+.services-page .engagement-model-card p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .services-page .engagement-model-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .services-page .engagement-model-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .services-page .engagement-model-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-page .engagement-model-card:last-child {
+    grid-column: auto;
+  }
+}
+
 .services-page .process-number {
   border: 1px solid rgba(255, 255, 255, .35);
   background: linear-gradient(145deg, #3e81c3, #174c83);
@@ -2052,6 +2120,10 @@
   .services-page .why-card,
   .services-page .process-step {
     border-radius: 18px;
+  }
+
+  .services-page .services-engagement .engagement-model-card {
+    border-radius: 50%;
   }
 
   .services-page .services-faq-question {

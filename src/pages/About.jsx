@@ -293,38 +293,15 @@ const About = () => {
 
     <div className="story-card">
       <p>
-        QllmSoft started in 2015 as a small team of engineers who were tired of
-        watching good ideas get buried under bad software. Over the past decade
-        that team has grown into a full-service{" "}
-        <strong>software development company</strong> that has shipped more than
-        50 production systems for clients spread across four continents, from
-        early-stage startups building their first product to established
-        companies replacing software that no longer keeps up with their
-        business.
+      In 2015, QllmSoft started as a small team of engineers tired of seeing great ideas ruined by bad software. Ten years later, we are a full service software company that has delivered over 50 production systems across four continents for both startups building new products and established companies replacing outdated software
       </p>
 
       <p>
-        We don't think of ourselves as a vendor that takes orders and writes
-        code.{" "}
-        <Link to="/" className="story-link">
-          QllmSoft
-        </Link>{" "}
-        works the way a good in-house engineering team would: we ask why a
-        feature matters before we estimate how long it will take to build, and
-        we push back when a request would create more problems than it solves.
-        Our team is made up of enterprise architects, full-stack engineers,
-        mobile developers, cloud specialists, and AI engineers who have built
-        software for healthcare providers, logistics companies, financial
-        teams, and retailers, so the conversation rarely starts from zero.
+       We work like an in-house engineering team, not just a code for hire vendor. We look at the business reason behind every feature before pricing it, and we will tell you honestly if a requested change creates unnecessary risk. With architects and specialists across web, mobile, cloud, and AI-plus deep experience in healthcare, logistics, finance, and retail we hit the ground running from day one.
       </p>
 
       <p>
-        Every engagement starts with a proper discovery phase. We map out the
-        workflow, write up a fixed-price proposal and a documented scope, and
-        get sign-off before any code gets written. It's a slower start than
-        jumping straight into development, but it's the reason clients on
-        three different continents have stayed with us for years instead of
-        one project.
+    We begin every engagement with a thorough discovery phase. We map your workflows, document the scope, and provide a fixed price proposal for sign off before coding starts. Taking time upfront prevents costly surprises later, which is why clients across three continents stay with us for the long haul.
       </p>
 
       <h4>What We Build</h4>
@@ -364,18 +341,15 @@ const About = () => {
       </ul>
 
       <p>
-        Our project history spans financial management platforms, healthcare
-        systems, document management tools, eCommerce platforms, HR and
-        payroll software, and warehouse automation, including our{" "}
+       We have delivered projects across finance, healthcare, document management, eCommerce, HR and payroll, and warehouse operations including  our {" "}
         <Link to="/finance-management-system" className="story-link">
           finance management system
         </Link>{" "}
-        built around budgeting, approvals, and real-time reporting for finance
-        teams.
+      platform centered on budgets, approvals, and real-time reporting.
       </p>
 
       <p>
-        Our work is reviewed publicly, not just promised in a sales deck. You
+      Our results are publicly verified, not just promised in a presentation. You
         can check our record on{" "}
         <a
           href="https://www.upwork.com/freelancers/~0170e20f8803389a86"
@@ -451,27 +425,27 @@ const About = () => {
               <FeatureCard
                 icon={Users}
                 title="10+ Years of Proven Delivery"
-                description="50+ projects delivered since 2015 for clients across four continents, with a 100% on-time delivery record."
+                description=" We have shipped more than 50 software systems across four continents since 2015 and delivered every single one on schedule."
               />
               <FeatureCard
                 icon={Shield}
                 title="Security Built In From the Start"
-                description="Security gets designed into the architecture from day one, following OWASP Top 10 practices across every web app, API, and mobile app we ship."
+                description="Rather than treating security as an afterthought, we build it into the core architecture from day one using OWASP Top 10 best practices across all web, mobile, and API builds."
               />
               <FeatureCard
                 icon={Zap}
                 title="One Team, Full-Stack Capability"
-                description="Web, mobile, backend, cloud, and AI under one roof, so there's a single point of accountability instead of handoffs between outsourced pieces."
+                description="With web, mobile, backend, cloud, and AI experts on the same team, one unified group owns your project from start to finish no juggling multiple contractors."
               />
               <FeatureCard
                 icon={Check}
                 title="Fixed-Price, On-Time Delivery"
-                description="Scope gets agreed before development starts, so there are no hourly billing surprises and no scope-creep invoices later."
+                description="We lock in the project scope before coding begins, protecting you from surprise hourly bills and unexpected invoices later on."
               />
               <FeatureCard
                 icon={Headphones}
                 title="30-Day Post-Launch Support Included"
-                description="Every project ships with hyper-care support, monitoring, and the option for longer-term maintenance, we stick around after launch."
+                description="We do not disappear after launch. Every project includes 30 days of active monitoring and priority support, with flexible options for ongoing maintenance."
               />
             </div>
           </div>
@@ -532,7 +506,7 @@ const About = () => {
         >
           <div className="container">
             <div className="section-title">
-              <h2 id="vm-heading">Our Vision &amp; Mission</h2>
+              <h2 id="vm-heading">Our Vision & Mission</h2>
             </div>
 
             <div className="vm-stack">
@@ -652,24 +626,11 @@ const About = () => {
                 <h2 id="ceo-heading">Message from the CEO</h2>
 
                 <p>
-                  I started QllmSoft in 2015 with a handful of people and a
-                  simple goal: build software that actually does what it's
-                  supposed to do, on a timeline clients can plan around. A
-                  decade later, that goal hasn't changed, even though the
-                  team and the size of the projects have grown a lot. We
-                  hold a 100% on-time delivery record and a verified 100%
-                  Upwork Job Success Score, and those numbers matter to me
-                  more than any award would.
+                 I launched QllmSoft in 2015 with a small team and a clear goal: deliver working software on a predictable timeline. Ten years on, our team and project scope have grown, but that focus remains unchanged. A 100% on time delivery record and a verified 100% Upwork Job Success Score matter more to me than any award.
                 </p>
 
                 <p>
-                  The thing I tell new hires on day one is that our job
-                  isn't to sell a tech stack, it's to solve the problem in
-                  front of us with whatever tools fit the client's
-                  situation, budget, and timeline. That's a harder sell than
-                  "we use the latest framework," but it's the reason
-                  clients we worked with in our first few years are still
-                  sending us new projects today.
+                 The first thing I share with new team members is that we are not here to sell a specific tech stack we are here to fix real business problems using whatever tools make the most sense for the client's budget, schedule, and setup. Leading with practicality is a tougher pitch than hyping trendy frameworks, yet it is the exact reason early clients still trust us with new projects years later.
                 </p>
 
               </div>

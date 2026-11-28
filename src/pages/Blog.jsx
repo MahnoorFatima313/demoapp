@@ -101,9 +101,7 @@ const Blog = () => {
         <div className="container">
           <h1>Software development insights for practical business decisions</h1>
           <p>
-            Read clear, experience-led guidance on planning, buying, building, and
-            improving software. Each article connects technical choices to delivery
-            risk, operating cost, security, and the outcomes a business actually needs.
+            Explore practical, real world advice on how to plan, buy, build, and improve software without the guesswork. Every article links technical choices directly to delivery risk, operating costs, security, and the business results you actually care about.
           </p>
         </div>
       </section>

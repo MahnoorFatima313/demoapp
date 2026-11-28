@@ -157,7 +157,7 @@ export const servicesData = [
   {
     id: 1,
     name: "Custom Web Application Development",
-    description: "We develop scalable custom web applications using modern cloud technologies. Our solutions include business dashboards, enterprise portals, SaaS platforms, and high-performance web systems built for security and scalability.",
+    description: "Using modern cloud tools, we create custom web applications designed to grow right alongside your company. Whether you need an internal business dashboard, an enterprise portal, or a full SaaS platform, we build fast, secure systems you can depend on.",
     image: CustomWebImg,
     features: [
       "Modern Front & Backend Frameworks",
@@ -171,7 +171,7 @@ export const servicesData = [
   {
     id: 2,
     name: "Web Design & UI/UX Services",
-    description: "We create modern, responsive, and user-focused websites with premium UI/UX design principles. Our solutions are optimized for performance, mobile responsiveness, user engagement, and seamless digital experiences across all devices.",
+    description: "We design and build modern websites that look great, feel intuitive, and work smoothly on every device. By focusing on clean user experience, fast performance, and mobile responsiveness, we help keep your visitors engaged from the moment they land on your page.",
     image: webDesign,
     features: [
       "Modern UI/UX design systems",
@@ -185,7 +185,7 @@ export const servicesData = [
     id: 3,
     name: "Mobile App Development (iOS & Android)",
     slug: "mobile-app-development",
-    description: "Our mobile app development services deliver high performance iOS and Android applications for startups and businesses. We build cross-platform and native mobile apps using modern frameworks such as Flutter and React Native.",
+    description: "We build fast, reliable iOS and Android mobile apps for startups and established businesses. Depending on your project needs, we create both native apps and cross platform apps using proven frameworks like Flutter and React Native.",
     image: MobileAppDevelopment,
     features: [
       "iOS and Android app development",
@@ -200,7 +200,7 @@ export const servicesData = [
     id: 4,
     name: "Enterprise & Custom Software Development",
     slug: "enterprise-custom-software-development",
-    description: "We build enterprise-grade software systems including ERP platforms, CRM solutions, and business automation tools. Our enterprise applications are designed for scalability, performance, and seamless integration with existing systems.",
+    description: "We build scalable, high performance enterprise software including custom ERP platforms, CRM solutions, and business automation tools that integrate smoothly with your existing systems.",
     image: CustomSoftwareDevelopment,
     features: [
       "ERP & CRM software development",
@@ -216,7 +216,7 @@ export const servicesData = [
     id: 5,
     name: "API Development & System Integration",
     slug: "api-development-system-integration",
-    description: "Our API development services enable seamless communication between web applications, mobile apps, and third-party systems. We build secure REST APIs and integrate external platforms to automate workflows and data synchronization.",
+    description: "Our API development services connect your web applications, mobile apps, and third party tools so they share data smoothly. We build secure REST APIs and integrate external platforms to automate daily workflows and keep your information synced automatically.",
     image: APIsoftwareImg,
     features: [
       "REST/SOAP/GraphQL API development",
@@ -270,13 +270,13 @@ export const projectsData = [
     title: "QllmDocs: AI-Powered Document Management System",
     shape: "orb",
     accent: "#edb702",
-    shortDescription: "QllmDocs is QllmSoft's own cloud document management product, bringing secure storage, metadata organization, and AI-powered document search into one workspace.",
+    shortDescription: "Built in house by QllmSoft, QllmDocs is our cloud document management platform that brings secure storage, smart metadata organization, and AI-powered document search together in one unified workspace.",
     productUrl: "https://qllmdocs.com",
     stack: ["C#", "ASP.NET Core", ".NET 10", "MVC", "EF Core", "SQL Server", "Azure", "AI Chatbot", "RAG"],
     category: "QllmSoft Product | AI & Document Management",
     problem: "Organizations needed a centralized way to securely store, search, and retrieve large volumes of business documents. Traditional document search made it difficult to find relevant information across unstructured files.",
     approach: "QllmSoft created QllmDocs as its own cloud document management product. It combines a centralized repository with structured metadata, category and attribute filters, role-based access, encryption, two-factor authentication, and ASKAI for natural-language and voice search across documents.",
-    result: "QllmDocs gives teams one workspace to organize, protect, find, and retrieve business documents. Users can search with metadata filters or ask ASKAI in plain language, then export document metadata to Excel or CSV when needed.",
+    result: "QllmDocs gives teams one workspace to organize, secure, and retrieve business documents with metadata filtering, plain language ASKAI search, and one click Excel or CSV metadata exports.",
     listTitle: "Key capabilities:",
     list: ["Centralized cloud document repository", "Structured metadata, categories, and custom tags", "ASKAI natural-language and voice search", "Advanced filtering by document attributes", "Role-based access controls", "Encryption and two-factor authentication", "Excel and CSV metadata export"],
     impact: ["QllmSoft-owned product available at QllmDocs.com", "Documents organized and searchable in one workspace", "AI-assisted retrieval with access controls"],
@@ -288,12 +288,12 @@ export const projectsData = [
     title: "Biometric Attendance Management System",
     shape: "gyro",
     accent: "#4299e1",
-    shortDescription: "Real-time biometric log processing with configurable shift rules for 1,000+ active users.",
+    shortDescription: "Real time biometric attendance tracking with flexible shift rules built for 1,000+ active users.",
     stack: ["C#", "ASP.NET Core/MVC", "SQL Server", "JavaScript", "Telerik Controls", "Workflow Engine", "GitHub"],
     category: "Workforce Operations",
     problem: "Managing biometric attendance data across a large workforce required continuous processing of attendance logs, complex shift rules, and consistent enforcement of organizational policies.",
     approach: "QllmSoft developed a centralized attendance management platform capable of processing real-time biometric logs for 1,000+ active users. The system included configurable shift rules, automated workflows, attendance calculations, and business-rule enforcement.",
-    result: "The system provided a centralized platform for processing biometric attendance data and applying configurable workforce policies across the organization.",
+    result: "We built a single centralized platform that processes biometric attendance logs in real time and automatically applies custom shift and workforce rules across every department.",
     listTitle: "Key capabilities:",
     list: ["Real-time biometric log processing", "Configurable shift rules", "Automated workflows", "Business-rule enforcement"],
     impact: ["1,000+ active users", "One platform for attendance data", "Configurable workforce policies"],
@@ -310,12 +310,12 @@ export const projectsData = [
     title: "Human Resource Management System (HRMS)",
     shape: "layers",
     accent: "#63b3ed",
-    shortDescription: "Position-based employee management, career progression, and integrated HR reporting.",
+    shortDescription: "Position based employee records, clear career progression paths, and built in HR reporting in one place..",
     stack: ["ASP.NET MVC", "C#", "jQuery", "Telerik Controls", "Entity Framework", "LINQ", "SQL Server", "Microsoft Reporting", "IIS"],
     category: "People Operations",
     problem: "HR teams needed to manage employee information, organizational structures, career progression, and reporting through a unified system instead of maintaining disconnected records.",
     approach: "QllmSoft developed an enterprise HR platform supporting position-based employee management, job progression tracking, organizational hierarchy mapping, and integrated reporting. Entity Framework and LINQ were used for data access and business operations.",
-    result: "The platform centralized employee and organizational data while providing structured workflows and reporting capabilities for HR operations.",
+    result: "We brought all employee and company structure data into one central platform, giving HR teams structured daily workflows and ready to use reporting tools.",
     listTitle: "Key capabilities:",
     list: ["Position-based employee management", "Job progression tracking", "Organizational hierarchy mapping", "Integrated reporting"],
     impact: ["Centralized employee data", "Structured HR workflows", "Built-in reporting"],
@@ -546,8 +546,8 @@ By leveraging powerful development frameworks like ASP.NET and the latest in web
       description: "We provide ongoing support and maintenance services to ensure your software stays up-to-date, secure, and performs optimally as your business evolves."
     }
   ],
-  vision: "Our vision is to become a trusted global software development company known for building innovative and scalable digital platforms that empower businesses worldwide.",
-  mission: "Our mission is to design and deliver secure, scalable, and user-focused software solutions including web applications, enterprise systems, APIs, and cloud-ready platforms."
+  vision: "To become a trusted global software development company known for building innovative, scalable digital platforms that help businesses grow around the world.",
+  mission: "Delivering secure, scalable, user focused web applications, enterprise systems, APIs, and cloud ready platforms."
 };
 
 export const projects = [

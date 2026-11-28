@@ -93,9 +93,9 @@ const techStack = [
 ];
 
 const introPoints = [
-  "Enterprise web applications, mobile apps and custom platforms",
-  "AI document management, HRMS, payroll, finance, logistics and inventory systems",
-  "Production-grade architecture from the first version",
+  "Custom enterprise web apps, mobile apps, and internal platforms",
+  "AI document management, HRMS, payroll, finance, logistics, and inventory software",
+  "Production grade architecture from day one",
 ];
 
 
@@ -176,11 +176,9 @@ const Projects = () => {
       <div className="intro-copy">
         <h2 id="intro-heading">Custom software development case studies</h2>
         <p>
-          QllmSoft  a custom software development company. Below you will find the
-          platforms we have designed, built and delivered, each with the problem, our approach
-          and the result. If you need something similar, see our{" "}
+         QllmSoft designs, builds, and delivers custom software built to last. Explore real platforms we have launched below—covering the problem, our approach, and the outcome. Need a similar build? View our {" "}
           <Link to="/services">software development services</Link> or{" "}
-          <Link to="/contact">talk to our team</Link>.
+          <Link to="/contact">  or contact our team. </Link>.
         </p>
       </div>
       <ul className="intro-points">
@@ -217,6 +215,7 @@ const Projects = () => {
                     <span className="case-media-label">Featured project</span>
                   </div>
                   <div className="case-content">
+                    <span className="case-pin-chip">Pinned case study</span>
                     <span className="case-badge">{c.category}</span>
                     <h3 itemProp="name">{c.title}</h3>
                     <p className="case-summary">{c.shortDescription}</p>
